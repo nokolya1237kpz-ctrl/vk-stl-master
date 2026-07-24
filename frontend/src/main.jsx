@@ -8,11 +8,20 @@ import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 import "./styles.css";
 import "./studio/studio.css";
 import "./styles/tokens.css";
+import "./design/tokens/color-tokens.css";
+import "./design/tokens/typography.css";
 import "./styles/reset.css";
 import "./styles/shared.css";
 import "./landing/landing.css";
 import "./admin/admin.css";
 import { StudioHeader, StudioSidebar, StudioEmptyState, StudioWorkflowBar } from "./studio/StudioComponents.jsx";
+import {
+  Badge as UiBadge,
+  Button as UiButton,
+  HeroCard as UiHeroCard,
+  Panel as UiPanel,
+  StatCard as UiStatCard,
+} from "./ui/index.js";
 
 const HISTORY_STORAGE_KEY = "stl-master-job-history";
 const HISTORY_LIMIT = 10;
@@ -3315,32 +3324,65 @@ function HeroSection({ onOpenApplication }) {
   const openFeatures = () => {
     document.getElementById("features")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  const benefits = [
+    { icon: "flash", title: "Быстро", text: "AI-исправление за секунды" },
+    { icon: "shield", title: "Надёжно", text: "Точная подготовка к печати" },
+    { icon: "cube", title: "Удобно", text: "Интуитивный интерфейс" },
+  ];
+  const metrics = [
+    ["rating", "4.9/5", "Рейтинг пользователей"],
+    ["users", "100K+", "Активных пользователей"],
+    ["cube", "1M+", "Обработанных моделей"],
+    ["success", "99.9%", "Успешных обработок"],
+    ["support", "24/7", "Поддержка пользователей"],
+  ];
+  const metricIconType = (icon) => (
+    icon === "cube" ? "cube" :
+    icon === "support" ? "analyze" :
+    icon === "success" ? "check" :
+    icon === "users" ? "connectors" :
+    "shield"
+  );
+
   return (
     <section className="launchHero heroV8 revealSection in-view" id="hero">
       <div className="heroCopy heroCopyV8">
-        <p className="heroLabel heroLabelV8"><span /> ПРОФЕССИОНАЛЬНЫЙ ОНЛАЙН-РЕДАКТОР STL</p>
+        <UiBadge className="heroLabel heroLabelV8" variant="primary"><span /> ПРОФЕССИОНАЛЬНЫЙ ОНЛАЙН-РЕДАКТОР STL</UiBadge>
         <h1>
           <span className="heroTitleLine">Исправляйте, режьте</span>
           <span className="heroTitleLine">и готовьте модели</span>
           <span className="heroTitleLine">к <span className="heroTitleAccent">3D-печати</span></span>
         </h1>
-        <p className="heroLead">Автоматическое исправление сетки, разрез на части,<br />соединения, проверка на печать и многое другое.<br />Всё в одном инструменте.</p>
+        <p className="heroLead">Автоматическое исправление сетки, разрез на части,<br /> соединения, проверка на печать и многое другое.<br /> Всё в одном инструменте.</p>
         <div className="heroBenefits heroBenefitsV8">
-          <article><LaunchIcon type="flash" /><b>Быстро</b><span>AI-исправление за секунды</span></article>
-          <article><LaunchIcon type="shield" /><b>Надёжно</b><span>Точная подготовка к печати</span></article>
-          <article><LaunchIcon type="cube" /><b>Удобно</b><span>Интуитивный интерфейс</span></article>
+          {benefits.map((benefit) => (
+            <UiHeroCard
+              key={benefit.title}
+              icon={<LaunchIcon type={benefit.icon} />}
+              text={benefit.text}
+              title={benefit.title}
+            />
+          ))}
         </div>
         <div className="launchActions heroActionsV8">
-          <button className="primaryCta" type="button" onClick={onOpenApplication} aria-label="Загрузить STL в редактор STL Master"><LaunchIcon type="upload" /> Загрузить STL<span>Открыть редактор</span></button>
-          <button className="secondaryCta" type="button" onClick={openFeatures}><LaunchIcon type="analyze" /> Смотреть возможности<span>Все инструменты</span></button>
+          <UiButton className="primaryCta" type="button" onClick={onOpenApplication} aria-label="Загрузить STL в редактор STL Master"><LaunchIcon type="upload" /> Загрузить STL<span>Открыть редактор</span></UiButton>
+          <UiButton className="secondaryCta" variant="secondary" type="button" onClick={openFeatures}><LaunchIcon type="analyze" /> Смотреть возможности<span>Все инструменты</span></UiButton>
         </div>
         <div className="formatRow formatRowV8"><span>Поддерживаемые форматы</span>{[".stl", ".obj", ".3mf", ".ply", ".amf", ".step", "+ ещё"].map((item) => <b key={item}>{item}</b>)}</div>
       </div>
       <StudioMockup />
       <div className="heroMetrics heroMetricsV8">
-        {[["rating", "4.9/5", "Рейтинг пользователей"], ["users", "100K+", "Активных пользователей"], ["cube", "1M+", "Обработанных моделей"], ["success", "99.9%", "Успешных обработок"], ["support", "24/7", "Поддержка пользователей"]].map(([icon, value, label]) => <article key={label}><span className={`metricIcon metricIcon-${icon}`}><LaunchIcon type={icon === "cube" ? "cube" : icon === "support" ? "analyze" : icon === "success" ? "check" : icon === "users" ? "connectors" : "shield"} /></span><strong>{value}</strong><span>{label}</span></article>)}
+        {metrics.map(([icon, value, label]) => (
+          <UiStatCard
+            key={label}
+            className={`heroMetricItem heroMetric-${icon}`}
+            icon={<span className={`metricIcon metricIcon-${icon}`}><LaunchIcon type={metricIconType(icon)} /></span>}
+            label={label}
+            value={value}
+          />
+        ))}
       </div>
-      <aside className="browserNote browserNoteV8"><LaunchIcon type="lock" /><div><b>Работает прямо в браузере.</b><span>Ничего не нужно устанавливать. Ваши модели в безопасности.</span></div><i /></aside>
+      <UiPanel className="browserNote browserNoteV8"><LaunchIcon type="lock" /><div><b>Работает прямо в браузере.</b><span>Ничего не нужно устанавливать. Ваши модели в безопасности.</span></div><i /></UiPanel>
     </section>
   );
 }

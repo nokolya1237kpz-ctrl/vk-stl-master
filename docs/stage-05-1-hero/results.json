@@ -1,0 +1,104 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "screenshot": "docs/stage-05-1-hero/hero-1920.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 268,
+        "y": 156,
+        "width": 1384,
+        "height": 703
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 1920,
+      "innerWidth": 1920
+    }
+  },
+  {
+    "width": 1440,
+    "height": 1024,
+    "screenshot": "docs/stage-05-1-hero/hero-1440.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 80,
+        "y": 156,
+        "width": 1344,
+        "height": 703
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440
+    }
+  },
+  {
+    "width": 1024,
+    "height": 900,
+    "screenshot": "docs/stage-05-1-hero/hero-1024.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 16,
+        "y": 0,
+        "width": 992,
+        "height": 2130
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "innerWidth": 1024
+    }
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "screenshot": "docs/stage-05-1-hero/hero-768.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 16,
+        "y": 0,
+        "width": 736,
+        "height": 2147
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "innerWidth": 768
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "screenshot": "docs/stage-05-1-hero/hero-390.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 14,
+        "y": 108,
+        "width": 362,
+        "height": 2452
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390
+    }
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "screenshot": "docs/stage-05-1-hero/hero-360.png",
+    "errors": [],
+    "metrics": {
+      "hero": {
+        "x": 14,
+        "y": 108,
+        "width": 332,
+        "height": 2433
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "innerWidth": 360
+    }
+  }
+]
