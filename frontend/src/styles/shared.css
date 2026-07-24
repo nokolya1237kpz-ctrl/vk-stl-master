@@ -1,0 +1,76 @@
+.publicSite .launchSvgIcon,
+.studioShell .launchSvgIcon,
+.adminDashboard .launchSvgIcon,
+.adminLoginScreen .launchSvgIcon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+:where(.publicSite, .studioShell, .adminDashboard, .adminLoginScreen) :is(button, a, input, textarea, select):focus-visible {
+  outline: 2px solid rgba(53, 215, 255, .88);
+  outline-offset: 3px;
+}
+
+.publicSite :is(.primaryCta, .publicTopCta, .connectionsCtaButton, .pricingPrimaryButton, .modalPrimaryButton, .footerAppButton),
+.studioShell :is(.studioPrimaryAction, .studioExportButton),
+.adminDashboard :is(.adminLoginButton, .adminCleanupButton, .adminRowActions button:first-child) {
+  min-height: 42px;
+  border-radius: var(--radius-md);
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue) 52%, var(--color-violet));
+  box-shadow: 0 12px 28px rgba(40, 124, 255, .24), var(--shadow-glow-cyan);
+  transition: transform .18s var(--ease-out), box-shadow .18s var(--ease-out), filter .18s var(--ease-out);
+}
+
+.publicSite :is(.primaryCta, .publicTopCta, .connectionsCtaButton, .pricingPrimaryButton, .modalPrimaryButton, .footerAppButton):hover,
+.studioShell :is(.studioPrimaryAction, .studioExportButton):hover,
+.adminDashboard :is(.adminLoginButton, .adminCleanupButton, .adminRowActions button:first-child):hover {
+  transform: translateY(-1px);
+  filter: saturate(1.08) brightness(1.03);
+  box-shadow: 0 16px 38px rgba(40, 124, 255, .32), 0 0 36px rgba(53, 215, 255, .22);
+}
+
+.publicSite :is(.secondaryCta, .appOpenButton, .mobileSupportButton, .faqHeaderSupport),
+.studioShell :is(.studioIconButton, .studioTextAction, .studioSecondaryAction),
+.adminDashboard :is(.adminToolbar button, .adminRowActions button, .adminSidebarToggle, .adminLogout),
+.adminLoginScreen :is(.adminBackLink) {
+  min-height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  background: linear-gradient(180deg, rgba(17, 27, 46, .9), rgba(8, 14, 26, .82));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  transition: border-color .18s var(--ease-out), background .18s var(--ease-out), transform .18s var(--ease-out);
+}
+
+.publicSite :is(.secondaryCta, .appOpenButton, .mobileSupportButton, .faqHeaderSupport):hover,
+.studioShell :is(.studioIconButton, .studioTextAction, .studioSecondaryAction):hover,
+.adminDashboard :is(.adminToolbar button, .adminRowActions button, .adminSidebarToggle, .adminLogout):hover,
+.adminLoginScreen :is(.adminBackLink):hover {
+  transform: translateY(-1px);
+  border-color: rgba(53, 215, 255, .46);
+  background: linear-gradient(180deg, rgba(22, 36, 61, .96), rgba(9, 18, 33, .9));
+}
+
+:where(.publicSite, .studioShell, .adminDashboard, .adminLoginScreen) :is(input, textarea, select) {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  background: rgba(3, 8, 17, .72);
+}
+
+:where(.publicSite, .studioShell, .adminDashboard) ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+:where(.publicSite, .studioShell, .adminDashboard) ::-webkit-scrollbar-track { background: rgba(4, 9, 18, .4); }
+:where(.publicSite, .studioShell, .adminDashboard) ::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(4, 9, 18, .4);
+  border-radius: 999px;
+  background: rgba(128, 163, 205, .26);
+}

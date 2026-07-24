@@ -1,0 +1,23 @@
+{
+  "name": "stl-master-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "@vkontakte/vkui": "7.4.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "three": "0.172.0",
+    "typescript": "5.7.3",
+    "vite": "5.4.20"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

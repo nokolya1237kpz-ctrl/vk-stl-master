@@ -1,0 +1,87 @@
+# Final check
+
+## git status
+fatal: not a git repository (or any of the parent directories): .git
+
+## source integrity
+# Recovery Stage 01 Source Integrity
+
+archive=/home/codex/backups/vk-stl-master-before-visual-recovery-20260723-082327.tar.gz
+checked_files=17
+changed_files=0
+missing_in_archive=2
+
+## Changed files
+none
+
+## Missing in archive
+- `backend/app/__pycache__/main.cpython-312.pyc`
+- `worker/app/__pycache__/worker.cpython-312.pyc`
+## dist diff
+# dist compare
+--- docs/recovery-stage-01-dist-before.sha256	2026-07-23 08:25:10.691419550 +0300
++++ docs/recovery-stage-01-dist-after.sha256	2026-07-23 08:26:05.960390115 +0300
+@@ -1,4 +1,4 @@
+-# dist before
++# dist after
+ 18db81355d851bb7ee84a3c364eeef68d7c4cb4bf78c9b0821cbe66acc7ce32b  frontend/dist/assets/index-QYl9msRJ.js
+ 22c4c2d45b5c8817ca9c11e43d228d0003d97c79616e8855bf6e3f1db74f0086  frontend/dist/assets/index-ph_I12Tf.css
+ ecf4ae736d9cb0dd4c201858a09026f1f42b802d8190369d8d88135e4dd0e7f2  frontend/dist/assets/marketing/dragon-skull/dragon_skull_demo_poster.png
+
+## stage files
+docs/VISUAL_RECOVERY_STAGE_01_REPORT.md
+docs/recovery-stage-01-api-and-files.txt
+docs/recovery-stage-01-backup-comparison.md
+docs/recovery-stage-01-backup.txt
+docs/recovery-stage-01-browser-console.txt
+docs/recovery-stage-01-component-map.md
+docs/recovery-stage-01-css-inventory.md
+docs/recovery-stage-01-dist-after.sha256
+docs/recovery-stage-01-dist-before.sha256
+docs/recovery-stage-01-dist-diff.txt
+docs/recovery-stage-01-environment.txt
+docs/recovery-stage-01-final-check.txt
+docs/recovery-stage-01-frontend-build.txt
+docs/recovery-stage-01-source-integrity.txt
+docs/recovery-stage-01-tests-inventory.txt
+docs/recovery-stage-01-tests.txt
+docs/visual-baseline/admin-desktop-1440x900-full.png
+docs/visual-baseline/admin-desktop-1440x900-viewport.png
+docs/visual-baseline/admin-desktop-1920x1080-full.png
+docs/visual-baseline/admin-desktop-1920x1080-viewport.png
+docs/visual-baseline/admin-mobile-360x800-full.png
+docs/visual-baseline/admin-mobile-360x800-viewport.png
+docs/visual-baseline/admin-mobile-390x844-full.png
+docs/visual-baseline/admin-mobile-390x844-viewport.png
+docs/visual-baseline/admin-tablet-1024x768-full.png
+docs/visual-baseline/admin-tablet-1024x768-viewport.png
+docs/visual-baseline/app-desktop-1440x900-full.png
+docs/visual-baseline/app-desktop-1440x900-viewport.png
+docs/visual-baseline/app-desktop-1920x1080-full.png
+docs/visual-baseline/app-desktop-1920x1080-viewport.png
+docs/visual-baseline/app-mobile-360x800-full.png
+docs/visual-baseline/app-mobile-360x800-viewport.png
+docs/visual-baseline/app-mobile-390x844-full.png
+docs/visual-baseline/app-mobile-390x844-viewport.png
+docs/visual-baseline/app-tablet-1024x768-full.png
+docs/visual-baseline/app-tablet-1024x768-viewport.png
+docs/visual-baseline/landing-desktop-1440x900-full.png
+docs/visual-baseline/landing-desktop-1440x900-viewport.png
+docs/visual-baseline/landing-desktop-1920x1080-full.png
+docs/visual-baseline/landing-desktop-1920x1080-viewport.png
+docs/visual-baseline/landing-mobile-360x800-full.png
+docs/visual-baseline/landing-mobile-360x800-viewport.png
+docs/visual-baseline/landing-mobile-390x844-full.png
+docs/visual-baseline/landing-mobile-390x844-viewport.png
+docs/visual-baseline/landing-section-compare-desktop-1920x1080.png
+docs/visual-baseline/landing-section-connections-desktop-1920x1080.png
+docs/visual-baseline/landing-section-faq-desktop-1920x1080.png
+docs/visual-baseline/landing-section-features-desktop-1920x1080.png
+docs/visual-baseline/landing-section-premium-desktop-1920x1080.png
+docs/visual-baseline/landing-section-workflow-desktop-1920x1080.png
+docs/visual-baseline/landing-tablet-1024x768-full.png
+docs/visual-baseline/landing-tablet-1024x768-viewport.png
+docs/visual-baseline/manifest.json
+
+## screenshot count
+36

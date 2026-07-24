@@ -1,0 +1,76 @@
+:root {
+  /* Background */
+  --stlm-bg-page: #05070d;
+  --stlm-bg-canvas: #070b14;
+  --stlm-bg-subtle: #0a101b;
+
+  /* Surface */
+  --stlm-surface-base: #0b1220;
+  --stlm-surface-muted: #101827;
+  --stlm-surface-glass: rgba(12, 19, 32, 0.78);
+
+  /* Elevated */
+  --stlm-elevated-base: #111b2c;
+  --stlm-elevated-strong: #162235;
+  --stlm-elevated-overlay: rgba(13, 20, 33, 0.92);
+
+  /* Border */
+  --stlm-border-subtle: rgba(116, 140, 170, 0.18);
+  --stlm-border-default: rgba(116, 140, 170, 0.28);
+  --stlm-border-strong: rgba(83, 215, 255, 0.58);
+
+  /* Primary */
+  --stlm-primary: #35d7ff;
+  --stlm-primary-strong: #2d8cff;
+  --stlm-primary-hover: #62e4ff;
+  --stlm-primary-active: #7963ff;
+
+  /* Status */
+  --stlm-success: #36e6a3;
+  --stlm-warning: #f7c75f;
+  --stlm-danger: #ff5f7a;
+
+  /* Text */
+  --stlm-text-primary: #f8fbff;
+  --stlm-text-secondary: #b8c5d8;
+  --stlm-text-muted: #8291a7;
+  --stlm-text-disabled: #5d6a7d;
+
+  /* Shadow */
+  --stlm-shadow-small: 0 8px 22px rgba(0, 0, 0, 0.22);
+  --stlm-shadow-medium: 0 18px 46px rgba(0, 0, 0, 0.32);
+  --stlm-shadow-large: 0 32px 90px rgba(0, 0, 0, 0.46);
+  --stlm-shadow-primary: 0 0 34px rgba(53, 215, 255, 0.22);
+
+  /* Radius */
+  --stlm-radius-small: 8px;
+  --stlm-radius-medium: 12px;
+  --stlm-radius-large: 18px;
+
+  /* Spacing scale */
+  --stlm-space-1: 4px;
+  --stlm-space-2: 8px;
+  --stlm-space-3: 12px;
+  --stlm-space-4: 16px;
+  --stlm-space-5: 20px;
+  --stlm-space-6: 24px;
+  --stlm-space-8: 32px;
+  --stlm-space-10: 40px;
+  --stlm-space-12: 48px;
+  --stlm-space-16: 64px;
+  --stlm-space-20: 80px;
+  --stlm-space-24: 96px;
+
+  /* Layout */
+  --stlm-container-width: 1384px;
+  --stlm-container-gutter-desktop: 80px;
+  --stlm-container-gutter-tablet: 32px;
+  --stlm-container-gutter-mobile: 16px;
+
+  /* Motion */
+  --stlm-duration-fast: 120ms;
+  --stlm-duration-base: 180ms;
+  --stlm-duration-slow: 280ms;
+  --stlm-curve-standard: cubic-bezier(0.2, 0, 0, 1);
+  --stlm-curve-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+}

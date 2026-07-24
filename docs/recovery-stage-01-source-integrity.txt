@@ -1,0 +1,13 @@
+# Recovery Stage 01 Source Integrity
+
+archive=/home/codex/backups/vk-stl-master-before-visual-recovery-20260723-082327.tar.gz
+checked_files=17
+changed_files=0
+missing_in_archive=2
+
+## Changed files
+none
+
+## Missing in archive
+- `backend/app/__pycache__/main.cpython-312.pyc`
+- `worker/app/__pycache__/worker.cpython-312.pyc`

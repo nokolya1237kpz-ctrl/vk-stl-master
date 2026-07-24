@@ -1,0 +1,190 @@
+# Recovery Stage 01 Browser Console
+
+Base URL: http://127.0.0.1:5177
+
+## Summary
+
+- landing desktop-1920x1080: nav=OK, horizontalScroll=NO, events=4, categories={"real/console-warning":4}
+- app desktop-1920x1080: nav=OK, horizontalScroll=NO, events=0, categories={}
+- admin desktop-1920x1080: nav=OK, horizontalScroll=NO, events=0, categories={}
+- landing desktop-1440x900: nav=OK, horizontalScroll=NO, events=0, categories={}
+- app desktop-1440x900: nav=OK, horizontalScroll=NO, events=0, categories={}
+- admin desktop-1440x900: nav=OK, horizontalScroll=NO, events=0, categories={}
+- landing tablet-1024x768: nav=OK, horizontalScroll=NO, events=0, categories={}
+- app tablet-1024x768: nav=OK, horizontalScroll=NO, events=0, categories={}
+- admin tablet-1024x768: nav=OK, horizontalScroll=NO, events=0, categories={}
+- landing mobile-390x844: nav=OK, horizontalScroll=NO, events=0, categories={}
+- app mobile-390x844: nav=OK, horizontalScroll=NO, events=0, categories={}
+- admin mobile-390x844: nav=OK, horizontalScroll=NO, events=0, categories={}
+- landing mobile-360x800: nav=OK, horizontalScroll=NO, events=0, categories={}
+- app mobile-360x800: nav=OK, horizontalScroll=NO, events=0, categories={}
+- admin mobile-360x800: nav=OK, horizontalScroll=NO, events=0, categories={}
+
+## Details
+
+### landing desktop-1920x1080
+
+- route: /
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1920,"h":8568,"vw":1920,"vh":1080,"overflowX":false}
+- navError: 
+
+- [real/console-warning] console.warning   [.WebGL-0x3ec40efa1a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+- [real/console-warning] console.warning   [.WebGL-0x3ec40efa5000]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+- [real/console-warning] console.warning   [.WebGL-0x3ec40efa7400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+- [real/console-warning] console.warning   [.WebGL-0x3ec40efa1a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+
+### app desktop-1920x1080
+
+- route: /app
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1920,"h":1080,"vw":1920,"vh":1080,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### admin desktop-1920x1080
+
+- route: /admin
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1920,"h":1152,"vw":1920,"vh":1080,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### landing desktop-1440x900
+
+- route: /
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1440,"h":8656,"vw":1440,"vh":900,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### app desktop-1440x900
+
+- route: /app
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1440,"h":900,"vw":1440,"vh":900,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### admin desktop-1440x900
+
+- route: /admin
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1440,"h":972,"vw":1440,"vh":900,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### landing tablet-1024x768
+
+- route: /
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1024,"h":11054,"vw":1024,"vh":768,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### app tablet-1024x768
+
+- route: /app
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1024,"h":1312,"vw":1024,"vh":768,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### admin tablet-1024x768
+
+- route: /admin
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":1024,"h":840,"vw":1024,"vh":768,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### landing mobile-390x844
+
+- route: /
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":390,"h":19126,"vw":390,"vh":844,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### app mobile-390x844
+
+- route: /app
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":390,"h":1795,"vw":390,"vh":844,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### admin mobile-390x844
+
+- route: /admin
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":390,"h":1424,"vw":390,"vh":844,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### landing mobile-360x800
+
+- route: /
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":360,"h":19427,"vw":360,"vh":800,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### app mobile-360x800
+
+- route: /app
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":360,"h":1882,"vw":360,"vh":800,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+
+
+### admin mobile-360x800
+
+- route: /admin
+- title: STL Master
+- bodyClass: 
+- scroll: {"w":360,"h":1449,"vw":360,"vh":800,"overflowX":false}
+- navError: 
+
+No console/network errors captured.
+

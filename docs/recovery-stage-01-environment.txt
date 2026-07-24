@@ -1,0 +1,56 @@
+# Recovery Stage 01 Environment
+
+2026-07-23T08:22:14+03:00
+
+## pwd
+/home/codex/projects/vk-stl-master
+
+## git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+
+## versions
+v18.19.1
+9.2.0
+Python 3.12.3
+Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+docker: unknown command: docker compose
+
+Run 'docker --help' for more information
+docker-compose version 1.29.2, build unknown
+
+## disk
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        79G   72G  7.4G  91% /
+/dev/sda1        79G   72G  7.4G  91% /
+/dev/sda1        79G   72G  7.4G  91% /
+
+## project size
+309M	.
+
+## top-level
+total 168
+drwxrwxr-x 17 codex codex  4096 Jul 13 15:08 .
+drwxrwxr-x  3 codex codex  4096 Jun  3 16:31 ..
+drwxrwxr-x  5 codex codex  4096 Jul  5 19:22 .codex-backups
+drwxrwxr-x  3 codex codex  4096 Jul  4 18:55 .codex-design-package
+-rw-r-----  1 root  codex   358 Jun 23 17:22 .env
+-rw-rw-r--  1 codex codex 28294 Jun  3 17:26 ARCHITECTURE.md
+-rw-rw-r--  1 codex codex 29040 Jun 15 18:10 README.md
+-rw-r--r--  1 codex codex 29605 Jul  4 18:54 STL_Master_Codex_Design_Package.zip
+drwxr--r--  2 codex codex  4096 Jun 28 19:35 __incoming_public_polish__
+drwxrwxr-x  2 codex codex  4096 Jun 28 18:26 __incoming_public_redesign__
+drwxrwxr-x  3 codex codex  4096 Jun  3 17:30 backend
+drwxrwxr-x  2 codex codex  4096 Jun 15 18:11 config
+drwxrwxr-x  4 codex codex  4096 Jun 23 01:00 deploy
+-rw-rw-r--  1 codex codex  1565 Jun 23 15:52 docker-compose.yml
+drwxrwxr-x  3 codex codex  4096 Jul 23 08:22 docs
+drwxrwxr-x  6 codex codex  4096 Jul 22 16:26 frontend
+drwxrwxr-x  3 codex codex  4096 Jul  1 16:39 scripts
+drwxrwxr-x  2 codex codex  4096 Jun 13 15:59 test-data
+drwxr-xr-x  3 codex codex  4096 Jul 22 10:27 tests
+drwxr--r--  2 codex codex  4096 Jul  2 17:11 tmp_polish_sync
+drwxrwxr-x  2 codex codex  4096 Jul 13 15:08 tmp_queue_files
+drwxrwxr-x  3 codex codex  4096 Jun  3 17:30 worker

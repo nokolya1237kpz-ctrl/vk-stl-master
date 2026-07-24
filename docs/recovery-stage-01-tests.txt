@@ -1,0 +1,98 @@
+# Recovery Stage 01 Tests
+
+## Shell smoke scripts
+._smoke_admin_auth_users_cleanup.sh
+._smoke_admin_feedback.sh
+._smoke_admin_security.sh
+._smoke_ai_cleanup.sh
+._smoke_apply_orientation.sh
+._smoke_apply_orientation_from_viewer_contract.sh
+._smoke_artifact_map.sh
+._smoke_auto_orientation.sh
+._smoke_beta_feedback_ui_contract.sh
+._smoke_beta_readiness.sh
+._smoke_chained_processing.sh
+._smoke_change_map.sh
+._smoke_compare_view_contract.sh
+._smoke_final_model_contract.sh
+._smoke_fit_to_bed_split.sh
+._smoke_frontend_workflow_contract.sh
+._smoke_local_smoothing.sh
+._smoke_local_smoothing_preview.sh
+._smoke_model_qa.sh
+._smoke_orientation_manual_transform.sh
+._smoke_pipeline_matrix.sh
+._smoke_premium_flow.sh
+._smoke_premium_ui_contract.sh
+._smoke_print_repair.sh
+._smoke_processing_history.sh
+._smoke_public_design_contract.sh
+._smoke_public_launch.sh
+._smoke_queue_limits.sh
+._smoke_split_assembly.sh
+._smoke_split_connectors.sh
+._smoke_split_glue_connector.sh
+._smoke_split_lock.sh
+._smoke_split_magnets.sh
+._smoke_split_pins.sh
+._smoke_split_plane_offset.sh
+._smoke_split_real_model.sh
+._smoke_surface_recovery.sh
+._smoke_surface_recovery_quality.sh
+._smoke_visible_result_contract.sh
+._smoke_visual_contract.sh
+run_all_smoke_tests.sh
+run_split_tests.sh
+smoke_admin_auth_users_cleanup.sh
+smoke_admin_feedback.sh
+smoke_admin_security.sh
+smoke_ai_cleanup.sh
+smoke_apply_orientation.sh
+smoke_apply_orientation_from_viewer_contract.sh
+smoke_artifact_map.sh
+smoke_auto_orientation.sh
+smoke_beta_feedback_ui_contract.sh
+smoke_beta_readiness.sh
+smoke_chained_processing.sh
+smoke_change_map.sh
+smoke_compare_view_contract.sh
+smoke_final_model_contract.sh
+smoke_fit_to_bed_split.sh
+smoke_frontend_workflow_contract.sh
+smoke_local_smoothing.sh
+smoke_local_smoothing_preview.sh
+smoke_model_qa.sh
+smoke_orientation_manual_transform.sh
+smoke_pipeline_matrix.sh
+smoke_premium_flow.sh
+smoke_premium_ui_contract.sh
+smoke_print_repair.sh
+smoke_processing_history.sh
+smoke_public_design_contract.sh
+smoke_public_launch.sh
+smoke_queue_limits.sh
+smoke_split_assembly.sh
+smoke_split_connectors.sh
+smoke_split_glue_connector.sh
+smoke_split_lock.sh
+smoke_split_magnets.sh
+smoke_split_pins.sh
+smoke_split_plane_offset.sh
+smoke_split_real_model.sh
+smoke_studio_legacy_contract.sh
+smoke_surface_recovery.sh
+smoke_surface_recovery_quality.sh
+smoke_visible_result_contract.sh
+smoke_visual_contract.sh
+
+## Historical result files count
+782
+
+## Destructive or state-changing references in smoke scripts
+
+## Selected non-destructive tests
+frontend npm build: already run, PASS
+Route/browser smoke: deferred to Playwright baseline capture
+
+## Not run
+Backend/worker/admin/premium/data-processing smoke scripts were not run because many create jobs, mutate queues, upload/process files, delete/cleanup data, or require credentials.

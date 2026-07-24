@@ -1,0 +1,67 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: stl-master-redis
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    container_name: stl-master-backend
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      UPLOAD_ROOT: /data/uploads
+      RESULT_ROOT: /data/results
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+      ADMIN_PASSWORD_HASH: ${ADMIN_PASSWORD_HASH:-}
+      ADMIN_SESSION_SECRET: ${ADMIN_SESSION_SECRET:-}
+      ACCESS_CODE_SALT: ${ACCESS_CODE_SALT:-stl-master-beta-local-salt}
+    volumes:
+      - uploads-data:/data/uploads
+      - results-data:/data/results
+      - ./config:/app/config:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  worker:
+    build:
+      context: ./worker
+    container_name: stl-master-worker
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      UPLOAD_ROOT: /data/uploads
+      RESULT_ROOT: /data/results
+    volumes:
+      - uploads-data:/data/uploads
+      - results-data:/data/results
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: stl-master-frontend
+    ports:
+      - "127.0.0.1:3000:80"
+    volumes:
+      - ./config:/usr/share/nginx/html/config:ro
+    depends_on:
+      - backend
+
+volumes:
+  redis-data:
+  uploads-data:
+  results-data:

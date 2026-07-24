@@ -1,0 +1,15 @@
+{
+  "beta_mode": true,
+  "beta_upload_limit_mb": 100,
+  "surface_recovery": false,
+  "local_smoothing": true,
+  "split": true,
+  "fit_to_bed_split": true,
+  "orientation": true,
+  "auto_orientation": true,
+  "compare_view": true,
+  "remove_ai_artifacts": true,
+  "print_repair": true,
+  "reduce_polygons": true,
+  "fix_symmetry": false
+}

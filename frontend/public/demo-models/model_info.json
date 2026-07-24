@@ -1,0 +1,47 @@
+{
+  "model_name": "STL Master Demo Core",
+  "files": {
+    "stlmaster_demo_model_clean_high.stl": {
+      "triangles": 28772,
+      "watertight": true,
+      "size_mm": [
+        93.02,
+        76.76,
+        100.0
+      ]
+    },
+    "stlmaster_demo_model_clean_low.stl": {
+      "triangles": 6788,
+      "watertight": true,
+      "size_mm": [
+        93.02,
+        76.76,
+        100.0
+      ]
+    },
+    "stlmaster_demo_model_problematic.stl": {
+      "triangles": 28828,
+      "watertight": false,
+      "size_mm": [
+        93.02,
+        76.76,
+        100.0
+      ]
+    }
+  },
+  "problematic_variant_issues": [
+    "missing faces/open area",
+    "flipped normals",
+    "spike artifact",
+    "tiny floating island",
+    "detached duplicate-like plate"
+  ],
+  "recommended_usage": {
+    "analysis": "problematic",
+    "repair": "problematic -> clean_high",
+    "optimization": "clean_high -> clean_low",
+    "split_connectors": "clean_high with Three.js overlays",
+    "orientation": "clean_high over print-bed grid",
+    "export": "show STL/ZIP/JSON/TXT package"
+  }
+}

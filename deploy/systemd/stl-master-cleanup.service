@@ -1,0 +1,7 @@
+[Unit]
+Description=STL Master beta artifact cleanup
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/codex/projects/vk-stl-master
+ExecStart=/home/codex/projects/vk-stl-master/scripts/auto-cleanup-beta.sh 24

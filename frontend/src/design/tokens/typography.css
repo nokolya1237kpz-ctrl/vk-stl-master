@@ -1,0 +1,60 @@
+:root {
+  /* Font families */
+  --stlm-font-sans: "SF Pro Display", "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --stlm-font-mono: "SF Mono", "JetBrains Mono", "Roboto Mono", ui-monospace, monospace;
+
+  /* Display */
+  --stlm-display-font-size: 64px;
+  --stlm-display-line-height: 1.04;
+  --stlm-display-font-weight: 800;
+  --stlm-display-letter-spacing: -0.03em;
+
+  /* H1 */
+  --stlm-h1-font-size: 48px;
+  --stlm-h1-line-height: 1.12;
+  --stlm-h1-font-weight: 780;
+  --stlm-h1-letter-spacing: -0.025em;
+
+  /* H2 */
+  --stlm-h2-font-size: 36px;
+  --stlm-h2-line-height: 1.16;
+  --stlm-h2-font-weight: 740;
+  --stlm-h2-letter-spacing: -0.018em;
+
+  /* H3 */
+  --stlm-h3-font-size: 24px;
+  --stlm-h3-line-height: 1.22;
+  --stlm-h3-font-weight: 700;
+  --stlm-h3-letter-spacing: -0.01em;
+
+  /* Body Large */
+  --stlm-body-large-font-size: 18px;
+  --stlm-body-large-line-height: 1.58;
+  --stlm-body-large-font-weight: 450;
+
+  /* Body */
+  --stlm-body-font-size: 16px;
+  --stlm-body-line-height: 1.55;
+  --stlm-body-font-weight: 450;
+
+  /* Small */
+  --stlm-small-font-size: 14px;
+  --stlm-small-line-height: 1.45;
+  --stlm-small-font-weight: 500;
+
+  /* Caption */
+  --stlm-caption-font-size: 12px;
+  --stlm-caption-line-height: 1.35;
+  --stlm-caption-font-weight: 600;
+  --stlm-caption-letter-spacing: 0.02em;
+
+  /* Button */
+  --stlm-button-font-size: 15px;
+  --stlm-button-line-height: 1.2;
+  --stlm-button-font-weight: 700;
+
+  /* Mono */
+  --stlm-mono-font-size: 13px;
+  --stlm-mono-line-height: 1.45;
+  --stlm-mono-font-weight: 600;
+}

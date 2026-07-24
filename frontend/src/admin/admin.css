@@ -1,0 +1,160 @@
+.adminLoginScreen,
+.adminDashboard {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(53,215,255,.12), transparent 28%),
+    radial-gradient(circle at 20% 92%, rgba(112,76,255,.12), transparent 32%),
+    linear-gradient(135deg, #030711, #07101d 52%, #030711);
+  color: var(--color-text-primary);
+}
+
+.vkuiPanelHeader { display: none; }
+
+.adminLoginScreen { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 28px; align-items: center; padding: 32px; }
+.adminLoginInfo, .adminLoginPanel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: rgba(7, 14, 27, .86);
+  box-shadow: var(--shadow-panel);
+}
+.adminLoginInfo { min-height: 560px; padding: 34px; overflow: hidden; }
+.adminLoginPanel { padding: 28px; }
+.adminBrand { display: flex; align-items: center; gap: 12px; color: #fff; }
+.adminBrand .launchSvgIcon { width: 34px; height: 34px; color: var(--color-cyan); }
+.adminBrand strong { font-size: 24px; }
+.adminLoginPanel h2 { margin: 0 0 10px; font-size: 32px; letter-spacing: -.03em; }
+.adminLoginPanel p, .adminLoginInfo p { color: var(--color-text-secondary); line-height: 1.55; }
+.adminPasswordField input { width: 100%; min-height: 44px; padding: 0 12px; }
+.adminLoginButton { width: 100%; margin-top: 16px; }
+.adminBackLink { display: inline-flex; align-items: center; padding: 0 14px; margin-top: 18px; }
+
+.adminDashboard {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px;
+  overflow: hidden;
+}
+.adminDashboard.sidebarCollapsed { grid-template-columns: 92px minmax(0, 1fr); }
+.adminSidebar,
+.adminWorkspace {
+  min-height: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: rgba(7, 14, 27, .86);
+  box-shadow: var(--shadow-panel);
+}
+.adminSidebar { display: grid; grid-template-rows: auto auto minmax(0,1fr) auto auto; gap: 14px; padding: 16px; overflow: hidden; }
+.adminSidebarToggle, .adminLogout { min-height: 40px; padding: 0 12px; }
+.adminTabs { display: grid; gap: 7px; overflow: auto; padding-right: 3px; }
+.adminTabs button {
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: 26px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  text-align: left;
+}
+.adminTabs button:hover { background: rgba(255,255,255,.035); border-color: rgba(128,163,205,.12); }
+.adminTabs button.active { color: #fff; border-color: rgba(53,215,255,.42); background: linear-gradient(135deg, rgba(53,215,255,.12), rgba(112,76,255,.10)); box-shadow: inset 3px 0 0 var(--color-cyan); }
+.adminNavIcon { color: var(--color-cyan); }
+.adminNavBadge, .adminBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(53,215,255,.22);
+  color: #bff4ff;
+  background: rgba(53,215,255,.08);
+  font-size: 12px;
+  font-weight: 800;
+}
+.adminBadge.real, .adminNavBadge.real { color: #a8ffd8; border-color: rgba(53,231,166,.26); background: rgba(53,231,166,.08); }
+.adminBadge.danger, .adminNavBadge.danger { color: #ffc2cd; border-color: rgba(255,95,125,.28); background: rgba(255,95,125,.1); }
+.adminBadge.test { color: #ffe7a6; border-color: rgba(247,201,72,.28); background: rgba(247,201,72,.09); }
+.adminVersion { color: var(--color-text-muted); }
+
+.adminWorkspace { padding: 16px; overflow: auto; }
+.adminTopbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(260px, 380px) auto;
+  gap: 16px;
+  align-items: center;
+  margin: -16px -16px 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(7, 14, 27, .94);
+  backdrop-filter: blur(12px);
+}
+.adminTopbar h1 { margin: 0; font-size: 32px; letter-spacing: -.03em; }
+.adminTopbar p { margin: 4px 0 0; color: var(--color-text-secondary); }
+.adminGlobalSearch input { width: 100%; min-height: 42px; padding: 0 12px; }
+.adminSystemPills { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.adminSystemPills span { min-height: 30px; display: inline-flex; align-items: center; padding: 0 9px; border: 1px solid var(--color-border); border-radius: 999px; color: var(--color-text-secondary); background: rgba(255,255,255,.025); }
+.adminSystemPills .ok { color: #a8ffd8; border-color: rgba(53,231,166,.26); }
+.adminSystemPills .danger { color: #ffc2cd; border-color: rgba(255,95,125,.28); }
+
+.adminSectionStack { display: grid; gap: 16px; }
+.adminSummaryGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.adminSummaryCard,
+.adminJobPanel,
+.adminAnalyticsPanel,
+.adminDangerPanel,
+.adminToolbar,
+.adminBulkBar,
+.adminFilters,
+.adminTableWrap {
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: rgba(9, 17, 31, .78);
+  box-shadow: var(--shadow-panel);
+}
+.adminSummaryCard { min-height: 96px; padding: 16px; }
+.adminSummaryCard span { color: var(--color-text-muted); font-size: 13px; }
+.adminSummaryCard strong { display: block; margin-top: 8px; font-size: 26px; letter-spacing: -.025em; }
+.adminJobPanel, .adminAnalyticsPanel, .adminDangerPanel { padding: 18px; }
+.adminJobPanel h2, .adminAnalyticsPanel h2, .adminDangerPanel h2 { margin: 0 0 10px; font-size: 24px; letter-spacing: -.025em; }
+.panelLabel { color: var(--color-cyan); font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.adminToolbar, .adminBulkBar, .adminFilters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px; margin: 14px 0; }
+.adminToolbar input, .adminToolbar select, .adminFilters input, .adminFilters select { min-height: 40px; padding: 0 10px; }
+.adminRowActions { display: flex; flex-wrap: wrap; gap: 8px; }
+.adminRowActions button { min-height: 36px; padding: 0 10px; }
+.adminTableWrap { overflow: auto; }
+.adminTable { width: 100%; border-collapse: separate; border-spacing: 0; color: var(--color-text-secondary); }
+.adminTable th, .adminTable td { padding: 12px 14px; border-bottom: 1px solid rgba(128,163,205,.10); text-align: left; vertical-align: top; }
+.adminTable th { position: sticky; top: 0; z-index: 2; color: #dce9fa; background: rgba(8, 16, 30, .96); font-size: 12px; letter-spacing: .045em; text-transform: uppercase; }
+.adminTable tr:hover td { background: rgba(53,215,255,.035); }
+.adminEmpty, .adminNotice, .adminCleanupStatus { color: var(--color-text-secondary); }
+.adminJsonPreview { max-height: 340px; overflow: auto; padding: 14px; border: 1px solid rgba(128,163,205,.14); border-radius: 14px; color: #dbeafe; background: rgba(3,8,17,.76); font-family: var(--font-mono); font-size: 12px; }
+.adminJobGrid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+.adminJobGrid span { padding: 14px; border: 1px solid rgba(128,163,205,.13); border-radius: 14px; background: rgba(255,255,255,.025); }
+.adminJobGrid em { display: block; color: var(--color-text-muted); font-style: normal; font-size: 12px; }
+.adminJobGrid strong { display: block; margin-top: 5px; color: #fff; }
+
+@media (max-width: 1100px) {
+  .adminDashboard { grid-template-columns: 92px minmax(0,1fr); }
+  .adminNavTitle, .adminVersion, .adminLogout { display: none; }
+  .adminTopbar { grid-template-columns: 1fr; }
+  .adminSummaryGrid, .adminJobGrid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .adminLoginScreen, .adminDashboard { display: block; height: auto; min-height: 100dvh; overflow: visible; padding: 10px; }
+  .adminLoginInfo { min-height: 260px; margin-bottom: 12px; }
+  .adminSidebar { position: sticky; top: 10px; z-index: 20; margin-bottom: 12px; max-height: 180px; }
+  .adminTabs { display: flex; overflow: auto hidden; }
+  .adminTabs button { min-width: 56px; grid-template-columns: 1fr; justify-items: center; }
+  .adminWorkspace { overflow: visible; }
+  .adminSummaryGrid, .adminJobGrid { grid-template-columns: 1fr; }
+  .adminTableWrap { max-width: 100%; }
+}

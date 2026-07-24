@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STL Master — Stage 01 Hero Preview</title>
+<style>
+:root{--bg:#05070d;--bg2:#07101d;--line:rgba(255,255,255,.12);--text:#f7f9ff;--muted:#9fb1c7;--cyan:#35d7ff;--blue:#6379ff;--green:#78ffc8;--gold:#f5c76b}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(950px 520px at 82% 0%,rgba(53,215,255,.18),transparent 62%),radial-gradient(820px 500px at 7% 4%,rgba(99,121,255,.13),transparent 60%),linear-gradient(180deg,#07101d,#05070d 58%,#04060b);color:var(--text);font-family:Inter,Arial,sans-serif}
+.page{width:1440px;min-height:1080px;margin:0 auto;padding:18px 0 80px}
+.header{position:sticky;top:16px;z-index:100;width:1200px;height:66px;margin:0 auto 74px;border:1px solid var(--line);border-radius:999px;background:rgba(8,14,26,.76);backdrop-filter:blur(24px);display:flex;align-items:center;gap:24px;padding:0 14px 0 24px;box-shadow:0 18px 70px rgba(0,0,0,.34)}
+.brand{font-size:20px;font-weight:950;letter-spacing:-.04em;white-space:nowrap}.brand span{color:var(--cyan)}
+.nav{flex:1;display:flex;justify-content:center;gap:6px}.nav a{font-size:14px;color:#c7d4e9;padding:10px 13px;border-radius:999px}.nav a.active,.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.btn{height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.13);padding:0 24px;font-size:15px;font-weight:850}
+.btn-primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#04111d;box-shadow:0 20px 54px rgba(53,215,255,.30)}
+.btn-secondary{background:rgba(255,255,255,.055);color:#f4f8ff}.btn-premium{background:linear-gradient(135deg,rgba(245,199,107,.96),rgba(53,215,255,.84));color:#101420}.header .btn{height:44px;padding:0 18px}
+.hero{width:1280px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}
+.label{display:inline-flex;gap:8px;align-items:center;padding:9px 14px;border:1px solid rgba(53,215,255,.23);background:rgba(53,215,255,.10);color:#bcf1ff;border-radius:999px;font-size:14px;font-weight:800}
+h1{font-size:82px;line-height:.92;letter-spacing:-.08em;margin:20px 0 24px}h1 span{background:linear-gradient(90deg,#fff,#8cecff,#8c9aff);-webkit-background-clip:text;color:transparent}
+.lead{font-size:20px;line-height:1.56;color:#b8c6db;margin:0 0 30px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}.chips{display:flex;gap:9px;flex-wrap:wrap}.chips span{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);color:#d9e7f8;font-size:13px}
+.studio{height:610px;border-radius:38px;background:linear-gradient(180deg,rgba(19,30,48,.95),rgba(7,12,23,.96));border:1px solid rgba(255,255,255,.14);box-shadow:0 56px 160px rgba(0,0,0,.58),0 0 100px rgba(53,215,255,.09);overflow:hidden}
+.studio-top{height:62px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;align-items:center;gap:10px;padding:0 20px}.dot{width:10px;height:10px;border-radius:50%;background:#ff5f78}.dot.y{background:#f5c76b}.dot.g{background:#78ffc8}.tabs{margin-left:auto;display:flex;gap:8px}.tabs span{font-size:12px;padding:8px 10px;border-radius:12px;color:#a0b1c8;background:rgba(255,255,255,.045)}.tabs .on{background:var(--cyan);color:#04111d;font-weight:900}
+.studio-main{display:grid;grid-template-columns:160px 1fr 215px;height:548px}.tools,.meta{padding:20px;display:flex;flex-direction:column;gap:12px;border-right:1px solid rgba(255,255,255,.08)}.meta{border-left:1px solid rgba(255,255,255,.08);border-right:0}.tool,.meta-card{border-radius:16px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);padding:13px;color:#abb9ce;font-size:13px}.tool.on,.meta-card.on{background:rgba(53,215,255,.12);border-color:rgba(53,215,255,.28);color:white}
+.viewport{position:relative;margin:20px;border-radius:28px;overflow:hidden;background:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),radial-gradient(circle at 50% 48%,rgba(53,215,255,.15),transparent 36%),#06101b;background-size:32px 32px,32px 32px,auto}
+.drone{position:absolute;left:50%;top:48%;width:410px;height:250px;transform:translate(-50%,-50%);filter:drop-shadow(0 30px 35px rgba(0,0,0,.55))}.body{position:absolute;left:90px;top:90px;width:230px;height:70px;border-radius:38px;background:linear-gradient(180deg,#e7edf5,#657286)}.core{position:absolute;left:155px;top:105px;width:100px;height:40px;border-radius:20px;background:#111827;border:2px solid rgba(53,215,255,.75)}
+.arm{position:absolute;height:12px;background:#b8c8dc;border-radius:99px;transform-origin:center}.a1{left:40px;top:50px;width:160px;transform:rotate(28deg)}.a2{right:40px;top:50px;width:160px;transform:rotate(-28deg)}.a3{left:40px;bottom:50px;width:160px;transform:rotate(-28deg)}.a4{right:40px;bottom:50px;width:160px;transform:rotate(28deg)}.rotor{position:absolute;width:72px;height:72px;border:8px solid #9fb7d2;border-radius:50%}.r1{left:5px;top:18px}.r2{right:5px;top:18px}.r3{left:5px;bottom:18px}.r4{right:5px;bottom:18px}
+.split-plane{position:absolute;left:48%;top:70px;width:3px;height:310px;background:var(--cyan);box-shadow:0 0 32px var(--cyan)}.pin{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--green);box-shadow:0 0 22px var(--green)}.p1{left:252px;top:165px}.p2{left:252px;top:215px}
+.hud{position:absolute;left:22px;right:22px;bottom:22px;display:flex;gap:10px}.hud div{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:12px;color:#9eb0c7;font-size:12px}.hud strong{display:block;color:white;font-size:17px;margin-top:4px}
+@media(max-width:900px){.page,.hero,.header{width:calc(100vw - 32px)}.nav{display:none}.hero{grid-template-columns:1fr}h1{font-size:48px}.studio-main{grid-template-columns:1fr}.tools,.meta{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="header"><div class="brand">STL <span>Master</span></div><nav class="nav"><a class="active">Возможности</a><a>Соединения</a><a>До / После</a><a>Premium</a><a>Контакты</a></nav><button class="btn btn-primary">Получить доступ</button></header>
+<main class="hero">
+<section><div class="label">⚡ Профессиональная подготовка STL</div><h1>Подготовьте <span>STL к печати</span> за минуты</h1><p class="lead">Исправляйте модели, разрезайте большие STL, добавляйте штифты, магниты и замки, проверяйте результат перед отправкой в слайсер.</p><div class="actions"><button class="btn btn-primary">Открыть демонстрацию</button><button class="btn btn-secondary">Получить ранний доступ</button><button class="btn btn-premium">Premium</button></div><div class="chips"><span>Разрез</span><span>Штифты</span><span>Магниты</span><span>Замки</span><span>AI Cleanup</span></div></section>
+<section class="studio"><div class="studio-top"><div class="dot"></div><div class="dot y"></div><div class="dot g"></div><div class="tabs"><span>Repair</span><span class="on">Split + Pins</span><span>Check</span></div></div><div class="studio-main"><aside class="tools"><div class="tool">Исправление</div><div class="tool on">Разрез</div><div class="tool on">Штифты</div><div class="tool">Магниты</div><div class="tool">Замок</div><div class="tool">Проверка</div></aside><div class="viewport"><div class="split-plane"></div><div class="drone"><div class="arm a1"></div><div class="arm a2"></div><div class="arm a3"></div><div class="arm a4"></div><div class="rotor r1"></div><div class="rotor r2"></div><div class="rotor r3"></div><div class="rotor r4"></div><div class="body"></div><div class="core"></div></div><div class="pin p1"></div><div class="pin p2"></div><div class="hud"><div>Качество<strong>65 → 88</strong></div><div>Результат<strong>part_A/B.stl</strong></div><div>Очередь<strong>#1</strong></div></div></div><aside class="meta"><div class="meta-card on">original.stl загружен</div><div class="meta-card on">Split plane готов</div><div class="meta-card on">connector_report.json</div><div class="meta-card">ZIP результата</div><div class="meta-card on">Скачать STL</div></aside></div></section>
+</main>
+</div>
+</body>
+</html>

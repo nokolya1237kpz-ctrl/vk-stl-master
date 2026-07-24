@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STL Master — Stage 02 Product Sections</title>
+<style>
+:root{--bg:#05070d;--surface:#0b1423;--line:rgba(255,255,255,.12);--text:#f7f9ff;--muted:#9fb1c7;--cyan:#35d7ff;--green:#78ffc8;--red:#ff5f78;--gold:#f5c76b}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(950px 520px at 82% 0%,rgba(53,215,255,.16),transparent 62%),linear-gradient(180deg,#07101d,#05070d 58%,#04060b);color:var(--text);font-family:Inter,Arial,sans-serif}
+.page{width:1440px;margin:0 auto;padding:80px 0}
+.section{width:1280px;margin:0 auto 118px}
+h2{font-size:54px;line-height:1.04;letter-spacing:-.055em;margin:0 0 14px}
+.lead{font-size:18px;line-height:1.58;color:#9fb0c8;max-width:820px;margin:0 0 36px}
+.process,.connectors{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.step,.conn,.feature,.check,.func{background:rgba(255,255,255,.055);border:1px solid var(--line)}
+.step{min-height:190px;border-radius:28px;padding:22px}
+.step strong{font-size:30px;color:var(--cyan)}.step h3{margin:18px 0 8px}.step p,.conn p,.feature p,.func p{color:var(--muted);font-size:14px;line-height:1.45;margin:0}
+.conn{min-height:330px;border-radius:28px;padding:18px}
+.visual{height:150px;border-radius:20px;background:#07111e;border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden;margin-bottom:16px}
+.part{position:absolute;top:57px;width:58px;height:38px;border-radius:9px;background:#d6deea}.pa{left:24px}.pb{right:24px}
+.glowline{position:absolute;left:50%;top:32px;width:2px;height:86px;background:var(--cyan);box-shadow:0 0 24px var(--cyan)}
+.pin{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--green);box-shadow:0 0 22px var(--green)}.p1{left:58px;top:66px}.p2{right:58px;top:66px}
+.ring{position:absolute;width:22px;height:22px;border-radius:50%;border:4px solid var(--cyan);box-shadow:0 0 18px rgba(53,215,255,.4)}.r1{left:56px;top:64px}.r2{right:56px;top:64px}
+.mag{position:absolute;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--gold));box-shadow:0 0 22px rgba(53,215,255,.45)}.m1{left:56px;top:64px}.m2{right:56px;top:64px}
+.zig{position:absolute;left:40px;right:40px;top:58px;height:36px;background:repeating-linear-gradient(135deg,#d9e2ec 0 12px,#07111e 12px 24px)}
+.badge{display:inline-flex;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:rgba(53,215,255,.1);border:1px solid rgba(53,215,255,.24);color:#bcefff;font-size:12px;font-weight:800}
+.conn h3{font-size:20px;margin:0 0 8px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.feature{min-height:360px;border-radius:34px;padding:26px;display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:center}.feature:nth-child(even){grid-template-columns:1.1fr 1fr}.feature h3{font-size:30px;line-height:1.1;margin:0 0 10px}
+.fvisual{height:260px;border-radius:26px;background:#07111e;border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden}
+.model{position:absolute;left:50%;top:50%;width:240px;height:120px;transform:translate(-50%,-50%);border-radius:60px;background:linear-gradient(180deg,#e7edf5,#657286);box-shadow:0 30px 40px rgba(0,0,0,.4)}
+.defect{position:absolute;width:24px;height:24px;border-radius:50%;background:var(--red);box-shadow:0 0 24px var(--red)}.d1{left:42%;top:34%}.d2{left:55%;top:58%}
+.cut{position:absolute;left:50%;top:38px;width:3px;height:190px;background:var(--cyan);box-shadow:0 0 28px var(--cyan)}
+.brush{position:absolute;left:32%;top:30%;width:130px;height:90px;border:4px solid var(--cyan);border-radius:50%;box-shadow:0 0 24px var(--cyan)}
+.compare{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+.compare-visual{height:430px;border-radius:34px;background:#07111e;border:1px solid var(--line);position:relative;overflow:hidden}
+.compare-visual:before{content:"ДО";position:absolute;left:20px;top:20px;padding:8px 12px;border-radius:999px;background:rgba(255,95,120,.16);border:1px solid rgba(255,95,120,.34);color:#ffc9d1;font-weight:900;font-size:12px}
+.compare-visual:after{content:"ПОСЛЕ";position:absolute;right:20px;top:20px;padding:8px 12px;border-radius:999px;background:rgba(120,255,200,.13);border:1px solid rgba(120,255,200,.32);color:#c7ffe9;font-weight:900;font-size:12px}
+.slider{position:absolute;left:50%;top:0;bottom:0;width:2px;background:white;box-shadow:0 0 24px white}.handle{position:absolute;left:50%;top:50%;width:42px;height:42px;border-radius:50%;background:white;color:#06111d;display:grid;place-items:center;transform:translate(-50%,-50%);font-weight:900}
+.check{border-radius:34px;padding:32px}.check h3{font-size:30px;margin:0 0 20px}.check li{list-style:none;margin:14px 0;color:#c7d3e7}.check li:before{content:"✓";color:var(--green);margin-right:10px}
+.functions{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.func{min-height:132px;border-radius:20px;padding:18px}.func span{display:inline-flex;font-size:12px;border:1px solid rgba(53,215,255,.25);color:#bcefff;background:rgba(53,215,255,.1);border-radius:999px;padding:5px 8px;margin-bottom:12px}.func b{display:block;margin-bottom:8px}
+@media(max-width:900px){.page,.section{width:calc(100vw - 32px)}.process,.connectors,.features,.compare,.functions,.feature,.feature:nth-child(even){grid-template-columns:1fr}h2{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="page">
+<section class="section"><h2>Как STL Master готовит модель</h2><p class="lead">От исходного STL до готовых частей для печати: анализ, исправление, разрез, соединения и ZIP-результат.</p><div class="process"><div class="step"><strong>01</strong><h3>Загрузить STL</h3><p>Пользователь загружает исходную модель.</p></div><div class="step"><strong>02</strong><h3>Исправить</h3><p>Сервис находит дефекты и проблемные зоны.</p></div><div class="step"><strong>03</strong><h3>Разрезать</h3><p>Большая модель делится на части.</p></div><div class="step"><strong>04</strong><h3>Соединения</h3><p>Добавляются штифты, магниты или замки.</p></div><div class="step"><strong>05</strong><h3>Скачать ZIP</h3><p>Готовые STL и отчёт скачиваются архивом.</p></div></div></section>
+<section class="section"><h2>Соединения после разреза</h2><p class="lead">Разрезайте большие модели и сразу выбирайте, как части будут собираться после печати.</p><div class="connectors"><div class="conn"><div class="visual"><div class="part pa"></div><div class="part pb"></div><div class="glowline"></div></div><span class="badge">Доступно</span><h3>Обычный разрез</h3><p>Модель делится на части без дополнительных элементов.</p></div><div class="conn"><div class="visual"><div class="part pa"></div><div class="part pb"></div><div class="ring r1"></div><div class="ring r2"></div></div><span class="badge">Premium</span><h3>Стык под клей</h3><p>Плоская поверхность и направляющие для склейки.</p></div><div class="conn"><div class="visual"><div class="part pa"></div><div class="part pb"></div><div class="pin p1"></div><div class="pin p2"></div></div><span class="badge">Premium</span><h3>Штифты</h3><p>Цилиндрические штифты и ответные отверстия.</p></div><div class="conn"><div class="visual"><div class="part pa"></div><div class="part pb"></div><div class="mag m1"></div><div class="mag m2"></div></div><span class="badge">Premium</span><h3>Магниты</h3><p>Карманы под 5×2, 6×2, 8×3 и 10×3 мм.</p></div><div class="conn"><div class="visual"><div class="zig"></div></div><span class="badge">Premium</span><h3>Фигурный замок</h3><p>Паз-гребень помогает точно совместить части.</p></div></div></section>
+<section class="section"><h2>Ключевые функции</h2><p class="lead">Каждая функция показывает конкретный этап подготовки модели к печати.</p><div class="features"><div class="feature"><div><h3>Исправление STL</h3><p>Подсветка проблемных зон и подготовка сетки.</p></div><div class="fvisual"><div class="model"></div><div class="defect d1"></div><div class="defect d2"></div></div></div><div class="feature"><div class="fvisual"><div class="model"></div><div class="cut"></div></div><div><h3>Разрез модели</h3><p>Разделение крупных STL на части для 3D-принтера.</p></div></div><div class="feature"><div><h3>Локальная правка</h3><p>Обработка только нужной области без изменения всей модели.</p></div><div class="fvisual"><div class="model"></div><div class="brush"></div></div></div><div class="feature"><div class="fvisual"><div class="model"></div></div><div><h3>Проверка перед печатью</h3><p>Финальный отчёт и готовый ZIP-пакет результата.</p></div></div></div></section>
+<section class="section"><h2>До / После — изменения видны сразу</h2><p class="lead">Показываем, где были дефекты, что исправлено и почему результат стал лучше.</p><div class="compare"><div class="compare-visual"><div class="model"></div><div class="defect d1"></div><div class="defect d2"></div><div class="slider"></div><div class="handle">↔</div></div><div class="check"><h3>Исправлено</h3><li>AI-шум и лишние островки</li><li>Проблемные зоны подсвечены</li><li>Сетка стала чище</li><li>Качество 65 → 88</li><li>Готово к проверке в слайсере</li></div></div></section>
+<section class="section"><h2>Что умеет STL Master</h2><p class="lead">Полный список функций, чтобы пользователь понимал весь объём сервиса.</p><div class="functions"><div class="func"><span>Доступно</span><b>Анализ STL</b><p>Размер, сетка, ошибки.</p></div><div class="func"><span>Доступно</span><b>Исправление модели</b><p>Безопасное исправление.</p></div><div class="func"><span>Premium</span><b>AI Cleanup</b><p>Удаление артефактов.</p></div><div class="func"><span>Premium</span><b>Разрез модели</b><p>Деление на части.</p></div><div class="func"><span>Premium</span><b>Стык под клей</b><p>Направляющие для склейки.</p></div><div class="func"><span>Premium</span><b>Штифты</b><p>Штифты и отверстия.</p></div><div class="func"><span>Premium</span><b>Магниты</b><p>5×2, 6×2, 8×3, 10×3.</p></div><div class="func"><span>Premium</span><b>Фигурные замки</b><p>Паз-гребень.</p></div><div class="func"><span>Premium</span><b>Локальная правка</b><p>Обработка области.</p></div><div class="func"><span>Доступно</span><b>Ориентация</b><p>Постановка модели.</p></div><div class="func"><span>Доступно</span><b>Compare View</b><p>Сравнение результата.</p></div><div class="func"><span>Доступно</span><b>ZIP-пакет</b><p>STL + отчёт.</p></div></div></section>
+</div>
+</body>
+</html>
