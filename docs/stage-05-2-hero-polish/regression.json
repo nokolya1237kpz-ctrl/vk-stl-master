@@ -1,0 +1,113 @@
+{
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "metrics": {
+        "title": "STL Master",
+        "path": "/",
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "horizontalOverflow": false,
+        "bodyTextStart": "STL\nMaster\nv2.0\nВозможности\nСоединения\nДо / После\nТарифы\nFAQ\nОткрыть приложение\nПолучить Premium\nПоддержка VK\nПРОФЕССИОНАЛЬНЫЙ ОНЛАЙН-РЕДАКТОР STL\nИсправляйте, режьте\nи готовьте модели\nк 3D-печати\n\nАвтоматическое исправление сетки, разрез на части,\nсоединения, проверка на печать и многое другое.\nВсё"
+      },
+      "consoleMessages": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "route": "/app",
+      "status": 200,
+      "metrics": {
+        "title": "STL Master",
+        "path": "/app",
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "horizontalOverflow": false,
+        "bodyTextStart": "STL Master Studio\nРабочая область\nГотово к работе\nSTL вход · STL/ZIP/JSON/TXT результат\nПолучить Premium\nПомощь\nЭкспорт\nИНСТРУМЕНТЫ\nАНАЛИЗ\n🔎\nПроверить модель\nПонятный отчёт о состоянии STL\n🧹\nУдалить AI-артефакты\nУбирает мусорные фрагменты\n✨\nУлучшить модель\nИсправляет сетку и нормали\n🎯\nВыборочная "
+      },
+      "consoleMessages": [],
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "metrics": {
+        "title": "STL Master",
+        "path": "/admin",
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "horizontalOverflow": false,
+        "bodyTextStart": "Панель STL Master\nSTL Master\nПАНЕЛЬ УПРАВЛЕНИЯ\nАдминистрирование сервиса обработки STL\n\nКонтроль заявок, Премиум-доступа, очереди обработки, обратной связи и безопасной очистки тестовых данных.\n\nВернуться на сайт\n\nЗАЩИЩЁННЫЙ РАЗДЕЛ\n\nВход в панель управления\n\nСессия завершается после закрытия браузер"
+      },
+      "consoleMessages": [],
+      "pageErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "actions": {
+    "mobileMenu": {
+      "expanded": "true",
+      "open": true,
+      "links": [
+        {
+          "text": "Возможности",
+          "href": "#features",
+          "visible": true
+        },
+        {
+          "text": "Соединения",
+          "href": "#connectors",
+          "visible": true
+        },
+        {
+          "text": "До / После",
+          "href": "#compare",
+          "visible": true
+        },
+        {
+          "text": "Тарифы",
+          "href": "#premium",
+          "visible": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "visible": true
+        }
+      ],
+      "supportVisible": true
+    },
+    "navLinks": [
+      {
+        "text": "Возможности",
+        "href": "#features"
+      },
+      {
+        "text": "Соединения",
+        "href": "#connectors"
+      },
+      {
+        "text": "До / После",
+        "href": "#compare"
+      },
+      {
+        "text": "Тарифы",
+        "href": "#premium"
+      },
+      {
+        "text": "FAQ",
+        "href": "#faq"
+      }
+    ],
+    "primaryText": " Загрузить STLОткрыть редактор",
+    "secondaryText": " Смотреть возможностиВсе инструменты",
+    "primaryResult": {
+      "path": "/app",
+      "visibleApp": 0
+    },
+    "vkPopupUrl": "https://vk.ru/3dmodeliron"
+  },
+  "apiMeStatus": 200
+}

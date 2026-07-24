@@ -1,0 +1,6847 @@
+[
+  {
+    "viewport": {
+      "width": 1920,
+      "height": 1080,
+      "name": "1920x1080"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "documentScrollWidth": 1920,
+      "horizontalOverflow": false,
+      "mode": "desktop",
+      "header": {
+        "x": 267,
+        "y": 44,
+        "width": 1386,
+        "height": 70,
+        "right": 1653,
+        "bottom": 114
+      },
+      "brand": {
+        "x": 290,
+        "y": 61,
+        "width": 260.15625,
+        "height": 36,
+        "right": 550.15625,
+        "bottom": 97
+      },
+      "menuButton": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panel": {
+        "x": 574.15625,
+        "y": 57,
+        "width": 1055.84375,
+        "height": 44,
+        "right": 1630,
+        "bottom": 101
+      },
+      "nav": {
+        "x": 574.15625,
+        "y": 64,
+        "width": 625.84375,
+        "height": 30,
+        "right": 1200,
+        "bottom": 94
+      },
+      "actions": {
+        "x": 1224,
+        "y": 57,
+        "width": 406,
+        "height": 44,
+        "right": 1630,
+        "bottom": 101
+      },
+      "app": {
+        "x": 1224,
+        "y": 57,
+        "width": 164,
+        "height": 44,
+        "right": 1388,
+        "bottom": 101
+      },
+      "premium": {
+        "x": 1398,
+        "y": 57,
+        "width": 178,
+        "height": 44,
+        "right": 1576,
+        "bottom": 101
+      },
+      "vk": {
+        "x": 1586,
+        "y": 57,
+        "width": 44,
+        "height": 44,
+        "right": 1630,
+        "bottom": 101
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 660.265625,
+            "y": 64,
+            "width": 86.765625,
+            "height": 30,
+            "right": 747.03125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 781.03125,
+            "y": 64,
+            "width": 80.015625,
+            "height": 30,
+            "right": 861.046875,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 895.046875,
+            "y": 64,
+            "width": 69.90625,
+            "height": 30,
+            "right": 964.953125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 998.953125,
+            "y": 64,
+            "width": 52.90625,
+            "height": 30,
+            "right": 1051.859375,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 1085.859375,
+            "y": 64,
+            "width": 28.015625,
+            "height": 30,
+            "right": 1113.875,
+            "bottom": 94
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 268,
+            "y": 598.859375,
+            "width": 228.8125,
+            "height": 62,
+            "right": 496.8125,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 508.8125,
+            "y": 598.859375,
+            "width": 207.1875,
+            "height": 62,
+            "right": 716,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 268,
+            "y": 480.859375,
+            "width": 142.65625,
+            "height": 88,
+            "right": 410.65625,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 282,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 320,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 420.65625,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 563.328125,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 434.65625,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 472.65625,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 573.328125,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 716,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 587.328125,
+            "y": 505.84375,
+            "width": 38,
+            "height": 38,
+            "right": 625.328125,
+            "bottom": 543.84375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 258,
+        "y": 761,
+        "width": 1030,
+        "height": 90,
+        "right": 1288,
+        "bottom": 851
+      },
+      "browserPanel": {
+        "x": 1303,
+        "y": 746,
+        "width": 347,
+        "height": 94,
+        "right": 1650,
+        "bottom": 840
+      }
+    },
+    "opened": null,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1680,
+      "height": 1050,
+      "name": "1680x1050"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1680,
+        "height": 1050
+      },
+      "documentScrollWidth": 1680,
+      "horizontalOverflow": false,
+      "mode": "desktop",
+      "header": {
+        "x": 147,
+        "y": 44,
+        "width": 1386,
+        "height": 70,
+        "right": 1533,
+        "bottom": 114
+      },
+      "brand": {
+        "x": 170,
+        "y": 61,
+        "width": 260.15625,
+        "height": 36,
+        "right": 430.15625,
+        "bottom": 97
+      },
+      "menuButton": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panel": {
+        "x": 454.15625,
+        "y": 57,
+        "width": 1055.84375,
+        "height": 44,
+        "right": 1510,
+        "bottom": 101
+      },
+      "nav": {
+        "x": 454.15625,
+        "y": 64,
+        "width": 625.84375,
+        "height": 30,
+        "right": 1080,
+        "bottom": 94
+      },
+      "actions": {
+        "x": 1104,
+        "y": 57,
+        "width": 406,
+        "height": 44,
+        "right": 1510,
+        "bottom": 101
+      },
+      "app": {
+        "x": 1104,
+        "y": 57,
+        "width": 164,
+        "height": 44,
+        "right": 1268,
+        "bottom": 101
+      },
+      "premium": {
+        "x": 1278,
+        "y": 57,
+        "width": 178,
+        "height": 44,
+        "right": 1456,
+        "bottom": 101
+      },
+      "vk": {
+        "x": 1466,
+        "y": 57,
+        "width": 44,
+        "height": 44,
+        "right": 1510,
+        "bottom": 101
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 540.265625,
+            "y": 64,
+            "width": 86.765625,
+            "height": 30,
+            "right": 627.03125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 661.03125,
+            "y": 64,
+            "width": 80.015625,
+            "height": 30,
+            "right": 741.046875,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 775.046875,
+            "y": 64,
+            "width": 69.90625,
+            "height": 30,
+            "right": 844.953125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 878.953125,
+            "y": 64,
+            "width": 52.90625,
+            "height": 30,
+            "right": 931.859375,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 965.859375,
+            "y": 64,
+            "width": 28.015625,
+            "height": 30,
+            "right": 993.875,
+            "bottom": 94
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 148,
+            "y": 598.859375,
+            "width": 228.8125,
+            "height": 62,
+            "right": 376.8125,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 388.8125,
+            "y": 598.859375,
+            "width": 207.1875,
+            "height": 62,
+            "right": 596,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 148,
+            "y": 480.859375,
+            "width": 142.65625,
+            "height": 88,
+            "right": 290.65625,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 162,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 200,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 300.65625,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 443.328125,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 314.65625,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 352.65625,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 453.328125,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 596,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 467.328125,
+            "y": 505.84375,
+            "width": 38,
+            "height": 38,
+            "right": 505.328125,
+            "bottom": 543.84375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 138,
+        "y": 761,
+        "width": 1030,
+        "height": 90,
+        "right": 1168,
+        "bottom": 851
+      },
+      "browserPanel": {
+        "x": 1183,
+        "y": 746,
+        "width": 347,
+        "height": 94,
+        "right": 1530,
+        "bottom": 840
+      }
+    },
+    "opened": null,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "name": "1440x900"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentScrollWidth": 1440,
+      "horizontalOverflow": false,
+      "mode": "desktop",
+      "header": {
+        "x": 48,
+        "y": 44,
+        "width": 1344,
+        "height": 70,
+        "right": 1392,
+        "bottom": 114
+      },
+      "brand": {
+        "x": 71,
+        "y": 61,
+        "width": 260.15625,
+        "height": 36,
+        "right": 331.15625,
+        "bottom": 97
+      },
+      "menuButton": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panel": {
+        "x": 355.15625,
+        "y": 57,
+        "width": 1013.84375,
+        "height": 44,
+        "right": 1369,
+        "bottom": 101
+      },
+      "nav": {
+        "x": 355.15625,
+        "y": 64,
+        "width": 583.84375,
+        "height": 30,
+        "right": 939,
+        "bottom": 94
+      },
+      "actions": {
+        "x": 963,
+        "y": 57,
+        "width": 406,
+        "height": 44,
+        "right": 1369,
+        "bottom": 101
+      },
+      "app": {
+        "x": 963,
+        "y": 57,
+        "width": 164,
+        "height": 44,
+        "right": 1127,
+        "bottom": 101
+      },
+      "premium": {
+        "x": 1137,
+        "y": 57,
+        "width": 178,
+        "height": 44,
+        "right": 1315,
+        "bottom": 101
+      },
+      "vk": {
+        "x": 1325,
+        "y": 57,
+        "width": 44,
+        "height": 44,
+        "right": 1369,
+        "bottom": 101
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 427.796875,
+            "y": 64,
+            "width": 86.765625,
+            "height": 30,
+            "right": 514.5625,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 544.796875,
+            "y": 64,
+            "width": 80.015625,
+            "height": 30,
+            "right": 624.8125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 655.046875,
+            "y": 64,
+            "width": 69.90625,
+            "height": 30,
+            "right": 724.953125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 755.1875,
+            "y": 64,
+            "width": 52.90625,
+            "height": 30,
+            "right": 808.09375,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 838.328125,
+            "y": 64,
+            "width": 28.015625,
+            "height": 30,
+            "right": 866.34375,
+            "bottom": 94
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 80,
+            "y": 598.859375,
+            "width": 228.8125,
+            "height": 62,
+            "right": 308.8125,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 320.8125,
+            "y": 598.859375,
+            "width": 207.1875,
+            "height": 62,
+            "right": 528,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 80,
+            "y": 480.859375,
+            "width": 142.65625,
+            "height": 88,
+            "right": 222.65625,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 94,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 132,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 232.65625,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 375.328125,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 246.65625,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 284.65625,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 385.328125,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 528,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 399.328125,
+            "y": 505.84375,
+            "width": 38,
+            "height": 38,
+            "right": 437.328125,
+            "bottom": 543.84375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 70,
+        "y": 761,
+        "width": 974,
+        "height": 90,
+        "right": 1044,
+        "bottom": 851
+      },
+      "browserPanel": {
+        "x": 1077,
+        "y": 746,
+        "width": 347,
+        "height": 94,
+        "right": 1424,
+        "bottom": 840
+      }
+    },
+    "opened": null,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1366,
+      "height": 768,
+      "name": "1366x768"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "documentScrollWidth": 1366,
+      "horizontalOverflow": false,
+      "mode": "desktop",
+      "header": {
+        "x": 48,
+        "y": 44,
+        "width": 1270,
+        "height": 70,
+        "right": 1318,
+        "bottom": 114
+      },
+      "brand": {
+        "x": 71,
+        "y": 61,
+        "width": 260.15625,
+        "height": 36,
+        "right": 331.15625,
+        "bottom": 97
+      },
+      "menuButton": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panel": {
+        "x": 355.15625,
+        "y": 57,
+        "width": 939.84375,
+        "height": 44,
+        "right": 1295,
+        "bottom": 101
+      },
+      "nav": {
+        "x": 355.15625,
+        "y": 64,
+        "width": 509.84375,
+        "height": 30,
+        "right": 865,
+        "bottom": 94
+      },
+      "actions": {
+        "x": 889,
+        "y": 57,
+        "width": 406,
+        "height": 44,
+        "right": 1295,
+        "bottom": 101
+      },
+      "app": {
+        "x": 889,
+        "y": 57,
+        "width": 164,
+        "height": 44,
+        "right": 1053,
+        "bottom": 101
+      },
+      "premium": {
+        "x": 1063,
+        "y": 57,
+        "width": 178,
+        "height": 44,
+        "right": 1241,
+        "bottom": 101
+      },
+      "vk": {
+        "x": 1251,
+        "y": 57,
+        "width": 44,
+        "height": 44,
+        "right": 1295,
+        "bottom": 101
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 393.921875,
+            "y": 64,
+            "width": 86.765625,
+            "height": 30,
+            "right": 480.6875,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 509.359375,
+            "y": 64,
+            "width": 80.015625,
+            "height": 30,
+            "right": 589.375,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 618.046875,
+            "y": 64,
+            "width": 69.90625,
+            "height": 30,
+            "right": 687.953125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 716.625,
+            "y": 64,
+            "width": 52.90625,
+            "height": 30,
+            "right": 769.53125,
+            "bottom": 94
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 798.203125,
+            "y": 64,
+            "width": 28.015625,
+            "height": 30,
+            "right": 826.21875,
+            "bottom": 94
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 80,
+            "y": 598.859375,
+            "width": 228.8125,
+            "height": 62,
+            "right": 308.8125,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 320.8125,
+            "y": 598.859375,
+            "width": 207.1875,
+            "height": 62,
+            "right": 528,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 80,
+            "y": 480.859375,
+            "width": 142.65625,
+            "height": 88,
+            "right": 222.65625,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 94,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 132,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 232.65625,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 375.328125,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 246.65625,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 284.65625,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 385.328125,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 528,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 399.328125,
+            "y": 505.84375,
+            "width": 38,
+            "height": 38,
+            "right": 437.328125,
+            "bottom": 543.84375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 70,
+        "y": 761,
+        "width": 900,
+        "height": 90,
+        "right": 970,
+        "bottom": 851
+      },
+      "browserPanel": {
+        "x": 1003,
+        "y": 746,
+        "width": 347,
+        "height": 94,
+        "right": 1350,
+        "bottom": 840
+      }
+    },
+    "opened": null,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 800,
+      "name": "1280x800"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentScrollWidth": 1280,
+      "horizontalOverflow": false,
+      "mode": "desktop",
+      "header": {
+        "x": 48,
+        "y": 44,
+        "width": 1184,
+        "height": 70,
+        "right": 1232,
+        "bottom": 114
+      },
+      "brand": {
+        "x": 67,
+        "y": 61,
+        "width": 260.15625,
+        "height": 36,
+        "right": 327.15625,
+        "bottom": 97
+      },
+      "menuButton": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panel": {
+        "x": 345.15625,
+        "y": 57,
+        "width": 867.84375,
+        "height": 44,
+        "right": 1213,
+        "bottom": 101
+      },
+      "nav": {
+        "x": 345.15625,
+        "y": 64.5,
+        "width": 471.84375,
+        "height": 29,
+        "right": 817,
+        "bottom": 93.5
+      },
+      "actions": {
+        "x": 835,
+        "y": 57,
+        "width": 378,
+        "height": 44,
+        "right": 1213,
+        "bottom": 101
+      },
+      "app": {
+        "x": 835,
+        "y": 57,
+        "width": 150,
+        "height": 44,
+        "right": 985,
+        "bottom": 101
+      },
+      "premium": {
+        "x": 995,
+        "y": 57,
+        "width": 164,
+        "height": 44,
+        "right": 1159,
+        "bottom": 101
+      },
+      "vk": {
+        "x": 1169,
+        "y": 57,
+        "width": 44,
+        "height": 44,
+        "right": 1213,
+        "bottom": 101
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 397.609375,
+            "y": 64.5,
+            "width": 80.5625,
+            "height": 29,
+            "right": 478.171875,
+            "bottom": 93.5
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 496.171875,
+            "y": 64.5,
+            "width": 74.3125,
+            "height": 29,
+            "right": 570.484375,
+            "bottom": 93.5
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 588.484375,
+            "y": 64.5,
+            "width": 64.90625,
+            "height": 29,
+            "right": 653.390625,
+            "bottom": 93.5
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 671.390625,
+            "y": 64.5,
+            "width": 49.125,
+            "height": 29,
+            "right": 720.515625,
+            "bottom": 93.5
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 738.515625,
+            "y": 64.5,
+            "width": 26.015625,
+            "height": 29,
+            "right": 764.53125,
+            "bottom": 93.5
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 80,
+            "y": 598.859375,
+            "width": 228.8125,
+            "height": 62,
+            "right": 308.8125,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 320.8125,
+            "y": 598.859375,
+            "width": 207.1875,
+            "height": 62,
+            "right": 528,
+            "bottom": 660.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 80,
+            "y": 480.859375,
+            "width": 142.65625,
+            "height": 88,
+            "right": 222.65625,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 94,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 132,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 232.65625,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 375.328125,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 246.65625,
+            "y": 505.859375,
+            "width": 38,
+            "height": 38,
+            "right": 284.65625,
+            "bottom": 543.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 385.328125,
+            "y": 480.859375,
+            "width": 142.671875,
+            "height": 88,
+            "right": 528,
+            "bottom": 568.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 399.328125,
+            "y": 505.84375,
+            "width": 38,
+            "height": 38,
+            "right": 437.328125,
+            "bottom": 543.84375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 70,
+        "y": 761,
+        "width": 814,
+        "height": 90,
+        "right": 884,
+        "bottom": 851
+      },
+      "browserPanel": {
+        "x": 917,
+        "y": 746,
+        "width": 347,
+        "height": 94,
+        "right": 1264,
+        "bottom": 840
+      }
+    },
+    "opened": null,
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "name": "1180x820"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "documentScrollWidth": 1180,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 1152,
+        "height": 68,
+        "right": 1166,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 1078,
+        "height": 36,
+        "right": 1107,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 1107,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 1151,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 626.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 626.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 508.859375,
+            "width": 376,
+            "height": 88,
+            "right": 392,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 402,
+            "y": 508.859375,
+            "width": 376,
+            "height": 88,
+            "right": 778,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 416,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 454,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 788,
+            "y": 508.859375,
+            "width": 376,
+            "height": 88,
+            "right": 1164,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 802,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 840,
+            "bottom": 571.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1378.859375,
+        "width": 1148,
+        "height": 723.8125,
+        "right": 1154,
+        "bottom": 2102.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2121.671875,
+        "width": 1148,
+        "height": 94,
+        "right": 1164,
+        "bottom": 2215.671875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "documentScrollWidth": 1180,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 1152,
+        "height": 274,
+        "right": 1166,
+        "bottom": 290
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 1078,
+        "height": 36,
+        "right": 1107,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 1107,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 1151,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 1122,
+        "height": 194,
+        "right": 1151,
+        "bottom": 277
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 1122,
+        "height": 84,
+        "right": 1151,
+        "bottom": 167
+      },
+      "actions": {
+        "x": 29,
+        "y": 179,
+        "width": 1110,
+        "height": 98,
+        "right": 1139,
+        "bottom": 277
+      },
+      "app": {
+        "x": 29,
+        "y": 179,
+        "width": 550,
+        "height": 44,
+        "right": 579,
+        "bottom": 223
+      },
+      "premium": {
+        "x": 589,
+        "y": 179,
+        "width": 550,
+        "height": 44,
+        "right": 1139,
+        "bottom": 223
+      },
+      "vk": {
+        "x": 29,
+        "y": 233,
+        "width": 1110,
+        "height": 44,
+        "right": 1139,
+        "bottom": 277
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 368.65625,
+            "height": 38,
+            "right": 397.65625,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 405.65625,
+            "y": 83,
+            "width": 368.671875,
+            "height": 38,
+            "right": 774.328125,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 782.328125,
+            "y": 83,
+            "width": 368.65625,
+            "height": 38,
+            "right": 1150.984375,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 368.65625,
+            "height": 38,
+            "right": 397.65625,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 405.65625,
+            "y": 129,
+            "width": 368.671875,
+            "height": 38,
+            "right": 774.328125,
+            "bottom": 167
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 832.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 832.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 714.859375,
+            "width": 376,
+            "height": 88,
+            "right": 392,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 402,
+            "y": 714.859375,
+            "width": 376,
+            "height": 88,
+            "right": 778,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 416,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 454,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 788,
+            "y": 714.859375,
+            "width": 376,
+            "height": 88,
+            "right": 1164,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 802,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 840,
+            "bottom": 777.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1584.859375,
+        "width": 1148,
+        "height": 723.8125,
+        "right": 1154,
+        "bottom": 2308.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2327.671875,
+        "width": 1148,
+        "height": 94,
+        "right": 1164,
+        "bottom": 2421.671875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1100,
+      "height": 800,
+      "name": "1100x800"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1100,
+        "height": 800
+      },
+      "documentScrollWidth": 1100,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 1072,
+        "height": 68,
+        "right": 1086,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 998,
+        "height": 36,
+        "right": 1027,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 1027,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 1071,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 626.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 626.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 508.859375,
+            "width": 349.328125,
+            "height": 88,
+            "right": 365.328125,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 375.328125,
+            "y": 508.859375,
+            "width": 349.328125,
+            "height": 88,
+            "right": 724.65625,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 389.328125,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 427.328125,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 734.65625,
+            "y": 508.859375,
+            "width": 349.34375,
+            "height": 88,
+            "right": 1084,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 748.65625,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 786.65625,
+            "bottom": 571.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1378.859375,
+        "width": 1068,
+        "height": 723.8125,
+        "right": 1074,
+        "bottom": 2102.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2121.671875,
+        "width": 1068,
+        "height": 94,
+        "right": 1084,
+        "bottom": 2215.671875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 1100,
+        "height": 800
+      },
+      "documentScrollWidth": 1100,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 1072,
+        "height": 274,
+        "right": 1086,
+        "bottom": 290
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 998,
+        "height": 36,
+        "right": 1027,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 1027,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 1071,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 1042,
+        "height": 194,
+        "right": 1071,
+        "bottom": 277
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 1042,
+        "height": 84,
+        "right": 1071,
+        "bottom": 167
+      },
+      "actions": {
+        "x": 29,
+        "y": 179,
+        "width": 1030,
+        "height": 98,
+        "right": 1059,
+        "bottom": 277
+      },
+      "app": {
+        "x": 29,
+        "y": 179,
+        "width": 510,
+        "height": 44,
+        "right": 539,
+        "bottom": 223
+      },
+      "premium": {
+        "x": 549,
+        "y": 179,
+        "width": 510,
+        "height": 44,
+        "right": 1059,
+        "bottom": 223
+      },
+      "vk": {
+        "x": 29,
+        "y": 233,
+        "width": 1030,
+        "height": 44,
+        "right": 1059,
+        "bottom": 277
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 342,
+            "height": 38,
+            "right": 371,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 379,
+            "y": 83,
+            "width": 342,
+            "height": 38,
+            "right": 721,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 729,
+            "y": 83,
+            "width": 342,
+            "height": 38,
+            "right": 1071,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 342,
+            "height": 38,
+            "right": 371,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 379,
+            "y": 129,
+            "width": 342,
+            "height": 38,
+            "right": 721,
+            "bottom": 167
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 832.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 832.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 714.859375,
+            "width": 349.328125,
+            "height": 88,
+            "right": 365.328125,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 375.328125,
+            "y": 714.859375,
+            "width": 349.328125,
+            "height": 88,
+            "right": 724.65625,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 389.328125,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 427.328125,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 734.65625,
+            "y": 714.859375,
+            "width": 349.34375,
+            "height": 88,
+            "right": 1084,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 748.65625,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 786.65625,
+            "bottom": 777.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1584.859375,
+        "width": 1068,
+        "height": 723.8125,
+        "right": 1074,
+        "bottom": 2308.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2327.671875,
+        "width": 1068,
+        "height": 94,
+        "right": 1084,
+        "bottom": 2421.671875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 768,
+      "name": "1024x768"
+    },
+    "closed": {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentScrollWidth": 1024,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 996,
+        "height": 68,
+        "right": 1010,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 922,
+        "height": 36,
+        "right": 951,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 951,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 995,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 626.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 626.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 508.859375,
+            "width": 324,
+            "height": 88,
+            "right": 340,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 350,
+            "y": 508.859375,
+            "width": 324,
+            "height": 88,
+            "right": 674,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 364,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 402,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 684,
+            "y": 508.859375,
+            "width": 324,
+            "height": 88,
+            "right": 1008,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 698,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 736,
+            "bottom": 571.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1378.859375,
+        "width": 992,
+        "height": 723.8125,
+        "right": 998,
+        "bottom": 2102.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2121.671875,
+        "width": 992,
+        "height": 94,
+        "right": 1008,
+        "bottom": 2215.671875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentScrollWidth": 1024,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 996,
+        "height": 274,
+        "right": 1010,
+        "bottom": 290
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 922,
+        "height": 36,
+        "right": 951,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 951,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 995,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 966,
+        "height": 194,
+        "right": 995,
+        "bottom": 277
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 966,
+        "height": 84,
+        "right": 995,
+        "bottom": 167
+      },
+      "actions": {
+        "x": 29,
+        "y": 179,
+        "width": 954,
+        "height": 98,
+        "right": 983,
+        "bottom": 277
+      },
+      "app": {
+        "x": 29,
+        "y": 179,
+        "width": 472,
+        "height": 44,
+        "right": 501,
+        "bottom": 223
+      },
+      "premium": {
+        "x": 511,
+        "y": 179,
+        "width": 472,
+        "height": 44,
+        "right": 983,
+        "bottom": 223
+      },
+      "vk": {
+        "x": 29,
+        "y": 233,
+        "width": 954,
+        "height": 44,
+        "right": 983,
+        "bottom": 277
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 316.65625,
+            "height": 38,
+            "right": 345.65625,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 353.65625,
+            "y": 83,
+            "width": 316.671875,
+            "height": 38,
+            "right": 670.328125,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 678.328125,
+            "y": 83,
+            "width": 316.65625,
+            "height": 38,
+            "right": 994.984375,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 316.65625,
+            "height": 38,
+            "right": 345.65625,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 353.65625,
+            "y": 129,
+            "width": 316.671875,
+            "height": 38,
+            "right": 670.328125,
+            "bottom": 167
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 832.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 832.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 714.859375,
+            "width": 324,
+            "height": 88,
+            "right": 340,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 350,
+            "y": 714.859375,
+            "width": 324,
+            "height": 88,
+            "right": 674,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 364,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 402,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 684,
+            "y": 714.859375,
+            "width": 324,
+            "height": 88,
+            "right": 1008,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 698,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 736,
+            "bottom": 777.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1584.859375,
+        "width": 992,
+        "height": 723.8125,
+        "right": 998,
+        "bottom": 2308.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2327.671875,
+        "width": 992,
+        "height": 94,
+        "right": 1008,
+        "bottom": 2421.671875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 900,
+      "height": 900,
+      "name": "900x900"
+    },
+    "closed": {
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "documentScrollWidth": 900,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 872,
+        "height": 68,
+        "right": 886,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 798,
+        "height": 36,
+        "right": 827,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 827,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 871,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 626.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 626.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 508.859375,
+            "width": 282.65625,
+            "height": 88,
+            "right": 298.65625,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 308.65625,
+            "y": 508.859375,
+            "width": 282.671875,
+            "height": 88,
+            "right": 591.328125,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 322.65625,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 360.65625,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 601.328125,
+            "y": 508.859375,
+            "width": 282.65625,
+            "height": 88,
+            "right": 883.984375,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 615.328125,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 653.328125,
+            "bottom": 571.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1378.859375,
+        "width": 868,
+        "height": 723.8125,
+        "right": 874,
+        "bottom": 2102.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2121.671875,
+        "width": 868,
+        "height": 94,
+        "right": 884,
+        "bottom": 2215.671875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "documentScrollWidth": 900,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 872,
+        "height": 274,
+        "right": 886,
+        "bottom": 290
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 798,
+        "height": 36,
+        "right": 827,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 827,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 871,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 842,
+        "height": 194,
+        "right": 871,
+        "bottom": 277
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 842,
+        "height": 84,
+        "right": 871,
+        "bottom": 167
+      },
+      "actions": {
+        "x": 29,
+        "y": 179,
+        "width": 830,
+        "height": 98,
+        "right": 859,
+        "bottom": 277
+      },
+      "app": {
+        "x": 29,
+        "y": 179,
+        "width": 410,
+        "height": 44,
+        "right": 439,
+        "bottom": 223
+      },
+      "premium": {
+        "x": 449,
+        "y": 179,
+        "width": 410,
+        "height": 44,
+        "right": 859,
+        "bottom": 223
+      },
+      "vk": {
+        "x": 29,
+        "y": 233,
+        "width": 830,
+        "height": 44,
+        "right": 859,
+        "bottom": 277
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 275.328125,
+            "height": 38,
+            "right": 304.328125,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 312.328125,
+            "y": 83,
+            "width": 275.328125,
+            "height": 38,
+            "right": 587.65625,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 595.65625,
+            "y": 83,
+            "width": 275.34375,
+            "height": 38,
+            "right": 871,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 275.328125,
+            "height": 38,
+            "right": 304.328125,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 312.328125,
+            "y": 129,
+            "width": 275.328125,
+            "height": 38,
+            "right": 587.65625,
+            "bottom": 167
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 832.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 832.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 714.859375,
+            "width": 282.65625,
+            "height": 88,
+            "right": 298.65625,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 308.65625,
+            "y": 714.859375,
+            "width": 282.671875,
+            "height": 88,
+            "right": 591.328125,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 322.65625,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 360.65625,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 601.328125,
+            "y": 714.859375,
+            "width": 282.65625,
+            "height": 88,
+            "right": 883.984375,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 615.328125,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 653.328125,
+            "bottom": 777.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1584.859375,
+        "width": 868,
+        "height": 723.8125,
+        "right": 874,
+        "bottom": 2308.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2327.671875,
+        "width": 868,
+        "height": 94,
+        "right": 884,
+        "bottom": 2421.671875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024,
+      "name": "768x1024"
+    },
+    "closed": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentScrollWidth": 768,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 740,
+        "height": 68,
+        "right": 754,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 666,
+        "height": 36,
+        "right": 695,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 695,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 739,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 626.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 626.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 688.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 508.859375,
+            "width": 238.65625,
+            "height": 88,
+            "right": 254.65625,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 264.65625,
+            "y": 508.859375,
+            "width": 238.671875,
+            "height": 88,
+            "right": 503.328125,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 278.65625,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 316.65625,
+            "bottom": 571.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 513.328125,
+            "y": 508.859375,
+            "width": 238.671875,
+            "height": 88,
+            "right": 752,
+            "bottom": 596.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 527.328125,
+            "y": 533.859375,
+            "width": 38,
+            "height": 38,
+            "right": 565.328125,
+            "bottom": 571.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1378.859375,
+        "width": 736,
+        "height": 723.8125,
+        "right": 742,
+        "bottom": 2102.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2121.671875,
+        "width": 736,
+        "height": 94,
+        "right": 752,
+        "bottom": 2215.671875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "documentScrollWidth": 768,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 740,
+        "height": 274,
+        "right": 754,
+        "bottom": 290
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 666,
+        "height": 36,
+        "right": 695,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 695,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 739,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 710,
+        "height": 194,
+        "right": 739,
+        "bottom": 277
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 710,
+        "height": 84,
+        "right": 739,
+        "bottom": 167
+      },
+      "actions": {
+        "x": 29,
+        "y": 179,
+        "width": 698,
+        "height": 98,
+        "right": 727,
+        "bottom": 277
+      },
+      "app": {
+        "x": 29,
+        "y": 179,
+        "width": 344,
+        "height": 44,
+        "right": 373,
+        "bottom": 223
+      },
+      "premium": {
+        "x": 383,
+        "y": 179,
+        "width": 344,
+        "height": 44,
+        "right": 727,
+        "bottom": 223
+      },
+      "vk": {
+        "x": 29,
+        "y": 233,
+        "width": 698,
+        "height": 44,
+        "right": 727,
+        "bottom": 277
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 231.328125,
+            "height": 38,
+            "right": 260.328125,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 268.328125,
+            "y": 83,
+            "width": 231.328125,
+            "height": 38,
+            "right": 499.65625,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 507.65625,
+            "y": 83,
+            "width": 231.328125,
+            "height": 38,
+            "right": 738.984375,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 231.328125,
+            "height": 38,
+            "right": 260.328125,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 268.328125,
+            "y": 129,
+            "width": 231.328125,
+            "height": 38,
+            "right": 499.65625,
+            "bottom": 167
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 16,
+            "y": 832.859375,
+            "width": 232,
+            "height": 62,
+            "right": 248,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 260,
+            "y": 832.859375,
+            "width": 210,
+            "height": 62,
+            "right": 470,
+            "bottom": 894.859375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 16,
+            "y": 714.859375,
+            "width": 238.65625,
+            "height": 88,
+            "right": 254.65625,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 30,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 68,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 264.65625,
+            "y": 714.859375,
+            "width": 238.671875,
+            "height": 88,
+            "right": 503.328125,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 278.65625,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 316.65625,
+            "bottom": 777.859375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 513.328125,
+            "y": 714.859375,
+            "width": 238.671875,
+            "height": 88,
+            "right": 752,
+            "bottom": 802.859375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 527.328125,
+            "y": 739.859375,
+            "width": 38,
+            "height": 38,
+            "right": 565.328125,
+            "bottom": 777.859375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 6,
+        "y": 1584.859375,
+        "width": 736,
+        "height": 723.8125,
+        "right": 742,
+        "bottom": 2308.671875
+      },
+      "browserPanel": {
+        "x": 16,
+        "y": 2327.671875,
+        "width": 736,
+        "height": 94,
+        "right": 752,
+        "bottom": 2421.671875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 430,
+      "height": 932,
+      "name": "430x932"
+    },
+    "closed": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentScrollWidth": 430,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 402,
+        "height": 68,
+        "right": 416,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 328,
+        "height": 36,
+        "right": 357,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 357,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 401,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 844.828125,
+            "width": 402,
+            "height": 62,
+            "right": 416,
+            "bottom": 906.828125
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 918.828125,
+            "width": 402,
+            "height": 62,
+            "right": 416,
+            "bottom": 980.828125
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 572.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 646.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 590.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 628.828125
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 656.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 730.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 674.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 712.828125
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 740.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 814.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 758.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 796.828125
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1658.828125,
+        "width": 402,
+        "height": 723.8125,
+        "right": 406,
+        "bottom": 2382.640625
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2395.640625,
+        "width": 402,
+        "height": 94,
+        "right": 416,
+        "bottom": 2489.640625
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "documentScrollWidth": 430,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 402,
+        "height": 374,
+        "right": 416,
+        "bottom": 390
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 328,
+        "height": 36,
+        "right": 357,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 357,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 401,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 372,
+        "height": 294,
+        "right": 401,
+        "bottom": 377
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 372,
+        "height": 130,
+        "right": 401,
+        "bottom": 213
+      },
+      "actions": {
+        "x": 29,
+        "y": 225,
+        "width": 372,
+        "height": 152,
+        "right": 401,
+        "bottom": 377
+      },
+      "app": {
+        "x": 29,
+        "y": 225,
+        "width": 372,
+        "height": 44,
+        "right": 401,
+        "bottom": 269
+      },
+      "premium": {
+        "x": 29,
+        "y": 279,
+        "width": 372,
+        "height": 44,
+        "right": 401,
+        "bottom": 323
+      },
+      "vk": {
+        "x": 29,
+        "y": 333,
+        "width": 372,
+        "height": 44,
+        "right": 401,
+        "bottom": 377
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 182,
+            "height": 38,
+            "right": 211,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 219,
+            "y": 83,
+            "width": 182,
+            "height": 38,
+            "right": 401,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 182,
+            "height": 38,
+            "right": 211,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 219,
+            "y": 129,
+            "width": 182,
+            "height": 38,
+            "right": 401,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 175,
+            "width": 182,
+            "height": 38,
+            "right": 211,
+            "bottom": 213
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 1150.828125,
+            "width": 402,
+            "height": 62,
+            "right": 416,
+            "bottom": 1212.828125
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 1224.828125,
+            "width": 402,
+            "height": 62,
+            "right": 416,
+            "bottom": 1286.828125
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 878.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 952.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 896.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 934.828125
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 962.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 1036.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 980.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1018.828125
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 1046.828125,
+            "width": 402,
+            "height": 74,
+            "right": 416,
+            "bottom": 1120.828125
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 1064.828125,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1102.828125
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1964.828125,
+        "width": 402,
+        "height": 723.8125,
+        "right": 406,
+        "bottom": 2688.640625
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2701.640625,
+        "width": 402,
+        "height": 94,
+        "right": 416,
+        "bottom": 2795.640625
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "name": "390x844"
+    },
+    "closed": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentScrollWidth": 390,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 362,
+        "height": 68,
+        "right": 376,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 288,
+        "height": 36,
+        "right": 317,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 317,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 361,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 838.734375,
+            "width": 362,
+            "height": 62,
+            "right": 376,
+            "bottom": 900.734375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 912.734375,
+            "width": 362,
+            "height": 62,
+            "right": 376,
+            "bottom": 974.734375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 566.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 640.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 584.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 622.734375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 650.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 724.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 668.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 706.734375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 734.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 808.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 752.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 790.734375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1686.734375,
+        "width": 362,
+        "height": 723.8125,
+        "right": 366,
+        "bottom": 2410.546875
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2423.546875,
+        "width": 362,
+        "height": 94,
+        "right": 376,
+        "bottom": 2517.546875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentScrollWidth": 390,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 362,
+        "height": 374,
+        "right": 376,
+        "bottom": 390
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 288,
+        "height": 36,
+        "right": 317,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 317,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 361,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 332,
+        "height": 294,
+        "right": 361,
+        "bottom": 377
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 332,
+        "height": 130,
+        "right": 361,
+        "bottom": 213
+      },
+      "actions": {
+        "x": 29,
+        "y": 225,
+        "width": 332,
+        "height": 152,
+        "right": 361,
+        "bottom": 377
+      },
+      "app": {
+        "x": 29,
+        "y": 225,
+        "width": 332,
+        "height": 44,
+        "right": 361,
+        "bottom": 269
+      },
+      "premium": {
+        "x": 29,
+        "y": 279,
+        "width": 332,
+        "height": 44,
+        "right": 361,
+        "bottom": 323
+      },
+      "vk": {
+        "x": 29,
+        "y": 333,
+        "width": 332,
+        "height": 44,
+        "right": 361,
+        "bottom": 377
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 162,
+            "height": 38,
+            "right": 191,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 199,
+            "y": 83,
+            "width": 162,
+            "height": 38,
+            "right": 361,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 162,
+            "height": 38,
+            "right": 191,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 199,
+            "y": 129,
+            "width": 162,
+            "height": 38,
+            "right": 361,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 175,
+            "width": 162,
+            "height": 38,
+            "right": 191,
+            "bottom": 213
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 1144.734375,
+            "width": 362,
+            "height": 62,
+            "right": 376,
+            "bottom": 1206.734375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 1218.734375,
+            "width": 362,
+            "height": 62,
+            "right": 376,
+            "bottom": 1280.734375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 872.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 946.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 890.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 928.734375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 956.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 1030.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 974.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1012.734375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 1040.734375,
+            "width": 362,
+            "height": 74,
+            "right": 376,
+            "bottom": 1114.734375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 1058.734375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1096.734375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1992.734375,
+        "width": 362,
+        "height": 723.8125,
+        "right": 366,
+        "bottom": 2716.546875
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2729.546875,
+        "width": 362,
+        "height": 94,
+        "right": 376,
+        "bottom": 2823.546875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 375,
+      "height": 812,
+      "name": "375x812"
+    },
+    "closed": {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "documentScrollWidth": 375,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 347,
+        "height": 68,
+        "right": 361,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 273,
+        "height": 36,
+        "right": 302,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 302,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 346,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 829.4375,
+            "width": 347,
+            "height": 62,
+            "right": 361,
+            "bottom": 891.4375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 903.4375,
+            "width": 347,
+            "height": 62,
+            "right": 361,
+            "bottom": 965.4375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 557.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 631.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 575.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 613.4375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 641.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 715.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 659.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 697.4375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 725.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 799.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 743.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 781.4375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1677.4375,
+        "width": 347,
+        "height": 723.8125,
+        "right": 351,
+        "bottom": 2401.25
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2414.25,
+        "width": 347,
+        "height": 94,
+        "right": 361,
+        "bottom": 2508.25
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "documentScrollWidth": 375,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 347,
+        "height": 374,
+        "right": 361,
+        "bottom": 390
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 273,
+        "height": 36,
+        "right": 302,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 302,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 346,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 317,
+        "height": 294,
+        "right": 346,
+        "bottom": 377
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 317,
+        "height": 130,
+        "right": 346,
+        "bottom": 213
+      },
+      "actions": {
+        "x": 29,
+        "y": 225,
+        "width": 317,
+        "height": 152,
+        "right": 346,
+        "bottom": 377
+      },
+      "app": {
+        "x": 29,
+        "y": 225,
+        "width": 317,
+        "height": 44,
+        "right": 346,
+        "bottom": 269
+      },
+      "premium": {
+        "x": 29,
+        "y": 279,
+        "width": 317,
+        "height": 44,
+        "right": 346,
+        "bottom": 323
+      },
+      "vk": {
+        "x": 29,
+        "y": 333,
+        "width": 317,
+        "height": 44,
+        "right": 346,
+        "bottom": 377
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 154.5,
+            "height": 38,
+            "right": 183.5,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 191.5,
+            "y": 83,
+            "width": 154.5,
+            "height": 38,
+            "right": 346,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 154.5,
+            "height": 38,
+            "right": 183.5,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 191.5,
+            "y": 129,
+            "width": 154.5,
+            "height": 38,
+            "right": 346,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 175,
+            "width": 154.5,
+            "height": 38,
+            "right": 183.5,
+            "bottom": 213
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 1135.4375,
+            "width": 347,
+            "height": 62,
+            "right": 361,
+            "bottom": 1197.4375
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 1209.4375,
+            "width": 347,
+            "height": 62,
+            "right": 361,
+            "bottom": 1271.4375
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 863.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 937.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 881.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 919.4375
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 947.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 1021.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 965.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1003.4375
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 1031.4375,
+            "width": 347,
+            "height": 74,
+            "right": 361,
+            "bottom": 1105.4375
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 1049.4375,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1087.4375
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1983.4375,
+        "width": 347,
+        "height": 723.8125,
+        "right": 351,
+        "bottom": 2707.25
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2720.25,
+        "width": 347,
+        "height": 94,
+        "right": 361,
+        "bottom": 2814.25
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 360,
+      "height": 800,
+      "name": "360x800"
+    },
+    "closed": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentScrollWidth": 360,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 332,
+        "height": 68,
+        "right": 346,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 258,
+        "height": 36,
+        "right": 287,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 287,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 331,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 820.21875,
+            "width": 332,
+            "height": 62,
+            "right": 346,
+            "bottom": 882.21875
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 894.21875,
+            "width": 332,
+            "height": 62,
+            "right": 346,
+            "bottom": 956.21875
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 548.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 622.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 566.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 604.21875
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 632.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 706.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 650.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 688.21875
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 716.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 790.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 734.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 772.21875
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1668.21875,
+        "width": 332,
+        "height": 723.8125,
+        "right": 336,
+        "bottom": 2392.03125
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2405.03125,
+        "width": 332,
+        "height": 94,
+        "right": 346,
+        "bottom": 2499.03125
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentScrollWidth": 360,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 332,
+        "height": 374,
+        "right": 346,
+        "bottom": 390
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 258,
+        "height": 36,
+        "right": 287,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 287,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 331,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 302,
+        "height": 294,
+        "right": 331,
+        "bottom": 377
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 302,
+        "height": 130,
+        "right": 331,
+        "bottom": 213
+      },
+      "actions": {
+        "x": 29,
+        "y": 225,
+        "width": 302,
+        "height": 152,
+        "right": 331,
+        "bottom": 377
+      },
+      "app": {
+        "x": 29,
+        "y": 225,
+        "width": 302,
+        "height": 44,
+        "right": 331,
+        "bottom": 269
+      },
+      "premium": {
+        "x": 29,
+        "y": 279,
+        "width": 302,
+        "height": 44,
+        "right": 331,
+        "bottom": 323
+      },
+      "vk": {
+        "x": 29,
+        "y": 333,
+        "width": 302,
+        "height": 44,
+        "right": 331,
+        "bottom": 377
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 147,
+            "height": 38,
+            "right": 176,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 184,
+            "y": 83,
+            "width": 147,
+            "height": 38,
+            "right": 331,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 147,
+            "height": 38,
+            "right": 176,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 184,
+            "y": 129,
+            "width": 147,
+            "height": 38,
+            "right": 331,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 175,
+            "width": 147,
+            "height": 38,
+            "right": 176,
+            "bottom": 213
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 1126.21875,
+            "width": 332,
+            "height": 62,
+            "right": 346,
+            "bottom": 1188.21875
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 1200.21875,
+            "width": 332,
+            "height": 62,
+            "right": 346,
+            "bottom": 1262.21875
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 854.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 928.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 872.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 910.21875
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 938.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 1012.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 956.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 994.21875
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 1022.21875,
+            "width": 332,
+            "height": 74,
+            "right": 346,
+            "bottom": 1096.21875
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 1040.21875,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1078.21875
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1974.21875,
+        "width": 332,
+        "height": 723.8125,
+        "right": 336,
+        "bottom": 2698.03125
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2711.03125,
+        "width": 332,
+        "height": 94,
+        "right": 346,
+        "bottom": 2805.03125
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568,
+      "name": "320x568"
+    },
+    "closed": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "documentScrollWidth": 320,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 292,
+        "height": 68,
+        "right": 306,
+        "bottom": 84
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 218,
+        "height": 36,
+        "right": 247,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 247,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 291,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "nav": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "actions": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "premium": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "vk": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": false,
+          "overflow": false,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ],
+      "visibleNavLabels": [],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": false,
+      "actionsInsideHeader": false,
+      "vkInsideHeader": false,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 800.0625,
+            "width": 311.265625,
+            "height": 62,
+            "right": 325.265625,
+            "bottom": 862.0625
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 874.0625,
+            "width": 311.265625,
+            "height": 62,
+            "right": 325.265625,
+            "bottom": 936.0625
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 528.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 602.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 546.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 584.0625
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 612.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 686.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 630.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 668.0625
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 696.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 770.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 714.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 752.0625
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1648.0625,
+        "width": 311.265625,
+        "height": 723.8125,
+        "right": 315.265625,
+        "bottom": 2371.875
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2384.875,
+        "width": 311.265625,
+        "height": 94,
+        "right": 325.265625,
+        "bottom": 2478.875
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "documentScrollWidth": 320,
+      "horizontalOverflow": false,
+      "mode": "compact",
+      "header": {
+        "x": 14,
+        "y": 16,
+        "width": 292,
+        "height": 374,
+        "right": 306,
+        "bottom": 390
+      },
+      "brand": {
+        "x": 29,
+        "y": 32,
+        "width": 218,
+        "height": 36,
+        "right": 247,
+        "bottom": 68
+      },
+      "menuButton": {
+        "x": 247,
+        "y": 29,
+        "width": 44,
+        "height": 42,
+        "right": 291,
+        "bottom": 71
+      },
+      "panel": {
+        "x": 29,
+        "y": 83,
+        "width": 262,
+        "height": 294,
+        "right": 291,
+        "bottom": 377
+      },
+      "nav": {
+        "x": 29,
+        "y": 83,
+        "width": 262,
+        "height": 130,
+        "right": 291,
+        "bottom": 213
+      },
+      "actions": {
+        "x": 29,
+        "y": 225,
+        "width": 262,
+        "height": 152,
+        "right": 291,
+        "bottom": 377
+      },
+      "app": {
+        "x": 29,
+        "y": 225,
+        "width": 262,
+        "height": 44,
+        "right": 291,
+        "bottom": 269
+      },
+      "premium": {
+        "x": 29,
+        "y": 279,
+        "width": 262,
+        "height": 44,
+        "right": 291,
+        "bottom": 323
+      },
+      "vk": {
+        "x": 29,
+        "y": 333,
+        "width": 262,
+        "height": 44,
+        "right": 291,
+        "bottom": 377
+      },
+      "navAnchors": [
+        {
+          "label": "Возможности",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 83,
+            "width": 127,
+            "height": 38,
+            "right": 156,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "Соединения",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 164,
+            "y": 83,
+            "width": 127,
+            "height": 38,
+            "right": 291,
+            "bottom": 121
+          }
+        },
+        {
+          "label": "До / После",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 129,
+            "width": 127,
+            "height": 38,
+            "right": 156,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "Тарифы",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 164,
+            "y": 129,
+            "width": 127,
+            "height": 38,
+            "right": 291,
+            "bottom": 167
+          }
+        },
+        {
+          "label": "FAQ",
+          "visible": true,
+          "overflow": false,
+          "rect": {
+            "x": 29,
+            "y": 175,
+            "width": 127,
+            "height": 38,
+            "right": 156,
+            "bottom": 213
+          }
+        }
+      ],
+      "visibleNavLabels": [
+        "Возможности",
+        "Соединения",
+        "До / После",
+        "Тарифы",
+        "FAQ"
+      ],
+      "missingNavLabels": [],
+      "navTextOverflow": [],
+      "headerOverflow": false,
+      "panelInsideHeader": true,
+      "actionsInsideHeader": true,
+      "vkInsideHeader": true,
+      "intersections": [],
+      "heroButtons": [
+        {
+          "label": "Загрузить STLОткрыть редактор",
+          "rect": {
+            "x": 14,
+            "y": 1106.0625,
+            "width": 311.265625,
+            "height": 62,
+            "right": 325.265625,
+            "bottom": 1168.0625
+          },
+          "textOverflow": false
+        },
+        {
+          "label": "Смотреть возможностиВсе инструменты",
+          "rect": {
+            "x": 14,
+            "y": 1180.0625,
+            "width": 311.265625,
+            "height": 62,
+            "right": 325.265625,
+            "bottom": 1242.0625
+          },
+          "textOverflow": false
+        }
+      ],
+      "ctaSameHeight": true,
+      "ctaOverflow": false,
+      "advantageCards": [
+        {
+          "label": "БыстроAI-исправление за секунды",
+          "rect": {
+            "x": 14,
+            "y": 834.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 908.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 852.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 890.0625
+          }
+        },
+        {
+          "label": "НадёжноТочная подготовка к печати",
+          "rect": {
+            "x": 14,
+            "y": 918.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 992.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 936.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 974.0625
+          }
+        },
+        {
+          "label": "УдобноИнтуитивный интерфейс",
+          "rect": {
+            "x": 14,
+            "y": 1002.0625,
+            "width": 311.265625,
+            "height": 74,
+            "right": 325.265625,
+            "bottom": 1076.0625
+          },
+          "textOverflow": false,
+          "icon": {
+            "x": 28,
+            "y": 1020.0625,
+            "width": 38,
+            "height": 38,
+            "right": 66,
+            "bottom": 1058.0625
+          }
+        }
+      ],
+      "advantageSameHeight": true,
+      "advantageOverflow": false,
+      "metrics": {
+        "x": 4,
+        "y": 1954.0625,
+        "width": 311.265625,
+        "height": 723.8125,
+        "right": 315.265625,
+        "bottom": 2677.875
+      },
+      "browserPanel": {
+        "x": 14,
+        "y": 2690.875,
+        "width": 311.265625,
+        "height": 94,
+        "right": 325.265625,
+        "bottom": 2784.875
+      }
+    },
+    "consoleMessages": [],
+    "pageErrors": [],
+    "failedRequests": []
+  }
+]
