@@ -3457,6 +3457,7 @@ function WorkflowSection() {
         <h2>Весь процесс в одном редакторе</h2>
         <p>От загрузки STL до готовой модели к печати</p>
       </div>
+      <span className="workflowTrack" aria-hidden="true" />
       <div className="workflowGrid">
         {publicWorkflowSteps.map((step) => (
           <article className={`workflowCard workflowCard-${step.number}`} key={step.number}>

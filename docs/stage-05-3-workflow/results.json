@@ -1,0 +1,50 @@
+{
+  "stage": "05.3",
+  "section": "Workflow",
+  "sourceCommit": "0c47235ef457a6892644d04ef85e512b06aa8975",
+  "automation": {
+    "browserScreenshots": "blocked",
+    "domGeometrySweep": "blocked",
+    "reason": "No usable browser automation runtime was available: server has no Chromium/Chrome, local headless Chrome launch is blocked by macOS EPERM, CDP port did not become available, and npm registry was unreachable for a temporary Playwright install."
+  },
+  "workflow": {
+    "visibleStepCount": 6,
+    "stepTitles": [
+      "Загрузите STL",
+      "Проверьте модель",
+      "Исправьте и оптимизируйте",
+      "Разрежьте и соедините",
+      "Проверьте печать",
+      "Экспортируйте"
+    ],
+    "textsChanged": false,
+    "orderChanged": false,
+    "logicChanged": false
+  },
+  "layouts": {
+    "desktopWide": "single horizontal six-step engineering pipeline",
+    "desktopNarrow": "two rows with three steps per row",
+    "tablet": "two rows with three steps per row",
+    "mobile": "vertical timeline with full-width cards"
+  },
+  "checks": {
+    "build": "pass",
+    "rootPreviewHttp200": true,
+    "appPreviewHttp200": true,
+    "adminPreviewHttp200": true,
+    "productionApiMeHttp200": true,
+    "protectedChecksumsMatch": true,
+    "gitDiffCheck": "pass",
+    "screenshotsBefore": "blocked",
+    "screenshotsAfter": "blocked",
+    "viewportSweep": "blocked",
+    "zoomCheck": "blocked",
+    "manualScreenshotReview": "blocked"
+  },
+  "changedFiles": [
+    "frontend/src/main.jsx",
+    "frontend/src/landing/landing.css",
+    "docs/STAGE-05-3-WORKFLOW.md",
+    "docs/stage-05-3-workflow/results.json"
+  ]
+}
