@@ -4160,6 +4160,20 @@ const workflowSteps = [
   },
 ];
 
+function featureToolIconType(id) {
+  const icons = {
+    analysis: "inspect",
+    repair: "magic",
+    cleanup: "magic",
+    optimization: "blocks",
+    split: "blocks",
+    connectors: "blocks",
+    orientation: "shieldCheck",
+    export: "export",
+  };
+  return icons[id] || "inspect";
+}
+
 function FeaturesSection({ onStartUpload }) {
   const [activeId, setActiveId] = useState(workflowSteps[0].id);
   const [connectorMode, setConnectorMode] = useState("pins");
@@ -4176,16 +4190,16 @@ function FeaturesSection({ onStartUpload }) {
   };
 
   return (
-    <section className="publicSection keyFeaturesSection demoWorkflowSection revealSection in-view" id="features">
+    <section className="publicSection keyFeaturesSection demoWorkflowSection featuresToolSection revealSection in-view" id="features">
       <SectionHeader
         label={<><span className="sectionNumber">05</span><span className="sectionLabel">ВОЗМОЖНОСТИ</span></>}
         title="Весь процесс подготовки STL — в одном приложении"
         text="Загрузите модель, проверьте сетку, исправьте основные дефекты, оптимизируйте геометрию, подготовьте разрез и скачайте результаты вместе с техническими отчётами."
       />
       <p className="workflowBridge">Все показанные выше изменения выполняются последовательным набором инструментов STL Master.</p>
-      <div className="demoWorkflowShell">
-        <nav className="workflowStepNav" aria-label="Этапы подготовки STL" onKeyDown={handleStepKey}>
-          {workflowSteps.map((step, index) => (
+      <div className="demoWorkflowShell featuresToolShell">
+        <nav className="workflowStepNav featuresToolNav" aria-label="Инструменты STL Master" onKeyDown={handleStepKey}>
+          {workflowSteps.map((step) => (
             <button
               type="button"
               key={step.id}
@@ -4193,13 +4207,13 @@ function FeaturesSection({ onStartUpload }) {
               aria-current={step.id === activeStep.id ? "step" : undefined}
               onClick={() => selectStep(step.id)}
             >
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <span className="featureToolIcon"><WorkflowIcon type={featureToolIconType(step.id)} /></span>
               <strong>{step.title}</strong>
               <em>{step.status}</em>
             </button>
           ))}
         </nav>
-        <div className="workflowDemoStage">
+        <div className="workflowDemoStage featuresToolStage">
           <StlMarketingViewer
             modelUrl={activeStep.modelUrl}
             secondaryModelUrl={activeStep.secondaryModelUrl}
@@ -4233,7 +4247,7 @@ function FeaturesSection({ onStartUpload }) {
               {["stlmaster_demo_model_clean_high.stl", "analysis.json", "print_report.txt", "manifest.json", "result_package.zip"].map((file) => <span key={file}>{file}</span>)}
             </div>
           )}
-          <aside className="workflowInfoPanel">
+          <aside className="workflowInfoPanel featuresToolInfoPanel">
             <span>{activeStep.status}</span>
             <h3>{activeStep.titleText}</h3>
             <p>{activeStep.description}</p>
@@ -4243,7 +4257,7 @@ function FeaturesSection({ onStartUpload }) {
           </aside>
         </div>
       </div>
-      <div className="featuresCtaPanel demoWorkflowCta">
+      <div className="featuresCtaPanel demoWorkflowCta featuresToolCta">
         <div>
           <span>STL Master pipeline</span>
           <h3>Подготовьте свою STL-модель</h3>

@@ -1,0 +1,77 @@
+{
+  "stage": "05.4",
+  "section": "Features",
+  "sourceCommit": "f12d0c0cc32bfaaf073dbadd8a9c28dc6b8e8a55",
+  "browserAutomation": "blocked",
+  "browserAutomationReason": "No usable browser automation runtime was available. Server has no Chromium/Chrome binary, local CDP endpoint on 127.0.0.1:9222 did not respond, and Stage 5.3 already confirmed local headless Chrome EPERM plus unavailable npm registry for a temporary Playwright install.",
+  "featureCards": {
+    "count": 8,
+    "titles": [
+      "Анализ модели",
+      "Ремонт сетки",
+      "Очистка артефактов",
+      "Оптимизация",
+      "Разрез",
+      "Соединения",
+      "Ориентация",
+      "Экспорт"
+    ],
+    "orderChanged": false,
+    "textsChanged": false,
+    "logicChanged": false
+  },
+  "statusBadges": [
+    "Диагностика",
+    "BETA",
+    "BETA",
+    "-50%",
+    "X/Y/Z",
+    "Pins",
+    "Print bed",
+    "STL ZIP JSON TXT"
+  ],
+  "interactiveElements": [
+    "8 feature tool buttons",
+    "split axis buttons X/Y/Z",
+    "connector mode buttons",
+    "context links to connectors for split/connectors steps",
+    "Загрузить STL CTA",
+    "Сравнить до и после link"
+  ],
+  "layouts": {
+    "desktop": "4x2 tool grid above STL viewer and information panel",
+    "tablet": "2-column tool grid, stage stacks below",
+    "mobile": "single-column tool cards, compact viewer, stacked info panel"
+  },
+  "icons": {
+    "analysis": "inspect",
+    "repair": "magic",
+    "cleanup": "magic",
+    "optimization": "blocks",
+    "split": "blocks",
+    "connectors": "blocks",
+    "orientation": "shieldCheck",
+    "export": "export"
+  },
+  "checks": {
+    "build": "pass",
+    "staticCssReview": "pass",
+    "gitDiffCheck": "pass",
+    "rootPreviewHttp200": true,
+    "appPreviewHttp200": true,
+    "adminPreviewHttp200": true,
+    "productionApiMeHttp200": true,
+    "protectedChecksumsMatch": true,
+    "screenshots": "blocked",
+    "viewportSweep": "blocked",
+    "zoomCheck": "blocked",
+    "manualReview": "blocked"
+  },
+  "changedFiles": [
+    "frontend/src/main.jsx",
+    "frontend/src/landing/landing.css",
+    "docs/STAGE-05-4-FEATURES.md",
+    "docs/stage-05-4-features/results.json",
+    "docs/stage-05-4-features/SCREENSHOTS_BLOCKED.md"
+  ]
+}
