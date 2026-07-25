@@ -1460,3 +1460,299 @@
   }
 }
 /* End Stage 5.2-F Browser Header hardening. */
+
+/* Stage 5.2-V Visual acceptance: balanced header actions and unclipped hero cards. */
+@media (min-width: 1241px) {
+  .publicLanding.publicSite > .publicTopNav.topNavV8,
+  .publicLanding.publicSite > .publicTopNav.topNavV8.compact,
+  .publicSite .publicTopNav.topNavV8 {
+    width: min(calc(100% - 96px), 1600px) !important;
+    max-width: 1600px !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr) max-content !important;
+    align-items: center !important;
+    column-gap: 24px !important;
+    padding: 0 24px !important;
+    overflow: visible !important;
+  }
+
+  .publicSite .publicTopBrand.topBrandV8 {
+    min-width: max-content !important;
+  }
+
+  .publicSite .publicTopPanel {
+    display: contents !important;
+  }
+
+  .publicSite .publicTopLinks.topLinksV8 {
+    min-width: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(20px, 2.1vw, 42px) !important;
+    overflow: visible !important;
+  }
+
+  .publicSite .publicTopLinks.topLinksV8 a {
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+    height: 34px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #dce7f6 !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .publicSite .publicTopActions.topActionsV8 {
+    min-width: max-content !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+  }
+
+  .publicSite .appOpenButtonV9,
+  .publicSite .premiumHeaderButtonV9,
+  .publicSite .premiumStatusControl,
+  .publicSite .mobileSupportButton {
+    height: 46px !important;
+    min-height: 46px !important;
+    border-radius: 14px !important;
+    border-width: 1px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+  }
+
+  .publicSite .appOpenButtonV9 {
+    width: 166px !important;
+    min-width: 166px !important;
+    padding: 0 15px !important;
+    gap: 9px !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+  }
+
+  .publicSite .premiumStatusWrap {
+    width: 176px !important;
+    min-width: 176px !important;
+    flex: 0 0 176px !important;
+  }
+
+  .publicSite .premiumHeaderButtonV9,
+  .publicSite .premiumStatusControl {
+    width: 176px !important;
+    min-width: 176px !important;
+    max-width: 176px !important;
+    padding: 0 13px !important;
+    gap: 9px !important;
+    overflow: visible !important;
+    background:
+      linear-gradient(135deg, rgba(53, 215, 255, .12), rgba(111, 92, 255, .18)),
+      rgba(9, 17, 32, .9) !important;
+  }
+
+  .publicSite .appOpenButtonV9 .launchSvgIcon,
+  .publicSite .premiumHeaderButtonV9 .launchSvgIcon,
+  .publicSite .premiumStatusControl .launchSvgIcon,
+  .publicSite .mobileSupportButton .launchSvgIcon {
+    flex: 0 0 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .publicSite .premiumStatusControl span {
+    min-width: 0 !important;
+    display: grid !important;
+    gap: 2px !important;
+    line-height: 1.12 !important;
+    text-align: left !important;
+  }
+
+  .publicSite .premiumStatusControl b {
+    font-size: 12px !important;
+    line-height: 1.12 !important;
+    white-space: nowrap !important;
+  }
+
+  .publicSite .premiumStatusControl small {
+    font-size: 10px !important;
+    line-height: 1.12 !important;
+    white-space: nowrap !important;
+  }
+
+  .publicSite .mobileSupportButton {
+    width: 46px !important;
+    min-width: 46px !important;
+    max-width: 46px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    color: #b7ecff !important;
+    background:
+      radial-gradient(circle at 50% 38%, rgba(53, 215, 255, .28), transparent 56%),
+      linear-gradient(135deg, rgba(53, 215, 255, .16), rgba(38, 106, 255, .12)),
+      rgba(9, 17, 32, .92) !important;
+    border-color: rgba(53, 215, 255, .36) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 0 20px rgba(53,215,255,.12) !important;
+  }
+
+  .publicSite .mobileSupportButton .launchSvgIcon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .publicSite .launchHero.heroV8 {
+    grid-template-columns: minmax(560px, .92fr) minmax(660px, 1.28fr) !important;
+    column-gap: clamp(28px, 2.6vw, 48px) !important;
+    align-items: start !important;
+  }
+
+  .publicSite .heroCopyV8,
+  .publicSite .studioShellV8 {
+    min-width: 0 !important;
+  }
+
+  .publicSite .studioShellV8 {
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+  }
+
+  .publicSite .heroBenefitsV8 {
+    width: 100% !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    overflow: visible !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 96px !important;
+    min-height: 96px !important;
+    display: grid !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 16px 14px !important;
+    overflow: visible !important;
+    border-radius: 14px !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card__icon {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 14px !important;
+    align-self: center !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card__icon .launchSvgIcon {
+    width: 24px !important;
+    height: 24px !important;
+    color: #67e4ff !important;
+    stroke-width: 1.9 !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card__title {
+    font-size: 14.5px !important;
+    line-height: 1.16 !important;
+    white-space: nowrap !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card__text {
+    font-size: 12px !important;
+    line-height: 1.32 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  .publicSite .heroActionsV8 {
+    width: 100% !important;
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: 1.08fr 1fr !important;
+    gap: 14px !important;
+    align-items: stretch !important;
+  }
+
+  .publicSite .heroActionsV8 .primaryCta,
+  .publicSite .heroActionsV8 .secondaryCta {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    grid-template-columns: 24px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 0 20px !important;
+  }
+}
+
+@media (min-width: 1241px) and (max-width: 1480px) {
+  .publicLanding.publicSite > .publicTopNav.topNavV8,
+  .publicLanding.publicSite > .publicTopNav.topNavV8.compact,
+  .publicSite .publicTopNav.topNavV8 {
+    width: min(calc(100% - 64px), 1360px) !important;
+    column-gap: 18px !important;
+    padding-inline: 20px !important;
+  }
+
+  .publicSite .publicTopLinks.topLinksV8 {
+    gap: clamp(14px, 1.35vw, 22px) !important;
+  }
+
+  .publicSite .publicTopLinks.topLinksV8 a {
+    font-size: 13px !important;
+  }
+
+  .publicSite .appOpenButtonV9 {
+    width: 152px !important;
+    min-width: 152px !important;
+    font-size: 12.5px !important;
+  }
+
+  .publicSite .premiumStatusWrap,
+  .publicSite .premiumHeaderButtonV9,
+  .publicSite .premiumStatusControl {
+    width: 168px !important;
+    min-width: 168px !important;
+    max-width: 168px !important;
+  }
+
+  .publicSite .launchHero.heroV8 {
+    grid-template-columns: minmax(548px, .92fr) minmax(620px, 1.22fr) !important;
+    column-gap: 28px !important;
+  }
+}
+
+@media (min-width: 1241px) and (max-width: 1320px) {
+  .publicSite .launchHero.heroV8 {
+    grid-template-columns: minmax(500px, .86fr) minmax(620px, 1.2fr) !important;
+    column-gap: 24px !important;
+  }
+
+  .publicSite .heroBenefitsV8 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card {
+    height: 88px !important;
+    min-height: 88px !important;
+  }
+
+  .publicSite .heroBenefitsV8 .stlm-ui-hero-card:nth-child(3) {
+    grid-column: 1 / -1 !important;
+  }
+}
+/* End Stage 5.2-V Visual acceptance. */
