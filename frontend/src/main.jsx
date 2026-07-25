@@ -3155,13 +3155,16 @@ function LaunchIcon({ type }) {
     play: "M8 5v14l11-7-11-7z",
     upload: "M12 16V4M7 9l5-5 5 5M5 20h14",
     analyze: "M4 12a8 8 0 1016 0 8 8 0 00-16 0zM12 8v4l3 2",
+    gauge: "M5 17a7 7 0 1114 0M12 17l4-6M8 17h8",
     repair: "M5 16l4 4 10-12M7 7h10v6H7z",
     split: "M12 3v18M5 8h14M5 16h14",
     connectors: "M7 8h4v8H7zM13 8h4v8h-4zM11 12h2",
     check: "M4 12l5 5L20 6",
     export: "M12 4v10M8 10l4 4 4-4M5 20h14",
     shield: "M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z",
+    shieldCheck: "M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3zM9 12l2 2 4-5",
     cube: "M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zM4 7.5l8 4.5 8-4.5M12 12v9",
+    sliders: "M5 7h9M18 7h1M5 17h1M10 17h9M8 5v4M16 15v4",
     vk: "M5 8c.3 4 2.5 7 5.5 7h1v-2c1.8.2 2.5 2 4.2 2h2.1c-.4-1.4-1.4-2.4-2.8-3.1 1.3-1.4 2.1-2.7 2.5-3.9h-2.4c-.5 1.1-1.1 2-2.1 3V8h-2.2v4.7C9.8 12 9 10.3 8.5 8H5z",
     telegram: "M21 4L3 11l6 2 2 6 3-4 4 3 3-14zM9 13l8-6-6 8",
     pikabu: "M6 19V5h7.5c2.8 0 4.5 1.7 4.5 4.1s-1.7 4.1-4.5 4.1H10v5.8H6zM10 9v.9h3.1c.6 0 .9-.2.9-.7s-.3-.8-.9-.8H10z",
@@ -3325,9 +3328,9 @@ function HeroSection({ onOpenApplication }) {
     document.getElementById("features")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const benefits = [
-    { icon: "flash", title: "Быстро", text: "AI-исправление за секунды" },
-    { icon: "shield", title: "Надёжно", text: "Точная подготовка к печати" },
-    { icon: "cube", title: "Удобно", text: "Интуитивный интерфейс" },
+    { icon: "gauge", title: "Быстро", text: "AI-исправление за секунды" },
+    { icon: "shieldCheck", title: "Надёжно", text: "Точная подготовка к печати" },
+    { icon: "sliders", title: "Удобно", text: "Интуитивный интерфейс" },
   ];
   const metrics = [
     ["rating", "4.9/5", "Рейтинг пользователей"],
