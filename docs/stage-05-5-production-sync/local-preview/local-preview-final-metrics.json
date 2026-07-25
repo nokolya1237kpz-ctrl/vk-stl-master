@@ -1,0 +1,48 @@
+{
+  "desktop1440": {
+    "connectionWidths": [
+      419,
+      419,
+      419,
+      419,
+      419,
+      419
+    ],
+    "connectionsCount": 6,
+    "overflow": false,
+    "scrollWidth": 1425,
+    "w": 1440,
+    "workflowCount": 6,
+    "workflowWidths": [
+      381,
+      381,
+      381,
+      381,
+      381,
+      381
+    ]
+  },
+  "mobile390": {
+    "connectionWidths": [
+      366,
+      366,
+      366,
+      366,
+      366,
+      366
+    ],
+    "connectionsCount": 6,
+    "overflow": false,
+    "scrollWidth": 375,
+    "w": 390,
+    "workflowCount": 6,
+    "workflowWidths": [
+      346,
+      346,
+      346,
+      346,
+      346,
+      346
+    ]
+  }
+}

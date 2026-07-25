@@ -1,0 +1,66 @@
+{
+  "connectionHeights": [
+    569,
+    569,
+    569,
+    569,
+    569,
+    569
+  ],
+  "connectionImageSizes": [
+    [
+      382,
+      382
+    ],
+    [
+      382,
+      384
+    ],
+    [
+      382,
+      382
+    ],
+    [
+      382,
+      382
+    ],
+    [
+      382,
+      384
+    ],
+    [
+      382,
+      278
+    ]
+  ],
+  "connectionWidths": [
+    419,
+    419,
+    419,
+    419,
+    419,
+    419
+  ],
+  "connectionsCount": 6,
+  "horizontalOverflow": false,
+  "innerWidth": 1440,
+  "scrollWidth": 1425,
+  "url": "http://127.0.0.1:4180/#workflow",
+  "workflowCount": 6,
+  "workflowHeights": [
+    259,
+    259,
+    259,
+    277,
+    277,
+    277
+  ],
+  "workflowWidths": [
+    83,
+    83,
+    83,
+    83,
+    83,
+    83
+  ]
+}

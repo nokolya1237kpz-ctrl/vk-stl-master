@@ -1,0 +1,49 @@
+Stage 05.5 production state before changes
+
+GitHub main SHA:
+6e293386158f6dd1f8d1ef5c3c7cbd4c1d345039
+
+Server git clone:
+/tmp/vk-stl-master-stage5-git
+HEAD before Stage 05.5:
+6e293386158f6dd1f8d1ef5c3c7cbd4c1d345039
+
+Project working directory:
+/home/codex/projects/vk-stl-master
+Git status:
+NOT_GIT_REPO
+
+Production URL:
+https://app.stlmaster.online
+
+Production routes before changes:
+/ -> 200
+/app -> 200
+/admin -> 200
+/api/v1/me -> 200
+
+Production HTML before changes:
+script: /assets/index-hpeLczfm.js
+stylesheet: /assets/index-Dq0nS2xU.css
+
+Local dist after Stage 05.4 build:
+script: /assets/index-CRGOwILY.js
+stylesheet: /assets/index-Ck0xpnPP.css
+
+Conclusion:
+Production did not match current GitHub main/dist before Stage 05.5. The visible Workflow defect was caused by stale production assets, and the current code also still needed a safer Workflow root layout because the section could inherit a multi-column grid context.
+
+Deploy mechanism found:
+/home/codex/projects/vk-stl-master/scripts/rebuild-frontend.sh
+
+Script content:
+docker-compose build frontend
+docker-compose rm -sf frontend
+docker-compose up -d frontend
+
+Frontend containers before changes:
+stl-master-edge-proxy: Up 3 days, created 2026-07-22 06:48:27 +0300
+stl-master-frontend: Up 3 weeks, created 2026-06-23 16:00:23 +0300
+
+Protected checksums:
+Stored on server at /tmp/stage-05-5/protected-before.sha256 before code changes.

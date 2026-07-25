@@ -1,0 +1,74 @@
+{
+  "stage": "05.5",
+  "title": "Workflow layout and Connections polish with production sync",
+  "sourceSha": "6e293386158f6dd1f8d1ef5c3c7cbd4c1d345039",
+  "productionBefore": {
+    "url": "https://app.stlmaster.online",
+    "routes": {
+      "/": 200,
+      "/app": 200,
+      "/admin": 200,
+      "/api/v1/me": 200
+    },
+    "htmlAssets": {
+      "script": "/assets/index-hpeLczfm.js",
+      "stylesheet": "/assets/index-Dq0nS2xU.css"
+    },
+    "matchesCurrentMainBeforeChanges": false
+  },
+  "changedFiles": [
+    "frontend/src/landing/landing.css",
+    "docs/STAGE-05-5-WORKFLOW-CONNECTIONS.md",
+    "docs/stage-05-5-production-sync/production-before.txt",
+    "docs/stage-05-5-production-sync/results.json",
+    "docs/stage-05-5-production-sync/before/*",
+    "docs/stage-05-5-production-sync/local-preview/*",
+    "docs/stage-05-5-production-sync/after/*"
+  ],
+  "workflow": {
+    "steps": 6,
+    "desktopBreakpoints": {
+      "1680+": "6 columns",
+      "1280-1679": "3 columns x 2 rows",
+      "768-1279": "2 columns x 3 rows",
+      "<768": "vertical timeline"
+    },
+    "rootFix": "The workflow section is forced back to block flow so the intro and grid do not occupy narrow inherited grid cells.",
+    "track": "Desktop uses lightweight row arrows. Mobile uses a vertical timeline line."
+  },
+  "connections": {
+    "cards": 6,
+    "desktopLayout": "3-column connection cards, integrated CAD parameters panel, compact CTA panel",
+    "tabletLayout": "2-column connection cards; CAD intro above parameter grid",
+    "mobileLayout": "1-column cards, full-width technical parameters and CTA"
+  },
+  "localPreview": {
+    "desktop1440": {
+      "workflowCount": 6,
+      "workflowWidths": [381, 381, 381, 381, 381, 381],
+      "connectionsCount": 6,
+      "connectionWidths": [419, 419, 419, 419, 419, 419],
+      "horizontalOverflow": false
+    },
+    "mobile390": {
+      "workflowCount": 6,
+      "workflowWidths": [346, 346, 346, 346, 346, 346],
+      "connectionsCount": 6,
+      "connectionWidths": [366, 366, 366, 366, 366, 366],
+      "horizontalOverflow": false
+    }
+  },
+  "build": {
+    "status": "PASS",
+    "command": "cd /home/codex/projects/vk-stl-master/frontend && npm run build",
+    "knownWarnings": [
+      "VKUI/Vite module-level use client warnings",
+      "Vite chunk size warning"
+    ]
+  },
+  "regression": {
+    "preDeployPreview": "PASS for Workflow/Connections layout metrics",
+    "productionAfterDeploy": "PENDING_UNTIL_DEPLOY",
+    "protectedChecksums": "PENDING_AFTER_DEPLOY"
+  }
+}
