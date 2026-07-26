@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-07-26T05:46:16.006Z",
+  "checks": [
+    {
+      "file": "/Users/duglas/Documents/Codex/2026-07-09/stl-master-text-design-stl-master/stage56-local/docs/stage-05-6-compare/after-final-2/compare-final2-1440.png",
+      "metrics": {
+        "afterBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "480.656px",
+          "position": "absolute",
+          "right": "18px",
+          "width": 160,
+          "x": 864,
+          "y": 643
+        },
+        "assets": [
+          "https://app.stlmaster.online/assets/index-2Ssh2v_h.js",
+          "https://app.stlmaster.online/assets/index-DOVuF2J-.css"
+        ],
+        "beforeBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "18px",
+          "position": "absolute",
+          "right": "496.266px",
+          "width": 144,
+          "x": 401,
+          "y": 643
+        },
+        "hint": {
+          "display": "block",
+          "height": 28,
+          "left": "330.156px",
+          "position": "absolute",
+          "right": "149.242px",
+          "width": 181,
+          "x": 622,
+          "y": 638
+        },
+        "metrics": {
+          "display": "grid",
+          "height": 120,
+          "left": "auto",
+          "position": "static",
+          "right": "auto",
+          "width": 1251,
+          "x": 87,
+          "y": 1165
+        },
+        "overflow": false,
+        "stage": {
+          "display": "block",
+          "height": 468,
+          "left": "0px",
+          "position": "relative",
+          "right": "0px",
+          "width": 660,
+          "x": 382,
+          "y": 624
+        },
+        "viewport": {
+          "height": 900,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "file": "/Users/duglas/Documents/Codex/2026-07-09/stl-master-text-design-stl-master/stage56-local/docs/stage-05-6-compare/after-final-2/compare-final2-390.png",
+      "metrics": {
+        "afterBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "176px",
+          "position": "absolute",
+          "right": "10px",
+          "width": 129,
+          "x": 206,
+          "y": 998
+        },
+        "assets": [
+          "https://app.stlmaster.online/assets/index-2Ssh2v_h.js",
+          "https://app.stlmaster.online/assets/index-DOVuF2J-.css"
+        ],
+        "beforeBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "10px",
+          "position": "absolute",
+          "right": "188.773px",
+          "width": 116,
+          "x": 40,
+          "y": 998
+        },
+        "hint": {
+          "display": "none",
+          "height": 0,
+          "left": "50%",
+          "position": "absolute",
+          "right": "auto",
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "metrics": {
+          "display": "grid",
+          "height": 590,
+          "left": "0px",
+          "position": "relative",
+          "right": "0px",
+          "width": 317,
+          "x": 29,
+          "y": 1768
+        },
+        "overflow": false,
+        "stage": {
+          "display": "block",
+          "height": 340,
+          "left": "0px",
+          "position": "relative",
+          "right": "0px",
+          "width": 317,
+          "x": 29,
+          "y": 985
+        },
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    },
+    {
+      "file": "/Users/duglas/Documents/Codex/2026-07-09/stl-master-text-design-stl-master/stage56-local/docs/stage-05-6-compare/after-final-2/compare-final2-360.png",
+      "metrics": {
+        "afterBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "156.5px",
+          "position": "absolute",
+          "right": "10px",
+          "width": 119,
+          "x": 187,
+          "y": 1032
+        },
+        "assets": [
+          "https://app.stlmaster.online/assets/index-2Ssh2v_h.js",
+          "https://app.stlmaster.online/assets/index-DOVuF2J-.css"
+        ],
+        "beforeBadge": {
+          "display": "flex",
+          "height": 28,
+          "left": "10px",
+          "position": "absolute",
+          "right": "158.773px",
+          "width": 116,
+          "x": 40,
+          "y": 1032
+        },
+        "hint": {
+          "display": "none",
+          "height": 0,
+          "left": "50%",
+          "position": "absolute",
+          "right": "auto",
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "metrics": {
+          "display": "grid",
+          "height": 590,
+          "left": "0px",
+          "position": "relative",
+          "right": "0px",
+          "width": 287,
+          "x": 29,
+          "y": 1838
+        },
+        "overflow": false,
+        "stage": {
+          "display": "block",
+          "height": 340,
+          "left": "0px",
+          "position": "relative",
+          "right": "0px",
+          "width": 287,
+          "x": 29,
+          "y": 1019
+        },
+        "viewport": {
+          "height": 800,
+          "width": 360
+        }
+      }
+    }
+  ],
+  "consoleErrors": []
+}

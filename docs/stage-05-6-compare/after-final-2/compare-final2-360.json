@@ -1,0 +1,61 @@
+{
+  "afterBadge": {
+    "display": "flex",
+    "height": 28,
+    "left": "156.5px",
+    "position": "absolute",
+    "right": "10px",
+    "width": 119,
+    "x": 187,
+    "y": 1032
+  },
+  "assets": [
+    "https://app.stlmaster.online/assets/index-2Ssh2v_h.js",
+    "https://app.stlmaster.online/assets/index-DOVuF2J-.css"
+  ],
+  "beforeBadge": {
+    "display": "flex",
+    "height": 28,
+    "left": "10px",
+    "position": "absolute",
+    "right": "158.773px",
+    "width": 116,
+    "x": 40,
+    "y": 1032
+  },
+  "hint": {
+    "display": "none",
+    "height": 0,
+    "left": "50%",
+    "position": "absolute",
+    "right": "auto",
+    "width": 0,
+    "x": 0,
+    "y": 0
+  },
+  "metrics": {
+    "display": "grid",
+    "height": 590,
+    "left": "0px",
+    "position": "relative",
+    "right": "0px",
+    "width": 287,
+    "x": 29,
+    "y": 1838
+  },
+  "overflow": false,
+  "stage": {
+    "display": "block",
+    "height": 340,
+    "left": "0px",
+    "position": "relative",
+    "right": "0px",
+    "width": 287,
+    "x": 29,
+    "y": 1019
+  },
+  "viewport": {
+    "height": 800,
+    "width": 360
+  }
+}
