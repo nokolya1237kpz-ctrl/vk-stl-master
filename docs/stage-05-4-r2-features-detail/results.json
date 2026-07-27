@@ -1,0 +1,14 @@
+{
+  "sourceSha": "b7b377609f8c8320c67e4bf9ccf39cfc6e717c0a",
+  "changedFiles": [
+    "frontend/src/landing/landing.css",
+    "docs/STAGE-05-4-R2-FEATURES-DETAIL.md",
+    "docs/stage-05-4-r2-features-detail/results.json"
+  ],
+  "build": "PASS",
+  "logicChanged": false,
+  "notes": [
+    "Production browser screenshots are captured after deploy and reported in the final response.",
+    "Protected backend, worker, studio and admin checksums are compared before and after."
+  ]
+}
