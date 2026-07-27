@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-07-27T10:17:49Z",
+  "checks": [
+    {
+      "target": "local-preview",
+      "route": "/",
+      "status": "200",
+      "body_sample": "<!doctype html>\n<html lang=\"ru\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>STL Master</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CP48OVOT.js\"></script>\n    <link rel=\"stylesheet\" crossorigin hre"
+    },
+    {
+      "target": "local-preview",
+      "route": "/app",
+      "status": "200",
+      "body_sample": "<!doctype html>\n<html lang=\"ru\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>STL Master</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CP48OVOT.js\"></script>\n    <link rel=\"stylesheet\" crossorigin hre"
+    },
+    {
+      "target": "local-preview",
+      "route": "/admin",
+      "status": "200",
+      "body_sample": "<!doctype html>\n<html lang=\"ru\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>STL Master</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CP48OVOT.js\"></script>\n    <link rel=\"stylesheet\" crossorigin hre"
+    },
+    {
+      "target": "production-api",
+      "route": "/api/v1/me",
+      "status": "200",
+      "body_sample": "{\"ok\":true,\"user_id\":null,\"access_level\":\"free\",\"plan\":\"free\",\"plan_label\":\"Бесплатный\",\"premium_active\":false,\"premium_started_at\":null,\"premium_expires_at\":null,\"premium_days_left\":null,\"blocked\":false,\"limits\":{\"max_file_size_mb\":100,\"daily_jobs\":null,\"active_jobs\":1,\"queued_jobs\":2,\"uploads_per_"
+    }
+  ],
+  "note": "Browser local preview regression was blocked by Browser URL policy after screenshots/metrics were captured; HTTP regression used for local preview routes."
+}

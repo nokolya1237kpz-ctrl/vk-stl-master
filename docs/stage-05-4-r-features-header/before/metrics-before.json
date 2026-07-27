@@ -1,0 +1,3656 @@
+{
+  "360": [
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 345,
+        "overflowX": false,
+        "scrollWidth": 345
+      },
+      "features": {
+        "height": 2377.0859375,
+        "top": 10943.1171875,
+        "width": 317,
+        "x": 14,
+        "y": 10943.1171875
+      },
+      "header": {
+        "height": 68,
+        "right": 338.5,
+        "top": 16,
+        "width": 332,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 360
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 345,
+        "overflowX": false,
+        "scrollWidth": 345
+      },
+      "features": {
+        "height": 2377.0859375,
+        "top": 10843.1171875,
+        "width": 317,
+        "x": 14,
+        "y": 10843.1171875
+      },
+      "header": {
+        "height": 68,
+        "right": 338.5,
+        "top": 16,
+        "width": 332,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 360
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 345,
+        "overflowX": false,
+        "scrollWidth": 345
+      },
+      "features": {
+        "height": 2377.0859375,
+        "top": 10443.1171875,
+        "width": 317,
+        "x": 14,
+        "y": 10443.1171875
+      },
+      "header": {
+        "height": 68,
+        "right": 338.5,
+        "top": 16,
+        "width": 332,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 360
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 345,
+        "overflowX": false,
+        "scrollWidth": 345
+      },
+      "features": {
+        "height": 2377.0859375,
+        "top": 9743.1171875,
+        "width": 317,
+        "x": 14,
+        "y": 9743.1171875
+      },
+      "header": {
+        "height": 68,
+        "right": 338.5,
+        "top": 16,
+        "width": 332,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 360
+      }
+    }
+  ],
+  "390": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 375,
+        "overflowX": false,
+        "scrollWidth": 375
+      },
+      "features": {
+        "height": 2359.6796875,
+        "top": 10865.921875,
+        "width": 347,
+        "x": 14,
+        "y": 10865.921875
+      },
+      "header": {
+        "height": 68,
+        "right": 368.5,
+        "top": 16,
+        "width": 362,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 390
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 375,
+        "overflowX": false,
+        "scrollWidth": 375
+      },
+      "features": {
+        "height": 2359.6796875,
+        "top": 10765.921875,
+        "width": 347,
+        "x": 14,
+        "y": 10765.921875
+      },
+      "header": {
+        "height": 68,
+        "right": 368.5,
+        "top": 16,
+        "width": 362,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 390
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 375,
+        "overflowX": false,
+        "scrollWidth": 375
+      },
+      "features": {
+        "height": 2359.6796875,
+        "top": 10365.921875,
+        "width": 347,
+        "x": 14,
+        "y": 10365.921875
+      },
+      "header": {
+        "height": 68,
+        "right": 368.5,
+        "top": 16,
+        "width": 362,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 390
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 375,
+        "overflowX": false,
+        "scrollWidth": 375
+      },
+      "features": {
+        "height": 2359.6796875,
+        "top": 9665.921875,
+        "width": 347,
+        "x": 14,
+        "y": 9665.921875
+      },
+      "header": {
+        "height": 68,
+        "right": 368.5,
+        "top": 16,
+        "width": 362,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 844,
+        "scrollbar": 15,
+        "width": 390
+      }
+    }
+  ],
+  "768": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 753,
+        "overflowX": false,
+        "scrollWidth": 753
+      },
+      "features": {
+        "height": 1874.96875,
+        "top": 7659.6015625,
+        "width": 705,
+        "x": 24,
+        "y": 7659.6015625
+      },
+      "header": {
+        "height": 68,
+        "right": 746.5,
+        "top": 16,
+        "width": 740,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 768
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 753,
+        "overflowX": false,
+        "scrollWidth": 753
+      },
+      "features": {
+        "height": 1874.96875,
+        "top": 7559.6015625,
+        "width": 705,
+        "x": 24,
+        "y": 7559.6015625
+      },
+      "header": {
+        "height": 68,
+        "right": 746.5,
+        "top": 16,
+        "width": 740,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 768
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 753,
+        "overflowX": false,
+        "scrollWidth": 753
+      },
+      "features": {
+        "height": 1874.96875,
+        "top": 7159.6015625,
+        "width": 705,
+        "x": 24,
+        "y": 7159.6015625
+      },
+      "header": {
+        "height": 68,
+        "right": 746.5,
+        "top": 16,
+        "width": 740,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 768
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 753,
+        "overflowX": false,
+        "scrollWidth": 753
+      },
+      "features": {
+        "height": 1874.96875,
+        "top": 6459.6015625,
+        "width": 705,
+        "x": 24,
+        "y": 6459.6015625
+      },
+      "header": {
+        "height": 68,
+        "right": 746.5,
+        "top": 16,
+        "width": 740,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 768
+      }
+    }
+  ],
+  "1024": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1009,
+        "overflowX": false,
+        "scrollWidth": 1009
+      },
+      "features": {
+        "height": 1871.5,
+        "top": 7891.71875,
+        "width": 961,
+        "x": 24,
+        "y": 7891.71875
+      },
+      "header": {
+        "height": 68,
+        "right": 1002.5,
+        "top": 16,
+        "width": 996,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1024
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1009,
+        "overflowX": false,
+        "scrollWidth": 1009
+      },
+      "features": {
+        "height": 1871.5,
+        "top": 7791.71875,
+        "width": 961,
+        "x": 24,
+        "y": 7791.71875
+      },
+      "header": {
+        "height": 68,
+        "right": 1002.5,
+        "top": 16,
+        "width": 996,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1024
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1009,
+        "overflowX": false,
+        "scrollWidth": 1009
+      },
+      "features": {
+        "height": 1871.5,
+        "top": 7391.71875,
+        "width": 961,
+        "x": 24,
+        "y": 7391.71875
+      },
+      "header": {
+        "height": 68,
+        "right": 1002.5,
+        "top": 16,
+        "width": 996,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1024
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1009,
+        "overflowX": false,
+        "scrollWidth": 1009
+      },
+      "features": {
+        "height": 1871.5,
+        "top": 6691.71875,
+        "width": 961,
+        "x": 24,
+        "y": 6691.71875
+      },
+      "header": {
+        "height": 68,
+        "right": 1002.5,
+        "top": 16,
+        "width": 996,
+        "x": 6.5,
+        "y": 16
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Возможности",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Соединения",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "До / После",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "Тарифы",
+          "visible": false
+        },
+        {
+          "rect": {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          "text": "FAQ",
+          "visible": false
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1024
+      }
+    }
+  ],
+  "1280": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1265,
+        "overflowX": false,
+        "scrollWidth": 1265
+      },
+      "features": {
+        "height": 1385.90625,
+        "top": 4692.90625,
+        "width": 1137,
+        "x": 64,
+        "y": 4692.90625
+      },
+      "header": {
+        "height": 72,
+        "right": 1281,
+        "top": 44,
+        "width": 1201,
+        "x": 80,
+        "y": 44
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 425.9765625,
+            "right": 512.9140625,
+            "top": 63,
+            "width": 86.9375,
+            "x": 425.9765625,
+            "y": 63
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 530.1875,
+            "right": 609.5078125,
+            "top": 63,
+            "width": 79.3203125,
+            "x": 530.1875,
+            "y": 63
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 626.78125,
+            "right": 694.640625,
+            "top": 63,
+            "width": 67.859375,
+            "x": 626.78125,
+            "y": 63
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 711.9140625,
+            "right": 765.171875,
+            "top": 63,
+            "width": 53.2578125,
+            "x": 711.9140625,
+            "y": 63
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 782.4453125,
+            "right": 809.171875,
+            "top": 63,
+            "width": 26.7265625,
+            "x": 782.4453125,
+            "y": 63
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1280
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1265,
+        "overflowX": false,
+        "scrollWidth": 1265
+      },
+      "features": {
+        "height": 1385.90625,
+        "top": 4592.90625,
+        "width": 1137,
+        "x": 64,
+        "y": 4592.90625
+      },
+      "header": {
+        "height": 72,
+        "right": 1233,
+        "top": 20,
+        "width": 1201,
+        "x": 32,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 377.9765625,
+            "right": 464.9140625,
+            "top": 39,
+            "width": 86.9375,
+            "x": 377.9765625,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 482.1875,
+            "right": 561.5078125,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 482.1875,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 578.78125,
+            "right": 646.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 578.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 663.9140625,
+            "right": 717.171875,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 663.9140625,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 734.4453125,
+            "right": 761.171875,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 734.4453125,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1280
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1265,
+        "overflowX": false,
+        "scrollWidth": 1265
+      },
+      "features": {
+        "height": 1385.90625,
+        "top": 4192.90625,
+        "width": 1137,
+        "x": 64,
+        "y": 4192.90625
+      },
+      "header": {
+        "height": 72,
+        "right": 1233,
+        "top": 20,
+        "width": 1201,
+        "x": 32,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 377.9765625,
+            "right": 464.9140625,
+            "top": 39,
+            "width": 86.9375,
+            "x": 377.9765625,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 482.1875,
+            "right": 561.5078125,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 482.1875,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 578.78125,
+            "right": 646.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 578.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 663.9140625,
+            "right": 717.171875,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 663.9140625,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 734.4453125,
+            "right": 761.171875,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 734.4453125,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1280
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1265,
+        "overflowX": false,
+        "scrollWidth": 1265
+      },
+      "features": {
+        "height": 1385.90625,
+        "top": 3492.90625,
+        "width": 1137,
+        "x": 64,
+        "y": 3492.90625
+      },
+      "header": {
+        "height": 72,
+        "right": 1281,
+        "top": 20,
+        "width": 1201,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 425.9765625,
+            "right": 512.9140625,
+            "top": 39,
+            "width": 86.9375,
+            "x": 425.9765625,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 530.1875,
+            "right": 609.5078125,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 530.1875,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 626.78125,
+            "right": 694.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 626.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 711.9140625,
+            "right": 765.171875,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 711.9140625,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 782.4453125,
+            "right": 809.171875,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 782.4453125,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1280
+      }
+    }
+  ],
+  "1366": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1351,
+        "overflowX": false,
+        "scrollWidth": 1351
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4690.109375,
+        "width": 1223,
+        "x": 64,
+        "y": 4690.109375
+      },
+      "header": {
+        "height": 72,
+        "right": 1367,
+        "top": 44,
+        "width": 1287,
+        "x": 80,
+        "y": 44
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 466.6484375,
+            "right": 553.5859375,
+            "top": 63,
+            "width": 86.9375,
+            "x": 466.6484375,
+            "y": 63
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 572.0234375,
+            "right": 651.34375,
+            "top": 63,
+            "width": 79.3203125,
+            "x": 572.0234375,
+            "y": 63
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 669.78125,
+            "right": 737.640625,
+            "top": 63,
+            "width": 67.859375,
+            "x": 669.78125,
+            "y": 63
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 756.078125,
+            "right": 809.3359375,
+            "top": 63,
+            "width": 53.2578125,
+            "x": 756.078125,
+            "y": 63
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 827.7734375,
+            "right": 854.5,
+            "top": 63,
+            "width": 26.7265625,
+            "x": 827.7734375,
+            "y": 63
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1366
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1351,
+        "overflowX": false,
+        "scrollWidth": 1351
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4590.109375,
+        "width": 1223,
+        "x": 64,
+        "y": 4590.109375
+      },
+      "header": {
+        "height": 72,
+        "right": 1367,
+        "top": 20,
+        "width": 1287,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 466.6484375,
+            "right": 553.5859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 466.6484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 572.0234375,
+            "right": 651.34375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 572.0234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 669.78125,
+            "right": 737.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 669.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 756.078125,
+            "right": 809.3359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 756.078125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 827.7734375,
+            "right": 854.5,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 827.7734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1366
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1351,
+        "overflowX": false,
+        "scrollWidth": 1351
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4190.109375,
+        "width": 1223,
+        "x": 64,
+        "y": 4190.109375
+      },
+      "header": {
+        "height": 72,
+        "right": 1367,
+        "top": 20,
+        "width": 1287,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 466.6484375,
+            "right": 553.5859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 466.6484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 572.0234375,
+            "right": 651.34375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 572.0234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 669.78125,
+            "right": 737.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 669.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 756.078125,
+            "right": 809.3359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 756.078125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 827.7734375,
+            "right": 854.5,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 827.7734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1366
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1351,
+        "overflowX": false,
+        "scrollWidth": 1351
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 3490.109375,
+        "width": 1223,
+        "x": 64,
+        "y": 3490.109375
+      },
+      "header": {
+        "height": 72,
+        "right": 1367,
+        "top": 20,
+        "width": 1287,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 466.6484375,
+            "right": 553.5859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 466.6484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 572.0234375,
+            "right": 651.34375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 572.0234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 669.78125,
+            "right": 737.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 669.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 756.078125,
+            "right": 809.3359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 756.078125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 827.7734375,
+            "right": 854.5,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 827.7734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1366
+      }
+    }
+  ],
+  "1440": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1425,
+        "overflowX": false,
+        "scrollWidth": 1425
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4712.84375,
+        "width": 1297,
+        "x": 64,
+        "y": 4712.84375
+      },
+      "header": {
+        "height": 72,
+        "right": 1440,
+        "top": 44,
+        "width": 1360,
+        "x": 80,
+        "y": 44
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 501.1484375,
+            "right": 588.0859375,
+            "top": 63,
+            "width": 86.9375,
+            "x": 501.1484375,
+            "y": 63
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 607.5234375,
+            "right": 686.84375,
+            "top": 63,
+            "width": 79.3203125,
+            "x": 607.5234375,
+            "y": 63
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 706.28125,
+            "right": 774.140625,
+            "top": 63,
+            "width": 67.859375,
+            "x": 706.28125,
+            "y": 63
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 793.578125,
+            "right": 846.8359375,
+            "top": 63,
+            "width": 53.2578125,
+            "x": 793.578125,
+            "y": 63
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 866.2734375,
+            "right": 893,
+            "top": 63,
+            "width": 26.7265625,
+            "x": 866.2734375,
+            "y": 63
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1440
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1425,
+        "overflowX": false,
+        "scrollWidth": 1425
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4612.84375,
+        "width": 1297,
+        "x": 64,
+        "y": 4612.84375
+      },
+      "header": {
+        "height": 72,
+        "right": 1392.5,
+        "top": 20,
+        "width": 1360,
+        "x": 32.5,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 453.6484375,
+            "right": 540.5859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 453.6484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 560.0234375,
+            "right": 639.34375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 560.0234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 658.78125,
+            "right": 726.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 658.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 746.078125,
+            "right": 799.3359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 746.078125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 818.7734375,
+            "right": 845.5,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 818.7734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1440
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1425,
+        "overflowX": false,
+        "scrollWidth": 1425
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4212.84375,
+        "width": 1297,
+        "x": 64,
+        "y": 4212.84375
+      },
+      "header": {
+        "height": 72,
+        "right": 1392.5,
+        "top": 20,
+        "width": 1360,
+        "x": 32.5,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 453.6484375,
+            "right": 540.5859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 453.6484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 560.0234375,
+            "right": 639.34375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 560.0234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 658.78125,
+            "right": 726.640625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 658.78125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 746.078125,
+            "right": 799.3359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 746.078125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 818.7734375,
+            "right": 845.5,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 818.7734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1440
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1425,
+        "overflowX": false,
+        "scrollWidth": 1425
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 3512.84375,
+        "width": 1297,
+        "x": 64,
+        "y": 3512.84375
+      },
+      "header": {
+        "height": 72,
+        "right": 1440,
+        "top": 20,
+        "width": 1360,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 501.1484375,
+            "right": 588.0859375,
+            "top": 39,
+            "width": 86.9375,
+            "x": 501.1484375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 607.5234375,
+            "right": 686.84375,
+            "top": 39,
+            "width": 79.3203125,
+            "x": 607.5234375,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 706.28125,
+            "right": 774.140625,
+            "top": 39,
+            "width": 67.859375,
+            "x": 706.28125,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 793.578125,
+            "right": 846.8359375,
+            "top": 39,
+            "width": 53.2578125,
+            "x": 793.578125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 866.2734375,
+            "right": 893,
+            "top": 39,
+            "width": 26.7265625,
+            "x": 866.2734375,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1440
+      }
+    }
+  ],
+  "1536": [
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1521,
+        "overflowX": false,
+        "scrollWidth": 1521
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4760.328125,
+        "width": 1393,
+        "x": 64,
+        "y": 4760.328125
+      },
+      "header": {
+        "height": 72,
+        "right": 1505,
+        "top": 44,
+        "width": 1425,
+        "x": 80,
+        "y": 44
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 484.9375,
+            "right": 578.5625,
+            "top": 63,
+            "width": 93.625,
+            "x": 484.9375,
+            "y": 63
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 610.8125,
+            "right": 696.234375,
+            "top": 63,
+            "width": 85.421875,
+            "x": 610.8125,
+            "y": 63
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 728.484375,
+            "right": 801.5625,
+            "top": 63,
+            "width": 73.078125,
+            "x": 728.484375,
+            "y": 63
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 833.8125,
+            "right": 891.171875,
+            "top": 63,
+            "width": 57.359375,
+            "x": 833.8125,
+            "y": 63
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 923.421875,
+            "right": 952.203125,
+            "top": 63,
+            "width": 28.78125,
+            "x": 923.421875,
+            "y": 63
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1536
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1521,
+        "overflowX": false,
+        "scrollWidth": 1521
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4660.328125,
+        "width": 1393,
+        "x": 64,
+        "y": 4660.328125
+      },
+      "header": {
+        "height": 72,
+        "right": 1473,
+        "top": 20,
+        "width": 1425,
+        "x": 48,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 452.9375,
+            "right": 546.5625,
+            "top": 39,
+            "width": 93.625,
+            "x": 452.9375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 578.8125,
+            "right": 664.234375,
+            "top": 39,
+            "width": 85.421875,
+            "x": 578.8125,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 696.484375,
+            "right": 769.5625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 696.484375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 801.8125,
+            "right": 859.171875,
+            "top": 39,
+            "width": 57.359375,
+            "x": 801.8125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 891.421875,
+            "right": 920.203125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 891.421875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1536
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1521,
+        "overflowX": false,
+        "scrollWidth": 1521
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4260.328125,
+        "width": 1393,
+        "x": 64,
+        "y": 4260.328125
+      },
+      "header": {
+        "height": 72,
+        "right": 1473,
+        "top": 20,
+        "width": 1425,
+        "x": 48,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 452.9375,
+            "right": 546.5625,
+            "top": 39,
+            "width": 93.625,
+            "x": 452.9375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 578.8125,
+            "right": 664.234375,
+            "top": 39,
+            "width": 85.421875,
+            "x": 578.8125,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 696.484375,
+            "right": 769.5625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 696.484375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 801.8125,
+            "right": 859.171875,
+            "top": 39,
+            "width": 57.359375,
+            "x": 801.8125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 891.421875,
+            "right": 920.203125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 891.421875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1536
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1521,
+        "overflowX": false,
+        "scrollWidth": 1521
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 3560.328125,
+        "width": 1393,
+        "x": 64,
+        "y": 3560.328125
+      },
+      "header": {
+        "height": 72,
+        "right": 1505,
+        "top": 20,
+        "width": 1425,
+        "x": 80,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 484.9375,
+            "right": 578.5625,
+            "top": 39,
+            "width": 93.625,
+            "x": 484.9375,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 610.8125,
+            "right": 696.234375,
+            "top": 39,
+            "width": 85.421875,
+            "x": 610.8125,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 728.484375,
+            "right": 801.5625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 728.484375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 833.8125,
+            "right": 891.171875,
+            "top": 39,
+            "width": 57.359375,
+            "x": 833.8125,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 923.421875,
+            "right": 952.203125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 923.421875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1536
+      }
+    }
+  ],
+  "1920": [
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1905,
+        "overflowX": false,
+        "scrollWidth": 1905
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4597.7890625,
+        "width": 1408,
+        "x": 248.5,
+        "y": 4597.7890625
+      },
+      "header": {
+        "height": 72,
+        "right": 1752.5,
+        "top": 44,
+        "width": 1600,
+        "x": 152.5,
+        "y": 44
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 628.8125,
+            "right": 722.4375,
+            "top": 63,
+            "width": 93.625,
+            "x": 628.8125,
+            "y": 63
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 762.75,
+            "right": 848.171875,
+            "top": 63,
+            "width": 85.421875,
+            "x": 762.75,
+            "y": 63
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 888.484375,
+            "right": 961.5625,
+            "top": 63,
+            "width": 73.078125,
+            "x": 888.484375,
+            "y": 63
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 1001.875,
+            "right": 1059.234375,
+            "top": 63,
+            "width": 57.359375,
+            "x": 1001.875,
+            "y": 63
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 97,
+            "height": 34,
+            "left": 1099.546875,
+            "right": 1128.328125,
+            "top": 63,
+            "width": 28.78125,
+            "x": 1099.546875,
+            "y": 63
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 0,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1920
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 ",
+      "doc": {
+        "clientWidth": 1905,
+        "overflowX": false,
+        "scrollWidth": 1905
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4497.7890625,
+        "width": 1408,
+        "x": 248.5,
+        "y": 4497.7890625
+      },
+      "header": {
+        "height": 72,
+        "right": 1752.5,
+        "top": 20,
+        "width": 1600,
+        "x": 152.5,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 628.8125,
+            "right": 722.4375,
+            "top": 39,
+            "width": 93.625,
+            "x": 628.8125,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 762.75,
+            "right": 848.171875,
+            "top": 39,
+            "width": 85.421875,
+            "x": 762.75,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 888.484375,
+            "right": 961.5625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 888.484375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1001.875,
+            "right": 1059.234375,
+            "top": 39,
+            "width": 57.359375,
+            "x": 1001.875,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1099.546875,
+            "right": 1128.328125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 1099.546875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 100,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1920
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1905,
+        "overflowX": false,
+        "scrollWidth": 1905
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 4097.7890625,
+        "width": 1408,
+        "x": 248.5,
+        "y": 4097.7890625
+      },
+      "header": {
+        "height": 72,
+        "right": 1867,
+        "top": 20,
+        "width": 1600,
+        "x": 267,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 743.3125,
+            "right": 836.9375,
+            "top": 39,
+            "width": 93.625,
+            "x": 743.3125,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 877.25,
+            "right": 962.671875,
+            "top": 39,
+            "width": 85.421875,
+            "x": 877.25,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1002.984375,
+            "right": 1076.0625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 1002.984375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1116.375,
+            "right": 1173.734375,
+            "top": 39,
+            "width": 57.359375,
+            "x": 1116.375,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1214.046875,
+            "right": 1242.828125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 1214.046875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 500,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1920
+      }
+    },
+    {
+      "className": "publicTopNav topNavV8 compact",
+      "doc": {
+        "clientWidth": 1905,
+        "overflowX": false,
+        "scrollWidth": 1905
+      },
+      "features": {
+        "height": 1387.625,
+        "top": 3397.7890625,
+        "width": 1408,
+        "x": 248.5,
+        "y": 3397.7890625
+      },
+      "header": {
+        "height": 72,
+        "right": 1867,
+        "top": 20,
+        "width": 1600,
+        "x": 267,
+        "y": 20
+      },
+      "links": [
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 743.3125,
+            "right": 836.9375,
+            "top": 39,
+            "width": 93.625,
+            "x": 743.3125,
+            "y": 39
+          },
+          "text": "Возможности",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 877.25,
+            "right": 962.671875,
+            "top": 39,
+            "width": 85.421875,
+            "x": 877.25,
+            "y": 39
+          },
+          "text": "Соединения",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1002.984375,
+            "right": 1076.0625,
+            "top": 39,
+            "width": 73.078125,
+            "x": 1002.984375,
+            "y": 39
+          },
+          "text": "До / После",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1116.375,
+            "right": 1173.734375,
+            "top": 39,
+            "width": 57.359375,
+            "x": 1116.375,
+            "y": 39
+          },
+          "text": "Тарифы",
+          "visible": true
+        },
+        {
+          "rect": {
+            "bottom": 73,
+            "height": 34,
+            "left": 1214.046875,
+            "right": 1242.828125,
+            "top": 39,
+            "width": 28.78125,
+            "x": 1214.046875,
+            "y": 39
+          },
+          "text": "FAQ",
+          "visible": true
+        }
+      ],
+      "scrollY": 1200,
+      "viewport": {
+        "height": 1024,
+        "scrollbar": 15,
+        "width": 1920
+      }
+    }
+  ]
+}
