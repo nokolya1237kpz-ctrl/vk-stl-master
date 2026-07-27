@@ -1,0 +1,561 @@
+[
+  {
+    "card": {
+      "h": 602,
+      "visible": true,
+      "w": 537,
+      "x": 271,
+      "y": 338
+    },
+    "cardCount": 1,
+    "clientWidth": 1905,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 803,
+      "x": 830,
+      "y": 450
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 271,
+      "y": 617
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1905,
+    "section": {
+      "h": 1228,
+      "visible": true,
+      "w": 1408,
+      "x": 249,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 1080,
+      "w": 1920
+    }
+  },
+  {
+    "card": {
+      "h": 602,
+      "visible": true,
+      "w": 531,
+      "x": 86,
+      "y": 338
+    },
+    "cardCount": 1,
+    "clientWidth": 1521,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 794,
+      "x": 640,
+      "y": 450
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 86,
+      "y": 617
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1521,
+    "section": {
+      "h": 1228,
+      "visible": true,
+      "w": 1393,
+      "x": 64,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 1024,
+      "w": 1536
+    }
+  },
+  {
+    "card": {
+      "h": 602,
+      "visible": true,
+      "w": 492,
+      "x": 86,
+      "y": 338
+    },
+    "cardCount": 1,
+    "clientWidth": 1425,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 737,
+      "x": 601,
+      "y": 450
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 86,
+      "y": 617
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1425,
+    "section": {
+      "h": 1228,
+      "visible": true,
+      "w": 1297,
+      "x": 64,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 1000,
+      "w": 1440
+    }
+  },
+  {
+    "card": {
+      "h": 602,
+      "visible": true,
+      "w": 463,
+      "x": 86,
+      "y": 338
+    },
+    "cardCount": 1,
+    "clientWidth": 1351,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 692,
+      "x": 572,
+      "y": 450
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 86,
+      "y": 617
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1351,
+    "section": {
+      "h": 1228,
+      "visible": true,
+      "w": 1223,
+      "x": 64,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 1366
+    }
+  },
+  {
+    "card": {
+      "h": 602,
+      "visible": true,
+      "w": 428,
+      "x": 86,
+      "y": 337
+    },
+    "cardCount": 1,
+    "clientWidth": 1265,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 641,
+      "x": 537,
+      "y": 450
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 86,
+      "y": 616
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1265,
+    "section": {
+      "h": 1227,
+      "visible": true,
+      "w": 1137,
+      "x": 64,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 1280
+    }
+  },
+  {
+    "card": {
+      "h": 301,
+      "visible": true,
+      "w": 917,
+      "x": 46,
+      "y": 326
+    },
+    "cardCount": 1,
+    "clientWidth": 1009,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 915,
+      "x": 47,
+      "y": 762
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 46,
+      "y": 587
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 1009,
+    "section": {
+      "h": 1539,
+      "visible": true,
+      "w": 961,
+      "x": 24,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 1024
+    }
+  },
+  {
+    "card": {
+      "h": 301,
+      "visible": true,
+      "w": 793,
+      "x": 46,
+      "y": 320
+    },
+    "cardCount": 1,
+    "clientWidth": 885,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 791,
+      "x": 47,
+      "y": 756
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 46,
+      "y": 581
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 885,
+    "section": {
+      "h": 1534,
+      "visible": true,
+      "w": 837,
+      "x": 24,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 900
+    }
+  },
+  {
+    "card": {
+      "h": 338,
+      "visible": true,
+      "w": 661,
+      "x": 46,
+      "y": 318
+    },
+    "cardCount": 1,
+    "clientWidth": 753,
+    "compare": {
+      "h": 488,
+      "visible": true,
+      "w": 659,
+      "x": 47,
+      "y": 791
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 41,
+      "visible": true,
+      "w": 171,
+      "x": 46,
+      "y": 597
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 753,
+    "section": {
+      "h": 1569,
+      "visible": true,
+      "w": 705,
+      "x": 24,
+      "y": 96
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 768
+    }
+  },
+  {
+    "card": {
+      "h": 598,
+      "visible": true,
+      "w": 361,
+      "x": 27,
+      "y": 581
+    },
+    "cardCount": 1,
+    "clientWidth": 415,
+    "compare": {
+      "h": 904,
+      "visible": true,
+      "w": 323,
+      "x": 46,
+      "y": 1427
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 54,
+      "visible": true,
+      "w": 323,
+      "x": 46,
+      "y": 1061
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 415,
+    "section": {
+      "h": 2645,
+      "visible": true,
+      "w": 387,
+      "x": 14,
+      "y": 208
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 430
+    }
+  },
+  {
+    "card": {
+      "h": 657,
+      "visible": true,
+      "w": 321,
+      "x": 27,
+      "y": 572
+    },
+    "cardCount": 1,
+    "clientWidth": 375,
+    "compare": {
+      "h": 904,
+      "visible": true,
+      "w": 283,
+      "x": 46,
+      "y": 1498
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 54,
+      "visible": true,
+      "w": 283,
+      "x": 46,
+      "y": 1111
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 375,
+    "section": {
+      "h": 2716,
+      "visible": true,
+      "w": 347,
+      "x": 14,
+      "y": 208
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 900,
+      "w": 390
+    }
+  },
+  {
+    "card": {
+      "h": 657,
+      "visible": true,
+      "w": 306,
+      "x": 27,
+      "y": 592
+    },
+    "cardCount": 1,
+    "clientWidth": 360,
+    "compare": {
+      "h": 904,
+      "visible": true,
+      "w": 268,
+      "x": 46,
+      "y": 1518
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 54,
+      "visible": true,
+      "w": 268,
+      "x": 46,
+      "y": 1132
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 360,
+    "section": {
+      "h": 2736,
+      "visible": true,
+      "w": 332,
+      "x": 14,
+      "y": 208
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 850,
+      "w": 375
+    }
+  },
+  {
+    "card": {
+      "h": 723,
+      "visible": true,
+      "w": 291,
+      "x": 27,
+      "y": 588
+    },
+    "cardCount": 1,
+    "clientWidth": 345,
+    "compare": {
+      "h": 904,
+      "visible": true,
+      "w": 253,
+      "x": 46,
+      "y": 1580
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 54,
+      "visible": true,
+      "w": 253,
+      "x": 46,
+      "y": 1193
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": false,
+    "scrollWidth": 345,
+    "section": {
+      "h": 2798,
+      "visible": true,
+      "w": 317,
+      "x": 14,
+      "y": 208
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 820,
+      "w": 360
+    }
+  },
+  {
+    "card": {
+      "h": 741,
+      "visible": true,
+      "w": 266,
+      "x": 26,
+      "y": 580
+    },
+    "cardCount": 1,
+    "clientWidth": 305,
+    "compare": {
+      "h": 920,
+      "visible": true,
+      "w": 228,
+      "x": 45,
+      "y": 1642
+    },
+    "compareRows": 8,
+    "cta": {
+      "h": 54,
+      "visible": true,
+      "w": 228,
+      "x": 45,
+      "y": 1186
+    },
+    "ctaTag": "BUTTON",
+    "ctaText": "Подключить Premium",
+    "overflowX": true,
+    "scrollWidth": 320,
+    "section": {
+      "h": 2877,
+      "visible": true,
+      "w": 292,
+      "x": 13,
+      "y": 208
+    },
+    "title": "Выберите подходящий режим работы",
+    "url": "https://app.stlmaster.online/#premium",
+    "viewport": {
+      "h": 780,
+      "w": 320
+    }
+  }
+]
