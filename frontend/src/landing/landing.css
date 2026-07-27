@@ -3623,6 +3623,7 @@
 /* Stage 5.4-R2 Features detail completion + connection image spacing. */
 .publicSite #features,.publicSite #connectors{scroll-margin-top:190px!important}
 .publicSite #features{overflow-anchor:none!important}
+.publicSite .featuresToolSection{padding-top:clamp(112px,10vw,148px)!important}
 .publicSite .featuresToolSection .workflowBridge{margin-bottom:22px!important}
 .publicSite .featuresToolSection .featuresToolShell{overflow:hidden!important}
 .publicSite .featuresToolSection .featuresToolStage{position:relative!important;display:grid!important;grid-template-columns:minmax(0,1.7fr) minmax(300px,.75fr)!important;grid-template-rows:auto 1fr!important;gap:18px 20px!important;align-items:stretch!important;min-height:0!important;padding:22px!important}
