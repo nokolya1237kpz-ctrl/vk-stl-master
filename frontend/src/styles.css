@@ -12353,3 +12353,679 @@ h1 {
     font-size: 24px !important;
   }
 }
+
+/* Stage 05.8: FAQ and footer stability override. Content, links and logic stay unchanged. */
+.publicSite #faq.faqSection {
+  scroll-margin-top: 126px !important;
+  margin-top: clamp(76px, 7vw, 118px) !important;
+  padding-top: 0 !important;
+}
+
+.publicSite #faq .launchSectionHeader {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: minmax(92px, 150px) minmax(0, 1fr) minmax(250px, auto) !important;
+  align-items: end !important;
+  gap: 24px !important;
+  margin: 0 0 28px !important;
+}
+
+.publicSite #faq .launchSectionHeader > div {
+  min-width: 0 !important;
+  max-width: 760px !important;
+}
+
+.publicSite #faq .launchSectionHeader h2 {
+  margin: 0 !important;
+  max-width: 760px !important;
+  color: #f7fbff !important;
+  font-size: clamp(34px, 3.2vw, 54px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance !important;
+}
+
+.publicSite #faq .launchSectionHeader p:not(.sectionKicker) {
+  max-width: 760px !important;
+  margin: 12px 0 0 !important;
+  color: #9fb0c8 !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+}
+
+.publicSite #faq .sectionKicker {
+  align-self: start !important;
+  margin-top: 10px !important;
+}
+
+.publicSite #faq .faqHeaderSupport {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-self: end !important;
+  max-width: 360px !important;
+  padding: 0 16px !important;
+  border: 1px solid rgba(53, 215, 255, 0.24) !important;
+  border-radius: 999px !important;
+  background: rgba(4, 12, 25, 0.78) !important;
+  color: #cde8ff !important;
+  font-size: 13px !important;
+  font-weight: 760 !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+.publicSite #faq .faqLayout {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 24px !important;
+  padding: 24px !important;
+  border: 1px solid rgba(53, 215, 255, 0.18) !important;
+  border-radius: 24px !important;
+  background: radial-gradient(680px 360px at 8% 8%, rgba(53, 215, 255, 0.11), transparent 68%), linear-gradient(180deg, rgba(8, 17, 33, 0.9), rgba(4, 10, 21, 0.86)) !important;
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.publicSite #faq .faqIntroCard,
+.publicSite #faq .faqSupportCard,
+.publicSite #faq .faqSearch,
+.publicSite #faq .faqAccordionItem,
+.publicSite #faq .faqEmptyState {
+  border: 1px solid rgba(128, 163, 205, 0.16) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, rgba(13, 25, 45, 0.88), rgba(5, 11, 22, 0.9)) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+}
+
+.publicSite #faq .faqIntroCard {
+  position: sticky !important;
+  top: 118px !important;
+  display: grid !important;
+  gap: 16px !important;
+  padding: 20px !important;
+}
+
+.publicSite #faq .faqIntroBadge {
+  width: max-content !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 28px !important;
+  padding: 0 11px !important;
+  border: 1px solid rgba(53, 215, 255, 0.24) !important;
+  border-radius: 999px !important;
+  background: rgba(53, 215, 255, 0.08) !important;
+  color: #75ddff !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.publicSite #faq .faqIntroCard h3,
+.publicSite #faq .faqSupportCard h3,
+.publicSite #faq .faqEmptyState h3 {
+  margin: 0 !important;
+  color: #f7fbff !important;
+  font-size: 20px !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.publicSite #faq .faqIntroCard p,
+.publicSite #faq .faqSupportCard p,
+.publicSite #faq .faqEmptyState p,
+.publicSite #faq .faqAccordionPanel p {
+  margin: 0 !important;
+  color: #a8b7cc !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+.publicSite #faq .faqCategoryList {
+  display: grid !important;
+  gap: 8px !important;
+  margin: 2px 0 0 !important;
+}
+
+.publicSite #faq .faqCategoryList button {
+  width: 100% !important;
+  min-height: 40px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(128, 163, 205, 0.14) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.026) !important;
+  color: #c7d4e8 !important;
+  font: inherit !important;
+  font-size: 13px !important;
+  font-weight: 760 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease !important;
+}
+
+.publicSite #faq .faqCategoryList button span {
+  min-width: 28px !important;
+  min-height: 22px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  background: rgba(53, 215, 255, 0.08) !important;
+  color: #8bd9ff !important;
+  font-size: 12px !important;
+  font-weight: 850 !important;
+}
+
+.publicSite #faq .faqCategoryList button:hover,
+.publicSite #faq .faqCategoryList button:focus-visible,
+.publicSite #faq .faqCategoryList button.active {
+  border-color: rgba(53, 215, 255, 0.44) !important;
+  background: rgba(53, 215, 255, 0.095) !important;
+  color: #ffffff !important;
+  outline: 0 !important;
+}
+
+.publicSite #faq .faqCategoryList button:focus-visible,
+.publicSite #faq .faqAccordionItem button:focus-visible,
+.publicSite #faq .faqSearch input:focus-visible,
+.publicSite #faq a:focus-visible,
+.publicSite #footer a:focus-visible,
+.publicSite #footer button:focus-visible {
+  outline: 2px solid rgba(53, 215, 255, 0.86) !important;
+  outline-offset: 3px !important;
+}
+
+.publicSite #faq .faqSupportCard {
+  display: grid !important;
+  gap: 10px !important;
+  padding: 16px !important;
+  background: linear-gradient(160deg, rgba(30, 64, 175, 0.18), rgba(5, 11, 22, 0.88)) !important;
+}
+
+.publicSite #faq .faqSupportCard .launchSvgIcon {
+  width: 28px !important;
+  height: 28px !important;
+  color: #35d7ff !important;
+}
+
+.publicSite #faq .faqSupportCard a,
+.publicSite #faq .faqEmptyState a,
+.publicSite #faq .faqAccordionPanel a {
+  width: max-content !important;
+  max-width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 34px !important;
+  color: #8be7ff !important;
+  font-size: 13px !important;
+  font-weight: 820 !important;
+  text-decoration: none !important;
+}
+
+.publicSite #faq .faqSupportCard a:hover,
+.publicSite #faq .faqEmptyState a:hover,
+.publicSite #faq .faqAccordionPanel a:hover {
+  color: #ffffff !important;
+}
+
+.publicSite #faq .faqAccordionColumn {
+  min-width: 0 !important;
+  display: grid !important;
+  gap: 14px !important;
+}
+
+.publicSite #faq .faqSearch {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 58px !important;
+  padding: 10px 12px 10px 16px !important;
+}
+
+.publicSite #faq .faqSearch span {
+  color: #f4f9ff !important;
+  font-size: 13px !important;
+  font-weight: 850 !important;
+}
+
+.publicSite #faq .faqSearch input {
+  width: 100% !important;
+  min-height: 38px !important;
+  min-width: 0 !important;
+  border: 1px solid rgba(128, 163, 205, 0.16) !important;
+  border-radius: 11px !important;
+  background: rgba(2, 8, 18, 0.58) !important;
+  color: #f7fbff !important;
+  font: inherit !important;
+  font-size: 14px !important;
+  padding: 0 12px !important;
+}
+
+.publicSite #faq .faqSearch input::placeholder {
+  color: #71839b !important;
+}
+
+.publicSite #faq .faqSearch button {
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(53, 215, 255, 0.24) !important;
+  border-radius: 10px !important;
+  background: rgba(53, 215, 255, 0.08) !important;
+  color: #d8f5ff !important;
+  font: inherit !important;
+  font-size: 13px !important;
+  font-weight: 780 !important;
+  cursor: pointer !important;
+}
+
+.publicSite #faq .faqAccordion {
+  display: grid !important;
+  gap: 10px !important;
+}
+
+.publicSite #faq .faqAccordionItem {
+  overflow: hidden !important;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease !important;
+}
+
+.publicSite #faq .faqAccordionItem.open {
+  border-color: rgba(53, 215, 255, 0.35) !important;
+  background: linear-gradient(180deg, rgba(13, 30, 54, 0.96), rgba(4, 10, 21, 0.94)) !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+}
+
+.publicSite #faq .faqAccordionItem h3 {
+  margin: 0 !important;
+}
+
+.publicSite #faq .faqAccordionItem button {
+  width: 100% !important;
+  min-height: 64px !important;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) 34px !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 14px 16px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #f5f9ff !important;
+  font: inherit !important;
+  font-size: 16px !important;
+  font-weight: 850 !important;
+  line-height: 1.28 !important;
+  text-align: left !important;
+  cursor: pointer !important;
+}
+
+.publicSite #faq .faqAccordionItem button > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 24px !important;
+  max-width: 168px !important;
+  padding: 0 10px !important;
+  border: 1px solid rgba(53, 215, 255, 0.18) !important;
+  border-radius: 999px !important;
+  background: rgba(53, 215, 255, 0.07) !important;
+  color: #8fdfff !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.publicSite #faq .faqAccordionItem button i {
+  width: 34px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(128, 163, 205, 0.18) !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.035) !important;
+  color: #9beaff !important;
+  font-style: normal !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease !important;
+}
+
+.publicSite #faq .faqAccordionItem.open button i {
+  transform: rotate(180deg) !important;
+  border-color: rgba(53, 215, 255, 0.42) !important;
+  background: rgba(53, 215, 255, 0.1) !important;
+}
+
+.publicSite #faq .faqAccordionPanel {
+  display: grid !important;
+  gap: 10px !important;
+  max-width: 860px !important;
+  padding: 0 18px 18px 18px !important;
+  overflow: hidden !important;
+}
+
+.publicSite #faq .faqAccordionPanel[aria-hidden="true"] {
+  display: none !important;
+}
+
+.publicSite #faq .faqEmptyState {
+  display: grid !important;
+  gap: 10px !important;
+  padding: 22px !important;
+}
+
+.publicSite #footer.footerV9,
+.publicSite #footer.launchContacts.footerV9 {
+  scroll-margin-top: 126px !important;
+  width: min(1398px, calc(100vw - 104px)) !important;
+  display: grid !important;
+  grid-template-columns: minmax(300px, 1.25fr) minmax(150px, 0.6fr) minmax(190px, 0.78fr) minmax(230px, 0.86fr) !important;
+  align-items: start !important;
+  gap: 30px !important;
+  margin: clamp(50px, 6vw, 84px) auto 0 !important;
+  padding: 34px 28px 0 !important;
+  border: 1px solid rgba(53, 215, 255, 0.16) !important;
+  border-radius: 24px 24px 0 0 !important;
+  background: radial-gradient(620px 280px at 0% 0%, rgba(53, 215, 255, 0.09), transparent 70%), linear-gradient(180deg, rgba(7, 15, 30, 0.92), rgba(3, 8, 18, 0.98)) !important;
+  color: #aebbd0 !important;
+  box-shadow: 0 -18px 70px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+.publicSite #footer:before {
+  inset: 0 24px auto !important;
+  background: linear-gradient(90deg, transparent, rgba(53, 215, 255, 0.5), transparent) !important;
+}
+
+.publicSite #footer .footerBrand {
+  display: grid !important;
+  gap: 14px !important;
+  min-width: 0 !important;
+}
+
+.publicSite #footer .footerLogo {
+  width: max-content !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.publicSite #footer .footerLogo .launchSvgIcon {
+  width: 36px !important;
+  height: 36px !important;
+  color: #35d7ff !important;
+}
+
+.publicSite #footer .footerLogo strong {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.publicSite #footer .footerLogo strong span {
+  color: #4fa0ff !important;
+}
+
+.publicSite #footer .footerBrand p {
+  max-width: 390px !important;
+  margin: 0 !important;
+  color: #a8b7cc !important;
+  font-size: 14px !important;
+  line-height: 1.62 !important;
+}
+
+.publicSite #footer .footerAppButton {
+  width: max-content !important;
+  min-height: 42px !important;
+  padding: 0 15px !important;
+  border: 1px solid rgba(53, 215, 255, 0.28) !important;
+  border-radius: 12px !important;
+  background: rgba(53, 215, 255, 0.075) !important;
+  color: #eaf8ff !important;
+  font-size: 13px !important;
+  font-weight: 820 !important;
+}
+
+.publicSite #footer nav {
+  min-width: 0 !important;
+  display: grid !important;
+  gap: 12px !important;
+}
+
+.publicSite #footer h3 {
+  margin: 0 !important;
+  color: #f4f9ff !important;
+  font-size: 13px !important;
+  font-weight: 880 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.publicSite #footer ul {
+  display: grid !important;
+  gap: 9px !important;
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.publicSite #footer li {
+  margin: 0 !important;
+}
+
+.publicSite #footer a {
+  min-height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #b7c6dc !important;
+  font-size: 13px !important;
+  line-height: 1.28 !important;
+  text-decoration: none !important;
+}
+
+.publicSite #footer a:hover {
+  color: #f4fcff !important;
+}
+
+.publicSite #footer .socialLinks {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+  margin: 0 !important;
+}
+
+.publicSite #footer .socialLinks a {
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(53, 215, 255, 0.26) !important;
+  border-radius: 999px !important;
+  background: rgba(53, 215, 255, 0.065) !important;
+  color: #e9fbff !important;
+  font-weight: 760 !important;
+}
+
+.publicSite #footer .socialLinks .launchSvgIcon {
+  width: 18px !important;
+  height: 18px !important;
+  color: #35d7ff !important;
+}
+
+.publicSite #footer .footerBottom {
+  grid-column: 1 / -1 !important;
+  min-height: 58px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin-top: 12px !important;
+  padding: 16px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.085) !important;
+  color: #7f90a8 !important;
+  font-size: 12px !important;
+}
+
+.publicSite #footer .footerBottom a {
+  color: #9fd8ff !important;
+  font-size: 12px !important;
+}
+
+@media (max-width: 1120px) {
+  .publicSite #faq .launchSectionHeader {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .publicSite #faq .faqHeaderSupport {
+    justify-self: start !important;
+  }
+
+  .publicSite #faq .faqLayout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .publicSite #faq .faqIntroCard {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .publicSite #footer.footerV9,
+  .publicSite #footer.launchContacts.footerV9 {
+    grid-template-columns: 1.2fr 1fr !important;
+    width: calc(100vw - 48px) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .publicSite #faq.faqSection {
+    margin-top: 64px !important;
+    scroll-margin-top: 104px !important;
+  }
+
+  .publicSite #faq .launchSectionHeader {
+    margin-bottom: 20px !important;
+  }
+
+  .publicSite #faq .launchSectionHeader h2 {
+    font-size: clamp(31px, 10vw, 40px) !important;
+  }
+
+  .publicSite #faq .faqHeaderSupport {
+    width: 100% !important;
+    max-width: none !important;
+    justify-content: flex-start !important;
+  }
+
+  .publicSite #faq .faqLayout {
+    padding: 14px !important;
+    border-radius: 20px !important;
+  }
+
+  .publicSite #faq .faqIntroCard,
+  .publicSite #faq .faqSupportCard,
+  .publicSite #faq .faqSearch,
+  .publicSite #faq .faqAccordionItem,
+  .publicSite #faq .faqEmptyState {
+    border-radius: 16px !important;
+  }
+
+  .publicSite #faq .faqIntroCard {
+    padding: 16px !important;
+  }
+
+  .publicSite #faq .faqSearch {
+    grid-template-columns: 1fr !important;
+    align-items: stretch !important;
+    padding: 14px !important;
+  }
+
+  .publicSite #faq .faqSearch button {
+    width: 100% !important;
+  }
+
+  .publicSite #faq .faqAccordionItem button {
+    min-height: 58px !important;
+    grid-template-columns: minmax(0, 1fr) 34px !important;
+    gap: 10px !important;
+    padding: 14px !important;
+    font-size: 15px !important;
+  }
+
+  .publicSite #faq .faqAccordionItem button > span {
+    grid-column: 1 / -1 !important;
+    justify-self: start !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .publicSite #faq .faqAccordionItem button i {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+
+  .publicSite #faq .faqAccordionPanel {
+    padding: 0 14px 16px !important;
+  }
+
+  .publicSite #footer.footerV9,
+  .publicSite #footer.launchContacts.footerV9 {
+    width: calc(100vw - 24px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-top: 54px !important;
+    padding: 26px 18px 0 !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+
+  .publicSite #footer .footerAppButton,
+  .publicSite #footer .socialLinks a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .publicSite #footer .footerBottom {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .publicSite #faq .faqLayout {
+    padding: 12px !important;
+  }
+
+  .publicSite #faq .faqAccordionItem button,
+  .publicSite #faq .faqIntroCard,
+  .publicSite #faq .faqSupportCard,
+  .publicSite #faq .faqEmptyState {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .publicSite #faq .faqAccordionPanel {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .publicSite #faq .faqCategoryList button,
+  .publicSite #faq .faqAccordionItem,
+  .publicSite #faq .faqAccordionItem button i {
+    transition: none !important;
+  }
+}

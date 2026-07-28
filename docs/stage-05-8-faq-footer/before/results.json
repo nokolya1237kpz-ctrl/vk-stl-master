@@ -1,0 +1,2693 @@
+[
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1348,
+      "width": 1408,
+      "x": 249,
+      "y": -939
+    },
+    "faqRect": {
+      "height": 1677,
+      "width": 1408,
+      "x": 249,
+      "y": -1198
+    },
+    "footerRect": {
+      "height": 450,
+      "width": 1408,
+      "x": 249,
+      "y": 550
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212937051#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1920
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1348,
+      "width": 1393,
+      "x": 64,
+      "y": -940
+    },
+    "faqRect": {
+      "height": 1677,
+      "width": 1393,
+      "x": 64,
+      "y": -1199
+    },
+    "footerRect": {
+      "height": 450,
+      "width": 1393,
+      "x": 64,
+      "y": 550
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212938041#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1536
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1385,
+      "width": 1297,
+      "x": 64,
+      "y": -976
+    },
+    "faqRect": {
+      "height": 1714,
+      "width": 1297,
+      "x": 64,
+      "y": -1235
+    },
+    "footerRect": {
+      "height": 450,
+      "width": 1297,
+      "x": 64,
+      "y": 550
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212939376#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1403,
+      "width": 1223,
+      "x": 64,
+      "y": -995
+    },
+    "faqRect": {
+      "height": 1732,
+      "width": 1223,
+      "x": 64,
+      "y": -1254
+    },
+    "footerRect": {
+      "height": 450,
+      "width": 1223,
+      "x": 64,
+      "y": 550
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212940562#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1366
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1440,
+      "width": 1137,
+      "x": 64,
+      "y": -1032
+    },
+    "faqRect": {
+      "height": 1768,
+      "width": 1137,
+      "x": 64,
+      "y": -1290
+    },
+    "footerRect": {
+      "height": 450,
+      "width": 1137,
+      "x": 64,
+      "y": 550
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212942064#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 1000,
+      "width": 1280
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1459,
+      "width": 961,
+      "x": 24,
+      "y": -1195
+    },
+    "faqRect": {
+      "height": 1776,
+      "width": 961,
+      "x": 24,
+      "y": -1442
+    },
+    "footerRect": {
+      "height": 494,
+      "width": 961,
+      "x": 24,
+      "y": 406
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212943380#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 1024
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1551,
+      "width": 837,
+      "x": 24,
+      "y": -1336
+    },
+    "faqRect": {
+      "height": 1936,
+      "width": 837,
+      "x": 24,
+      "y": -1651
+    },
+    "footerRect": {
+      "height": 543,
+      "width": 837,
+      "x": 24,
+      "y": 357
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212944364#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 900
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 1683,
+      "width": 705,
+      "x": 24,
+      "y": -1468
+    },
+    "faqRect": {
+      "height": 2127,
+      "width": 705,
+      "x": 24,
+      "y": -1842
+    },
+    "footerRect": {
+      "height": 543,
+      "width": 705,
+      "x": 24,
+      "y": 357
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212945366#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 768
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 2501,
+      "width": 387,
+      "x": 14,
+      "y": -2507
+    },
+    "faqRect": {
+      "height": 2966,
+      "width": 387,
+      "x": 14,
+      "y": -2902
+    },
+    "footerRect": {
+      "height": 1105,
+      "width": 406,
+      "x": 5,
+      "y": 112
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212946339#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 430
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 2716,
+      "width": 347,
+      "x": 14,
+      "y": -2722
+    },
+    "faqRect": {
+      "height": 3182,
+      "width": 347,
+      "x": 14,
+      "y": -3118
+    },
+    "footerRect": {
+      "height": 1105,
+      "width": 366,
+      "x": 5,
+      "y": 112
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212947379#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 2827,
+      "width": 332,
+      "x": 14,
+      "y": -2833
+    },
+    "faqRect": {
+      "height": 3293,
+      "width": 332,
+      "x": 14,
+      "y": -3229
+    },
+    "footerRect": {
+      "height": 1105,
+      "width": 351,
+      "x": 5,
+      "y": 112
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212948373#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 375
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 3042,
+      "width": 317,
+      "x": 14,
+      "y": -3047
+    },
+    "faqRect": {
+      "height": 3507,
+      "width": 317,
+      "x": 14,
+      "y": -3443
+    },
+    "footerRect": {
+      "height": 1105,
+      "width": 336,
+      "x": 5,
+      "y": 112
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212949372#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": false,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 360
+    }
+  },
+  {
+    "expanded": [
+      "true",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false",
+      "false"
+    ],
+    "faqCount": 12,
+    "faqLayout": {
+      "height": 3302,
+      "width": 292,
+      "x": 11,
+      "y": -3308
+    },
+    "faqRect": {
+      "height": 3768,
+      "width": 292,
+      "x": 11,
+      "y": -3704
+    },
+    "footerRect": {
+      "height": 1125,
+      "width": 296,
+      "x": 9,
+      "y": 112
+    },
+    "links": [
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Не нашли нужный ответ? Напишите нам во ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать автору поддержки",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master, наверх страницы",
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#top",
+        "text": "STL Master",
+        "type": "a"
+      },
+      {
+        "aria": "Открыть редактор STL Master",
+        "href": null,
+        "text": "Открыть приложение",
+        "type": "button"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#features",
+        "text": "Возможности",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#connectors",
+        "text": "Соединения",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#compare",
+        "text": "До / После",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#premium",
+        "text": "Тарифы",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#features",
+        "text": "Проверка STL",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#features",
+        "text": "Ремонт модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#connectors",
+        "text": "Разрез модели",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#connectors",
+        "text": "Подготовка соединений",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#features",
+        "text": "Ориентация",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#features",
+        "text": "Экспорт результатов",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://app.stlmaster.online/?stage58before=1785212950373#faq",
+        "text": "FAQ",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/3dmodeliron",
+        "text": "Написать в поддержку",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "Сообщество ВКонтакте",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram-чат",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Канал на Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": "STL Master во ВКонтакте, откроется в новой вкладке",
+        "href": "https://vk.ru/pechatdlyadoma",
+        "text": "VK",
+        "type": "a"
+      },
+      {
+        "aria": "Чат STL Master в Telegram, откроется в новой вкладке",
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram",
+        "type": "a"
+      },
+      {
+        "aria": "Канал STL Master на Pikabu, откроется в новой вкладке",
+        "href": "https://pikabu.ru/@PechatDlyaDoma",
+        "text": "Pikabu",
+        "type": "a"
+      },
+      {
+        "aria": null,
+        "href": "https://t.me/chat_pechatdlyadoma",
+        "text": "Telegram: @chat_pechatdlyadoma",
+        "type": "a"
+      }
+    ],
+    "openCount": 1,
+    "overflowX": true,
+    "questions": [
+      "Файлы и результатыКакие файлы поддерживает STL Master?−",
+      "Начало работыНужно ли устанавливать программу?+",
+      "ОбработкаЧто STL Master проверяет в модели?+",
+      "ОбработкаМожет ли STL Master исправить повреждённую модель?+",
+      "ОбработкаМожно ли уменьшить количество полигонов?+",
+      "ОбработкаМожно ли разрезать модель на части?+",
+      "ОбработкаКакие соединения поддерживаются?+",
+      "Файлы и результатыСохраняется ли исходная модель?+",
+      "Файлы и результатыЧто я получу после обработки?+",
+      "ОбработкаГарантирует ли сервис успешную печать?+",
+      "Тарифы и доступЧем бесплатный режим отличается от Premium?+",
+      "ПоддержкаКак связаться с поддержкой?+"
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 320
+    }
+  }
+]
