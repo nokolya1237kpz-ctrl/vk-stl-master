@@ -4139,3 +4139,466 @@
 }
 
 /* End Stage 5.9 Landing consistency pass. */
+
+/* Stage 5.9-R Button color system + numbered badge consistency. */
+.publicLanding.publicSite {
+  --button-primary-bg:
+    linear-gradient(135deg, #35d7ff 0%, #347aff 52%, #704cff 100%);
+  --button-primary-bg-hover:
+    linear-gradient(135deg, #5de0ff 0%, #4d8cff 50%, #8262ff 100%);
+  --button-primary-text: #ffffff;
+  --button-primary-caption: rgba(236, 248, 255, .82);
+  --button-primary-border: rgba(255, 255, 255, .18);
+  --button-primary-shadow:
+    0 18px 40px rgba(45, 132, 255, .28),
+    0 0 22px rgba(53, 215, 255, .16),
+    inset 0 1px 0 rgba(255, 255, 255, .22);
+
+  --button-secondary-bg:
+    linear-gradient(180deg, rgba(20, 35, 58, .92), rgba(8, 17, 31, .90));
+  --button-secondary-bg-hover:
+    linear-gradient(180deg, rgba(28, 48, 78, .96), rgba(10, 22, 40, .94));
+  --button-secondary-text: #edf7ff;
+  --button-secondary-caption: rgba(196, 214, 236, .76);
+  --button-secondary-border: rgba(84, 150, 230, .42);
+  --button-secondary-border-hover: rgba(53, 215, 255, .66);
+  --button-secondary-shadow:
+    0 14px 34px rgba(0, 0, 0, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .055);
+
+  --button-ghost-bg: rgba(13, 27, 47, .42);
+  --button-ghost-bg-hover: rgba(22, 43, 70, .68);
+  --button-ghost-text: #b7ecff;
+  --button-ghost-border: rgba(53, 215, 255, .28);
+
+  --button-premium-bg:
+    linear-gradient(135deg, rgba(53, 215, 255, .16), rgba(111, 76, 255, .72));
+  --button-premium-bg-hover:
+    linear-gradient(135deg, rgba(78, 224, 255, .22), rgba(128, 90, 255, .86));
+  --button-premium-text: #ffffff;
+  --button-premium-border: rgba(166, 145, 255, .48);
+  --button-premium-shadow:
+    0 16px 42px rgba(104, 78, 255, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .16);
+
+  --button-icon-bg:
+    radial-gradient(circle at 50% 38%, rgba(53, 215, 255, .32), rgba(13, 28, 48, .82) 58%);
+  --button-icon-bg-hover:
+    radial-gradient(circle at 50% 38%, rgba(83, 224, 255, .42), rgba(18, 42, 70, .92) 62%);
+  --button-icon-color: #b7ecff;
+  --button-icon-border: rgba(53, 215, 255, .42);
+
+  --button-disabled-bg: rgba(18, 29, 45, .58);
+  --button-disabled-text: rgba(174, 190, 211, .48);
+  --button-disabled-border: rgba(116, 139, 172, .18);
+
+  --step-number-bg:
+    linear-gradient(135deg, #35d7ff 0%, #347aff 52%, #704cff 100%);
+  --step-number-text: #ffffff;
+  --step-number-border: rgba(255, 255, 255, .22);
+  --step-number-shadow:
+    0 12px 28px rgba(48, 129, 255, .34),
+    inset 0 1px 0 rgba(255, 255, 255, .25);
+
+  --badge-technical-bg: rgba(11, 24, 42, .72);
+  --badge-technical-text: #9fb5cf;
+  --badge-technical-border: rgba(133, 162, 200, .22);
+  --badge-premium-bg: rgba(112, 76, 255, .20);
+  --badge-premium-text: #d8ceff;
+  --badge-premium-border: rgba(146, 120, 255, .42);
+}
+
+.publicSite .primaryCta,
+.publicSite .connectionsCtaButton,
+.publicSite .featuresPrimaryCta,
+.publicSite .premiumPrimaryButton {
+  background: var(--button-primary-bg) !important;
+  color: var(--button-primary-text) !important;
+  border-color: var(--button-primary-border) !important;
+  box-shadow: var(--button-primary-shadow) !important;
+}
+
+.publicSite .primaryCta span,
+.publicSite .connectionsCtaButton span,
+.publicSite .featuresPrimaryCta span,
+.publicSite .premiumPrimaryButton span,
+.publicSite .primaryCta strong,
+.publicSite .connectionsCtaButton strong,
+.publicSite .featuresPrimaryCta strong,
+.publicSite .premiumPrimaryButton strong,
+.publicSite .primaryCta b,
+.publicSite .connectionsCtaButton b,
+.publicSite .featuresPrimaryCta b,
+.publicSite .premiumPrimaryButton b {
+  color: var(--button-primary-text) !important;
+}
+
+.publicSite .primaryCta small,
+.publicSite .connectionsCtaButton small,
+.publicSite .featuresPrimaryCta small,
+.publicSite .premiumPrimaryButton small {
+  color: var(--button-primary-caption) !important;
+}
+
+.publicSite .primaryCta:hover,
+.publicSite .connectionsCtaButton:hover,
+.publicSite .featuresPrimaryCta:hover,
+.publicSite .premiumPrimaryButton:hover {
+  background: var(--button-primary-bg-hover) !important;
+  box-shadow:
+    0 20px 46px rgba(45, 132, 255, .34),
+    0 0 28px rgba(53, 215, 255, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .26) !important;
+}
+
+.publicSite .secondaryCta,
+.publicSite .appOpenButton,
+.publicSite .featuresSecondaryLink,
+.publicSite .footerAppButton,
+.publicSite .compareMoreLink,
+.publicSite .faqHeaderSupport {
+  background: var(--button-secondary-bg) !important;
+  color: var(--button-secondary-text) !important;
+  border-color: var(--button-secondary-border) !important;
+  box-shadow: var(--button-secondary-shadow) !important;
+}
+
+.publicSite .secondaryCta span,
+.publicSite .appOpenButton span,
+.publicSite .featuresSecondaryLink span,
+.publicSite .footerAppButton span,
+.publicSite .compareMoreLink span,
+.publicSite .faqHeaderSupport span,
+.publicSite .secondaryCta strong,
+.publicSite .appOpenButton strong,
+.publicSite .featuresSecondaryLink strong,
+.publicSite .footerAppButton strong,
+.publicSite .compareMoreLink strong,
+.publicSite .faqHeaderSupport strong,
+.publicSite .secondaryCta b,
+.publicSite .appOpenButton b,
+.publicSite .featuresSecondaryLink b,
+.publicSite .footerAppButton b,
+.publicSite .compareMoreLink b,
+.publicSite .faqHeaderSupport b {
+  color: var(--button-secondary-text) !important;
+}
+
+.publicSite .secondaryCta small,
+.publicSite .appOpenButton small,
+.publicSite .featuresSecondaryLink small,
+.publicSite .footerAppButton small,
+.publicSite .compareMoreLink small,
+.publicSite .faqHeaderSupport small {
+  color: var(--button-secondary-caption) !important;
+}
+
+.publicSite .secondaryCta:hover,
+.publicSite .appOpenButton:hover,
+.publicSite .featuresSecondaryLink:hover,
+.publicSite .footerAppButton:hover,
+.publicSite .compareMoreLink:hover,
+.publicSite .faqHeaderSupport:hover {
+  background: var(--button-secondary-bg-hover) !important;
+  border-color: var(--button-secondary-border-hover) !important;
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, .28),
+    0 0 20px rgba(53, 215, 255, .12),
+    inset 0 1px 0 rgba(255, 255, 255, .075) !important;
+}
+
+.publicSite .publicTopCta,
+.publicSite .premiumHeaderButtonV9 {
+  background: var(--button-premium-bg) !important;
+  color: var(--button-premium-text) !important;
+  border-color: var(--button-premium-border) !important;
+  box-shadow: var(--button-premium-shadow) !important;
+}
+
+.publicSite .publicTopCta:hover,
+.publicSite .premiumHeaderButtonV9:hover {
+  background: var(--button-premium-bg-hover) !important;
+  border-color: rgba(184, 166, 255, .58) !important;
+}
+
+.publicSite .premiumStatusControl {
+  background:
+    linear-gradient(135deg, rgba(57, 41, 109, .88), rgba(24, 32, 67, .92)) !important;
+  color: var(--button-premium-text) !important;
+  border-color: var(--button-premium-border) !important;
+  box-shadow:
+    0 14px 34px rgba(83, 60, 202, .22),
+    inset 0 1px 0 rgba(255, 255, 255, .09) !important;
+}
+
+.publicSite .premiumStatusControl b {
+  color: #ffffff !important;
+}
+
+.publicSite .premiumStatusControl small {
+  color: #cfc5ff !important;
+}
+
+.publicSite .mobileSupportButton {
+  background: var(--button-icon-bg) !important;
+  color: var(--button-icon-color) !important;
+  border-color: var(--button-icon-border) !important;
+  box-shadow:
+    0 12px 32px rgba(53, 215, 255, .16),
+    inset 0 1px 0 rgba(255, 255, 255, .09) !important;
+}
+
+.publicSite .mobileSupportButton:hover {
+  background: var(--button-icon-bg-hover) !important;
+  border-color: rgba(83, 224, 255, .58) !important;
+}
+
+.publicSite .primaryCta svg,
+.publicSite .secondaryCta svg,
+.publicSite .appOpenButton svg,
+.publicSite .publicTopCta svg,
+.publicSite .premiumHeaderButtonV9 svg,
+.publicSite .premiumStatusControl svg,
+.publicSite .mobileSupportButton svg,
+.publicSite .connectionsCtaButton svg,
+.publicSite .featuresPrimaryCta svg,
+.publicSite .featuresSecondaryLink svg,
+.publicSite .footerAppButton svg,
+.publicSite .compareMoreLink svg,
+.publicSite .faqHeaderSupport svg,
+.publicSite .primaryCta .launchSvgIcon,
+.publicSite .secondaryCta .launchSvgIcon,
+.publicSite .appOpenButton .launchSvgIcon,
+.publicSite .publicTopCta .launchSvgIcon,
+.publicSite .premiumHeaderButtonV9 .launchSvgIcon,
+.publicSite .premiumStatusControl .launchSvgIcon,
+.publicSite .mobileSupportButton .launchSvgIcon,
+.publicSite .connectionsCtaButton .launchSvgIcon,
+.publicSite .featuresPrimaryCta .launchSvgIcon,
+.publicSite .featuresSecondaryLink .launchSvgIcon,
+.publicSite .footerAppButton .launchSvgIcon,
+.publicSite .compareMoreLink .launchSvgIcon,
+.publicSite .faqHeaderSupport .launchSvgIcon {
+  color: currentColor !important;
+  stroke: currentColor !important;
+}
+
+.publicSite .primaryCta:active,
+.publicSite .secondaryCta:active,
+.publicSite .appOpenButton:active,
+.publicSite .publicTopCta:active,
+.publicSite .premiumStatusControl:active,
+.publicSite .mobileSupportButton:active,
+.publicSite .connectionsCtaButton:active,
+.publicSite .featuresPrimaryCta:active,
+.publicSite .featuresSecondaryLink:active,
+.publicSite .footerAppButton:active,
+.publicSite .compareMoreLink:active,
+.publicSite .faqHeaderSupport:active {
+  filter: brightness(.94) saturate(.98) !important;
+  box-shadow: inset 0 2px 14px rgba(0, 0, 0, .20) !important;
+}
+
+.publicSite .primaryCta:disabled,
+.publicSite .secondaryCta:disabled,
+.publicSite .appOpenButton:disabled,
+.publicSite .publicTopCta:disabled,
+.publicSite .premiumStatusControl:disabled,
+.publicSite .mobileSupportButton:disabled,
+.publicSite .connectionsCtaButton:disabled,
+.publicSite .featuresPrimaryCta:disabled,
+.publicSite .featuresSecondaryLink[aria-disabled="true"],
+.publicSite .footerAppButton[aria-disabled="true"] {
+  background: var(--button-disabled-bg) !important;
+  color: var(--button-disabled-text) !important;
+  border-color: var(--button-disabled-border) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+.publicSite .workflowStepNumber,
+.publicSite .connectionCardNumber {
+  background: var(--step-number-bg) !important;
+  color: var(--step-number-text) !important;
+  border: 1px solid var(--step-number-border) !important;
+  box-shadow: var(--step-number-shadow) !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .28) !important;
+}
+
+.publicSite .connectionPill,
+.publicSite .workflowPill,
+.publicSite .featureToolTag,
+.publicSite .formatTag,
+.publicSite .compareChip,
+.publicSite .featureBadge {
+  background: var(--badge-technical-bg) !important;
+  color: var(--badge-technical-text) !important;
+  border: 1px solid var(--badge-technical-border) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .035) !important;
+}
+
+.publicSite .premiumBadge,
+.publicSite .premiumPlanBadge,
+.publicSite .premiumHeaderBadge {
+  background: var(--badge-premium-bg) !important;
+  color: var(--badge-premium-text) !important;
+  border-color: var(--badge-premium-border) !important;
+}
+
+.publicSite .featuresToolOption,
+.publicSite .featuresToolSection .featuresToolNav button,
+.publicSite .featuresToolSection .workflowToggleRail button {
+  background: var(--button-secondary-bg) !important;
+  color: var(--button-secondary-text) !important;
+  border-color: var(--button-secondary-border) !important;
+  box-shadow: var(--button-secondary-shadow) !important;
+}
+
+.publicSite .featuresToolOption *,
+.publicSite .featuresToolSection .featuresToolNav button *,
+.publicSite .featuresToolSection .workflowToggleRail button * {
+  color: inherit !important;
+}
+
+.publicSite .featuresToolOption.active,
+.publicSite .featuresToolSection .featuresToolNav button.active,
+.publicSite .featuresToolSection .workflowToggleRail button.active,
+.publicSite .featuresToolSection .workflowToggleRail button[aria-pressed="true"] {
+  background:
+    linear-gradient(180deg, rgba(21, 64, 103, .95), rgba(7, 24, 45, .94)) !important;
+  color: #ffffff !important;
+  border-color: rgba(53, 215, 255, .62) !important;
+  box-shadow:
+    0 16px 38px rgba(28, 133, 210, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .08) !important;
+}
+
+.publicSite .featuresToolOption:hover,
+.publicSite .featuresToolSection .featuresToolNav button:hover,
+.publicSite .featuresToolSection .workflowToggleRail button:hover {
+  background: var(--button-secondary-bg-hover) !important;
+  color: var(--button-secondary-text) !important;
+  border-color: var(--button-secondary-border-hover) !important;
+}
+
+.publicSite .featuresToolSection .featuresPrimaryCta {
+  background: var(--button-primary-bg) !important;
+  color: var(--button-primary-text) !important;
+  border-color: var(--button-primary-border) !important;
+  box-shadow: var(--button-primary-shadow) !important;
+}
+
+.publicSite .featuresToolSection .featuresPrimaryCta:hover,
+.publicSite .featuresToolSection .featuresPrimaryCta:focus-visible {
+  background: var(--button-primary-bg-hover) !important;
+  color: var(--button-primary-text) !important;
+  border-color: var(--button-primary-border) !important;
+}
+
+.publicSite .featuresToolSection .featuresSecondaryLink {
+  background: var(--button-secondary-bg) !important;
+  color: var(--button-secondary-text) !important;
+  border-color: var(--button-secondary-border) !important;
+  box-shadow: var(--button-secondary-shadow) !important;
+}
+
+.publicSite .featuresToolSection .featuresSecondaryLink:hover,
+.publicSite .featuresToolSection .featuresSecondaryLink:focus-visible {
+  background: var(--button-secondary-bg-hover) !important;
+  color: var(--button-secondary-text) !important;
+  border-color: var(--button-secondary-border-hover) !important;
+}
+
+.publicSite .faqList button,
+.publicSite .faqAccordion button,
+.publicSite .faqQuestion {
+  color: #f4f9ff !important;
+}
+
+.publicSite .faqList button *,
+.publicSite .faqAccordion button *,
+.publicSite .faqQuestion * {
+  min-width: 0 !important;
+}
+
+.publicSite .faqSupportCard a,
+.publicSite .footerSocialLink,
+.publicSite .footerSocials a,
+.publicSite .textAction,
+.publicSite a[class*="Link"] {
+  color: var(--button-ghost-text) !important;
+}
+
+.publicSite .footerSocialLink,
+.publicSite .footerSocials a {
+  background: var(--button-ghost-bg) !important;
+  border-color: var(--button-ghost-border) !important;
+}
+
+.publicSite .footerSocialLink:hover,
+.publicSite .footerSocials a:hover,
+.publicSite .faqSupportCard a:hover,
+.publicSite .textAction:hover,
+.publicSite a[class*="Link"]:hover {
+  color: #e8fbff !important;
+  background: var(--button-ghost-bg-hover) !important;
+  border-color: var(--button-secondary-border-hover) !important;
+}
+
+@media (max-width: 520px) {
+  .publicSite .faqList button,
+  .publicSite .faqAccordion button,
+  .publicSite .faqQuestion {
+    align-items: flex-start !important;
+    white-space: normal !important;
+    line-height: 1.18 !important;
+    min-height: 58px !important;
+    padding-block: 12px !important;
+  }
+
+  .publicSite .faqList button span,
+  .publicSite .faqAccordion button span,
+  .publicSite .faqQuestion span {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .publicSite .faqHeaderSupport,
+  .publicSite .footerAppButton,
+  .publicSite .featuresSecondaryLink,
+  .publicSite .featuresPrimaryCta {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 340px) {
+  .publicSite .publicTopBrand.topBrandV8 {
+    gap: 6px !important;
+    min-width: 0 !important;
+  }
+
+  .publicSite .publicTopBrand.topBrandV8 .launchSvgIcon,
+  .publicSite .publicTopBrand.topBrandV8 > svg {
+    width: 28px !important;
+    height: 28px !important;
+    flex: 0 0 28px !important;
+  }
+
+  .publicSite .publicTopBrand.topBrandV8 strong {
+    font-size: 22px !important;
+    letter-spacing: -.03em !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .publicSite .publicTopBrand.topBrandV8 em {
+    min-width: 0 !important;
+    height: 22px !important;
+    padding-inline: 6px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* End Stage 5.9-R Button color system + numbered badge consistency. */
