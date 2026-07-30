@@ -1,0 +1,2 @@
+Source checksum PASS excluding generated tests/results/* and Python __pycache__. Full before manifest: /home/codex/backups/stage-07-0-studio-baseline-sha256.txt
+Clean comparison files: /tmp/stage-07-0-source-before-clean.sha256 and /tmp/stage-07-0-source-after-clean.sha256

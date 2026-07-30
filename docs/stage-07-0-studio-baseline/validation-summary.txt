@@ -1,0 +1,5 @@
+npm run build: PASS
+./tests/run_all_smoke_tests.sh: PASS
+Browser baseline screenshots: PASS
+Browser console: 4 WebGL ReadPixels performance warnings, 0 page errors, 0 failed requests
+Deploy: NOT RUN

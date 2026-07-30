@@ -1,0 +1,1171 @@
+function App() {
+  const studioFileInputRef = useRef(null);
+  const [publicView, setPublicView] = useState(() => (window.location.pathname === "/app" ? "app" : "home"));
+  const [demoMode, setDemoMode] = useState(false);
+  const [accessGateMessage, setAccessGateMessage] = useState("");
+  const [file, setFile] = useState(null);
+  const [jobId, setJobId] = useState(null);
+  const [jobStatus, setJobStatus] = useState(null);
+  const [featureFlags, setFeatureFlags] = useState(DEFAULT_FEATURE_FLAGS);
+  const [accessCode, setAccessCode] = useState(() => localStorage.getItem(ACCESS_CODE_STORAGE_KEY) || "");
+  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUserLoading, setCurrentUserLoading] = useState(true);
+  const [currentUserError, setCurrentUserError] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState("");
+  const [selectedMode, setSelectedMode] = useState("check");
+  const [activePanel, setActivePanel] = useState("settings:check");
+  const [reductionPercent, setReductionPercent] = useState(50);
+  const [splitAxis, setSplitAxis] = useState("z");
+  const [splitParts, setSplitParts] = useState(2);
+  const [splitMode, setSplitMode] = useState("simple");
+  const [splitPlaneOffset, setSplitPlaneOffset] = useState(0);
+  const [connectorSize, setConnectorSize] = useState(4);
+  const [connectorClearance, setConnectorClearance] = useState(0.25);
+  const [connectorCount, setConnectorCount] = useState(2);
+  const [connectorDepth, setConnectorDepth] = useState(6);
+  const [connectorWallThickness, setConnectorWallThickness] = useState(1.2);
+  const [magnetSize, setMagnetSize] = useState("6x2");
+  const [lockProfile, setLockProfile] = useState("tongue_groove");
+  const [bedSizePreset, setBedSizePreset] = useState("220");
+  const [bedSizeX, setBedSizeX] = useState(220);
+  const [bedSizeY, setBedSizeY] = useState(250);
+  const [bedSizeZ, setBedSizeZ] = useState(220);
+  const [bedConnectorMode, setBedConnectorMode] = useState("none");
+  const [bedConnectorClearance, setBedConnectorClearance] = useState(0.25);
+  const [symmetryAxis, setSymmetryAxis] = useState("x");
+  const [symmetryMode, setSymmetryMode] = useState("analyze");
+  const [modelImprovementStrength, setModelImprovementStrength] = useState("balanced");
+  const [artifactCleanupStrength, setArtifactCleanupStrength] = useState("balanced");
+  const [localSelectionRadius, setLocalSelectionRadius] = useState(10);
+  const [localSmoothingStrength, setLocalSmoothingStrength] = useState("balanced");
+  const [localSelectionMode, setLocalSelectionMode] = useState("point");
+  const [localSelection, setLocalSelection] = useState(null);
+  const [orientationPriority, setOrientationPriority] = useState("supports");
+  const [modelName, setModelName] = useState("");
+  const [orientationTransform, setOrientationTransform] = useState({
+    rotation_x: 0,
+    rotation_y: 0,
+    rotation_z: 0,
+    rotation_x_deg: 0,
+    rotation_y_deg: 0,
+    rotation_z_deg: 0,
+    translate_to_floor: false,
+    translate_x_mm: 0,
+    translate_z_mm: 0,
+  });
+  const [bedMoveStep, setBedMoveStep] = useState(5);
+  const [previewMode, setPreviewMode] = useState("before");
+  const [processedPreviewFile, setProcessedPreviewFile] = useState(null);
+  const [processedPreviewLoading, setProcessedPreviewLoading] = useState(false);
+  const [processedPreviewError, setProcessedPreviewError] = useState("");
+  const [heatmapEnabled, setHeatmapEnabled] = useState(false);
+  const [heatmapData, setHeatmapData] = useState(null);
+  const [heatmapLoading, setHeatmapLoading] = useState(false);
+  const [heatmapError, setHeatmapError] = useState("");
+  const [focusChangesVersion, setFocusChangesVersion] = useState(0);
+  const [artifactMapEnabled, setArtifactMapEnabled] = useState(false);
+  const [artifactMapData, setArtifactMapData] = useState(null);
+  const [artifactMapLoading, setArtifactMapLoading] = useState(false);
+  const [artifactMapError, setArtifactMapError] = useState("");
+  const apiBaseUrl = useMemo(getApiBaseUrl, []);
+  const visiblePresets = useMemo(() => visiblePresetsForFlags(featureFlags), [featureFlags]);
+  const uploadLimitMb = Number(currentUser?.limits?.max_file_size_mb || featureFlags.active_upload_limit_mb || featureFlags.beta_upload_limit_mb || 100);
+  const hasUploadAccess = Boolean(accessCode.trim());
+  const progress = jobStatus?.progress ?? 0;
+  const activePreviewFile = previewMode === "after" && processedPreviewFile ? processedPreviewFile : file;
+  const afterDownloadUrl = getProcessedPreviewUrl(jobStatus?.result);
+  const changeMapUrl = getChangeMapUrl(jobStatus?.result);
+  const artifactMapUrl = getArtifactMapUrl(jobStatus?.result);
+  const orientationHasVisualChanges =
+    Boolean(orientationTransform.translate_to_floor) ||
+    ["rotation_x_deg", "rotation_y_deg", "rotation_z_deg", "rotation_x", "rotation_y", "rotation_z", "translate_x_mm", "translate_z_mm"].some((key) => Number(orientationTransform[key] || 0) !== 0);
+
+  const navigatePublicView = (view) => {
+    setPublicView(view);
+    if (view !== "home" && view !== "app") return;
+    const targetPath = view === "app" ? "/app" : "/";
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState({ view }, "", targetPath);
+    }
+  };
+
+  useEffect(() => {
+    setActivePanel(`settings:${selectedMode}`);
+  }, [selectedMode]);
+
+  useEffect(() => {
+    const onPopState = () => {
+      setPublicView(window.location.pathname === "/app" ? "app" : "home");
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  useEffect(() => {
+    if (accessCode.trim()) {
+      localStorage.setItem(ACCESS_CODE_STORAGE_KEY, accessCode.trim());
+    } else {
+      localStorage.removeItem(ACCESS_CODE_STORAGE_KEY);
+    }
+  }, [accessCode]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const loadCurrentUser = async () => {
+      setCurrentUserLoading(true);
+      setCurrentUserError("");
+      try {
+        const payload = await fetchCurrentUser(apiBaseUrl, accessCode, controller.signal);
+        setCurrentUser(payload);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          setCurrentUser((current) => current || null);
+          setCurrentUserError("Не удалось подтвердить статус доступа.");
+        }
+      } finally {
+        if (!controller.signal.aborted) setCurrentUserLoading(false);
+      }
+    };
+    loadCurrentUser();
+    return () => controller.abort();
+  }, [accessCode, apiBaseUrl]);
+
+  useEffect(() => {
+    const refreshOnVisible = () => {
+      if (document.visibilityState !== "visible") return;
+      fetchCurrentUser(apiBaseUrl, accessCode)
+        .then((payload) => {
+          setCurrentUser(payload);
+          setCurrentUserError("");
+        })
+        .catch(() => setCurrentUserError("Не удалось подтвердить статус доступа."));
+    };
+    document.addEventListener("visibilitychange", refreshOnVisible);
+    window.addEventListener("focus", refreshOnVisible);
+    return () => {
+      document.removeEventListener("visibilitychange", refreshOnVisible);
+      window.removeEventListener("focus", refreshOnVisible);
+    };
+  }, [accessCode, apiBaseUrl]);
+
+  useEffect(() => {
+    let stopped = false;
+    const applyFeatureFlags = (data) => {
+      if (!stopped) setFeatureFlags({ ...DEFAULT_FEATURE_FLAGS, ...data });
+    };
+    const loadFeatureFlags = async () => {
+      try {
+        const response = await fetch(`${apiBaseUrl}/api/v1/config/features`, { cache: "no-store" });
+        if (!response.ok) throw new Error("features unavailable");
+        applyFeatureFlags(await response.json());
+        return;
+      } catch {
+        // Static fallback is useful for local static previews without backend.
+      }
+      try {
+        const staticResponse = await fetch("/config/features.json", { cache: "no-store" });
+        if (staticResponse.ok) {
+          applyFeatureFlags(await staticResponse.json());
+          return;
+        }
+      } catch {
+        // Default feature flags below.
+      }
+      if (!stopped) setFeatureFlags(DEFAULT_FEATURE_FLAGS);
+    };
+    loadFeatureFlags();
+    return () => {
+      stopped = true;
+    };
+  }, [apiBaseUrl]);
+
+  useEffect(() => {
+    const currentPreset = operationPresets.find((preset) => preset.id === selectedMode);
+    if (currentPreset && !featureEnabled(featureFlags, currentPreset.featureKey)) {
+      setSelectedMode("check");
+    }
+  }, [featureFlags, selectedMode]);
+
+  useEffect(() => {
+    if (jobStatus?.status === "completed" && jobStatus.result) {
+      setActivePanel("current_model");
+    }
+  }, [jobStatus?.job_id, jobStatus?.status, jobStatus?.result?.final_model]);
+
+  useEffect(() => {
+    setOrientationTransform({
+      rotation_x: 0,
+      rotation_y: 0,
+      rotation_z: 0,
+      rotation_x_deg: 0,
+      rotation_y_deg: 0,
+      rotation_z_deg: 0,
+      translate_to_floor: false,
+      translate_x_mm: 0,
+      translate_z_mm: 0,
+    });
+    setHeatmapEnabled(false);
+    setHeatmapData(null);
+    setHeatmapError("");
+    setHeatmapLoading(false);
+    setFocusChangesVersion(0);
+    setArtifactMapEnabled(false);
+    setArtifactMapData(null);
+    setArtifactMapError("");
+    setArtifactMapLoading(false);
+    setLocalSelection(null);
+  }, [file?.name, file?.size]);
+
+  useEffect(() => {
+    if (!jobId || jobId === "demo") return undefined;
+
+    let stopped = false;
+    let timer = null;
+    const loadStatus = async () => {
+      try {
+        const response = await fetch(`${apiBaseUrl}/api/v1/jobs/${jobId}`);
+        if (!response.ok) throw new Error("Не удалось получить статус задачи");
+        const data = await response.json();
+        if (!stopped) {
+          setJobStatus(data);
+          if ((data.status === "completed" || data.status === "failed") && timer) {
+            window.clearInterval(timer);
+          }
+        }
+      } catch (err) {
+        if (!stopped) setError(err.message);
+      }
+    };
+
+    loadStatus();
+    timer = window.setInterval(loadStatus, 1500);
+    return () => {
+      stopped = true;
+      if (timer) window.clearInterval(timer);
+    };
+  }, [apiBaseUrl, jobId]);
+
+  useEffect(() => {
+    setHeatmapEnabled(false);
+    setHeatmapData(null);
+    setHeatmapLoading(false);
+    setHeatmapError("");
+    setFocusChangesVersion(0);
+    setArtifactMapEnabled(false);
+    setArtifactMapData(null);
+    setArtifactMapLoading(false);
+    setArtifactMapError("");
+  }, [jobStatus?.job_id]);
+
+  useEffect(() => {
+    setProcessedPreviewFile(null);
+    setProcessedPreviewError("");
+    setProcessedPreviewLoading(false);
+
+    if (jobStatus?.status !== "completed") return undefined;
+
+    if (!afterDownloadUrl) {
+      setProcessedPreviewError("Обработанная модель пока недоступна");
+      return undefined;
+    }
+
+    let stopped = false;
+    const loadProcessedPreview = async () => {
+      setProcessedPreviewLoading(true);
+      try {
+        const response = await fetch(`${apiBaseUrl}${afterDownloadUrl}`);
+        if (!response.ok) throw new Error("Не удалось загрузить обработанную модель");
+        const blob = await response.blob();
+        if (!stopped) {
+          setProcessedPreviewFile(new File([blob], "stl-master-after.stl", { type: "model/stl" }));
+          setProcessedPreviewError("");
+        }
+      } catch {
+        if (!stopped) {
+          setProcessedPreviewFile(null);
+          setProcessedPreviewError("Не удалось загрузить обработанную модель");
+        }
+      } finally {
+        if (!stopped) setProcessedPreviewLoading(false);
+      }
+    };
+
+    loadProcessedPreview();
+    return () => {
+      stopped = true;
+    };
+  }, [apiBaseUrl, jobStatus?.job_id, jobStatus?.status, afterDownloadUrl]);
+
+  const handleShowChanges = async (overrideChangeMapUrl = null) => {
+    const mapUrl = overrideChangeMapUrl || changeMapUrl;
+    if (!mapUrl || !processedPreviewFile) return;
+    if (heatmapEnabled) {
+      setHeatmapEnabled(false);
+      setPreviewMode("after");
+      return;
+    }
+
+    setHeatmapLoading(true);
+    setHeatmapError("");
+    try {
+      const response = await fetch(`${apiBaseUrl}${mapUrl}`);
+      if (!response.ok) throw new Error("Не удалось загрузить карту изменений.");
+      const data = await response.json();
+      setHeatmapData(data);
+      setHeatmapEnabled(true);
+      setArtifactMapEnabled(false);
+      setArtifactMapData(null);
+      setArtifactMapError("");
+      setPreviewMode("after");
+    } catch {
+      setHeatmapData(null);
+      setHeatmapEnabled(false);
+      setHeatmapError("Не удалось загрузить карту изменений.");
+    } finally {
+      setHeatmapLoading(false);
+    }
+  };
+
+  const handleFocusChanges = async () => {
+    const mapUrl = changeMapUrl;
+    if (!mapUrl || !processedPreviewFile) return;
+    setHeatmapLoading(true);
+    setHeatmapError("");
+    try {
+      let data = heatmapData;
+      if (!data) {
+        const response = await fetch(`${apiBaseUrl}${mapUrl}`);
+        if (!response.ok) throw new Error("Не удалось загрузить карту изменений.");
+        data = await response.json();
+      }
+      setHeatmapData(data);
+      setHeatmapEnabled(true);
+      setArtifactMapEnabled(false);
+      setArtifactMapData(null);
+      setArtifactMapError("");
+      setPreviewMode("after");
+      setFocusChangesVersion((value) => value + 1);
+    } catch {
+      setHeatmapData(null);
+      setHeatmapEnabled(false);
+      setHeatmapError("Не удалось загрузить карту изменений.");
+    } finally {
+      setHeatmapLoading(false);
+    }
+  };
+
+  const handleOpenHistoryFile = async (downloadUrl, fileName) => {
+    if (!downloadUrl) return;
+    setProcessedPreviewLoading(true);
+    setProcessedPreviewError("");
+    setHeatmapEnabled(false);
+    setHeatmapData(null);
+    setHeatmapError("");
+    setArtifactMapEnabled(false);
+    setArtifactMapData(null);
+    setArtifactMapError("");
+    try {
+      const response = await fetch(`${apiBaseUrl}${downloadUrl}`);
+      if (!response.ok) throw new Error("Не удалось открыть файл этапа");
+      const blob = await response.blob();
+      setProcessedPreviewFile(new File([blob], fileName || "stl-master-stage.stl", { type: "model/stl" }));
+      setPreviewMode("after");
+    } catch {
+      setProcessedPreviewError("Не удалось открыть файл этапа");
+    } finally {
+      setProcessedPreviewLoading(false);
+    }
+  };
+
+  const handleShowArtifacts = async () => {
+    if (!artifactMapUrl) return;
+    if (artifactMapEnabled) {
+      setArtifactMapEnabled(false);
+      return;
+    }
+
+    setArtifactMapLoading(true);
+    setArtifactMapError("");
+    try {
+      const response = await fetch(`${apiBaseUrl}${artifactMapUrl}`);
+      if (!response.ok) throw new Error("Не удалось загрузить карту дефектов.");
+      const data = await response.json();
+      setArtifactMapData(data);
+      setArtifactMapEnabled(true);
+      setHeatmapEnabled(false);
+      setHeatmapData(null);
+      setHeatmapError("");
+      setPreviewMode("before");
+    } catch {
+      setArtifactMapData(null);
+      setArtifactMapEnabled(false);
+      setArtifactMapError("Не удалось загрузить карту дефектов.");
+    } finally {
+      setArtifactMapLoading(false);
+    }
+  };
+
+  const localSelectionRegions = Array.isArray(localSelection?.regions)
+    ? localSelection.regions
+    : localSelection?.center
+      ? [{ center: localSelection.center, radius_mm: localSelection.radius_mm || localSelectionRadius }]
+      : [];
+
+  const localSelectionPayload = localSelectionRegions.length > 0
+    ? {
+        type: "spheres",
+        regions: localSelectionRegions.slice(0, 30).map((region) => ({
+          center: region.center,
+          radius_mm: Number(region.radius_mm || localSelectionRadius),
+        })),
+        strength: localSmoothingStrength,
+      }
+    : null;
+
+  const localSelectionPreviewStats = {
+    selectedRegions: localSelectionRegions.length,
+    selectedVertices: Number(localSelection?.estimated_vertices || 0),
+    selectedFaces: Number(localSelection?.estimated_faces || 0),
+    selectedPercent: Number(localSelection?.selected_percent || 0),
+  };
+  const localSelectionImpact = localSmoothingImpactLabel({
+    selectedVertices: localSelectionPreviewStats.selectedVertices,
+    selectedPercent: localSelectionPreviewStats.selectedPercent,
+    strength: localSmoothingStrength,
+  });
+  const shouldWarnSmallRadius = selectedMode === "local" && localSelectionRadius === 2 && (file?.size || 0) > 5 * 1024 * 1024;
+
+  const applyPremiumActivation = async (code, payload) => {
+    const normalizedCode = String(code || "").trim();
+    if (normalizedCode) setAccessCode(normalizedCode);
+    if (payload?.current_user) {
+      setCurrentUser(payload.current_user);
+      setCurrentUserError("");
+      return;
+    }
+    try {
+      setCurrentUserLoading(true);
+      const nextUser = await fetchCurrentUser(apiBaseUrl, normalizedCode || accessCode);
+      setCurrentUser(nextUser);
+      setCurrentUserError("");
+    } catch {
+      setCurrentUserError("Premium активирован, но статус не удалось обновить автоматически.");
+    } finally {
+      setCurrentUserLoading(false);
+    }
+  };
+
+  const goHomeFromEditor = () => {
+    const hasActiveWork = Boolean(file || jobId || orientationHasVisualChanges);
+    if (hasActiveWork) {
+      const confirmed = window.confirm("Перейти на главную? Текущая модель останется доступна в истории обработки.");
+      if (!confirmed) return;
+    }
+    navigatePublicView("home");
+  };
+
+  const undoLocalSelection = () => {
+    setLocalSelection((current) => {
+      const regions = Array.isArray(current?.regions)
+        ? current.regions
+        : current?.center
+          ? [{ center: current.center, radius_mm: current.radius_mm || localSelectionRadius }]
+          : [];
+      const nextRegions = regions.slice(0, -1);
+      if (nextRegions.length === 0) return null;
+      return {
+        type: "spheres",
+        regions: nextRegions,
+        strength: localSmoothingStrength,
+        estimated_vertices: current?.estimated_vertices,
+      };
+    });
+  };
+
+  const setOrientationAxis = (axis, value) => {
+    const normalized = Number.isFinite(Number(value)) ? Number(value) : 0;
+    setOrientationTransform((current) => ({
+      ...current,
+      [`rotation_${axis}`]: normalized,
+      [`rotation_${axis}_deg`]: normalized,
+    }));
+  };
+
+  const nudgeOrientationAxis = (axis, delta) => {
+    const currentValue = Number(orientationTransform[`rotation_${axis}_deg`] ?? orientationTransform[`rotation_${axis}`] ?? 0);
+    setOrientationAxis(axis, currentValue + delta);
+  };
+
+  const moveOnBed = (axis, delta) => {
+    const key = axis === "x" ? "translate_x_mm" : "translate_z_mm";
+    setOrientationTransform((current) => ({
+      ...current,
+      translate_to_floor: true,
+      [key]: Number(current[key] || 0) + delta,
+    }));
+  };
+
+  const centerOnBed = () => {
+    setOrientationTransform((current) => ({
+      ...current,
+      translate_to_floor: true,
+      translate_x_mm: 0,
+      translate_z_mm: 0,
+    }));
+  };
+
+  const resetOrientationTransform = () => {
+    setOrientationTransform({
+      rotation_x: 0,
+      rotation_y: 0,
+      rotation_z: 0,
+      rotation_x_deg: 0,
+      rotation_y_deg: 0,
+      rotation_z_deg: 0,
+      translate_to_floor: false,
+      translate_x_mm: 0,
+      translate_z_mm: 0,
+    });
+  };
+
+  const openDemo = () => {
+    const original = createDemoStl({ cleaned: false });
+    const cleaned = createDemoStl({ cleaned: true });
+    setDemoMode(true);
+    navigatePublicView("app");
+    setFile(original);
+    setProcessedPreviewFile(cleaned);
+    setJobId("demo");
+    setJobStatus(demoJobStatus());
+    setSelectedMode("remove_artifacts");
+    setPreviewMode("after");
+    setError("");
+    setAccessGateMessage("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const openUpload = () => {
+    setDemoMode(false);
+    navigatePublicView("app");
+    setError("");
+    setAccessGateMessage("");
+    window.setTimeout(() => {
+      document.querySelector(".studioWorkspace")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 80);
+  };
+
+  const showAccessGate = () => {
+    setAccessGateMessage("Для обработки собственных моделей необходимо получить ранний доступ или оформить Premium.");
+  };
+
+  const applySelectedStudioFile = (nextFile) => {
+    if (!nextFile) return;
+    if (!String(nextFile.name || "").toLowerCase().endsWith(".stl")) {
+      setError("Редактор принимает только STL-файлы.");
+      return;
+    }
+    setDemoMode(false);
+    setFile(nextFile);
+    setProcessedPreviewFile(null);
+    setProcessedPreviewLoading(false);
+    setProcessedPreviewError("");
+    setPreviewMode("before");
+    setJobId(null);
+    setJobStatus(null);
+    setError("");
+    setAccessGateMessage("");
+  };
+
+  const requestStudioFile = () => {
+    if (!hasUploadAccess) {
+      showAccessGate();
+      return;
+    }
+    studioFileInputRef.current?.click();
+  };
+
+  const handleStudioFileChange = (event) => {
+    if (!hasUploadAccess) {
+      event.target.value = "";
+      showAccessGate();
+      return;
+    }
+    applySelectedStudioFile(event.target.files?.[0] || null);
+    event.target.value = "";
+  };
+
+  const handleStudioDrop = (event) => {
+    event.preventDefault();
+    if (!hasUploadAccess) {
+      showAccessGate();
+      return;
+    }
+    applySelectedStudioFile(event.dataTransfer?.files?.[0] || null);
+  };
+
+  const handleStudioDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  const handleUpload = async () => {
+    if (demoMode && !hasUploadAccess) {
+      showAccessGate();
+      return;
+    }
+    if (!hasUploadAccess) {
+      showAccessGate();
+      return;
+    }
+    if (!file) {
+      setError("Добавьте STL-модель перед запуском.");
+      return;
+    }
+    const uploadOperations = expandOperationsForUpload(operationsForMode(selectedMode));
+    const localSmoothingSelected = uploadOperations.includes("local_smoothing");
+    if (localSmoothingSelected && !localSelectionPayload) {
+      setError("Сначала выберите участок модели.");
+      return;
+    }
+
+    setUploading(true);
+    setError("");
+    setJobStatus(null);
+    setProcessedPreviewFile(null);
+    setProcessedPreviewLoading(false);
+    setProcessedPreviewError("");
+    setHeatmapEnabled(false);
+    setHeatmapData(null);
+    setHeatmapLoading(false);
+    setHeatmapError("");
+    setArtifactMapEnabled(false);
+    setArtifactMapData(null);
+    setArtifactMapLoading(false);
+    setArtifactMapError("");
+    setPreviewMode("before");
+
+    const formData = new FormData();
+    const applyOrientationSelected = uploadOperations.includes("apply_orientation");
+    const autoOrientationSelected = uploadOperations.includes("auto_orientation");
+    const fitToBedSelected = uploadOperations.includes("fit_to_bed_split");
+    formData.append("file", file);
+    formData.append("operations", JSON.stringify(uploadOperations));
+    formData.append("reduction_percent", String(reductionPercent));
+    formData.append("split_axis", splitAxis);
+    formData.append("split_parts", String(splitParts));
+    formData.append("split_mode", splitMode);
+    formData.append("split_engine", "blender_boolean");
+    formData.append("split_plane_offset_mm", String(splitPlaneOffset));
+    formData.append("connector_size_mm", String(connectorSize));
+    formData.append("connector_clearance_mm", String(connectorClearance));
+    formData.append("connector_count", String(connectorCount));
+    formData.append("connector_depth_mm", String(connectorDepth));
+    formData.append("connector_wall_thickness_mm", String(connectorWallThickness));
+    formData.append("magnet_size", magnetSize);
+    const selectedMagnet = magnetSizeOptions.find((item) => item.id === magnetSize) || magnetSizeOptions[1];
+    formData.append("magnet_diameter_mm", String(selectedMagnet.diameter));
+    formData.append("magnet_thickness_mm", String(selectedMagnet.thickness));
+    formData.append("lock_profile", lockProfile);
+    formData.append("symmetry_axis", symmetryAxis);
+    formData.append("symmetry_mode", symmetryMode);
+    formData.append("artifact_cleanup_strength", artifactCleanupStrength);
+    formData.append("model_improvement_strength", modelImprovementStrength);
+    formData.append("model_name", modelName);
+    formData.append("apply_orientation", String(applyOrientationSelected));
+    formData.append("orientation_transform", JSON.stringify(orientationTransform));
+    formData.append("auto_orientation", String(autoOrientationSelected));
+    formData.append("orientation_priority", orientationPriority);
+    formData.append("fit_to_bed", String(fitToBedSelected));
+    formData.append("bed_size_x", String(bedSizeX));
+    formData.append("bed_size_y", String(bedSizeY));
+    formData.append("bed_size_z", String(bedSizeZ));
+    formData.append("bed_connector_mode", bedConnectorMode);
+    formData.append("bed_connector_clearance_mm", String(bedConnectorClearance));
+    if (localSmoothingSelected && localSelectionPayload) {
+      formData.append("local_selection", JSON.stringify(localSelectionPayload));
+    }
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/v1/jobs/upload`, {
+        method: "POST",
+        headers: accessCode.trim() ? { "X-Beta-Access-Code": accessCode.trim() } : undefined,
+        body: formData,
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.detail || "Ошибка загрузки");
+      setJobId(data.job_id);
+      setJobStatus({ ...data, job_id: data.job_id, status: data.status, progress: 0, message: "Задача поставлена в очередь" });
+      addJobToHistory(data.job_id);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const openHistoryJob = (historyJobId) => {
+    setJobId(historyJobId);
+    setJobStatus(null);
+    setError("");
+    setPreviewMode("before");
+    setProcessedPreviewFile(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const studioSelectedPreset = operationPresets.find((preset) => preset.id === selectedMode) || operationPresets[0];
+  const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode));
+  const studioGeneratedFiles = Array.isArray(jobStatus?.result?.generated_files) ? jobStatus.result.generated_files : [];
+  const canRunStudioJob = Boolean(file && hasUploadAccess);
+
+  const renderOptionButtons = (items, value, onChange, formatter = (item) => item) => (
+    <div className="studioSegmentGroup">
+      {items.map((item) => {
+        const itemValue = typeof item === "object" ? item.id : item;
+        const label = formatter(item);
+        return (
+          <button className={value === itemValue ? "active" : ""} key={itemValue} type="button" onClick={() => onChange(itemValue, item)}>
+            {label}
+          </button>
+        );
+      })}
+    </div>
+  );
+
+  const renderStudioSettings = () => {
+    if (!studioSelectedPreset || selectedMode === "check") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Проверка модели</h3>
+          <p>STL Master проверит габариты, целостность сетки, тонкие места и готовность к печати.</p>
+        </div>
+      );
+    }
+
+    if (selectedMode === "improve") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Улучшение модели</h3>
+          <p>Сглаживает AI-шум, исправляет нормали и готовит STL к проверке.</p>
+          <label className="studioTextField">
+            <span>Название модели</span>
+            <input value={modelName} maxLength={120} placeholder="Например: фигурка, корпус, деталь" onChange={(event) => setModelName(event.target.value)} />
+          </label>
+          {renderOptionButtons(improvementStrengthOptions, modelImprovementStrength, setModelImprovementStrength, (item) => item.title)}
+        </div>
+      );
+    }
+
+    if (selectedMode === "remove_artifacts") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Очистка артефактов</h3>
+          <p>Удаляет отдельные островки, шипы и мусорные фрагменты после генераторов.</p>
+          {renderOptionButtons(artifactCleanupStrengthOptions, artifactCleanupStrength, setArtifactCleanupStrength, (item) => item.title)}
+        </div>
+      );
+    }
+
+    if (selectedMode === "surface") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Восстановление поверхности</h3>
+          <p>Экспериментальный режим ищет волны, бугры и мелкую рябь. Изменения применяются только при безопасном результате.</p>
+        </div>
+      );
+    }
+
+    if (selectedMode === "local") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Выборочная правка</h3>
+          <p>{localSelectionMode === "brush" ? "Проведите кистью по дефекту в 3D-окне." : "Кликните по проблемной области модели в 3D-окне."}</p>
+          <span className="studioSettingLabel">Режим выделения</span>
+          {renderOptionButtons([
+            { id: "point", title: "Точка" },
+            { id: "brush", title: "Кисть" },
+          ], localSelectionMode, setLocalSelectionMode, (item) => item.title)}
+          <span className="studioSettingLabel">Радиус</span>
+          {renderOptionButtons([2, 5, 10, 20], localSelectionRadius, setLocalSelectionRadius, (item) => `${item} мм`)}
+          <span className="studioSettingLabel">Сила</span>
+          {renderOptionButtons([
+            { id: "light", title: "Лёгкая" },
+            { id: "balanced", title: "Средняя" },
+            { id: "strong", title: "Сильная" },
+          ], localSmoothingStrength, (value) => {
+            setLocalSmoothingStrength(value);
+            setLocalSelection((current) => current ? { ...current, strength: value } : current);
+          }, (item) => item.title)}
+          <div className={`studioSelectionSummary ${localSelection ? "ready" : ""}`}>
+            <strong>{localSelection ? `Областей: ${localSelectionPreviewStats.selectedRegions}` : "Область не выбрана"}</strong>
+            <span>Вершин: {formatMetric(localSelectionPreviewStats.selectedVertices)} · граней: {formatMetric(localSelectionPreviewStats.selectedFaces)}</span>
+            <span>Ожидаемое воздействие: {localSelectionImpact}</span>
+            {shouldWarnSmallRadius && <em>Для крупных моделей лучше выбрать радиус 10–20 мм.</em>}
+          </div>
+          <div className="studioInlineActions">
+            <button type="button" onClick={undoLocalSelection} disabled={!localSelection}>Отменить последнее</button>
+            <button type="button" onClick={() => setLocalSelection(null)}>Очистить</button>
+          </div>
+        </div>
+      );
+    }
+
+    if (selectedMode === "reduce") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Снижение полигонов</h3>
+          <p>Уменьшает вес STL и сохраняет рабочую подготовку сетки.</p>
+          {renderOptionButtons([25, 50, 75], reductionPercent, setReductionPercent, (item) => `${item}%`)}
+        </div>
+      );
+    }
+
+    if (selectedMode === "split") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Плоскость разреза</h3>
+          <p>Настройте положение секущей плоскости и тип соединения для сборки после печати.</p>
+          <span className="studioSettingLabel">Ось разреза</span>
+          {renderOptionButtons(["x", "y", "z"], splitAxis, setSplitAxis, (item) => item.toUpperCase())}
+          <span className="studioSettingLabel">Количество частей</span>
+          {renderOptionButtons([2, 3, 4], splitParts, setSplitParts)}
+          <label className="studioRangeField">
+            <span>Смещение плоскости: {Number(splitPlaneOffset || 0)} мм</span>
+            <input type="range" min="-100" max="100" step="1" value={splitPlaneOffset} onChange={(event) => setSplitPlaneOffset(Number(event.target.value) || 0)} />
+          </label>
+          <span className="studioSettingLabel">Тип соединения</span>
+          {renderOptionButtons(splitModeOptions, splitMode, setSplitMode, (item) => item.title)}
+          {splitMode !== "simple" && (
+            <>
+              <span className="studioSettingLabel">Зазор</span>
+              {renderOptionButtons(connectorClearanceOptions, connectorClearance, setConnectorClearance, (item) => `${item} мм`)}
+              <span className="studioSettingLabel">{splitMode === "magnets" ? "Количество пар" : "Количество соединителей"}</span>
+              {renderOptionButtons(connectorCountOptions, connectorCount, setConnectorCount)}
+            </>
+          )}
+        </div>
+      );
+    }
+
+    if (selectedMode === "fit_to_bed") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Раскрой под стол</h3>
+          <span className="studioSettingLabel">Размер рабочей области</span>
+          {renderOptionButtons(bedSizeOptions, bedSizePreset, (value, item) => {
+            setBedSizePreset(value);
+            if (item?.id !== "custom") {
+              setBedSizeX(item.x);
+              setBedSizeY(item.y);
+              setBedSizeZ(item.z);
+            }
+          }, (item) => item.title)}
+          {bedSizePreset === "custom" && (
+            <div className="studioSizeGrid">
+              <label><span>X</span><input type="number" value={bedSizeX} onChange={(event) => setBedSizeX(Number(event.target.value) || 1)} /></label>
+              <label><span>Y</span><input type="number" value={bedSizeY} onChange={(event) => setBedSizeY(Number(event.target.value) || 1)} /></label>
+              <label><span>Z</span><input type="number" value={bedSizeZ} onChange={(event) => setBedSizeZ(Number(event.target.value) || 1)} /></label>
+            </div>
+          )}
+          <span className="studioSettingLabel">Соединение частей</span>
+          {renderOptionButtons(bedConnectorOptions, bedConnectorMode, setBedConnectorMode, (item) => item.title)}
+        </div>
+      );
+    }
+
+    if (selectedMode === "orientation") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Ориентация модели</h3>
+          <p>Будет сохранён текущий поворот модели и смещение по рабочему столу.</p>
+          <div className="studioSizeGrid">
+            {["x", "y", "z"].map((axis) => (
+              <label key={axis}>
+                <span>{axis.toUpperCase()}, °</span>
+                <input type="number" value={Number(orientationTransform[`rotation_${axis}_deg`] ?? 0)} onChange={(event) => setOrientationAxis(axis, event.target.value)} />
+              </label>
+            ))}
+          </div>
+          <span className="studioSettingLabel">Положение на столе</span>
+          <div className="studioInlineActions">
+            <button type="button" onClick={() => setOrientationTransform((current) => ({ ...current, translate_to_floor: true }))}>Поставить на стол</button>
+            <button type="button" onClick={centerOnBed}>По центру</button>
+            <button type="button" onClick={resetOrientationTransform}>Сброс</button>
+          </div>
+          <span className="studioSettingLabel">Шаг перемещения</span>
+          {renderOptionButtons([1, 5, 10], bedMoveStep, setBedMoveStep, (item) => `${item} мм`)}
+          <div className="studioMovePad">
+            <button type="button" onClick={() => moveOnBed("z", -bedMoveStep)}>↑</button>
+            <button type="button" onClick={() => moveOnBed("x", -bedMoveStep)}>←</button>
+            <button type="button" onClick={() => moveOnBed("x", bedMoveStep)}>→</button>
+            <button type="button" onClick={() => moveOnBed("z", bedMoveStep)}>↓</button>
+          </div>
+        </div>
+      );
+    }
+
+    if (selectedMode === "auto_orientation") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Автоориентация</h3>
+          <p>Сервис проверит несколько положений модели и выберет лучшее для печати.</p>
+          {renderOptionButtons(orientationPriorityOptions, orientationPriority, setOrientationPriority, (item) => item.title)}
+        </div>
+      );
+    }
+
+    if (selectedMode === "symmetry") {
+      return (
+        <div className="studioSettingBlock">
+          <h3>Симметрия</h3>
+          <span className="studioSettingLabel">Ось</span>
+          {renderOptionButtons(["x", "y", "z"], symmetryAxis, setSymmetryAxis, (item) => item.toUpperCase())}
+          <span className="studioSettingLabel">Режим</span>
+          {renderOptionButtons([
+            { id: "analyze", title: "Анализ" },
+            { id: "fix", title: "Исправить" },
+          ], symmetryMode, setSymmetryMode, (item) => item.title)}
+        </div>
+      );
+    }
+
+    return null;
+  };
+
+  if (publicView === "home") {
+    return (
+      <ConfigProvider appearance="dark">
+        <PublicLanding
+          onDemo={openDemo}
+          onEarlyAccess={() => setPublicView("access")}
+          onPremiumActivated={applyPremiumActivation}
+          onPremium={() => setPublicView("premium")}
+          onStartCut={openUpload}
+          currentUser={currentUser}
+          currentUserLoading={currentUserLoading}
+          featureFlags={featureFlags}
+        />
+      </ConfigProvider>
+    );
+  }
+
+  if (publicView === "access") {
+    return (
+      <ConfigProvider appearance="dark">
+        <AccessRequestForm apiBaseUrl={apiBaseUrl} onBack={() => navigatePublicView("home")} />
+      </ConfigProvider>
+    );
+  }
+
+  if (publicView === "premium") {
+    return (
+      <ConfigProvider appearance="dark">
+        <main className="publicLanding publicSite publicFormPage">
+          <PremiumAccessModal
+            onActivated={applyPremiumActivation}
+            onClose={() => navigatePublicView("home")}
+            onOpenApplication={() => navigatePublicView("app")}
+          />
+        </main>
+      </ConfigProvider>
+    );
+  }
+
+  return (
+    <ConfigProvider appearance="dark">
+      <View activePanel="main">
+        <Panel id="main">
+          <main className="studioShell">
+            <StudioHeader
+              apiBaseUrl={apiBaseUrl}
+              currentUser={currentUser}
+              currentUserLoading={currentUserLoading}
+              file={file}
+              jobStatus={jobStatus}
+              onGoHome={goHomeFromEditor}
+              onOpenApplication={() => navigatePublicView("app")}
+              onOpenPremium={() => setPublicView("premium")}
+              Icon={LaunchIcon}
+              PremiumStatusControl={PremiumStatusControl}
+              statusLabel={statusLabel}
+              supportUrl={STL_MASTER_SUPPORT_URL}
+            />
+
+            {currentUserError && <p className="studioWarning" role="status">{currentUserError}</p>}
+            {accessGateMessage && (
+              <section className="studioAccessBanner" role="status">
+                <div>
+                  <strong>Доступ к обработке закрыт</strong>
+                  <span>{accessGateMessage}</span>
+                </div>
+                <button type="button" onClick={() => setPublicView("premium")}>Подключить Premium</button>
+                <button type="button" onClick={() => setPublicView("access")}>Ранний доступ</button>
+              </section>
+            )}
+
+            <section className="studioWorkspace">
+              <StudioSidebar presets={visiblePresets} selectedMode={selectedMode} onSelect={setSelectedMode} />
+
+              <section className="studioViewerWorkspace" aria-label="3D viewport STL Master Studio" onDrop={handleStudioDrop} onDragOver={handleStudioDragOver}>
+                {file ? (
+                  <StlPreview
+                    file={activePreviewFile}
+                    sourceFile={file}
+                    splitPreviewEnabled={selectedMode === "split"}
+                    splitAxis={splitAxis}
+                    splitParts={splitParts}
+                    splitMode={splitMode}
+                    splitPlaneOffset={splitPlaneOffset}
+                    symmetryPreviewEnabled={selectedMode === "symmetry"}
+                    symmetryAxis={symmetryAxis}
+                    compareMode={previewMode}
+                    heatmapEnabled={heatmapEnabled}
+                    heatmapData={heatmapData}
+                    heatmapError={heatmapError}
+                    artifactMapEnabled={artifactMapEnabled}
+                    artifactMapData={artifactMapData}
+                    artifactMapError={artifactMapError}
+                    localSelectionEnabled={selectedMode === "local"}
+                    localSelectionRadius={localSelectionRadius}
+                    localSelectionStrength={localSmoothingStrength}
+                    localSelectionMode={localSelectionMode}
+                    localSelection={localSelection}
+                    onLocalSelectionChange={setLocalSelection}
+                    orientationTransform={orientationTransform}
+                    onOrientationChange={setOrientationTransform}
+                  />
+                ) : (
+                  <StudioEmptyState
+                    hasUploadAccess={hasUploadAccess}
+                    uploadLimitMb={uploadLimitMb}
+                    onDragOver={handleStudioDragOver}
+                    onDrop={handleStudioDrop}
+                    onOpenDemo={openDemo}
+                    onOpenRequirements={() => window.alert("Требования к файлу:\n\n- Формат: STL\n- Размер: до " + uploadLimitMb + " МБ\n- Результаты: STL, ZIP, JSON и TXT\n- Не загружайте конфиденциальные модели без Premium-доступа.")}
+                    onRequestAccess={showAccessGate}
+                    onSelectFile={requestStudioFile}
+                    Icon={LaunchIcon}
+                  />
+                )}
+              </section>
+
+              <aside className="studioInspector" aria-label="Инспектор модели и обработки">
+                <section className="studioInspectorCard studioUserCard">
+                  <p className="studioPanelLabel">Пользователь</p>
+                  <h2>{currentUser?.premium_active ? "Premium активен" : hasUploadAccess ? "Доступ активен" : "Гостевой режим"}</h2>
+                  <dl>
+                    <div><dt>Лимит STL</dt><dd>{uploadLimitMb} МБ</dd></div>
+                    <div><dt>Очередь</dt><dd>{currentUser?.limits?.priority === "premium" ? "Повышенная" : "Обычная"}</dd></div>
+                    <div><dt>Вход</dt><dd>.stl</dd></div>
+                    <div><dt>Экспорт</dt><dd>STL · ZIP · JSON · TXT</dd></div>
+                  </dl>
+                </section>
+
+                <section className="studioInspectorCard">
+                  <p className="studioPanelLabel">Настройка</p>
+                  <h2>{studioSelectedPreset.title}</h2>
+                  <p className="studioInspectorLead">{studioSelectedPreset.description}</p>
+                  {renderStudioSettings()}
+                </section>
+
+                {orientationHasVisualChanges && selectedMode !== "orientation" && (
+                  <section className="studioInspectorNote">
+                    <strong>Поворот изменил только просмотр.</strong>
+                    <span>Чтобы сохранить его в STL, выберите “Применить ориентацию”.</span>
+                  </section>
+                )}
+
+                {jobStatus && (
+                  <section className="studioInspectorCard">
+                    <p className="studioPanelLabel">Обработка</p>
+                    <h2>{statusLabel(jobStatus.status)}</h2>
+                    {jobStatus.status === "queued" && (
+                      <dl>
+                        <div><dt>Место</dt><dd>{jobStatus.queue_position || "—"}</dd></div>
+                        <div><dt>Задач</dt><dd>{jobStatus.queue_size ?? "—"}</dd></div>
+                        <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus.estimated_wait_seconds)}</dd></div>
+                        <div><dt>Приоритет</dt><dd>{queuePriorityLabel(jobStatus.priority)}</dd></div>
+                      </dl>
+                    )}
+                    {jobStatus.status === "queued" && (
+                      <p className="studioQueueHint">Premium-задачи обрабатываются быстрее и получают повышенный приоритет в очереди.</p>
+                    )}
+                    <Progress value={progress} />
+                    <p>{statusMessage(jobStatus.status, jobStatus.message)}</p>
+                  </section>
+                )}
+
+                {jobStatus?.status === "completed" && (
+                  <AnalysisResult
+                    activePanel={activePanel}
+                    apiBaseUrl={apiBaseUrl}
+                    result={jobStatus.result}
+                    jobStatus={jobStatus}
+                    sourceFile={file}
+                    processedPreviewFile={processedPreviewFile}
+                    setActivePanel={setActivePanel}
+                    compareMode={previewMode}
+                    hasProcessedPreview={Boolean(processedPreviewFile)}
+                    processedPreviewLoading={processedPreviewLoading}
+                    processedPreviewError={processedPreviewError}
+                    heatmapEnabled={heatmapEnabled}
+                    heatmapData={heatmapData}
+                    heatmapLoading={heatmapLoading}
+                    heatmapError={heatmapError}
+                    focusChangesVersion={focusChangesVersion}
+                    artifactMapEnabled={artifactMapEnabled}
+                    artifactMapData={artifactMapData}
+                    artifactMapLoading={artifactMapLoading}
+                    artifactMapError={artifactMapError}
+                    onCompareModeChange={(mode) => {
+                      setHeatmapEnabled(false);
+                      setArtifactMapEnabled(false);
+                      setPreviewMode(mode);
+                    }}
+                    onShowChanges={handleShowChanges}
+                    onFocusChanges={handleFocusChanges}
+                    onShowArtifacts={handleShowArtifacts}
+                    onOpenHistoryFile={handleOpenHistoryFile}
+                  />
+                )}
+
+                {jobStatus && <JobInfoPanel jobStatus={jobStatus} result={jobStatus.result} />}
+                {jobStatus?.status === "completed" && <FeedbackPanel apiBaseUrl={apiBaseUrl} jobStatus={jobStatus} />}
+                <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
+              </aside>
+            </section>
+
+            <StudioWorkflowBar
+              apiBaseUrl={apiBaseUrl}
+              canRun={canRunStudioJob}
+              error={error}
+              jobId={jobId}
+              jobStatus={jobStatus}
+              progress={progress}
+              result={jobStatus?.result}
+              selectedOperations={studioSelectedOperations}
+              selectedPreset={studioSelectedPreset}
+              uploading={uploading}
+              onRun={handleUpload}
+              operationTitles={operationTitles}
+              shortJobId={shortJobId}
+              statusMessage={statusMessage}
+              ProgressComponent={Progress}
+            />
+
+            <input ref={studioFileInputRef} className="studioFileInput" type="file" accept=".stl" onChange={handleStudioFileChange} />
+          </main>
+        </Panel>
+      </View>
+    </ConfigProvider>
+  );
+}
+function formatFeedbackDate(value) {
+  if (!value) return "—";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.toLocaleString("ru-RU", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",

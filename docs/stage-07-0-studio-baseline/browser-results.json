@@ -1,0 +1,709 @@
+{
+  "runId": "stage07-1785413206299",
+  "base": "http://127.0.0.1",
+  "startedAt": "2026-07-30T12:06:46.300Z",
+  "console": [
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x2a6400160a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1/app",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x2a6400160a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1/app",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x2a6400160a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1/app",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x2a6400160a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+      "location": {
+        "url": "http://127.0.0.1/app",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failedRequests": [],
+  "apiChecks": {
+    "/health": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    "/api/v1/status": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "service": "stl-master-backend",
+        "status": "ok",
+        "redis": "ok"
+      }
+    },
+    "/api/v1/me": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "ok": true,
+        "user_id": null,
+        "access_level": "free",
+        "plan": "free",
+        "plan_label": "Бесплатный",
+        "premium_active": false,
+        "premium_started_at": null,
+        "premium_expires_at": null,
+        "premium_days_left": null,
+        "blocked": false,
+        "limits": {
+          "max_file_size_mb": 100,
+          "daily_jobs": null,
+          "active_jobs": 1,
+          "queued_jobs": 2,
+          "uploads_per_hour": 5,
+          "priority": "free"
+        },
+        "has_access_code": false
+      }
+    },
+    "/api/v1/config/features": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "beta_mode": true,
+        "beta_upload_limit_mb": 100,
+        "surface_recovery": false,
+        "local_smoothing": true,
+        "split": true,
+        "fit_to_bed_split": true,
+        "orientation": true,
+        "auto_orientation": true,
+        "compare_view": true,
+        "remove_ai_artifacts": true,
+        "print_repair": true,
+        "reduce_polygons": true,
+        "fix_symmetry": false,
+        "absolute_upload_limit_mb": 500,
+        "active_upload_limit_mb": 100
+      }
+    },
+    "/api/v1/me-with-access": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "id": "9cf33194-377b-4dac-a820-8a632e983a2e",
+        "contact": "stage07-stage07-1785413206299@example.test",
+        "name": "Stage 7 Audit",
+        "access_level": "early_access",
+        "created_at": "2026-07-30T12:06:47.850286+00:00",
+        "expires_at": "2026-08-06T12:06:47.850155+00:00",
+        "notes": "Заявка early_access: 22318b34-15cd-4d3a-af55-2e3d0ad15b3f",
+        "jobs_count": 0,
+        "last_seen_at": null,
+        "activated_at": null,
+        "activated_application_id": null,
+        "request_number": null,
+        "max_uses": null,
+        "uses": 0,
+        "is_test": true,
+        "source": "stage-07-audit",
+        "environment": "audit",
+        "test_run_id": "stage07-1785413206299",
+        "test_name": "",
+        "has_access_code": true,
+        "raw_access_level": "early_access",
+        "plan": "early_access",
+        "blocked": false,
+        "premium_active": false,
+        "premium_started_at": "2026-07-30T12:06:47.850286+00:00",
+        "premium_expires_at": "2026-08-06T12:06:47.850155+00:00",
+        "premium_days_left": 7,
+        "classification": "test",
+        "classification_reasons": [
+          "metadata.is_test",
+          "test_run_id",
+          "example_contact"
+        ],
+        "archived": false,
+        "user_id": "9cf33194-377b-4dac-a820-8a632e983a2e",
+        "plan_label": "Ранний доступ",
+        "limits": {
+          "max_file_size_mb": 100,
+          "daily_jobs": null,
+          "active_jobs": 1,
+          "queued_jobs": 3,
+          "uploads_per_hour": 15,
+          "priority": "early_access"
+        },
+        "ok": true
+      }
+    }
+  },
+  "screenshots": [
+    "studio-1024.png",
+    "studio-1440-zoom-100.png",
+    "studio-1440-zoom-125.png",
+    "studio-1440-zoom-67.png",
+    "studio-1440-zoom-80.png",
+    "studio-320.png",
+    "studio-360.png",
+    "studio-390.png",
+    "studio-430.png",
+    "studio-768.png",
+    "studio-compare-1920.png",
+    "studio-completed-1920.png",
+    "studio-empty-1440.png",
+    "studio-empty-1920.png",
+    "studio-file-loaded-1920.png",
+    "studio-history-1440.png",
+    "studio-history-1920.png",
+    "studio-invalid-file-1920.png",
+    "studio-loaded-1440.png",
+    "studio-mobile-menu.png",
+    "studio-mobile-operations.png",
+    "studio-mobile-result.png",
+    "studio-mobile-viewer.png",
+    "studio-modal-1920.png",
+    "studio-operations-1920.png",
+    "studio-premium-gate-1920.png",
+    "studio-processing-1440.png",
+    "studio-result-1440.png",
+    "studio-result-1920.png",
+    "studio-uploading-1920.png"
+  ],
+  "metrics": {
+    "empty1920": {
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "width": 1892,
+        "height": 864,
+        "top": 100,
+        "left": 14,
+        "right": 1906,
+        "bottom": 964
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "width": 1304,
+        "height": 864,
+        "top": 100,
+        "left": 268,
+        "right": 1572,
+        "bottom": 964
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "width": 320,
+        "height": 864,
+        "top": 100,
+        "left": 1586,
+        "right": 1906,
+        "bottom": 964
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "width": 1892,
+        "height": 72,
+        "top": 14,
+        "left": 14,
+        "right": 1906,
+        "bottom": 86
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "width": 1892,
+        "height": 104,
+        "top": 978,
+        "left": 14,
+        "right": 1906,
+        "bottom": 1082
+      },
+      "horizontalOverflow": false,
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "focusableWithoutLabels": 1
+    },
+    "studio-empty-1440.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyHeight": 900,
+      "viewportHeight": 900
+    },
+    "studio-loaded-1440.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyHeight": 900,
+      "viewportHeight": 900
+    },
+    "studio-processing-1440.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyHeight": 900,
+      "viewportHeight": 900
+    },
+    "studio-result-1440.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyHeight": 900,
+      "viewportHeight": 900
+    },
+    "studio-history-1440.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "bodyHeight": 900,
+      "viewportHeight": 900
+    },
+    "studio-1024.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "bodyHeight": 4561,
+      "viewportHeight": 768
+    },
+    "studio-768.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "bodyHeight": 4648,
+      "viewportHeight": 1024
+    },
+    "studio-430.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 430,
+      "innerWidth": 430,
+      "bodyHeight": 5759,
+      "viewportHeight": 932
+    },
+    "studio-390.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyHeight": 5983,
+      "viewportHeight": 844
+    },
+    "studio-360.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "bodyHeight": 6113,
+      "viewportHeight": 800
+    },
+    "studio-320.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "bodyHeight": 6501,
+      "viewportHeight": 568
+    },
+    "studio-mobile-menu.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyHeight": 5984,
+      "viewportHeight": 844
+    },
+    "studio-mobile-viewer.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyHeight": 5984,
+      "viewportHeight": 844
+    },
+    "studio-mobile-operations.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyHeight": 5984,
+      "viewportHeight": 844
+    },
+    "studio-mobile-result.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "bodyHeight": 5984,
+      "viewportHeight": 844
+    },
+    "studio-1440-zoom-67.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440
+    },
+    "studio-1440-zoom-80.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440
+    },
+    "studio-1440-zoom-100.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440
+    },
+    "studio-1440-zoom-125.png": {
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440
+    }
+  },
+  "accessibility": {
+    "keyboard": {
+      "focusableCount": 45,
+      "iconOnlyNoLabel": 1
+    }
+  },
+  "jobFlow": {
+    "status": "completed-api-verified",
+    "completedInUi": true,
+    "bodyExcerpt": "STL Master Studio\nstage07-tiny.stl\nОбработка\nPacking analysis result ZIP\nПолучить Premium\nПомощь\nЭкспорт\nИНСТРУМЕНТЫ\nАНАЛИЗ\n🔎\nПроверить модель\nПонятный отчёт о состоянии STL\n🧹\nУдалить AI-артефакты\nУбирает мусорные фрагменты\n✨\nУлучшить модель\nИсправляет сетку и нормали\n🎯\nВыборочная правка\nЛокально сглаживает выбранную область\nГЕОМЕТРИЯ\n✂️\nРазрезать для склейки\nЧасти со штифтами и пазами\n🧩\nРазрезать под стол\nЧасти помещаются на стол принтера\n🪶\nУменьшить вес\nУменьшает количество полигонов\n📐\nПрименить ориентацию\nСохраняет текущий поворот\n🧭\nПодобрать ориентацию для печати\nВыбирает удобное положение\nSTL input\n.stl\n\n3D-ПРОСМОТР\n\nstage07-tiny.stl\nМодель готова к просмотру\nПо центру\nПовернуть X\nПовернуть Y\nПовернуть Z\nПоставить на стол\nОчистить\nСкриншот\n\nПОЛЬЗОВАТЕЛЬ\n\nДоступ активен\nЛимит STL\n100 МБ\nОчередь\nОбычная\nВход\n.stl\nЭкспорт\nSTL · ZIP · JSON · TXT\n\nНАСТРОЙКА\n\nПроверить модель\n\nБыстрая проверка размеров, треугольников и готовности к печати.\n\nПроверка модели\n\nSTL Master проверит габариты, целостность сетки, тонкие места и готовность к печати.\n\nОБРАБОТКА\n\nОбработка\n\nМодель обрабатывается. Можно оставить страницу открытой.\n\nИНФОРМАЦИЯ О ЗАДАЧЕ\n\nДанные обработки\nJob ID\nc1a25090-d646-492b-8002-bc348204b3e4\nСкопировать Job ID\nВремя обработки\n—\nИсходный STL\n202 Б\nИтоговый STL\n—\nОперации\nАнализ модели, Проверка к печати, Подготовить пакет\nЗавершено\n—\nПоследние обработки\n№ c1a25090…b3e4\nОБРАБОТКА\n\nМодель обрабатывается. Можно оставить страницу открытой.\n\nОткрыть результат\nУдалить из истории\n1\nЗагрузка\n2\nАнализ\n3\nНастройка\n4\nОбработка\n5\nПроверка\n6\nЭкспорт\nПроверить модель\nАнализ модели · Проверка к печати · Подготовить пакет\nЗадание: c1a25090…b3e4\n80% · Модель обрабатывается. Можно оставить страницу открытой.\nЗапустить обработку",
+    "apiVerification": {
+      "job_id": "c1a25090-d646-492b-8002-bc348204b3e4",
+      "status": "completed",
+      "progress": 100,
+      "processing_seconds": 2.015,
+      "operations": [
+        "analyze",
+        "print_check",
+        "prepare_package"
+      ],
+      "download_ready": true,
+      "download_url": "/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/download",
+      "generated_files": [
+        {
+          "name": "original.stl",
+          "type": "source",
+          "label": "Исходная модель",
+          "download_url": "/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/original.stl",
+          "size_bytes": 202
+        },
+        {
+          "name": "artifact_map.json",
+          "type": "report",
+          "label": "Карта найденных дефектов",
+          "download_url": "/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/artifact_map.json",
+          "size_bytes": 456
+        },
+        {
+          "name": "print_report.txt",
+          "type": "report",
+          "label": "Отчёт",
+          "download_url": "/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/print_report.txt",
+          "size_bytes": 649
+        }
+      ],
+      "artifact_map_available": true,
+      "change_map_available": false
+    },
+    "zipVerification": {
+      "zip_path": "/tmp/stage07-c1a25090-d646-492b-8002-bc348204b3e4.zip",
+      "zip_size": 1592,
+      "zip_files": [
+        "original.stl",
+        "artifact_map.json",
+        "print_report.txt",
+        "manifest.json"
+      ]
+    },
+    "cleanupJob": {
+      "endpoint": "/api/v1/admin/jobs/bulk",
+      "action": "delete",
+      "job_id": "c1a25090-d646-492b-8002-bc348204b3e4",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "action": "delete",
+        "report": {
+          "success": [
+            {
+              "id": "c1a25090-d646-492b-8002-bc348204b3e4",
+              "action": "delete",
+              "manifest": {
+                "job_id": "c1a25090-d646-492b-8002-bc348204b3e4",
+                "redis_hash": {
+                  "original_filename": "stage07-tiny.stl",
+                  "connector_wall_thickness_mm": "1.2",
+                  "split_plane_offset_mm": "0.0",
+                  "reduction_percent": "50",
+                  "fit_to_bed": "false",
+                  "size_bytes": "202",
+                  "test_name": "",
+                  "model_name": "",
+                  "environment": "production",
+                  "source": "app",
+                  "operations": "[\"analyze\", \"print_check\", \"prepare_package\"]",
+                  "progress": "100",
+                  "magnet_diameter_mm": "6.0",
+                  "result": "{\"file\": {\"size_bytes\": 202, \"size_mb\": 0.0}, \"stl_type\": \"ascii\", \"triangles\": 2, \"triangles_count\": 2, \"bounding_box\": {\"min\": {\"x\": 0.0, \"y\": 0.0, \"z\": 0.0}, \"max\": {\"x\": 10.0, \"y\": 10.0, \"z\": 1.0}}, \"dimensions\": {\"width\": 10.0, \"depth\": 10.0, \"height\": 1.0}, \"checks\": {\"has_negative_coordinates\": false, \"has_near_zero_axis\": false, \"oversized_for_bed_220_220_250\": false}, \"printability\": {\"bed_fit_220_220_250\": true, \"size_class\": \"small\", \"warnings\": [], \"recommendations\": [\"Критичных ограничений для базовой подготовки к печати не найдено.\"]}, \"download_ready\": true, \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/download\", \"operations\": [\"analyze\", \"print_check\", \"prepare_package\"], \"implemented_operations\": [\"analyze\", \"print_check\", \"prepare_package\"], \"planned_operations\": [], \"model_qa\": {\"health_score\": 52, \"health_label\": \"Требует исправления\", \"watertight\": false, \"non_manifold_edges\": 0, \"open_edges\": 6, \"duplicate_vertices\": 0, \"duplicate_faces\": 0, \"degenerate_faces\": 0, \"components\": 2, \"tiny_islands\": 2, \"inverted_normals\": 0, \"zero_area_faces\": 0, \"repair_recommended\": true, \"artifact_quality\": {\"suspicious_regions\": 2, \"spikes_detected\": 0, \"elongated_faces\": 0, \"dense_regions\": 2, \"sparse_regions\": 2, \"artifact_score_penalty\": 18}, \"warning\": null}, \"skipped_operations\": [], \"after_file\": \"original.stl\", \"after_download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/original.stl\", \"final_model\": \"original.stl\", \"final_download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/original.stl\", \"change_map\": {\"available\": false, \"file\": null, \"operation\": null, \"changed_vertices\": 0, \"max_distance\": 0.0, \"mean_distance\": 0.0, \"download_url\": null, \"reason\": \"Нет операции с видимым изменением модели.\"}, \"artifact_map\": {\"available\": true, \"file\": \"artifact_map.json\", \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/artifact_map.json\", \"faces_count\": 2, \"sampled\": false, \"summary\": {\"elongated_faces\": 0, \"spikes_detected\": 0, \"suspicious_regions\": 2, \"dense_regions\": 2, \"sparse_regions\": 2}}, \"processing_history\": [{\"step\": 1, \"operation\": \"original\", \"title\": \"Исходная модель\", \"file\": \"original.stl\", \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/original.stl\", \"visible_result\": {\"created\": true}, \"artifact_map\": \"artifact_map.json\", \"artifact_map_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/artifact_map.json\"}], \"package_ready\": true, \"package_message\": \"Пакет подготовки создан\", \"generated_files\": [{\"name\": \"original.stl\", \"type\": \"source\", \"label\": \"Исходная модель\", \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/original.stl\", \"size_bytes\": 202}, {\"name\": \"artifact_map.json\", \"type\": \"report\", \"label\": \"Карта найденных дефектов\", \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/artifact_map.json\", \"size_bytes\": 456}, {\"name\": \"print_report.txt\", \"type\": \"report\", \"label\": \"Отчёт\", \"download_url\": \"/api/v1/jobs/c1a25090-d646-492b-8002-bc348204b3e4/files/print_report.txt\", \"size_bytes\": 649}]}",
+                  "queued_at": "2026-07-30T12:06:55.341929+00:00",
+                  "message": "STL analysis completed",
+                  "split_axis": "z",
+                  "magnet_size": "6x2",
+                  "test_run_id": "",
+                  "split_parts": "2",
+                  "orientation_transform": "{\"rotation_x\": 0.0, \"rotation_y\": 0.0, \"rotation_z\": 0.0, \"rotation_x_deg\": 0.0, \"rotation_y_deg\": 0.0, \"rotation_z_deg\": 0.0, \"translate_to_floor\": false, \"translate_x_mm\": 0.0, \"translate_z_mm\": 0.0}",
+                  "processing_started_at": "2026-07-30T12:06:55.344810+00:00",
+                  "connector_count": "2",
+                  "lock_profile": "tongue_groove",
+                  "connector_clearance_mm": "0.25",
+                  "model_improvement_strength": "balanced",
+                  "split_engine": "blender_boolean",
+                  "split_mode": "simple",
+                  "connector_depth_mm": "6.0",
+                  "artifact_cleanup_strength": "balanced",
+                  "auto_orientation": "false",
+                  "apply_orientation": "false",
+                  "vehicle_name": "",
+                  "bed_size_x": "220.0",
+                  "heavy_job": "false",
+                  "bed_size_z": "220.0",
+                  "input_path": "/data/uploads/c1a25090-d646-492b-8002-bc348204b3e4/input.stl",
+                  "updated_at": "2026-07-30T12:06:57.360870+00:00",
+                  "orientation_priority": "supports",
+                  "access_level": "early_access",
+                  "is_test": "false",
+                  "bed_connector_mode": "none",
+                  "bed_connector_clearance_mm": "0.25",
+                  "magnet_thickness_mm": "2.0",
+                  "processing_seconds": "2.015",
+                  "local_selection": "",
+                  "symmetry_axis": "x",
+                  "beta_user_id": "9cf33194-377b-4dac-a820-8a632e983a2e",
+                  "bed_size_y": "250.0",
+                  "job_id": "c1a25090-d646-492b-8002-bc348204b3e4",
+                  "symmetry_mode": "analyze",
+                  "priority": "early_access",
+                  "filename": "stage07-tiny.stl",
+                  "result_dir": "/data/results/c1a25090-d646-492b-8002-bc348204b3e4",
+                  "connector_size_mm": "4",
+                  "status": "completed",
+                  "queue_owner_key": "user:9cf33194-377b-4dac-a820-8a632e983a2e",
+                  "ai_cleanup_strength": "medium",
+                  "completed_at": "2026-07-30T12:06:57.360123+00:00"
+                },
+                "files": 2,
+                "bytes": 9171,
+                "feedback": 0,
+                "locks": []
+              }
+            }
+          ],
+          "skipped": [],
+          "protected": [],
+          "errors": []
+        },
+        "quarantine": "/data/quarantine/jobs-bulk-ebe93d74-f24d-441a-9a7d-6edfebe2b04c",
+        "integrity": {
+          "ok": false,
+          "summary": {
+            "orphan_jobs": 0,
+            "orphan_files": 0,
+            "redis": 0,
+            "locks": 0,
+            "uploads": 0,
+            "results": 0,
+            "feedback": 1,
+            "users": 0,
+            "applications": 0
+          },
+          "issues": {
+            "orphan_jobs": [],
+            "orphan_files": [],
+            "redis": [],
+            "locks": [],
+            "uploads": [],
+            "results": [],
+            "feedback": [
+              {
+                "feedback_id": "9aafe688-eccd-4076-b0bb-7f4a3384f488",
+                "job_id": "beta-smoke"
+              }
+            ],
+            "users": [],
+            "applications": []
+          },
+          "fixed": [
+            {
+              "entity": "feedback",
+              "id": "9aafe688-eccd-4076-b0bb-7f4a3384f488",
+              "from": "/data/results/feedback/9aafe688-eccd-4076-b0bb-7f4a3384f488.json",
+              "to": "/data/quarantine/integrity-feedback/3d348da1-efaa-4d88-8fe2-b66f915e7a86/9aafe688-eccd-4076-b0bb-7f4a3384f488.json"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "cleanup": {
+    "attempted": true,
+    "response": {
+      "ok": true,
+      "status": 200,
+      "body": {
+        "ok": true,
+        "cleanup_id": "6b3e45ea-090f-47e3-b1a6-ca1265e33a9b",
+        "test_run_id": "stage07-1785413206299",
+        "counts": {
+          "feedback": 0,
+          "jobs": 0,
+          "applications": 1,
+          "users": 1,
+          "files": 0,
+          "errors": 0
+        },
+        "quarantine": "/data/quarantine/test-data-6b3e45ea-090f-47e3-b1a6-ca1265e33a9b",
+        "remaining": {
+          "total": {
+            "users": 1,
+            "applications": 2,
+            "premium_codes": 1,
+            "jobs": 2897,
+            "feedback": 1,
+            "files": 42
+          },
+          "test": {
+            "users": 0,
+            "applications": 1,
+            "premium_codes": 0,
+            "jobs": 42,
+            "feedback": 1,
+            "files": 42
+          },
+          "legacy_test_candidate": {
+            "applications": 1,
+            "jobs": 2854,
+            "files": 2854
+          },
+          "real": {
+            "users": 1,
+            "applications": 0,
+            "premium_codes": 1,
+            "jobs": 0,
+            "feedback": 0,
+            "files": 0
+          },
+          "uncertain": {
+            "job": 1
+          },
+          "test_size_bytes": 2660854834,
+          "test_size_mb": 2537.59,
+          "legacy_size_bytes": 388566012,
+          "legacy_size_mb": 370.57
+        },
+        "remaining_test_counts": {
+          "users": 0,
+          "applications": 0,
+          "premium_codes": 0,
+          "jobs": 0,
+          "feedback": 0,
+          "files": 0
+        }
+      }
+    }
+  },
+  "accessRequest": {
+    "ok": true,
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "application_id": "22318b34-15cd-4d3a-af55-2e3d0ad15b3f"
+    }
+  },
+  "approval": {
+    "ok": true,
+    "status": 200,
+    "body": {
+      "application": {
+        "id": "22318b34-15cd-4d3a-af55-2e3d0ad15b3f",
+        "type": "early_access",
+        "name": "Stage 7 Audit",
+        "email": "stage07-stage07-1785413206299@example.test",
+        "telegram": "@stage07_audit",
+        "occupation": "audit",
+        "use_case": "audit fixture",
+        "comment": "audit fixture",
+        "ip": "172.19.0.1",
+        "country": "unknown",
+        "created_at": "2026-07-30T12:06:47.843847+00:00",
+        "status": "approved",
+        "approved_at": "2026-07-30T12:06:47.850286+00:00",
+        "user_id": "9cf33194-377b-4dac-a820-8a632e983a2e",
+        "is_test": true,
+        "source": "stage-07-audit",
+        "environment": "audit",
+        "test_run_id": "stage07-1785413206299",
+        "test_name": "",
+        "updated_at": "2026-07-30T12:06:47.850286+00:00"
+      },
+      "user": {
+        "id": "9cf33194-377b-4dac-a820-8a632e983a2e",
+        "contact": "stage07-stage07-1785413206299@example.test",
+        "name": "Stage 7 Audit",
+        "access_level": "early_access",
+        "created_at": "2026-07-30T12:06:47.850286+00:00",
+        "expires_at": "2026-08-06T12:06:47.850155+00:00",
+        "notes": "Заявка early_access: 22318b34-15cd-4d3a-af55-2e3d0ad15b3f",
+        "jobs_count": 0,
+        "last_seen_at": null,
+        "activated_at": null,
+        "activated_application_id": null,
+        "request_number": null,
+        "max_uses": null,
+        "uses": 0,
+        "is_test": true,
+        "source": "stage-07-audit",
+        "environment": "audit",
+        "test_run_id": "stage07-1785413206299",
+        "test_name": "",
+        "has_access_code": true
+      },
+      "access_code": "[redacted-test-access-code]",
+      "message": "[redacted-test-approval-message]",
+      "request_number": null
+    }
+  },
+  "finishedAt": "2026-07-30T12:07:17.403Z"
+}

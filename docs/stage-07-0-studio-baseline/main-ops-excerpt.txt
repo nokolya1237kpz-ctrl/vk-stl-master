@@ -1,0 +1,611 @@
+  },
+  {
+    id: "prepare_package",
+    title: "Подготовить пакет",
+    description: "Собрать ZIP с моделями и понятными отчётами.",
+    available: true,
+  },
+];
+
+const operationTitles = {
+  ...Object.fromEntries(processingOperations.map((operation) => [operation.id, operation.title])),
+};
+
+function expandOperationsForUpload(operations) {
+  return [...new Set(operations)];
+}
+
+function getProcessedPreviewUrl(result) {
+  return (result && result.final_download_url) || (result && result.after_download_url) || (result && result.model_improvement && result.model_improvement.after_download_url) || null;
+}
+
+function getChangeMapUrl(result) {
+  return result?.change_map?.available && result.change_map.download_url ? result.change_map.download_url : null;
+}
+
+function getArtifactMapUrl(result) {
+  return result?.artifact_map?.available && result.artifact_map.download_url ? result.artifact_map.download_url : null;
+}
+
+function createDemoStl({ cleaned = false } = {}) {
+  const spikeHeight = cleaned ? 1 : 2.4;
+  const triangles = [
+    [[-10, 0, -10], [10, 0, -10], [10, 0, 10]], [[-10, 0, -10], [10, 0, 10], [-10, 0, 10]],
+    [[-10, 20, -10], [10, 20, 10], [10, 20, -10]], [[-10, 20, -10], [-10, 20, 10], [10, 20, 10]],
+    [[-10, 0, -10], [-10, 20, -10], [10, 20, -10]], [[-10, 0, -10], [10, 20, -10], [10, 0, -10]],
+    [[10, 0, -10], [10, 20, -10], [10, 20, 10]], [[10, 0, -10], [10, 20, 10], [10, 0, 10]],
+    [[10, 0, 10], [10, 20, 10], [-10, 20, 10]], [[10, 0, 10], [-10, 20, 10], [-10, 0, 10]],
+    [[-10, 0, 10], [-10, 20, 10], [-10, 20, -10]], [[-10, 0, 10], [-10, 20, -10], [-10, 0, -10]],
+    [[-2, 20, -2], [2, 20, -2], [0, 20 + spikeHeight, 0]],
+    [[2, 20, -2], [2, 20, 2], [0, 20 + spikeHeight, 0]],
+    [[2, 20, 2], [-2, 20, 2], [0, 20 + spikeHeight, 0]],
+    [[-2, 20, 2], [-2, 20, -2], [0, 20 + spikeHeight, 0]],
+  ];
+  const body = triangles.map((triangle) => (
+    `  facet normal 0 0 0\n    outer loop\n${triangle.map((point) => `      vertex ${point[0]} ${point[1]} ${point[2]}`).join("\n")}\n    endloop\n  endfacet`
+  )).join("\n");
+  const content = `solid stl_master_demo\n${body}\nendsolid stl_master_demo\n`;
+  return new File([content], cleaned ? "demo_final.stl" : "demo_original.stl", { type: "model/stl" });
+}
+
+function demoJobStatus() {
+  return {
+    job_id: "demo",
+    status: "completed",
+    progress: 100,
+    operations: ["analyze", "print_check", "remove_ai_artifacts"],
+    result: {
+      model_qa: {
+        health_score: 73,
+        status: "needs_repair",
+        artifact_quality: {
+          suspicious_regions: 12,
+          spikes_detected: 4,
+          elongated_faces: 9,
+          artifact_penalty: 18,
+        },
+      },
+      ai_cleanup: {
+        success: true,
+        health_score_before: 73,
+        health_score_after: 88,
+        suspicious_regions_before: 12,
+        suspicious_regions_after: 3,
+        removed_components: 6,
+        output_file: "demo_final.stl",
+      },
+      final_model: "demo_final.stl",
+      final_download_url: null,
+      generated_files: [],
+      processing_history: [
+        { step: 1, operation: "original", title: "Исходная модель", file: "demo_original.stl", visible_result: { created: true } },
+        { step: 2, operation: "remove_ai_artifacts", title: "Очистка AI-артефактов", file: "demo_final.stl", visible_result: { created: true } },
+      ],
+      change_map: { available: false },
+      artifact_map: { available: false },
+    },
+  };
+}
+
+const dragonSkullPoster = "/assets/marketing/dragon_skull_cutout.png";
+
+const publicWorkflowSteps = [
+  { number: "1", title: "Загрузите STL", text: <>Просто перетащите<br />файл в окно редактора</>, icon: "upload" },
+  { number: "2", title: "Проверьте модель", text: <>Авто-анализ на ошибки<br />и проблемные зоны</>, icon: "inspect" },
+  { number: "3", title: "Исправьте и оптимизируйте", text: <>AI-исправление, очистка сетки,<br />снижение полигонов</>, icon: "magic" },
+  { number: "4", title: "Разрежьте и соедините", text: <>Разделите модель и добавьте<br />соединения для печати</>, icon: "blocks" },
+  { number: "5", title: "Проверьте печать", text: <>Проверка на толщину,<br />нависы и печатаемость</>, icon: "shieldCheck" },
+  { number: "6", title: "Экспортируйте", text: <>Сохраните готовую модель<br />или отправьте в печать</>, icon: "export" },
+];
+
+const connectionModes = [
+  {
+    id: "simple",
+    number: "01",
+    title: "Обычный разрез",
+    description: "Ровное разделение модели без дополнительных соединительных элементов.",
+    image: "/images/connections/stlmaster_render_01_simple_cut.png?v=20260719-clean2",
+    alt: "Обычный разрез STL-модели",
+    meta: "Чистая плоскость",
+  },
+  {
+    id: "glue",
+    number: "02",
+    title: "Под склейку",
+    description: "Подготовленные поверхности для точного совмещения и прочной фиксации деталей.",
+    image: "/images/connections/stlmaster_render_02_glue_surface.png?v=20260719-clean2",
+    alt: "Поверхности STL-модели под склейку",
+    meta: "Контактные поверхности",
+  },
+  {
+    id: "pins",
+    number: "03",
+    title: "Штифты",
+    description: "Цилиндрические направляющие для точного позиционирования частей при сборке.",
+    image: "/images/connections/stlmaster_render_03_alignment_pins.png?v=20260719-clean2",
+    alt: "Штифтовое соединение частей STL-модели",
+    meta: "Точная стыковка",
+  },
+  {
+    id: "magnets",
+    number: "04",
+    title: "Магниты",
+    description: "Посадочные места под круглые магниты для удобной сборки и разборки модели.",
+    image: "/images/connections/stlmaster_render_04_magnetic_connectors.png?v=20260719-clean2",
+    alt: "Посадочные места под магниты в STL-модели",
+    meta: "5×2 мм · 6×2 мм · 8×3 мм · 10×3 мм",
+  },
+  {
+    id: "lock",
+    number: "05",
+    title: "Профильный замок",
+    description: "Фигурное соединение для прочного и предсказуемого совмещения половин модели.",
+    image: "/images/connections/stlmaster_render_05_profile_lock.png?v=20260719-clean2",
+    alt: "Профильный замок между частями STL-модели",
+    meta: "Шип-паз · Ласточкин хвост · Волновой профиль",
+  },
+  {
+    id: "slots",
+    number: "06",
+    title: "Пазы и направляющие",
+    description: "Продольные направляющие для точного позиционирования частей перед фиксацией.",
+    image: "/images/connections/stlmaster_render_06_slots_guides.png?v=20260719-clean2",
+    alt: "Пазы и направляющие между частями STL-модели",
+    meta: "Линейное позиционирование",
+  },
+];
+
+const connectionParameters = [
+  { label: "Размер соединителя", value: "3 / 4 / 6 мм" },
+  { label: "Количество", value: "2 / 3 / 4" },
+  { label: "Зазор", value: "0,15 / 0,25 / 0,40 мм" },
+  { label: "Глубина", value: "2–30 мм" },
+  { label: "Толщина стенки", value: "0,4–5 мм" },
+];
+
+const featureCategories = [
+  "Проверка и ремонт",
+  "Очистка и оптимизация",
+  "Разрез и сборка",
+  "Подготовка результата",
+];
+
+const productFeatures = [
+  {
+    id: "geometry-check",
+    category: "Проверка и ремонт",
+    status: "Стабильно",
+    title: "Проверка геометрии",
+    description: "Находит открытые края, non-manifold участки, ошибки нормалей, дублирующиеся элементы и другие проблемы STL-сетки.",
+    technical: ["Open edges", "Non-manifold", "Normals", "Duplicates"],
+    visual: "diagnostics",
+    size: "large",
+  },
+  {
+    id: "auto-repair",
+    category: "Проверка и ремонт",
+    status: "BETA",
+    title: "Автоматический ремонт STL",
+    description: "Исправляет основные дефекты сетки и формирует обновлённую модель с отчётом о выполненных изменениях.",
+    technical: ["Holes", "Normals", "Manifold", "Repair report"],
+    visual: "repair",
+    size: "large",
+  },
+  {
+    id: "ai-cleanup",
+    category: "Очистка и оптимизация",
+    status: "BETA",
+    title: "Очистка AI-моделей",
+    description: "Находит подозрительные выступы, вытянутые полигоны, мелкие островки и локальные дефекты моделей, созданных генераторами.",
+    technical: ["Spikes", "Tiny islands", "Artifacts", "Change map"],
+    visual: "cleanup",
+    note: "Выборочное сглаживание области: радиус и сила обработки.",
+  },
+  {
+    id: "reduce-weight",
+    category: "Очистка и оптимизация",
+    status: "Зависит от конфигурации",
+    title: "Уменьшение веса модели",
+    description: "Сокращает количество полигонов на 25%, 50% или 75%, уменьшая размер модели и сохраняя её узнаваемую форму.",
+    technical: ["25%", "50%", "75%"],
+    visual: "reduce",
+  },
+  {
+    id: "split-model",
+    category: "Разрез и сборка",
+    status: "BETA",
+    title: "Разрез модели на части",
+    description: "Разделяет STL по осям X, Y или Z на 2–4 части с настройкой положения плоскости разреза.",
+    technical: ["X / Y / Z", "2–4 части", "Offset"],
+    visual: "split",
+    size: "wide",
+  },
+  {
+    id: "assembly-connectors",
+    category: "Разрез и сборка",
+    status: "BETA",
+    title: "Соединения для сборки",
+    description: "Подготавливает разрез под склейку, штифты, магниты или базовый профильный замок.",
+    technical: ["Glue", "Pins", "Magnets", "Tongue & Groove"],
+    visual: "connectors",
+    size: "wide",
+  },
+  {
+    id: "print-orientation",
+    category: "Подготовка результата",
+    status: "Стабильно",
+    title: "Ориентация под печать",
+    description: "Анализирует модель и подбирает более подходящее положение на печатном столе. Также доступны ручные повороты по осям.",
+    technical: ["Auto orientation", "Rotate X/Y/Z", "Place on table"],
+    visual: "orientation",
+  },
+  {
+    id: "reports-export",
+    category: "Подготовка результата",
+    status: "Стабильно",
+    title: "До / после и отчёты",
+    description: "Показывает обработанную модель, карту изменений и предоставляет STL, ZIP и технические отчёты по результатам обработки.",
+    technical: ["STL", "ZIP", "JSON", "TXT"],
+    visual: "reports",
+  },
+];
+
+const featureWorkflowSteps = [
+  { icon: "upload", title: "Загрузка" },
+  { icon: "analyze", title: "Анализ" },
+  { icon: "repair", title: "Обработка" },
+  { icon: "shield", title: "Проверка" },
+  { icon: "export", title: "Экспорт" },
+];
+
+const pricingAccessLevels = {
+  free: {
+    title: "Бесплатно",
+    uploadLimitMb: 100,
+    activeJobs: 1,
+    queuedJobs: 2,
+    uploadsPerHour: 5,
+    priority: "Стандартный",
+  },
+  premium: {
+    title: "Premium",
+    uploadLimitMb: 300,
+    activeJobs: 2,
+    queuedJobs: 10,
+    uploadsPerHour: 50,
+    priority: "Повышенный",
+  },
+  earlyAccess: {
+    title: "Early Access",
+    uploadLimitMb: 100,
+    activeJobs: 1,
+    queuedJobs: 3,
+    uploadsPerHour: 15,
+    priority: "Выше бесплатного",
+  },
+};
+
+const pricingPlan = {
+  title: "STL Master Premium",
+  subtitle: "Для регулярной работы с STL-моделями",
+  badge: "Подключение через заявку",
+  priceLabel: "299 ₽ / месяц",
+  priceNote: "2 999 ₽ в год (-17%). Premium активируется после заявки и подтверждения.",
+  cta: "Подключить Premium",
+  footnote: "Заявку проверяет администратор и выдаёт access-code для подключения Premium.",
+  benefits: [
+    "Файлы STL до 300 МБ",
+    "До 2 активных задач одновременно",
+    "До 10 задач в очереди",
+    "До 50 загрузок в час",
+    "Повышенный приоритет обработки",
+    "STL, ZIP, JSON и TXT в пакете результата",
+  ],
+};
+
+function buildPricingComparison(featureFlags = DEFAULT_FEATURE_FLAGS) {
+  const freeUploadMb = Number(featureFlags.active_upload_limit_mb || featureFlags.beta_upload_limit_mb || pricingAccessLevels.free.uploadLimitMb);
+  return [
+    {
+      feature: "Размер STL-файла",
+      free: `до ${freeUploadMb} МБ`,
+      premium: `до ${pricingAccessLevels.premium.uploadLimitMb} МБ`,
+      accent: true,
+    },
+    {
+      feature: "Активные задачи",
+      free: `${pricingAccessLevels.free.activeJobs} задача`,
+      premium: `${pricingAccessLevels.premium.activeJobs} задачи`,
+    },
+    {
+      feature: "Очередь пользователя",
+      free: `до ${pricingAccessLevels.free.queuedJobs} задач`,
+      premium: `до ${pricingAccessLevels.premium.queuedJobs} задач`,
+    },
+    {
+      feature: "Загрузки в час",
+      free: `${pricingAccessLevels.free.uploadsPerHour}`,
+      premium: `${pricingAccessLevels.premium.uploadsPerHour}`,
+    },
+    {
+      feature: "Приоритет обработки",
+      free: pricingAccessLevels.free.priority,
+      premium: pricingAccessLevels.premium.priority,
+      accent: true,
+    },
+    {
+      feature: "Редактор и операции STL",
+      free: "Тот же редактор",
+      premium: "Тот же редактор",
+    },
+    {
+      feature: "Пакет результата",
+      free: "STL / ZIP / JSON / TXT",
+      premium: "STL / ZIP / JSON / TXT",
+    },
+    {
+      feature: "Подключение",
+      free: "Без access-code",
+      premium: "Заявка и одобрение",
+    },
+  ];
+}
+
+const pricingTrustItems = [
+  ["Работает в браузере", "Ничего не нужно устанавливать для запуска редактора."],
+  ["Исходный STL сохраняется", "Оригинальная модель остаётся в пакете результата."],
+  ["Технические отчёты", "ZIP может включать JSON, TXT, manifest и карты изменений."],
+  ["Условия перед активацией", "Premium подключается после заявки и подтверждения."],
+];
+
+const faqItems = [
+  {
+    id: "supported-files",
+    category: "Файлы и результаты",
+    question: "Какие файлы поддерживает STL Master?",
+    answer: "Сейчас редактор принимает STL-файлы. Результаты обработки могут включать STL-модели, ZIP-пакет и технические отчёты в форматах JSON и TXT.",
+  },
+  {
+    id: "browser-work",
+    category: "Начало работы",
+    question: "Нужно ли устанавливать программу?",
+    answer: "Нет. STL Master работает в браузере. Загрузите STL, выберите операции и дождитесь завершения обработки.",
+  },
+  {
+    id: "mesh-diagnostics",
+    category: "Обработка",
+    question: "Что STL Master проверяет в модели?",
+    answer: "Редактор анализирует замкнутость сетки, открытые и non-manifold рёбра, нормали, дублирующиеся и вырожденные элементы, мелкие островки, подозрительные артефакты и соответствие модели заданному печатному столу.",
+  },
+  {
+    id: "repair-beta",
+    category: "Обработка",
+    question: "Может ли STL Master исправить повреждённую модель?",
+    answer: "STL Master умеет исправлять основные дефекты сетки и формировать обновлённую версию модели с отчётом. Ремонт находится в beta, поэтому итог рекомендуется проверить в слайсере.",
+  },
+  {
+    id: "reduce-polygons",
+    category: "Обработка",
+    question: "Можно ли уменьшить количество полигонов?",
+    answer: "Да. Доступны режимы уменьшения количества полигонов на 25%, 50% и 75%. Доступность операции может зависеть от конфигурации обработчика.",
+  },
+  {
+    id: "split-model",
+    category: "Обработка",
+    question: "Можно ли разрезать модель на части?",
+    answer: "Да. Модель можно разделить по осям X, Y или Z на 2–4 части и настроить положение плоскости разреза.",
+  },
+  {
+    id: "connectors",
+    category: "Обработка",
+    question: "Какие соединения поддерживаются?",
+    answer: "Доступны подготовка под склейку, штифты, посадочные места под магниты и базовый профильный замок. Некоторые режимы находятся в beta и требуют проверки перед печатью.",
+  },
+  {
+    id: "source-model",
+    category: "Файлы и результаты",
+    question: "Сохраняется ли исходная модель?",
+    answer: "Исходный STL включается в историю и результаты обработки в соответствии с текущим процессом задачи. Дополнительно могут быть доступны промежуточные модели и отчёты.",
+  },
+  {
+    id: "result-package",
+    category: "Файлы и результаты",
+    question: "Что я получу после обработки?",
+    answer: "В зависимости от выбранных операций результат может содержать исправленную STL-модель, части разрезанной модели, ZIP-пакет, анализ, отчёт проверки печати и JSON-отчёты по выполненным операциям.",
+  },
+  {
+    id: "print-guarantee",
+    category: "Обработка",
+    question: "Гарантирует ли сервис успешную печать?",
+    answer: "Нет. STL Master помогает обнаружить и исправить основные проблемы, но результат рекомендуется дополнительно проверить в слайсере с учётом принтера, материала и настроек печати.",
+  },
+  {
+    id: "premium-difference",
+    category: "Тарифы и доступ",
+    question: "Чем бесплатный режим отличается от Premium?",
+    answer: "Бесплатный режим использует лимит STL до 100 МБ, 1 активную задачу, до 2 задач в очереди, 5 загрузок в час и стандартный приоритет. Premium повышает лимиты до 300 МБ, 2 активных задач, 10 задач в очереди, 50 загрузок в час и получает повышенный приоритет обработки. Подключение Premium выполняется по заявке.",
+  },
+  {
+    id: "support",
+    category: "Поддержка",
+    question: "Как связаться с поддержкой?",
+    answer: "Напишите в официальное сообщество STL Master во ВКонтакте или в Telegram-чат. Приложите описание проблемы, скриншот и, если возможно, название операции, на которой возникла ошибка.",
+  },
+];
+
+const faqCategories = ["Начало работы", "Обработка", "Файлы и результаты", "Тарифы и доступ", "Поддержка"];
+
+function localSmoothingImpactLabel({ selectedVertices = 0, selectedPercent = 0, changedVertices = 0, strength = "balanced" } = {}) {
+  const vertices = Number(changedVertices || selectedVertices || 0);
+  const percent = Number(selectedPercent || 0);
+  const strengthWeight = strength === "strong" ? 2 : strength === "balanced" ? 1 : 0;
+  if (vertices >= 1200 || percent >= 2 || strengthWeight === 2) return "Сильное";
+  if (vertices >= 250 || percent >= 0.4 || strengthWeight === 1) return "Среднее";
+  return "Минимальное";
+}
+
+function buildWhatChangedItems(result) {
+  if (!result) return [];
+  const items = [];
+  const cleanup = result.ai_cleanup || result.remove_ai_artifacts;
+  const localSmoothing = result.local_smoothing;
+  const reduction = result.reduce_polygons;
+  const orientation = result.apply_orientation;
+  const split = result.split_model;
+
+  if (cleanup) {
+    const found = cleanup.suspicious_regions ?? result.model_qa?.artifact_quality?.suspicious_regions;
+    const fixed = cleanup.removed_components ?? cleanup.changed_vertices ?? cleanup.vertices_modified;
+    const output = cleanup.output_file || result.final_model;
+    items.push({
+      title: "Удаление AI-артефактов",
+      details: [
+        `Найдено подозрительных участков: ${formatMetric(found)}`,
+        `Исправлено или удалено: ${formatMetric(fixed || 0)}`,
+        `Итоговый файл: ${output || "не создан"}`,
+      ],
+    });
+  }
+
+  if (localSmoothing) {
+    items.push({
+      title: "Выборочная правка",
+      details: [
+        `Выбрано областей: ${formatMetric(localSmoothing.selected_regions)}`,
+        `Изменено вершин: ${formatMetric(localSmoothing.changed_vertices)}`,
+        `Сила обработки: ${localSmoothing.strength || "balanced"}`,
+      ],
+    });
+  }
+
+  if (reduction) {
+    items.push({
+      title: "Уменьшение полигонов",
+      details: [
+        `Было полигонов: ${formatMetric(reduction.original_faces)}`,
+        `Стало полигонов: ${formatMetric(reduction.reduced_faces)}`,
+        `Уменьшение: ${formatMetric(reduction.reduction_percent, "%")}`,
+      ],
+    });
+  }
+
+  if (orientation) {
+    const rotation = orientation.rotation || {};
+    items.push({
+      title: "Ориентация",
+      details: [
+        `Сохранён поворот: X=${formatMetric(rotation.x, "°")}, Y=${formatMetric(rotation.y, "°")}, Z=${formatMetric(rotation.z, "°")}`,
+        `Смещение по столу: X=${formatMetric(orientation.translate_x_mm ?? orientation.translation?.x, " мм")}, Z=${formatMetric(orientation.translate_z_mm ?? orientation.translation?.z, " мм")}`,
+        `Модель поставлена на стол: ${orientation.translated_to_floor ? "да" : "нет"}`,
+      ],
+    });
+  }
+
+  if (split) {
+    const partCount = split.output_files?.length || split.split_parts || 0;
+    items.push({
+      title: "Разрезание модели",
+      details: [
+        `Создано частей: ${formatMetric(partCount)}`,
+        `Ось разреза: ${(split.axis_used || split.split_axis || "—").toString().toUpperCase()}`,
+        `Смещение плоскости: ${formatMetric(split.split_plane_offset_mm || 0, " мм")}`,
+        `Соединение: ${splitModeTitles[split.split_mode] || split.split_mode || "без соединителей"}`,
+      ],
+    });
+  }
+
+  return items;
+}
+
+const operationPresets = [
+  {
+    id: "check",
+    title: "Проверить модель",
+    description: "Быстрая проверка размеров, треугольников и готовности к печати.",
+    result: "Понятный отчёт о состоянии STL",
+    icon: "🔎",
+    status: "Рекомендуется",
+    operations: ["analyze", "print_check", "prepare_package"],
+  },
+  {
+    id: "improve",
+    title: "Улучшить модель",
+    description: "Сгладить AI-шум, исправить нормали и убрать мелкие артефакты.",
+    result: "Исправляет сетку и нормали",
+    icon: "✨",
+    status: "Pro",
+    featureKey: "print_repair",
+    operations: ["analyze", "print_check", "model_improvement", "prepare_package"],
+  },
+  {
+    id: "remove_artifacts",
+    title: "Удалить AI-артефакты",
+    description: "Убирает лишние островки, шипы, наросты и мусор, который часто появляется после генерации модели нейросетями.",
+    result: "Убирает мусорные фрагменты",
+    icon: "🧹",
+    status: "Рекомендуется",
+    featureKey: "remove_ai_artifacts",
+    operations: ["analyze", "print_check", "remove_ai_artifacts", "prepare_package"],
+  },
+  {
+    id: "surface",
+    title: "Восстановить поверхность",
+    description: "Помогает убрать волны, бугры и мелкую рябь на поверхности. Не предназначено для удаления отдельных деталей.",
+    result: "Сглаживает шум и рябь",
+    icon: "🧼",
+    status: "В разработке",
+    featureKey: "surface_recovery",
+    operations: ["analyze", "print_check", "surface_recovery", "prepare_package"],
+  },
+  {
+    id: "local",
+    title: "Выборочная правка",
+    description: "Выделите кистью проблемную область и сгладьте только выбранный участок.",
+    result: "Локально сглаживает выбранную область",
+    icon: "🎯",
+    status: "Pro",
+    featureKey: "local_smoothing",
+    operations: ["analyze", "print_check", "local_smoothing", "prepare_package"],
+  },
+  {
+    id: "reduce",
+    title: "Уменьшить вес",
+    description: "Сделать STL легче, сохранив рабочую подготовку сетки.",
+    result: "Уменьшает количество полигонов",
+    icon: "🪶",
+    status: "Pro",
+    featureKey: "reduce_polygons",
+    operations: ["analyze", "print_check", "model_improvement", "reduce_polygons", "prepare_package"],
+  },
+  {
+    id: "split",
+    title: "Разрезать для склейки",
+    description: "Делит модель на части для печати на маленьком столе. Можно выбрать ось и сместить плоскость разреза.",
+    result: "Части со штифтами и пазами",
+    icon: "✂️",
+    status: "Pro",
+    featureKey: "split",
+    operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
+  },
+  {
+    id: "fit_to_bed",
+    title: "Разрезать под стол",
+    description: "Автоматически делит большую модель на части под выбранный размер стола.",
+    result: "Части помещаются на стол принтера",
+    icon: "🧩",
+    status: "Pro",
+    featureKey: "fit_to_bed_split",
+    operations: ["analyze", "print_check", "fit_to_bed_split", "prepare_package"],
+  },
+  {
+    id: "symmetry",
+    title: "Исправить симметрию",
+    description: "Сравнить стороны модели и зеркально восстановить выбранную ось.",
+    result: "Выравнивает стороны модели",
+    icon: "🪞",
+    status: "В разработке",
+    featureKey: "fix_symmetry",
+    operations: ["analyze", "print_check", "fix_symmetry", "prepare_package"],
+  },
+  {
+    id: "orientation",

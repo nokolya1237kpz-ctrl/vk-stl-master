@@ -1,0 +1,3965 @@
+{
+  "states": [
+    {
+      "state": "publicView",
+      "setter": "setPublicView",
+      "initial": "() => (window.location.pathname === \"/app\" ? \"app\" : \"home\")",
+      "line": 6302
+    },
+    {
+      "state": "demoMode",
+      "setter": "setDemoMode",
+      "initial": "false",
+      "line": 6303
+    },
+    {
+      "state": "accessGateMessage",
+      "setter": "setAccessGateMessage",
+      "initial": "\"\"",
+      "line": 6304
+    },
+    {
+      "state": "file",
+      "setter": "setFile",
+      "initial": "null",
+      "line": 6305
+    },
+    {
+      "state": "jobId",
+      "setter": "setJobId",
+      "initial": "null",
+      "line": 6306
+    },
+    {
+      "state": "jobStatus",
+      "setter": "setJobStatus",
+      "initial": "null",
+      "line": 6307
+    },
+    {
+      "state": "featureFlags",
+      "setter": "setFeatureFlags",
+      "initial": "DEFAULT_FEATURE_FLAGS",
+      "line": 6308
+    },
+    {
+      "state": "accessCode",
+      "setter": "setAccessCode",
+      "initial": "() => localStorage.getItem(ACCESS_CODE_STORAGE_KEY) || \"\"",
+      "line": 6309
+    },
+    {
+      "state": "currentUser",
+      "setter": "setCurrentUser",
+      "initial": "null",
+      "line": 6310
+    },
+    {
+      "state": "currentUserLoading",
+      "setter": "setCurrentUserLoading",
+      "initial": "true",
+      "line": 6311
+    },
+    {
+      "state": "currentUserError",
+      "setter": "setCurrentUserError",
+      "initial": "\"\"",
+      "line": 6312
+    },
+    {
+      "state": "uploading",
+      "setter": "setUploading",
+      "initial": "false",
+      "line": 6313
+    },
+    {
+      "state": "error",
+      "setter": "setError",
+      "initial": "\"\"",
+      "line": 6314
+    },
+    {
+      "state": "selectedMode",
+      "setter": "setSelectedMode",
+      "initial": "\"check\"",
+      "line": 6315
+    },
+    {
+      "state": "activePanel",
+      "setter": "setActivePanel",
+      "initial": "\"settings:check\"",
+      "line": 6316
+    },
+    {
+      "state": "reductionPercent",
+      "setter": "setReductionPercent",
+      "initial": "50",
+      "line": 6317
+    },
+    {
+      "state": "splitAxis",
+      "setter": "setSplitAxis",
+      "initial": "\"z\"",
+      "line": 6318
+    },
+    {
+      "state": "splitParts",
+      "setter": "setSplitParts",
+      "initial": "2",
+      "line": 6319
+    },
+    {
+      "state": "splitMode",
+      "setter": "setSplitMode",
+      "initial": "\"simple\"",
+      "line": 6320
+    },
+    {
+      "state": "splitPlaneOffset",
+      "setter": "setSplitPlaneOffset",
+      "initial": "0",
+      "line": 6321
+    },
+    {
+      "state": "connectorSize",
+      "setter": "setConnectorSize",
+      "initial": "4",
+      "line": 6322
+    },
+    {
+      "state": "connectorClearance",
+      "setter": "setConnectorClearance",
+      "initial": "0.25",
+      "line": 6323
+    },
+    {
+      "state": "connectorCount",
+      "setter": "setConnectorCount",
+      "initial": "2",
+      "line": 6324
+    },
+    {
+      "state": "connectorDepth",
+      "setter": "setConnectorDepth",
+      "initial": "6",
+      "line": 6325
+    },
+    {
+      "state": "connectorWallThickness",
+      "setter": "setConnectorWallThickness",
+      "initial": "1.2",
+      "line": 6326
+    },
+    {
+      "state": "magnetSize",
+      "setter": "setMagnetSize",
+      "initial": "\"6x2\"",
+      "line": 6327
+    },
+    {
+      "state": "lockProfile",
+      "setter": "setLockProfile",
+      "initial": "\"tongue_groove\"",
+      "line": 6328
+    },
+    {
+      "state": "bedSizePreset",
+      "setter": "setBedSizePreset",
+      "initial": "\"220\"",
+      "line": 6329
+    },
+    {
+      "state": "bedSizeX",
+      "setter": "setBedSizeX",
+      "initial": "220",
+      "line": 6330
+    },
+    {
+      "state": "bedSizeY",
+      "setter": "setBedSizeY",
+      "initial": "250",
+      "line": 6331
+    },
+    {
+      "state": "bedSizeZ",
+      "setter": "setBedSizeZ",
+      "initial": "220",
+      "line": 6332
+    },
+    {
+      "state": "bedConnectorMode",
+      "setter": "setBedConnectorMode",
+      "initial": "\"none\"",
+      "line": 6333
+    },
+    {
+      "state": "bedConnectorClearance",
+      "setter": "setBedConnectorClearance",
+      "initial": "0.25",
+      "line": 6334
+    },
+    {
+      "state": "symmetryAxis",
+      "setter": "setSymmetryAxis",
+      "initial": "\"x\"",
+      "line": 6335
+    },
+    {
+      "state": "symmetryMode",
+      "setter": "setSymmetryMode",
+      "initial": "\"analyze\"",
+      "line": 6336
+    },
+    {
+      "state": "modelImprovementStrength",
+      "setter": "setModelImprovementStrength",
+      "initial": "\"balanced\"",
+      "line": 6337
+    },
+    {
+      "state": "artifactCleanupStrength",
+      "setter": "setArtifactCleanupStrength",
+      "initial": "\"balanced\"",
+      "line": 6338
+    },
+    {
+      "state": "localSelectionRadius",
+      "setter": "setLocalSelectionRadius",
+      "initial": "10",
+      "line": 6339
+    },
+    {
+      "state": "localSmoothingStrength",
+      "setter": "setLocalSmoothingStrength",
+      "initial": "\"balanced\"",
+      "line": 6340
+    },
+    {
+      "state": "localSelectionMode",
+      "setter": "setLocalSelectionMode",
+      "initial": "\"point\"",
+      "line": 6341
+    },
+    {
+      "state": "localSelection",
+      "setter": "setLocalSelection",
+      "initial": "null",
+      "line": 6342
+    },
+    {
+      "state": "orientationPriority",
+      "setter": "setOrientationPriority",
+      "initial": "\"supports\"",
+      "line": 6343
+    },
+    {
+      "state": "modelName",
+      "setter": "setModelName",
+      "initial": "\"\"",
+      "line": 6344
+    },
+    {
+      "state": "orientationTransform",
+      "setter": "setOrientationTransform",
+      "initial": "{ rotation_x: 0, rotation_y: 0, rotation_z: 0, rotation_x_deg: 0, rotation_y_deg: 0, rotation_z_deg: 0, translate_to_floor: false, translate_x_mm: 0, translate_z_mm: 0, }",
+      "line": 6345
+    },
+    {
+      "state": "bedMoveStep",
+      "setter": "setBedMoveStep",
+      "initial": "5",
+      "line": 6356
+    },
+    {
+      "state": "previewMode",
+      "setter": "setPreviewMode",
+      "initial": "\"before\"",
+      "line": 6357
+    },
+    {
+      "state": "processedPreviewFile",
+      "setter": "setProcessedPreviewFile",
+      "initial": "null",
+      "line": 6358
+    },
+    {
+      "state": "processedPreviewLoading",
+      "setter": "setProcessedPreviewLoading",
+      "initial": "false",
+      "line": 6359
+    },
+    {
+      "state": "processedPreviewError",
+      "setter": "setProcessedPreviewError",
+      "initial": "\"\"",
+      "line": 6360
+    },
+    {
+      "state": "heatmapEnabled",
+      "setter": "setHeatmapEnabled",
+      "initial": "false",
+      "line": 6361
+    },
+    {
+      "state": "heatmapData",
+      "setter": "setHeatmapData",
+      "initial": "null",
+      "line": 6362
+    },
+    {
+      "state": "heatmapLoading",
+      "setter": "setHeatmapLoading",
+      "initial": "false",
+      "line": 6363
+    },
+    {
+      "state": "heatmapError",
+      "setter": "setHeatmapError",
+      "initial": "\"\"",
+      "line": 6364
+    },
+    {
+      "state": "focusChangesVersion",
+      "setter": "setFocusChangesVersion",
+      "initial": "0",
+      "line": 6365
+    },
+    {
+      "state": "artifactMapEnabled",
+      "setter": "setArtifactMapEnabled",
+      "initial": "false",
+      "line": 6366
+    },
+    {
+      "state": "artifactMapData",
+      "setter": "setArtifactMapData",
+      "initial": "null",
+      "line": 6367
+    },
+    {
+      "state": "artifactMapLoading",
+      "setter": "setArtifactMapLoading",
+      "initial": "false",
+      "line": 6368
+    },
+    {
+      "state": "artifactMapError",
+      "setter": "setArtifactMapError",
+      "initial": "\"\"",
+      "line": 6369
+    }
+  ],
+  "api_calls": [
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1139,
+      "call": "fetch(`${apiBaseUrl}/api/v1/jobs/${historyJobId}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6458,
+      "call": "fetch(`${apiBaseUrl}/api/v1/config/features`, { cache: \"no-store\" })"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6466,
+      "call": "fetch(\"/config/features.json\", { cache: \"no-store\" })"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6526,
+      "call": "fetch(`${apiBaseUrl}/api/v1/jobs/${jobId}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6576,
+      "call": "fetch(`${apiBaseUrl}${afterDownloadUrl}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6611,
+      "call": "fetch(`${apiBaseUrl}${mapUrl}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6637,
+      "call": "fetch(`${apiBaseUrl}${mapUrl}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6668,
+      "call": "fetch(`${apiBaseUrl}${downloadUrl}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6690,
+      "call": "fetch(`${apiBaseUrl}${artifactMapUrl}`)"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6988,
+      "call": "fetch(`${apiBaseUrl}/api/v1/jobs/upload`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7635,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/login`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7682,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/overview`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7683,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/feedback`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7684,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/feedback/summary`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7685,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7686,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/applications`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7687,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/premium-codes`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7688,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/cleanup/status`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7689,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/queue`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7690,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/security`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7691,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/features`, { cache: \"no-store\", headers: adminHeaders }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7692,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/test-data/scan`, { method: \"POST\", cache: \"no-store\", headers: { \"Content-Type\": \"application/json\", ...adminHeaders }, body: JSON.stringify({ include_items: false }) }),"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7741,
+      "call": "fetch(`${apiBaseUrl}/api/v1/jobs/${jobId}`, { cache: \"no-store\" })"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7754,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/feedback/cleanup-test`, { method: \"POST\", headers: adminHeaders })"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7767,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/applications/delete-test`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7785,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/jobs/delete-test`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7811,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/integrity-check`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7830,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/applications/bulk`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7862,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/jobs/bulk`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7896,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users/bulk`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7916,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7936,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/applications/${kind}/${applicationId}/approve`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7960,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/applications/${kind}/${applicationId}/reject`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7974,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users/${userId}/${action}`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7992,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/cleanup/scan`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8017,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/cleanup/execute`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8039,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/test-data/scan`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8064,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/test-data/cleanup`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8085,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/system-cleanup/preview`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8110,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/system-cleanup`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8132,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users/deletion-preview`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8157,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/users/delete`, {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 8176,
+      "call": "fetch(`${apiBaseUrl}/api/v1/admin/jobs/${jobId}/cancel`, {"
+    }
+  ],
+  "component_defs": [
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 37,
+      "text": "const mainNavigation = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 44,
+      "text": "const footerNavigation = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 67,
+      "text": "const socialLinks = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 90,
+      "text": "const processingOperations = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 163,
+      "text": "function expandOperationsForUpload(operations) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 167,
+      "text": "function getProcessedPreviewUrl(result) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 171,
+      "text": "function getChangeMapUrl(result) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 175,
+      "text": "function getArtifactMapUrl(result) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 179,
+      "text": "function createDemoStl({ cleaned = false } = {}) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 200,
+      "text": "function demoJobStatus() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 241,
+      "text": "const publicWorkflowSteps = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 250,
+      "text": "const connectionModes = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 307,
+      "text": "const connectionParameters = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 315,
+      "text": "const featureCategories = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 322,
+      "text": "const productFeatures = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 402,
+      "text": "const featureWorkflowSteps = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 455,
+      "text": "function buildPricingComparison(featureFlags = DEFAULT_FEATURE_FLAGS) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 503,
+      "text": "const pricingTrustItems = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 510,
+      "text": "const faqItems = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 585,
+      "text": "const faqCategories = [\"Начало работы\", \"Обработка\", \"Файлы и результаты\", \"Тарифы и доступ\", \"Поддержка\"];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 587,
+      "text": "function localSmoothingImpactLabel({ selectedVertices = 0, selectedPercent = 0, changedVertices = 0, strength = \"balanced\" } = {}) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 596,
+      "text": "function buildWhatChangedItems(result) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 669,
+      "text": "const operationPresets = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 781,
+      "text": "function operationsForMode(modeId) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 785,
+      "text": "function featureEnabled(flags, key) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 790,
+      "text": "function visiblePresetsForFlags(flags) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 794,
+      "text": "const improvementStrengthOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 800,
+      "text": "const artifactCleanupStrengthOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 806,
+      "text": "const splitModeOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 814,
+      "text": "const connectorSizeOptions = [3, 4, 6];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 815,
+      "text": "const connectorClearanceOptions = [0.15, 0.25, 0.4];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 816,
+      "text": "const connectorCountOptions = [2, 3, 4];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 817,
+      "text": "const connectorDepthOptions = [4, 6, 10];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 818,
+      "text": "const connectorWallOptions = [0.8, 1.2, 1.6];"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 819,
+      "text": "const magnetSizeOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 825,
+      "text": "const lockProfileOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 829,
+      "text": "const bedSizeOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 836,
+      "text": "const bedConnectorOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 841,
+      "text": "const orientationPriorityOptions = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 848,
+      "text": "function getApiBaseUrl() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 859,
+      "text": "function getApiUrl(path) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 876,
+      "text": "function formatDateRu(value, { month = \"long\" } = {}) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 883,
+      "text": "function formatPremiumShortDate(value) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 890,
+      "text": "function premiumTimeLabel(currentUser) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 903,
+      "text": "function premiumUntilLabel(currentUser) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 909,
+      "text": "function formatMetric(value, suffix = \"\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 914,
+      "text": "function formatBytes(bytes) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 923,
+      "text": "function formatDuration(seconds) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 930,
+      "text": "function queuePriorityLabel(priority) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 939,
+      "text": "function formatDateTime(value) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 951,
+      "text": "function statusLabel(status) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 964,
+      "text": "function statusMessage(status, fallback = \"\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 976,
+      "text": "function fileTypeLabel(type) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 986,
+      "text": "function displayGeneratedFile(file) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 998,
+      "text": "function isRealJobHistoryId(jobId) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1002,
+      "text": "function readJobHistory() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1014,
+      "text": "function writeJobHistory(jobIds) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1018,
+      "text": "function addJobToHistory(jobId) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1025,
+      "text": "function shortJobId(jobId) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1030,
+      "text": "function qualityTone(score) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1039,
+      "text": "function GeneratedFilesBlock({ files = [] }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1108,
+      "text": "function HistoryGeneratedFiles({ files = [] }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1126,
+      "text": "function JobHistory({ apiBaseUrl, currentJobId, onOpenJob }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 1229,
+      "text": "function StlPreview({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2240,
+      "text": "function normalizeCompareGeometry(geometry) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2250,
+      "text": "function compareChangeColor(level) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2260,
+      "text": "function applyCompareChangeMap(geometry, changeMap) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2279,
+      "text": "function compareArtifactColor(reason, severity) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2285,
+      "text": "function applyCompareArtifactMap(geometry, artifactMap) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2329,
+      "text": "function ComparePane({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2618,
+      "text": "function CompareView2({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2789,
+      "text": "function WorkflowPanel({ id, title, meta, success = true, activePanel, setActivePanel, children, className = \"\" }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2805,
+      "text": "function ProcessingStage({ id, title, success, activePanel, setActivePanel, children }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2819,
+      "text": "function CurrentModelSummary({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 2889,
+      "text": "function CurrentResultBlock({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3038,
+      "text": "function ProcessingHistoryTimeline({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3151,
+      "text": "function LaunchIcon({ type }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3179,
+      "text": "function PremiumStatusControl({ currentUser, loading = false, onOpenPremium, onOpenApplication, className = \"\" }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3228,
+      "text": "function StudioMockup() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3302,
+      "text": "function SectionHeader({ label, title, text, action }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3326,
+      "text": "function HeroSection({ onOpenApplication }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3393,
+      "text": "function WorkflowIcon({ type }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3449,
+      "text": "function WorkflowSection() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3480,
+      "text": "function ConnectionCard({ item }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3506,
+      "text": "function ConnectionParameters() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3527,
+      "text": "function ConnectorsSection({ onStartCut }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3573,
+      "text": "function formatNumber(value) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3577,
+      "text": "function getPrefersReducedMotion() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3581,
+      "text": "function canUseWebGL() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3590,
+      "text": "function loadMarketingGeometry(modelUrl) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3605,
+      "text": "function disposeMarketingObject(object) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3615,
+      "text": "function createMarketingMaterial({ variant = \"clean\", transparent = false, opacity = 1, wireframe = false } = {}) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3627,
+      "text": "function normalizeMarketingMesh(geometry, variant) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3644,
+      "text": "function addMarketingGrid(scene) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3652,
+      "text": "function addPrintBed(scene) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3663,
+      "text": "function addIssueMarkers(group, mode = \"analysis\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3690,
+      "text": "function addSplitPlane(group, axis = \"x\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3709,
+      "text": "function addConnectorPreview(group, mode = \"pins\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3725,
+      "text": "function StlMarketingViewer({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3904,
+      "text": "const compareBeforeProblems = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3912,
+      "text": "const compareAfterFixes = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3920,
+      "text": "const comparePrimaryMetrics = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 3927,
+      "text": "function BeforeAfterShowcase() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4049,
+      "text": "const workflowSteps = ["
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4163,
+      "text": "function featureToolIconType(id) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4177,
+      "text": "function FeaturesSection({ onStartUpload }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4278,
+      "text": "function ModalArtScene() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4300,
+      "text": "function DemoStudioPreview() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4317,
+      "text": "function PricingComparison({ rows }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4338,
+      "text": "function PremiumPlanCard({ onPremium }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4362,
+      "text": "function PricingTrustBar() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4378,
+      "text": "function PremiumShowcase({ onPremium, featureFlags = DEFAULT_FEATURE_FLAGS }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4403,
+      "text": "function FAQSection() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4523,
+      "text": "function LaunchContacts({ onOpenApplication }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4607,
+      "text": "function getPremiumClientId() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4615,
+      "text": "function createIdempotencyKey() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4620,
+      "text": "function normalizePremiumCode(value) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4644,
+      "text": "function fetchWithSoftTimeout(url, options = {}, ms = 15000, timeoutKey = \"timeout\") {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 4656,
+      "text": "function PremiumAccessModal({ onClose, onOpenApplication, onActivated }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5168,
+      "text": "function PublicModal({ type, onClose }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5236,
+      "text": "function PublicLanding({ onStartCut, onDemo, onPremiumActivated, currentUser = null, currentUserLoading = false, featureFlags = DEFAULT_FEATURE_FLAGS }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5315,
+      "text": "function AccessRequestForm({ apiBaseUrl, onBack }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5325,
+      "text": "function JobInfoPanel({ jobStatus, result }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5385,
+      "text": "function FeedbackPanel({ apiBaseUrl, jobStatus }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 5467,
+      "text": "function AnalysisResult({"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 6300,
+      "text": "function App() {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7461,
+      "text": "function formatFeedbackDate(value) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 7567,
+      "text": "function AdminFeedbackDashboard({ apiBaseUrl }) {"
+    },
+    {
+      "file": "frontend/src/main.jsx",
+      "line": 9265,
+      "text": "function AdminApp() {"
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 4,
+      "text": "export const studioToolGroups = ["
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 15,
+      "text": "export const studioSteps = [\"Загрузка\", \"Анализ\", \"Настройка\", \"Обработка\", \"Проверка\", \"Экспорт\"];"
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 17,
+      "text": "export function StudioHeader({"
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 70,
+      "text": "export function StudioSidebar({ presets, selectedMode, onSelect }) {"
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 110,
+      "text": "export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile, onOpenDemo, onOpenRequirements, onRequestAccess, onDrop, onDragOver, Icon }) {"
+    },
+    {
+      "file": "frontend/src/studio/StudioComponents.jsx",
+      "line": 142,
+      "text": "export function StudioWorkflowBar({ selectedPreset, selectedOperations, jobId, jobStatus, progress, uploading, error, canRun, onRun, result, apiBaseUrl, operationTitles, shortJobId, statusMessage, ProgressComponent = Progress }) {"
+    }
+  ],
+  "studio_css_refs": [
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1,
+      "text": ".studioShell {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 16,
+      "text": ".studioShell::before {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 29,
+      "text": ".studioShell button {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 33,
+      "text": ".studioHeader,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 34,
+      "text": ".studioSidebar,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 35,
+      "text": ".studioViewerWorkspace,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 36,
+      "text": ".studioInspector,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 37,
+      "text": ".studioWorkflowBar,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 38,
+      "text": ".studioAccessBanner {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 43,
+      "text": ".studioHeader {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 55,
+      "text": ".studioBrand,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 56,
+      "text": ".studioHeaderActions,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 57,
+      "text": ".studioProjectStatus,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 58,
+      "text": ".studioToolButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 59,
+      "text": ".studioEmptyActions,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 60,
+      "text": ".studioRunActions,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 61,
+      "text": ".studioAccessBanner,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 62,
+      "text": ".studioInlineActions,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 63,
+      "text": ".studioSizeGrid,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 64,
+      "text": ".studioMovePad {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 69,
+      "text": ".studioBrand {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 79,
+      "text": ".studioBrand .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 85,
+      "text": ".studioBrand b {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 91,
+      "text": ".studioBrand small,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 92,
+      "text": ".studioProjectStatus em,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 93,
+      "text": ".studioToolButton small,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 94,
+      "text": ".studioInspectorCard p,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 95,
+      "text": ".studioInspectorCard dd,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 96,
+      "text": ".studioRunMeta span,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 97,
+      "text": ".studioRunMeta em,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 98,
+      "text": ".studioEmptyState p,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 99,
+      "text": ".studioFileLimits span,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 100,
+      "text": ".studioSelectionSummary span,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 101,
+      "text": ".studioWorkflowBar em {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 105,
+      "text": ".studioBrand small {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 109,
+      "text": ".studioProjectStatus {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 117,
+      "text": ".studioProjectStatus span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 121,
+      "text": ".studioHeaderActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 126,
+      "text": ".studioShell .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 140,
+      "text": ".studioIconButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 141,
+      "text": ".studioExportButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 142,
+      "text": ".studioPrimaryAction,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 143,
+      "text": ".studioSecondaryAction,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 144,
+      "text": ".studioTextAction,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 145,
+      "text": ".studioAccessBanner button,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 146,
+      "text": ".studioInlineActions button,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 147,
+      "text": ".studioSegmentGroup button,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 148,
+      "text": ".studioMovePad button {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 158,
+      "text": ".studioIconButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 159,
+      "text": ".studioExportButton {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 164,
+      "text": ".studioExportButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 165,
+      "text": ".studioPrimaryAction {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 175,
+      "text": ".studioExportButton:disabled,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 176,
+      "text": ".studioPrimaryAction:disabled {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 182,
+      "text": ".studioHeaderActions .premiumHeaderButtonV9,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 183,
+      "text": ".studioHeaderActions .publicTopCta {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 202,
+      "text": ".studioHeaderActions .premiumHeaderButtonV9 .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 210,
+      "text": ".studioWarning,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 211,
+      "text": ".studioAccessBanner {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 218,
+      "text": ".studioWarning {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 223,
+      "text": ".studioAccessBanner {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 228,
+      "text": ".studioAccessBanner div {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 232,
+      "text": ".studioAccessBanner strong,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 233,
+      "text": ".studioAccessBanner span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 237,
+      "text": ".studioWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 244,
+      "text": ".studioSidebar,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 245,
+      "text": ".studioInspector,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 246,
+      "text": ".studioViewerWorkspace,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 247,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 253,
+      "text": ".studioSidebar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 263,
+      "text": ".studioPanelLabel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 264,
+      "text": ".studioSettingLabel {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 274,
+      "text": ".studioToolGroup h2 {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 280,
+      "text": ".studioToolList {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 285,
+      "text": ".studioToolButton {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 295,
+      "text": ".studioToolButton.active {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 301,
+      "text": ".studioToolIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 310,
+      "text": ".studioToolButton b,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 311,
+      "text": ".studioToolButton small {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 315,
+      "text": ".studioToolButton b {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 319,
+      "text": ".studioToolButton small {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 325,
+      "text": ".studioSidebarFoot {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 331,
+      "text": ".studioSidebarFoot span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 336,
+      "text": ".studioSidebarFoot b {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 341,
+      "text": ".studioViewerWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 348,
+      "text": ".studioViewerWorkspace .previewPanel {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 359,
+      "text": ".studioViewerWorkspace .previewCanvas {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 364,
+      "text": ".studioViewerWorkspace .previewHelp {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 368,
+      "text": ".studioEmptyState {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 382,
+      "text": ".studioDropAura {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 394,
+      "text": ".studioDropAura .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 400,
+      "text": ".studioEmptyState h1 {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 406,
+      "text": ".studioEmptyState p {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 413,
+      "text": ".studioEmptyActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 420,
+      "text": ".studioPrimaryAction {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 425,
+      "text": ".studioPrimaryAction.compact {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 429,
+      "text": ".studioSecondaryAction,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 430,
+      "text": ".studioTextAction {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 439,
+      "text": ".studioTextAction {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 444,
+      "text": ".studioFileLimits {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 452,
+      "text": ".studioFileLimits span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 460,
+      "text": ".studioInspector {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 467,
+      "text": ".studioInspectorCard,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 468,
+      "text": ".studioInspectorNote,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 469,
+      "text": ".studioInspector .analysisResult,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 470,
+      "text": ".studioInspector .jobInfoPanel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 471,
+      "text": ".studioInspector .feedbackPanel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 472,
+      "text": ".studioInspector .historySection {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 480,
+      "text": ".studioInspectorCard h2,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 481,
+      "text": ".studioSettingBlock h3 {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 486,
+      "text": ".studioInspectorLead,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 487,
+      "text": ".studioSettingBlock p {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 492,
+      "text": ".studioInspectorCard dl {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 498,
+      "text": ".studioInspectorCard dl div {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 504,
+      "text": ".studioInspectorCard dt {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 508,
+      "text": ".studioInspectorCard dd {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 513,
+      "text": ".studioSegmentGroup {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 520,
+      "text": ".studioSegmentGroup button {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 526,
+      "text": ".studioSegmentGroup button.active {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 532,
+      "text": ".studioTextField,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 533,
+      "text": ".studioRangeField,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 534,
+      "text": ".studioSizeGrid label {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 543,
+      "text": ".studioTextField input,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 544,
+      "text": ".studioRangeField input,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 545,
+      "text": ".studioSizeGrid input {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 553,
+      "text": ".studioSizeGrid {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 560,
+      "text": ".studioSelectionSummary {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 570,
+      "text": ".studioSelectionSummary.ready {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 574,
+      "text": ".studioSelectionSummary em,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 575,
+      "text": ".studioErrorText {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 580,
+      "text": ".studioInlineActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 585,
+      "text": ".studioInlineActions button,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 586,
+      "text": ".studioMovePad button {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 591,
+      "text": ".studioMovePad {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 598,
+      "text": ".studioInspectorNote {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 604,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 616,
+      "text": ".studioStepper {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 622,
+      "text": ".studioStepper span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 631,
+      "text": ".studioStepper i {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 643,
+      "text": ".studioStepper span.active {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 647,
+      "text": ".studioStepper span.active i {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 653,
+      "text": ".studioRunPanel {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 661,
+      "text": ".studioRunMeta {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 665,
+      "text": ".studioRunMeta strong,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 666,
+      "text": ".studioRunMeta span,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 667,
+      "text": ".studioRunMeta em {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 674,
+      "text": ".studioProgressMini {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 678,
+      "text": ".studioProgressMini span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 685,
+      "text": ".studioRunActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 690,
+      "text": ".studioFileInput {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 699,
+      "text": ".studioShell {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 705,
+      "text": ".studioWorkspace,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 706,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 710,
+      "text": ".studioSidebar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 714,
+      "text": ".studioViewerWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 718,
+      "text": ".studioInspector {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 724,
+      "text": ".studioShell {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 728,
+      "text": ".studioHeader {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 733,
+      "text": ".studioProjectStatus {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 739,
+      "text": ".studioHeaderActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 746,
+      "text": ".studioHeaderActions .premiumHeaderButtonV9,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 747,
+      "text": ".studioHeaderActions .publicTopCta {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 755,
+      "text": ".studioHelpButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 756,
+      "text": ".studioExportButton {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 762,
+      "text": ".studioViewerWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 766,
+      "text": ".studioStepper {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 770,
+      "text": ".studioRunPanel {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 775,
+      "text": ".studioShell .studioBrand .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 784,
+      "text": "/* UI redesign 2026-07: route-scoped Studio refinement. */"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 785,
+      "text": ".studioShell {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 795,
+      "text": ".studioHeader {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 804,
+      "text": ".studioBrand { min-width: 234px; gap: 11px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 805,
+      "text": ".studioBrand .launchSvgIcon { width: 32px; height: 32px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 806,
+      "text": ".studioBrand b { font-size: 19px; letter-spacing: -.02em; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 807,
+      "text": ".studioBrand small { color: var(--color-text-muted); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 809,
+      "text": ".studioProjectStatus {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 816,
+      "text": ".studioProjectStatus span { color: #fff; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 817,
+      "text": ".studioProjectStatus em { color: var(--color-text-secondary); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 819,
+      "text": ".studioHeaderActions { gap: 9px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 820,
+      "text": ".studioHeaderActions :is(button, a) { white-space: nowrap; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 821,
+      "text": ".studioHeaderActions .premiumHeaderButtonV9,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 822,
+      "text": ".studioHeaderActions .studioPremiumButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 823,
+      "text": ".studioHeaderActions .premiumStatusControl {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 832,
+      "text": ".studioHeaderActions .launchSvgIcon { width: 18px; height: 18px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 833,
+      "text": ".studioHeaderActions .studioIconButton,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 834,
+      "text": ".studioHeaderActions .studioExportButton { height: 42px; padding: 0 14px; display: inline-flex; align-items: center; gap: 8px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 836,
+      "text": ".studioWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 841,
+      "text": ".studioSidebar,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 842,
+      "text": ".studioInspector,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 843,
+      "text": ".studioViewerWorkspace,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 844,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 850,
+      "text": ".studioSidebar { padding: 14px; border-radius: 18px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 851,
+      "text": ".studioPanelLabel, .studioSettingLabel { color: #9fb1c7; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 852,
+      "text": ".studioToolGroup h2 { color: #d8e6f8; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 853,
+      "text": ".studioToolButton {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 861,
+      "text": ".studioToolButton:hover { border-color: rgba(53,215,255,.34); background: rgba(20, 35, 60, .78) !important; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 862,
+      "text": ".studioToolButton.active {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 867,
+      "text": ".studioToolIcon { width: 34px; height: 34px; border-radius: 12px; color: var(--color-cyan); background: rgba(53,215,255,.09); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 868,
+      "text": ".studioToolButton b { font-size: 13px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 869,
+      "text": ".studioToolButton small { color: var(--color-text-muted); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 871,
+      "text": ".studioViewerWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 875,
+      "text": ".studioViewerWorkspace .previewPanel {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 883,
+      "text": ".studioViewerWorkspace canvas,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 884,
+      "text": ".studioViewerWorkspace .previewCanvas { border-radius: 16px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 886,
+      "text": ".studioEmptyState {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 894,
+      "text": ".studioDropAura { width: 84px; height: 84px; border-radius: 24px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 895,
+      "text": ".studioDropAura .launchSvgIcon { width: 48px; height: 48px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 896,
+      "text": ".studioEmptyState h1 { margin: 10px 0; font-size: clamp(40px, 4vw, 48px); letter-spacing: -.04em; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 897,
+      "text": ".studioEmptyState p { max-width: 560px; line-height: 1.55; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 898,
+      "text": ".studioEmptyActions { gap: 10px; justify-content: center; flex-wrap: wrap; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 899,
+      "text": ".studioPrimaryAction, .studioTextAction, .studioSecondaryAction { min-height: 42px; border-radius: 13px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 900,
+      "text": ".studioFileLimits span { border-color: rgba(128,163,205,.18); background: rgba(5,11,22,.72); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 902,
+      "text": ".studioInspector { padding: 13px; border-radius: 18px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 903,
+      "text": ".studioInspectorCard,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 904,
+      "text": ".studioInspectorNote,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 905,
+      "text": ".studioInspector .analysisResult,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 906,
+      "text": ".studioInspector .jobInfoPanel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 907,
+      "text": ".studioInspector .feedbackPanel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 908,
+      "text": ".studioInspector .historySection,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 909,
+      "text": ".studioSettingBlock {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 914,
+      "text": ".studioInspectorCard h2, .studioSettingBlock h3 { font-size: 18px; letter-spacing: -.015em; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 915,
+      "text": ".studioSegmentGroup button { border-radius: 11px; background: rgba(255,255,255,.035); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 916,
+      "text": ".studioSegmentGroup button.active { background: rgba(53,215,255,.14); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 917,
+      "text": ".studioTextField input, .studioRangeField input, .studioSizeGrid input { min-height: 40px; padding: 0 10px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 919,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 926,
+      "text": ".studioStepper { gap: 8px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 927,
+      "text": ".studioStepper span {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 936,
+      "text": ".studioStepper span.active {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 941,
+      "text": ".studioStepper i { background: rgba(53,215,255,.12); color: var(--color-cyan); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 942,
+      "text": ".studioRunPanel { min-width: 0; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 943,
+      "text": ".studioRunMeta { min-width: 0; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 944,
+      "text": ".studioRunMeta strong, .studioRunMeta span, .studioRunMeta em { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 945,
+      "text": ".studioRunActions { flex-wrap: nowrap; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 948,
+      "text": ".studioShell { height: auto; min-height: 100dvh; overflow: visible; grid-template-rows: auto auto auto; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 949,
+      "text": ".studioWorkspace { grid-template-columns: 80px minmax(0, 1fr); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 950,
+      "text": ".studioSidebar { padding: 10px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 951,
+      "text": ".studioSidebar .studioPanelLabel, .studioToolGroup h2, .studioToolButton small, .studioSidebarFoot { display: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 952,
+      "text": ".studioToolButton { justify-content: center; min-height: 52px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 953,
+      "text": ".studioToolButton span:not(.studioToolIcon) { display: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 954,
+      "text": ".studioInspector { grid-column: 1 / -1; max-height: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 955,
+      "text": ".studioWorkflowBar { grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 959,
+      "text": ".studioShell { padding: 10px; gap: 10px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 960,
+      "text": ".studioHeader { height: auto; display: grid; grid-template-columns: 1fr; gap: 10px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 961,
+      "text": ".studioBrand { min-width: 0; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 962,
+      "text": ".studioProjectStatus { justify-content: start; width: 100%; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 963,
+      "text": ".studioHeaderActions { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 964,
+      "text": ".studioHeaderActions .premiumStatusWrap, .studioHeaderActions .premiumHeaderButtonV9 { grid-column: 1 / -1; width: 100%; max-width: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 965,
+      "text": ".studioWorkspace { grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 966,
+      "text": ".studioSidebar { order: 2; max-height: 96px; overflow: auto hidden; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 967,
+      "text": ".studioToolList { display: flex; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 968,
+      "text": ".studioToolButton { width: 54px; flex: 0 0 54px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 969,
+      "text": ".studioViewerWorkspace { min-height: 520px; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 970,
+      "text": ".studioInspector { order: 3; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 971,
+      "text": ".studioWorkflowBar { min-height: auto; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 972,
+      "text": ".studioStepper { display: grid; grid-template-columns: repeat(3, 1fr); }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 973,
+      "text": ".studioRunPanel { grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 974,
+      "text": ".studioRunActions { display: grid; grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 978,
+      "text": ".studioShell {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 984,
+      "text": ".studioHeader {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 990,
+      "text": ".studioBrand,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 991,
+      "text": ".studioProjectStatus,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 992,
+      "text": ".studioHeaderActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 997,
+      "text": ".studioHeaderActions {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1001,
+      "text": ".studioHeaderActions .premiumStatusWrap,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1002,
+      "text": ".studioHeaderActions .premiumHeaderButtonV9 {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1006,
+      "text": ".studioWorkspace {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1010,
+      "text": ".studioViewerWorkspace,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1011,
+      "text": ".studioInspector,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1012,
+      "text": ".studioWorkflowBar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1015,
+      "text": ".studioSidebar {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1018,
+      "text": ".studioSidebar .studioPanelLabel,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1019,
+      "text": ".studioToolGroup h2,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1020,
+      "text": ".studioToolButton small,"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1021,
+      "text": ".studioSidebarFoot { display: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1022,
+      "text": ".studioToolButton {"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1027,
+      "text": ".studioToolButton span:not(.studioToolIcon) { display: none; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1028,
+      "text": ".studioInspector { grid-column: 1 / -1; }"
+    },
+    {
+      "file": "frontend/src/studio/studio.css",
+      "line": 1029,
+      "text": ".studioWorkflowBar { grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4590,
+      "text": ".demoStudioPreview {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4604,
+      "text": ".demoStudioPreview span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4811,
+      "text": ".demoStudioPreview {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4817,
+      "text": ".demoStudioTop {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4825,
+      "text": ".demoStudioTop span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4832,
+      "text": ".demoStudioTop span:nth-child(2) { background: #f5c76b; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4833,
+      "text": ".demoStudioTop span:nth-child(3) { background: #28e6ad; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4834,
+      "text": ".demoStudioTop b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4839,
+      "text": ".demoStudioGrid {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4844,
+      "text": ".demoStudioGrid aside {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4851,
+      "text": ".demoStudioGrid aside span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4859,
+      "text": ".demoStudioGrid section {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4863,
+      "text": ".demoStudioGrid img {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 4892,
+      "text": ".demoStudioPreview{border-right:0;min-height:300px}"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5363,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5376,
+      "text": ".publicSite .studioTopbarV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5386,
+      "text": ".publicSite .studioTopbarV8 strong {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5396,
+      "text": ".publicSite .studioTopbarV8 > span,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5397,
+      "text": ".publicSite .studioTopbarV8 em {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5403,
+      "text": ".publicSite .studioTopbarV8 > span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5407,
+      "text": ".publicSite .studioTopbarV8 > div {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5414,
+      "text": ".publicSite .studioMenuDots {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5420,
+      "text": ".publicSite .studioTopbarV8 button {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5435,
+      "text": ".publicSite .studioBodyV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5441,
+      "text": ".publicSite .studioToolsV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5450,
+      "text": ".publicSite .studioToolsV8 small,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5451,
+      "text": ".publicSite .studioInfoV8 h3 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5457,
+      "text": ".publicSite .studioToolsV8 button {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5471,
+      "text": ".publicSite .studioToolsV8 button.active {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5477,
+      "text": ".publicSite .studioToolsV8 button .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5482,
+      "text": ".publicSite .studioToolsV8 b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5489,
+      "text": ".publicSite .studioToolsV8 em {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5498,
+      "text": ".publicSite .studioToolFoot {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5505,
+      "text": ".publicSite .studioToolFoot span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5514,
+      "text": ".publicSite .studioViewportV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5531,
+      "text": ".publicSite .studioViewportV8:before {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5543,
+      "text": ".publicSite .studioViewportV8 .studioSkull {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5565,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5576,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg polygon {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5583,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg line {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5589,
+      "text": ".publicSite .studioViewportV8 .sectionCutSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5600,
+      "text": ".publicSite .studioViewportV8 .sectionCutSvg line {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5649,
+      "text": ".publicSite .studioViewportV8 .axisGizmo {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5664,
+      "text": ".publicSite .studioViewportV8 .axisGizmo i {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5675,
+      "text": ".publicSite .studioViewportV8 .axisGizmo i span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5686,
+      "text": ".publicSite .studioViewportV8 .axisGizmo b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5699,
+      "text": ".publicSite .studioViewportV8 .axisX { color: #ff3f3f !important; background: currentColor !important; transform: rotate(-8deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5700,
+      "text": ".publicSite .studioViewportV8 .axisY { color: #21c56a !important; background: currentColor !important; transform: rotate(214deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5701,
+      "text": ".publicSite .studioViewportV8 .axisZ { color: #2383ff !important; background: currentColor !important; transform: rotate(-96deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5703,
+      "text": ".publicSite .studioInfoV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5709,
+      "text": ".publicSite .studioInfoV8 dl {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5718,
+      "text": ".publicSite .studioInfoV8 dl div,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5719,
+      "text": ".publicSite .studioChecks li {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5728,
+      "text": ".publicSite .studioInfoV8 dd,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5729,
+      "text": ".publicSite .studioChecks b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5735,
+      "text": ".publicSite .studioChecks {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5742,
+      "text": ".publicSite .studioChecks li {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5747,
+      "text": ".publicSite .studioChecks span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5754,
+      "text": ".publicSite .studioChecks .bad { background: var(--ref-red) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5755,
+      "text": ".publicSite .studioChecks .warn { background: #ffd322 !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5757,
+      "text": ".publicSite .studioCheckButton {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5938,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5976,
+      "text": ".publicSite .studioShellV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5988,
+      "text": ".publicSite .studioShellV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5995,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 5999,
+      "text": ".publicSite .studioBodyV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 6004,
+      "text": ".publicSite .studioToolsV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 6005,
+      "text": ".publicSite .studioInfoV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 6009,
+      "text": ".publicSite .studioViewportV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10652,
+      "text": "/* Route-safe SVG sizing restored after Studio refactor."
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10654,
+      "text": "to the public route so Studio/admin styles cannot leak into the landing. */"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10676,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10681,
+      "text": ".publicSite .studioViewportV8 .sectionCutSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10707,
+      "text": ".publicSite .studioToolsV8 button .launchSvgIcon,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 10718,
+      "text": "the Studio refactor, so desktop production lost the landing layout. */"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11187,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11200,
+      "text": ".publicSite .studioTopbarV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11210,
+      "text": ".publicSite .studioTopbarV8 strong {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11220,
+      "text": ".publicSite .studioTopbarV8 > span,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11221,
+      "text": ".publicSite .studioTopbarV8 em {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11227,
+      "text": ".publicSite .studioTopbarV8 > span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11231,
+      "text": ".publicSite .studioTopbarV8 > div {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11238,
+      "text": ".publicSite .studioMenuDots {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11244,
+      "text": ".publicSite .studioTopbarV8 button {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11259,
+      "text": ".publicSite .studioBodyV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11265,
+      "text": ".publicSite .studioToolsV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11274,
+      "text": ".publicSite .studioToolsV8 small,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11275,
+      "text": ".publicSite .studioInfoV8 h3 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11281,
+      "text": ".publicSite .studioToolsV8 button {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11295,
+      "text": ".publicSite .studioToolsV8 button.active {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11301,
+      "text": ".publicSite .studioToolsV8 button .launchSvgIcon {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11306,
+      "text": ".publicSite .studioToolsV8 b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11313,
+      "text": ".publicSite .studioToolsV8 em {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11322,
+      "text": ".publicSite .studioToolFoot {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11329,
+      "text": ".publicSite .studioToolFoot span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11338,
+      "text": ".publicSite .studioViewportV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11355,
+      "text": ".publicSite .studioViewportV8:before {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11367,
+      "text": ".publicSite .studioViewportV8 .studioSkull {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11389,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11400,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg polygon {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11407,
+      "text": ".publicSite .studioViewportV8 .sectionPlaneSvg line {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11413,
+      "text": ".publicSite .studioViewportV8 .sectionCutSvg {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11424,
+      "text": ".publicSite .studioViewportV8 .sectionCutSvg line {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11473,
+      "text": ".publicSite .studioViewportV8 .axisGizmo {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11488,
+      "text": ".publicSite .studioViewportV8 .axisGizmo i {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11499,
+      "text": ".publicSite .studioViewportV8 .axisGizmo i span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11510,
+      "text": ".publicSite .studioViewportV8 .axisGizmo b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11523,
+      "text": ".publicSite .studioViewportV8 .axisX { color: #ff3f3f !important; background: currentColor !important; transform: rotate(-8deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11524,
+      "text": ".publicSite .studioViewportV8 .axisY { color: #21c56a !important; background: currentColor !important; transform: rotate(214deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11525,
+      "text": ".publicSite .studioViewportV8 .axisZ { color: #2383ff !important; background: currentColor !important; transform: rotate(-96deg) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11527,
+      "text": ".publicSite .studioInfoV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11533,
+      "text": ".publicSite .studioInfoV8 dl {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11542,
+      "text": ".publicSite .studioInfoV8 dl div,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11543,
+      "text": ".publicSite .studioChecks li {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11552,
+      "text": ".publicSite .studioInfoV8 dd,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11553,
+      "text": ".publicSite .studioChecks b {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11559,
+      "text": ".publicSite .studioChecks {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11566,
+      "text": ".publicSite .studioChecks li {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11571,
+      "text": ".publicSite .studioChecks span {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11578,
+      "text": ".publicSite .studioChecks .bad { background: var(--ref-red) !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11579,
+      "text": ".publicSite .studioChecks .warn { background: #ffd322 !important; }"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11581,
+      "text": ".publicSite .studioCheckButton {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11762,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11800,
+      "text": ".publicSite .studioShellV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11812,
+      "text": ".publicSite .studioShellV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11819,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11823,
+      "text": ".publicSite .studioBodyV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11828,
+      "text": ".publicSite .studioToolsV8,"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11829,
+      "text": ".publicSite .studioInfoV8 {"
+    },
+    {
+      "file": "frontend/src/styles.css",
+      "line": 11833,
+      "text": ".publicSite .studioViewportV8 {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 173,
+      "text": "grid-template-areas: \"copy studio\" \"metrics note\";"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 240,
+      "text": ".studioShellV8 { grid-area: studio; width: 100%; max-width: 780px; justify-self: end; border-radius: 20px; border: 1px solid rgba(53,215,255,.5); background: rgba(4,10,20,.88); box-shadow: var(--shadow-panel), 0 0 54px r"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 241,
+      "text": ".studioTopbarV8 { height: 50px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; padding: 0 14px; border-bottom: 1px solid rgba(128,163,205,.18); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 242,
+      "text": ".studioTopbarV8 strong, .studioTopbarV8 div { display: flex; align-items: center; gap: 10px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 243,
+      "text": ".studioTopbarV8 div { justify-content: flex-end; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 244,
+      "text": ".studioTopbarV8 .launchSvgIcon { width: 18px; height: 18px; color: var(--color-cyan); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 245,
+      "text": ".studioTopbarV8 button { height: 34px; display: inline-flex; align-items: center; gap: 7px; padding: 0 12px; border-radius: 9px; color: #fff; background: linear-gradient(135deg, var(--color-cyan), var(--color-blue)); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 246,
+      "text": ".studioBodyV8 { min-height: 500px; display: grid; grid-template-columns: 156px minmax(0, 1fr) 210px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 247,
+      "text": ".studioToolsV8 { padding: 14px; border-right: 1px solid rgba(128,163,205,.16); background: rgba(4,9,18,.64); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 248,
+      "text": ".studioToolsV8 button { width: 100%; min-height: 50px; display: flex; align-items: center; gap: 8px; margin-top: 8px; padding: 8px; border: 1px solid rgba(128,163,205,.14); border-radius: 10px; color: #d9e7f8; background"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 249,
+      "text": ".studioToolsV8 button.active { border-color: rgba(53,215,255,.88); background: linear-gradient(135deg, rgba(40,124,255,.34), rgba(9,18,33,.86)); box-shadow: inset 3px 0 0 var(--color-cyan); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 250,
+      "text": ".studioToolsV8 .launchSvgIcon { width: 18px; height: 18px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 251,
+      "text": ".studioToolsV8 em { display: block; color: var(--color-text-muted); font-size: 10px; font-style: normal; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 252,
+      "text": ".studioViewportV8 { position: relative; min-height: 500px; overflow: hidden; background: radial-gradient(circle at 55% 47%, rgba(53,215,255,.13), transparent 34%), linear-gradient(rgba(53,215,255,.06) 1px, transparent 1p"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 253,
+      "text": ".studioViewportV8 .studioSkull { position: absolute; z-index: 3; width: 78%; left: 49%; top: 54%; transform: translate(-50%,-50%); filter: brightness(.96) contrast(1.08) saturate(.74); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 263,
+      "text": ".studioInfoV8 { padding: 16px; border-left: 1px solid rgba(128,163,205,.16); background: rgba(5,11,22,.7); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 264,
+      "text": ".studioInfoV8 h3 { margin: 0 0 12px; color: #a9bbd1; font-size: 11px; letter-spacing: .06em; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 265,
+      "text": ".studioInfoV8 dl, .studioInfoV8 ul { margin: 0 0 18px; padding: 0; display: grid; gap: 9px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 266,
+      "text": ".studioInfoV8 dl div, .studioChecks li { display: flex; justify-content: space-between; gap: 8px; color: var(--color-text-secondary); font-size: 12px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 267,
+      "text": ".studioInfoV8 dd { margin: 0; color: #fff; font-weight: 800; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 268,
+      "text": ".studioCheckButton, .quickActions button { min-height: 34px; border: 1px solid rgba(53,215,255,.34); border-radius: 9px; color: #dff8ff; background: rgba(53,215,255,.08); }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 364,
+      "text": ".launchHero.heroV8 { grid-template-columns: 1fr; grid-template-areas: \"copy\" \"studio\" \"metrics\" \"note\"; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 365,
+      "text": ".studioShellV8 { justify-self: stretch; max-width: none; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 417,
+      "text": ".studioBodyV8 { grid-template-columns: 1fr; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 418,
+      "text": ".studioToolsV8, .studioInfoV8 { display: none; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 419,
+      "text": ".studioViewportV8 { min-height: 420px; }"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 505,
+      "text": ".studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 512,
+      "text": ".studioBodyV8 {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 1668,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 1672,
+      "text": ".publicSite .studioShellV8 {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4017,
+      "text": ".publicSite .studioToolsV8 button,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4018,
+      "text": ".publicSite .studioQuickActions button,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4019,
+      "text": ".publicSite .studioInspectorV8 button,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4020,
+      "text": ".publicSite .studioBodyV8 button {"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4026,
+      "text": ".publicSite .studioToolsV8 button span,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4027,
+      "text": ".publicSite .studioQuickActions button span,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4028,
+      "text": ".publicSite .studioInspectorV8 button span,"
+    },
+    {
+      "file": "frontend/src/landing/landing.css",
+      "line": 4029,
+      "text": ".publicSite .studioBodyV8 button span {"
+    }
+  ],
+  "backend_worker_refs": [
+    {
+      "file": "backend/app/main.py",
+      "line": 49,
+      "text": "HEAVY_OPERATIONS = {\"model_improvement\", \"repair_mesh\", \"split_model\", \"fit_to_bed_split\", \"remove_ai_artifacts\", \"ai_cleanup\", \"surface_recovery\", \"local_smoothing\"}"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 70,
+      "text": "ALLOWED_OPERATIONS = {"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 87,
+      "text": "DEFAULT_OPERATIONS = [\"analyze\", \"print_check\"]"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2153,
+      "text": "return DEFAULT_OPERATIONS"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2167,
+      "text": "if operation not in ALLOWED_OPERATIONS:"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2172,
+      "text": "return normalized or DEFAULT_OPERATIONS"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2503,
+      "text": "@app.get(\"/health\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2508,
+      "text": "@app.get(\"/api/v1/status\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2524,
+      "text": "@app.get(\"/api/v1/config/features\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2532,
+      "text": "@app.get(\"/api/v1/me\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2539,
+      "text": "@app.post(\"/api/v1/access-requests\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2578,
+      "text": "@app.post(\"/api/v1/premium-requests\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2645,
+      "text": "@app.get(\"/api/v1/premium-requests/by-number/{request_number}\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2655,
+      "text": "@app.get(\"/api/v1/premium-requests/{application_id}\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2668,
+      "text": "@app.post(\"/api/v1/premium/activate\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2757,
+      "text": "@app.post(\"/api/v1/premium/status\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2790,
+      "text": "@app.post(\"/api/v1/feedback\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2960,
+      "text": "@app.post(\"/api/v1/admin/login\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 2991,
+      "text": "@app.get(\"/api/v1/admin/security\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3012,
+      "text": "@app.get(\"/api/v1/admin/overview\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3058,
+      "text": "@app.get(\"/api/v1/admin/premium-codes\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3087,
+      "text": "@app.get(\"/api/v1/admin/features\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3142,
+      "text": "@app.post(\"/api/v1/admin/test-data/scan\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3158,
+      "text": "@app.post(\"/api/v1/admin/test-data/cleanup\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3268,
+      "text": "@app.post(\"/api/v1/admin/legacy-data/scan\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3283,
+      "text": "@app.post(\"/api/v1/admin/legacy-data/quarantine\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3412,
+      "text": "@app.get(\"/api/v1/admin/feedback\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3418,
+      "text": "@app.get(\"/api/v1/admin/feedback/summary\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3444,
+      "text": "@app.post(\"/api/v1/admin/feedback/cleanup-test\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3468,
+      "text": "@app.post(\"/api/v1/admin/feedback/delete-test\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3495,
+      "text": "@app.get(\"/api/v1/admin/applications\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3514,
+      "text": "@app.post(\"/api/v1/admin/applications/delete-test\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3541,
+      "text": "@app.post(\"/api/v1/admin/applications/bulk\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3646,
+      "text": "@app.post(\"/api/v1/admin/applications/{kind}/{application_id}/approve\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3717,
+      "text": "@app.post(\"/api/v1/admin/applications/{kind}/{application_id}/reject\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3738,
+      "text": "@app.get(\"/api/v1/admin/users\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3744,
+      "text": "@app.post(\"/api/v1/admin/users/deletion-preview\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3758,
+      "text": "@app.post(\"/api/v1/admin/users/delete\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3848,
+      "text": "@app.post(\"/api/v1/admin/users/bulk\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 3980,
+      "text": "@app.post(\"/api/v1/admin/users\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4024,
+      "text": "@app.patch(\"/api/v1/admin/users/{user_id}\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4042,
+      "text": "@app.post(\"/api/v1/admin/users/{user_id}/premium\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4054,
+      "text": "@app.post(\"/api/v1/admin/users/{user_id}/block\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4061,
+      "text": "@app.post(\"/api/v1/admin/users/{user_id}/unblock\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4068,
+      "text": "@app.post(\"/api/v1/admin/users/{user_id}/reset-code\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4077,
+      "text": "@app.get(\"/api/v1/admin/cleanup/status\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4106,
+      "text": "@app.post(\"/api/v1/admin/cleanup/scan\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4125,
+      "text": "@app.post(\"/api/v1/admin/cleanup/execute\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4143,
+      "text": "@app.post(\"/api/v1/admin/cleanup/run\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4309,
+      "text": "@app.post(\"/api/v1/admin/system-cleanup/preview\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4326,
+      "text": "@app.post(\"/api/v1/admin/system-cleanup\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4391,
+      "text": "@app.get(\"/api/v1/admin/queue\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4401,
+      "text": "@app.post(\"/api/v1/admin/integrity-check\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4415,
+      "text": "@app.post(\"/api/v1/admin/jobs/bulk\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4485,
+      "text": "@app.post(\"/api/v1/admin/jobs/delete-test\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4528,
+      "text": "@app.post(\"/api/v1/admin/jobs/{job_id}/cancel\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4560,
+      "text": "@app.post(\"/api/v1/jobs/upload\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4755,
+      "text": "\"heavy_job\": str(bool(set(selected_operations).intersection(HEAVY_OPERATIONS))).lower(),"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4775,
+      "text": "@app.get(\"/api/v1/jobs/{job_id}\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4909,
+      "text": "@app.get(\"/api/v1/jobs/{job_id}/download\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4922,
+      "text": "@app.head(\"/api/v1/jobs/{job_id}/download\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4938,
+      "text": "@app.get(\"/api/v1/jobs/{job_id}/files/{filename}\")"
+    },
+    {
+      "file": "backend/app/main.py",
+      "line": 4970,
+      "text": "@app.head(\"/api/v1/jobs/{job_id}/files/{filename}\")"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 25,
+      "text": "DEFAULT_OPERATIONS = [\"analyze\", \"print_check\", \"prepare_package\"]"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 26,
+      "text": "IMPLEMENTED_OPERATIONS = {"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 79,
+      "text": "HEAVY_OPERATIONS = {\"model_improvement\", \"repair_mesh\", \"reduce_polygons\", \"split_model\", \"fit_to_bed_split\", \"ai_cleanup\", \"fix_symmetry\", \"surface_recovery\", \"local_smoothing\"}"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 129,
+      "text": "return DEFAULT_OPERATIONS"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 135,
+      "text": "return DEFAULT_OPERATIONS"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 137,
+      "text": "return normalized or DEFAULT_OPERATIONS"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 431,
+      "text": "heavy_selected = [operation for operation in operations if operation in HEAVY_OPERATIONS]"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 630,
+      "text": "result[\"implemented_operations\"] = [operation for operation in operations if operation in IMPLEMENTED_OPERATIONS]"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 738,
+      "text": "\"download_url\": f\"/api/v1/jobs/{job_id}/files/{file_name}\","
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 750,
+      "text": "\"download_url\": f\"/api/v1/jobs/{job_id}/files/{file_name}\","
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 762,
+      "text": "\"download_url\": f\"/api/v1/jobs/{job_id}/files/{file_name}\","
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 787,
+      "text": "def run_repair_mesh(input_path: Path, result_dir: Path) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 897,
+      "text": "def run_reduce_polygons(source_path: Path, result_dir: Path, reduction_percent: int) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 1115,
+      "text": "def run_ai_cleanup(source_path: Path, result_dir: Path, input_file: str, strength: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 1510,
+      "text": "def run_remove_ai_artifacts(source_path: Path, result_dir: Path, input_file: str, strength: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 1721,
+      "text": "def run_surface_recovery(source_path: Path, result_dir: Path, source_file: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2372,
+      "text": "\"download_url\": f\"/api/v1/jobs/{job_id}/files/change_map.json\","
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2432,
+      "text": "\"download_url\": f\"/api/v1/jobs/{job_id}/files/artifact_map.json\","
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2475,
+      "text": "return f\"/api/v1/jobs/{job_id}/files/{file_name}\""
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2575,
+      "text": "def run_apply_orientation(source_path: Path, result_dir: Path, transform: dict[str, object], source_file: str = \"original.stl\") -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2667,
+      "text": "def run_local_smoothing(source_path: Path, result_dir: Path, selection: dict[str, object] | None, source_file: str = \"original.stl\") -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 2902,
+      "text": "def run_auto_orientation(source_path: Path, result_dir: Path, priority: str, source_file: str = \"original.stl\") -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 3263,
+      "text": "def run_split_connector_qa("
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 3622,
+      "text": "def run_safe_mvp_split(source_path: Path, result_dir: Path, split_axis: str, split_parts: int, split_mode: str, split_plane_offset_mm: float = 0.0, connector_size_mm: int = 4, connector_clearance_mm: float = 0.25, connector_count: int = 2, "
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 3698,
+      "text": "def run_blender_boolean_split(source_path: Path, result_dir: Path, split_axis: str, split_parts: int, split_mode: str, split_plane_offset_mm: float = 0.0, connector_size_mm: int = 4, connector_clearance_mm: float = 0.25, connector_count: in"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 3924,
+      "text": "def run_split_model(source_path: Path, result_dir: Path, split_axis: str, split_parts: int, split_mode: str, split_engine: str, split_plane_offset_mm: float = 0.0, connector_size_mm: int = 4, connector_clearance_mm: float = 0.25, connector_"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 3975,
+      "text": "def run_fit_to_bed_split(source_path: Path, result_dir: Path, bed_size: dict[str, float], connector_mode: str, connector_clearance_mm: float, source_file: str = \"original.stl\") -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 4193,
+      "text": "def run_fix_symmetry(source_path: Path, result_dir: Path, axis: str, mode: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 4710,
+      "text": "def run_print_repair(input_path: Path, result_dir: Path, result: dict, strength: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 5040,
+      "text": "def run_blender_improvement(source_path: Path, result_dir: Path, result: dict, strength: str) -> dict:"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 5091,
+      "text": "\"after_download_url\": f\"/api/v1/jobs/{job_id}/files/{after_file}\" if after_file else None,"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 5385,
+      "text": "operation for operation in executable_operations if operation in IMPLEMENTED_OPERATIONS"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 5749,
+      "text": "result[\"after_download_url\"] = f\"/api/v1/jobs/{job_id}/files/{result['after_file']}\" if result.get(\"after_file\") else None"
+    },
+    {
+      "file": "worker/app/worker.py",
+      "line": 5771,
+      "text": "result[\"download_url\"] = f\"/api/v1/jobs/{job_id}/download\""
+    }
+  ]
+}
