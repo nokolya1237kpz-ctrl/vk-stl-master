@@ -4093,6 +4093,7 @@ def admin_cleanup_status(request: Request, authorization: str | None = Header(de
         "feedback_size_bytes": directory_size(FEEDBACK_ROOT),
         "users_size_bytes": directory_size(USERS_ROOT),
         "quarantine_size_bytes": directory_size(QUARANTINE_ROOT),
+        "quarantine_entries": quarantine_entry_count(),
         "tests_results_size_bytes": directory_size(Path("/app/tests/results")),
         "job_dirs": {
             "uploads": len([item for item in UPLOAD_ROOT.iterdir() if item.is_dir()]) if UPLOAD_ROOT.exists() else 0,
@@ -4195,6 +4196,95 @@ def remove_empty_cleanup_dirs() -> dict[str, object]:
     return {"removed": removed, "errors": errors}
 
 
+def preview_empty_cleanup_dirs() -> dict[str, object]:
+    candidates: list[dict[str, object]] = []
+    errors: list[dict[str, str]] = []
+    for root in (UPLOAD_ROOT, RESULT_ROOT, ADMIN_CLEANUP_TEST_ROOT):
+        if not root.exists():
+            continue
+        for current_root, dirs, files in os.walk(root, topdown=False):
+            path = Path(current_root)
+            if path == root or not is_cleanup_path_allowed(path) or path.is_symlink():
+                continue
+            try:
+                if not dirs and not files and not any(path.iterdir()):
+                    candidates.append({"path_masked": masked_path(path), "age_hours": round(file_age_hours(path), 2)})
+            except OSError as exc:
+                errors.append({"path": masked_path(path), "error": str(exc)})
+    return {"candidates": len(candidates), "items": candidates[:80], "errors": errors, "freed_bytes": 0}
+
+
+def quarantine_entry_count() -> int:
+    if not QUARANTINE_ROOT.exists():
+        return 0
+    try:
+        return sum(1 for _ in QUARANTINE_ROOT.iterdir())
+    except OSError:
+        return 0
+
+
+def preview_system_cleanup_actions(actions: list[str]) -> dict[str, object]:
+    preview: dict[str, object] = {"ok": True, "dry_run": True, "actions": {}, "freed_bytes": 0, "completed_at": utc_now_iso()}
+    try:
+        client = get_redis()
+    except RedisError:
+        client = None
+    for action in actions:
+        if action == "orphan_files":
+            plan = build_cleanup_plan(6)
+            candidates = [item for item in plan.get("items", []) if isinstance(item, dict) and item.get("safe_to_delete")]
+            size = int(plan.get("total_size_bytes", 0) or 0)
+            preview["actions"][action] = {  # type: ignore[index]
+                "dry_run": True,
+                "eligible_files": len(candidates),
+                "freed_bytes": size,
+                "protected_count": plan.get("protected_count", 0),
+                "scan_id": plan.get("scan_id"),
+                "category": "expired_job_files",
+            }
+            preview["freed_bytes"] = int(preview.get("freed_bytes", 0) or 0) + size
+        elif action == "empty_dirs":
+            preview["actions"][action] = preview_empty_cleanup_dirs()  # type: ignore[index]
+        elif action == "redis":
+            integrity = admin_integrity_check(auto_fix=False)
+            preview["actions"][action] = {"dry_run": True, "integrity_summary": integrity.get("summary"), "will_fix": True}  # type: ignore[index]
+        elif action == "stale_jobs":
+            deleted: list[str] = []
+            protected: list[dict[str, str]] = []
+            if client is None:
+                preview["actions"][action] = {"dry_run": True, "error": "Redis недоступен"}  # type: ignore[index]
+                preview["ok"] = False
+                continue
+            for key in client.keys("stl:job:*"):
+                job_id = key.rsplit(":", 1)[-1]
+                job = client.hgetall(key)
+                stale = job.get("status") == "stale_processing" or (job.get("status") == "processing" and not is_fresh_processing_job(job))
+                if not stale:
+                    continue
+                diagnostics = job_runtime_diagnostics(client, job_id, job)
+                if diagnostics.get("lock_status") == "locked":
+                    protected.append({"id": job_id, "reason": "есть блокировка"})
+                else:
+                    deleted.append(job_id)
+            preview["actions"][action] = {"dry_run": True, "eligible_jobs": len(deleted), "protected": protected[:80]}  # type: ignore[index]
+        elif action == "quarantine":
+            size = directory_size(QUARANTINE_ROOT)
+            preview["actions"][action] = {  # type: ignore[index]
+                "dry_run": True,
+                "category": "quarantine",
+                "entries": quarantine_entry_count(),
+                "freed_bytes": size,
+                "requires_confirmation": "ОЧИСТИТЬ КАРАНТИН",
+                "warning": "Карантин очищается только вручную администратором.",
+            }
+            preview["freed_bytes"] = int(preview.get("freed_bytes", 0) or 0) + size
+        elif action in {"cache", "temp"}:
+            preview["actions"][action] = {"dry_run": True, "skipped": True, "reason": "операция требует отдельного серверного подтверждения"}  # type: ignore[index]
+        else:
+            preview["actions"][action] = {"dry_run": True, "skipped": True, "reason": "неизвестное действие"}  # type: ignore[index]
+    return preview
+
+
 def clear_quarantine_root() -> dict[str, object]:
     QUARANTINE_ROOT.mkdir(parents=True, exist_ok=True)
     freed_bytes = directory_size(QUARANTINE_ROOT)
@@ -4216,6 +4306,23 @@ def clear_quarantine_root() -> dict[str, object]:
     return {"deleted_entries": deleted_entries, "freed_bytes": freed_bytes, "errors": errors}
 
 
+@app.post("/api/v1/admin/system-cleanup/preview")
+async def admin_system_cleanup_preview(request: Request, authorization: str | None = Header(default=None), x_admin_token: str | None = Header(default=None, alias="X-Admin-Token")) -> dict[str, object]:
+    require_admin_auth(request, authorization, x_admin_token)
+    try:
+        payload = await request.json()
+    except json.JSONDecodeError:
+        payload = {}
+    if not isinstance(payload, dict):
+        payload = {}
+    actions = [str(item) for item in payload.get("actions", []) if str(item).strip()] if isinstance(payload.get("actions"), list) else []
+    if not actions:
+        raise HTTPException(status_code=400, detail="Нужно указать действия очистки")
+    result = preview_system_cleanup_actions(actions)
+    audit_event("system_cleanup_preview", request, actions=actions, freed_bytes=result.get("freed_bytes"))
+    return result
+
+
 @app.post("/api/v1/admin/system-cleanup")
 async def admin_system_cleanup(request: Request, authorization: str | None = Header(default=None), x_admin_token: str | None = Header(default=None, alias="X-Admin-Token")) -> dict[str, object]:
     require_admin_auth(request, authorization, x_admin_token)
@@ -4228,6 +4335,10 @@ async def admin_system_cleanup(request: Request, authorization: str | None = Hea
     actions = [str(item) for item in payload.get("actions", []) if str(item).strip()] if isinstance(payload.get("actions"), list) else []
     if not actions:
         raise HTTPException(status_code=400, detail="Нужно указать действия очистки")
+    if bool(payload.get("dry_run")):
+        result = preview_system_cleanup_actions(actions)
+        audit_event("system_cleanup_preview", request, actions=actions, freed_bytes=result.get("freed_bytes"))
+        return result
     result: dict[str, object] = {"ok": True, "actions": {}, "freed_bytes": 0}
     for action in actions:
         try:

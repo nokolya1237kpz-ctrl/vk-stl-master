@@ -158,3 +158,46 @@
   .adminSummaryGrid, .adminJobGrid { grid-template-columns: 1fr; }
   .adminTableWrap { max-width: 100%; }
 }
+
+.adminConfirmOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(1, 5, 12, .72);
+  backdrop-filter: blur(10px);
+}
+.adminConfirmModal {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(86dvh, 760px);
+  overflow: auto;
+  border: 1px solid rgba(53,215,255,.28);
+  border-radius: 20px;
+  padding: 22px;
+  background: linear-gradient(145deg, rgba(9,17,31,.98), rgba(10,18,38,.96));
+  box-shadow: 0 24px 80px rgba(0,0,0,.48), 0 0 0 1px rgba(255,255,255,.035) inset;
+}
+.adminConfirmModal h3 { margin: 0 0 10px; font-size: 28px; letter-spacing: -.03em; }
+.adminConfirmModal p { color: var(--color-text-secondary); line-height: 1.55; }
+.adminConfirmClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 999px;
+}
+.adminJobGrid.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 14px 0; }
+.adminNotice.warning { color: #ffe7a6; }
+.confirmActions { justify-content: flex-end; margin-top: 14px; }
+.confirmActions button:first-child { min-width: 190px; }
+
+@media (max-width: 760px) {
+  .adminConfirmOverlay { padding: 10px; align-items: end; }
+  .adminConfirmModal { max-height: 92dvh; border-radius: 18px; padding: 18px; }
+  .adminJobGrid.compact { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,421 @@
+{
+  "generatedAt": "2026-07-28T15:24:31",
+  "sourceSha": "9181038dbc7049b6dc95ba38b780ffaa969cc1e0",
+  "branch": "stage-06-0-admin-storage-recovery",
+  "disk": {
+    "df_h": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sda1        79G   77G  2.2G  98% /",
+    "df_i": "Filesystem      Inodes  IUsed   IFree IUse% Mounted on\n/dev/sda1      5242880 894233 4348647   18% /"
+  },
+  "dockerSystemDf": "TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE\nImages          19        6         2.123GB   1.784GB (84%)\nContainers      6         6         19.79GB   0B (0%)\nLocal Volumes   5         4         2.174GB   0B (0%)\nBuild Cache     74        0         3.843GB   3.478GB",
+  "runtime": {
+    "uploadsBytes": 125729835,
+    "resultsBytes": 206259517,
+    "quarantineBytes": 19746064101,
+    "redisDbSize": "2852"
+  },
+  "safeDeleteBytes": 5368402287,
+  "conditionalBytes": 28615005978,
+  "protectedBytes": 1114869467,
+  "items": [
+    {
+      "path": "/tmp/vk-stage57-check",
+      "sizeBytes": 117852574,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-28T01:06:07",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/vk-stl-master-stage5-git",
+      "sizeBytes": 118724627,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-24T11:39:25",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/vk-stl-master-github-push",
+      "sizeBytes": 48737283,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-24T08:11:33",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/vk-stl-master-github-source",
+      "sizeBytes": 48734755,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-24T08:11:33",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-recovery-candidates",
+      "sizeBytes": 175641684,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T17:41:24",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-stage1-landing",
+      "sizeBytes": 18864857,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T23:00:31",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stage-05-8-faq-footer-after",
+      "sizeBytes": 12633335,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-28T08:33:30",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit",
+      "sizeBytes": 7122449,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T13:30:33",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit-preview",
+      "sizeBytes": 5355417,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T13:36:14",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit-preview2",
+      "sizeBytes": 7197635,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T13:51:39",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit-preview3",
+      "sizeBytes": 7286027,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T13:53:35",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit-after",
+      "sizeBytes": 8979478,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T14:01:14",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-visual-audit-vite-preview",
+      "sizeBytes": 8977793,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T13:55:16",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-ui-redesign-before",
+      "sizeBytes": 2816354,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T15:19:55",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-ui-redesign-after-preview",
+      "sizeBytes": 4457501,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T16:06:49",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/stl-ui-redesign-after-production",
+      "sizeBytes": 4523697,
+      "category": "safe",
+      "reason": "Old temporary clone/screenshot/artifact directory outside production runtime storage.",
+      "lastModified": "2026-07-22T16:24:52",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/home/codex/.npm",
+      "sizeBytes": 252455937,
+      "category": "safe",
+      "reason": "Developer/build cache; can be rebuilt or re-downloaded. Does not contain STL runtime data.",
+      "lastModified": "2026-06-25T00:57:25",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/home/codex/.cache/ms-playwright",
+      "sizeBytes": 674450718,
+      "category": "safe",
+      "reason": "Developer/build cache; can be rebuilt or re-downloaded. Does not contain STL runtime data.",
+      "lastModified": "2026-07-22T10:26:45",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/tmp/vk-stage58",
+      "sizeBytes": 482237975,
+      "category": "protected",
+      "reason": "Active git worktree for current stage and documentation artifacts.",
+      "lastModified": "2026-07-28T07:03:39",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master",
+      "sizeBytes": 300636337,
+      "category": "protected",
+      "reason": "Production working directory and configuration bind source.",
+      "lastModified": "2026-07-13T15:08:57",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master/.env",
+      "sizeBytes": 358,
+      "category": "protected",
+      "reason": "Production secrets/configuration file; never print or delete.",
+      "lastModified": "2026-06-23T17:22:52",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master/config",
+      "sizeBytes": 338,
+      "category": "protected",
+      "reason": "Runtime feature/config bind-mounted into backend/frontend.",
+      "lastModified": "2026-06-15T18:11:25",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/etc/letsencrypt",
+      "sizeBytes": 3249,
+      "category": "protected",
+      "reason": "TLS certificates mounted into edge proxy.",
+      "lastModified": "2026-07-28T12:02:33",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/tmp/stl-master-edge-proxy.conf",
+      "sizeBytes": 1858,
+      "category": "protected",
+      "reason": "Active edge proxy nginx config bind mount.",
+      "lastModified": "2026-07-22T06:48:07",
+      "usedByProduction": true,
+      "containsUserData": false,
+      "action": "keep"
+    },
+    {
+      "path": "/data/uploads",
+      "sizeBytes": 125729835,
+      "category": "protected",
+      "reason": "User upload volume mounted into backend and worker as UPLOAD_ROOT.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "keep"
+    },
+    {
+      "path": "/data/results",
+      "sizeBytes": 206259517,
+      "category": "protected",
+      "reason": "Result/report/download volume mounted into backend and worker as RESULT_ROOT.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "keep"
+    },
+    {
+      "path": "/data/quarantine",
+      "sizeBytes": 19746064101,
+      "category": "conditional",
+      "reason": "Runtime quarantine contains test-data-* and is very large; should be deletable only through Admin confirmation, not automatic server cleanup.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "manual-review"
+    },
+    {
+      "path": "docker-volume:vk-stl-master_redis-data",
+      "sizeBytes": 0,
+      "category": "protected",
+      "reason": "Redis persistence volume for queue/session/app state.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "keep"
+    },
+    {
+      "path": "docker-volume:vk-stl-master_uploads-data",
+      "sizeBytes": 0,
+      "category": "protected",
+      "reason": "Docker named volume backing /data/uploads.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "keep"
+    },
+    {
+      "path": "docker-volume:vk-stl-master_results-data",
+      "sizeBytes": 0,
+      "category": "protected",
+      "reason": "Docker named volume backing /data/results and /data/quarantine.",
+      "lastModified": null,
+      "usedByProduction": true,
+      "containsUserData": true,
+      "action": "keep"
+    },
+    {
+      "path": "docker-build-cache",
+      "sizeBytes": 3843000000,
+      "category": "safe",
+      "reason": "docker buildx reports reclaimable build cache; safe only via docker builder prune, never with --volumes.",
+      "lastModified": null,
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "docker-dangling-frontend-images",
+      "sizeBytes": 967000000,
+      "category": "conditional",
+      "reason": "Multiple dangling frontend images exist; delete only after keeping current production image and at least one rollback image.",
+      "lastModified": null,
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/var/log/mtproxy_bot/bot.log",
+      "sizeBytes": 2456283827,
+      "category": "conditional",
+      "reason": "Large non-STL active log file; rotate/truncate only after confirming service owner and log retention.",
+      "lastModified": "2026-07-28T15:24:27",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/var/log/journal",
+      "sizeBytes": 4831838208,
+      "category": "conditional",
+      "reason": "Systemd journal is large; use journalctl vacuum retention, not direct rm.",
+      "lastModified": "2025-08-21T03:50:19",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/var/log/syslog.1",
+      "sizeBytes": 498671716,
+      "category": "conditional",
+      "reason": "Rotated system log; eligible only under OS log retention policy.",
+      "lastModified": "2026-07-26T00:00:26",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/home/codex/backups/stl-master-before-visual-recovery-20260722-173943.tar.gz",
+      "sizeBytes": 58413222,
+      "category": "conditional",
+      "reason": "Archive/source backup or design package. Verify source-only and GitHub coverage before deletion; keep recent restore points.",
+      "lastModified": "2026-07-22T17:39:47",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/home/codex/backups/vk-stl-master-before-visual-recovery-20260723-082327.tar.gz",
+      "sizeBytes": 56705299,
+      "category": "conditional",
+      "reason": "Archive/source backup or design package. Verify source-only and GitHub coverage before deletion; keep recent restore points.",
+      "lastModified": "2026-07-23T08:23:30",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master/STL_Master_Codex_Design_Package.zip",
+      "sizeBytes": 29605,
+      "category": "conditional",
+      "reason": "Archive/source backup or design package. Verify source-only and GitHub coverage before deletion; keep recent restore points.",
+      "lastModified": "2026-07-04T18:54:33",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "manual-review"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master/backend/app/__pycache__",
+      "sizeBytes": 296072,
+      "category": "safe",
+      "reason": "Python bytecode cache; recreated automatically.",
+      "lastModified": "2026-07-22T07:46:35",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    },
+    {
+      "path": "/home/codex/projects/vk-stl-master/worker/app/__pycache__",
+      "sizeBytes": 294094,
+      "category": "safe",
+      "reason": "Python bytecode cache; recreated automatically.",
+      "lastModified": "2026-06-27T01:12:47",
+      "usedByProduction": false,
+      "containsUserData": false,
+      "action": "delete"
+    }
+  ]
+}

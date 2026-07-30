@@ -7528,6 +7528,12 @@ const adminBulkActionTitles = {
   delete_with_premium: "удалено вместе с кодами",
   delete_with_feedback: "удалено вместе с отзывами",
   delete_with_all: "удалено полностью",
+  stale_jobs: "зависшие задания",
+  orphan_files: "неиспользуемые файлы",
+  empty_dirs: "пустые папки",
+  redis: "проверка Redis",
+  cache: "кэш",
+  temp: "временные файлы",
 };
 
 const adminOperationLabels = {
@@ -7609,6 +7615,8 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
   const [selectedJobLoading, setSelectedJobLoading] = useState(false);
   const [selectedJobError, setSelectedJobError] = useState("");
   const [cleanupStatus, setCleanupStatus] = useState("");
+  const [systemCleanupPreview, setSystemCleanupPreview] = useState(null);
+  const [systemCleanupBusy, setSystemCleanupBusy] = useState(false);
   const [newUserContact, setNewUserContact] = useState("");
   const [newUserName, setNewUserName] = useState("");
   const [lastAccessCode, setLastAccessCode] = useState("");
@@ -8070,15 +8078,34 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
   };
 
   const systemCleanup = async (actions) => {
-    const needsQuarantineConfirmation = actions.includes("quarantine");
-    const confirmation = needsQuarantineConfirmation ? "ОЧИСТИТЬ КАРАНТИН" : undefined;
-    if (needsQuarantineConfirmation) {
-      const quarantineSize = formatBytes(cleanupState?.quarantine_size_bytes || 0);
-      const confirmed = window.confirm(`Очистить карантин?\n\nБудут безвозвратно удалены только файлы из карантина.\nПримерно освободится: ${quarantineSize}.`);
-      if (!confirmed) return;
-    }
-    setCleanupStatus("Выполняем очистку системы...");
+    setCleanupStatus("Готовим предварительный расчёт очистки...");
     setError("");
+    setSystemCleanupBusy(true);
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/v1/admin/system-cleanup/preview`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...adminHeaders },
+        body: JSON.stringify({ actions }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(typeof payload.detail === "string" ? payload.detail : "Не удалось подготовить предварительный расчёт очистки.");
+      setSystemCleanupPreview({ actions, payload });
+      setCleanupStatus(`Предварительный расчёт готов. Потенциально освободится ${formatBytes(payload.freed_bytes || 0)}.`);
+    } catch (err) {
+      setCleanupStatus("");
+      setError(err.message || "Не удалось подготовить предварительный расчёт очистки.");
+    } finally {
+      setSystemCleanupBusy(false);
+    }
+  };
+
+  const executeSystemCleanup = async () => {
+    if (!systemCleanupPreview?.actions?.length) return;
+    const actions = systemCleanupPreview.actions;
+    const confirmation = actions.includes("quarantine") ? "ОЧИСТИТЬ КАРАНТИН" : undefined;
+    setCleanupStatus("Выполняем подтверждённую очистку системы...");
+    setError("");
+    setSystemCleanupBusy(true);
     try {
       const response = await fetch(`${apiBaseUrl}/api/v1/admin/system-cleanup`, {
         method: "POST",
@@ -8089,10 +8116,13 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
       if (!response.ok) throw new Error(typeof payload.detail === "string" ? payload.detail : "Не удалось выполнить очистку системы.");
       setCleanupStatus(`Очистка системы завершена. Освобождено ${formatBytes(payload.freed_bytes || 0)}.`);
       setAdminToast(`Очистка системы: ${Object.keys(payload.actions || {}).length} действий выполнено.`);
+      setSystemCleanupPreview(null);
       await loadData({ silent: true });
     } catch (err) {
       setCleanupStatus("");
       setError(err.message || "Не удалось выполнить очистку системы.");
+    } finally {
+      setSystemCleanupBusy(false);
     }
   };
 
@@ -9027,13 +9057,13 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
             </div>
             <div className="adminRowActions">
               <button type="button" disabled={testDataBusy} onClick={cleanupTestData}>Удалить все тестовые данные</button>
-              <button type="button" onClick={() => systemCleanup(["stale_jobs"])}>Удалить зависшие задания</button>
-              <button type="button" onClick={() => systemCleanup(["orphan_files"])}>Удалить неиспользуемые файлы</button>
-              <button type="button" onClick={() => systemCleanup(["empty_dirs"])}>Удалить пустые папки</button>
-              <button type="button" onClick={() => systemCleanup(["redis"])}>Очистить Redis</button>
-              <button type="button" onClick={() => systemCleanup(["cache"])}>Очистить кэш</button>
-              <button type="button" onClick={() => systemCleanup(["temp"])}>Очистить временные файлы</button>
-              <button type="button" onClick={() => systemCleanup(["quarantine"])}>Очистить карантин</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["stale_jobs"])}>Удалить зависшие задания</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["orphan_files"])}>Удалить неиспользуемые файлы</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["empty_dirs"])}>Удалить пустые папки</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["redis"])}>Очистить Redis</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["cache"])}>Очистить кэш</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["temp"])}>Очистить временные файлы</button>
+              <button type="button" disabled={systemCleanupBusy} onClick={() => systemCleanup(["quarantine"])}>Очистить карантин</button>
               <button type="button" onClick={() => runIntegrityCheck(true)}>Проверка целостности</button>
             </div>
           </section>
@@ -9107,6 +9137,30 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
             </section>
           )}
           {cleanupState?.last_run && <pre className="adminJsonPreview">{JSON.stringify(cleanupState.last_run, null, 2)}</pre>}
+          {systemCleanupPreview && (
+            <div className="adminConfirmOverlay" role="dialog" aria-modal="true" aria-labelledby="system-cleanup-confirm-title">
+              <section className="adminConfirmModal">
+                <button className="adminConfirmClose" type="button" onClick={() => setSystemCleanupPreview(null)} disabled={systemCleanupBusy} aria-label="Закрыть подтверждение">×</button>
+                <p className="panelLabel">Подтверждение очистки</p>
+                <h3 id="system-cleanup-confirm-title">Проверьте предварительный расчёт</h3>
+                <p>Операция выполнится только по выбранной категории. Пользовательские загрузки, результаты и активные задания защищены allowlist и проверкой состояния.</p>
+                <div className="adminJobGrid compact">
+                  <span><em>Действия</em><strong>{systemCleanupPreview.actions.map((action) => adminBulkActionTitles[action] || action).join(", ")}</strong></span>
+                  <span><em>Потенциально освободится</em><strong>{formatBytes(systemCleanupPreview.payload?.freed_bytes || 0)}</strong></span>
+                  <span><em>Карантин</em><strong>{formatBytes(cleanupState?.quarantine_size_bytes || 0)}</strong></span>
+                  <span><em>Проверка целостности</em><strong>После удаления</strong></span>
+                </div>
+                <pre className="adminJsonPreview">{JSON.stringify(systemCleanupPreview.payload?.actions || {}, null, 2)}</pre>
+                {systemCleanupPreview.actions.includes("quarantine") && (
+                  <p className="adminNotice warning">Карантин будет очищен только потому, что вы нажали отдельную кнопку “Очистить карантин”. Это действие не входит в обычную очистку файлов.</p>
+                )}
+                <div className="adminRowActions confirmActions">
+                  <button type="button" disabled={systemCleanupBusy} onClick={executeSystemCleanup}>{systemCleanupBusy ? "Выполняем..." : "Подтвердить очистку"}</button>
+                  <button type="button" disabled={systemCleanupBusy} onClick={() => setSystemCleanupPreview(null)}>Отмена</button>
+                </div>
+              </section>
+            </div>
+          )}
         </section>
       )}
 

@@ -202,6 +202,23 @@ assert "would_delete" in data
 print("cleanup dry-run OK")
 '
 
+curl -sS "${headers[@]}" -H 'Content-Type: application/json' -d '{"actions":["quarantine"]}' "${API_BASE}/api/v1/admin/system-cleanup/preview" | python3 -c '
+import json, sys
+data = json.load(sys.stdin)
+assert data["dry_run"] is True
+assert "quarantine" in data.get("actions", {})
+assert data["actions"]["quarantine"].get("requires_confirmation") == "ОЧИСТИТЬ КАРАНТИН"
+print("system cleanup preview OK")
+'
+
+curl -sS "${headers[@]}" -H 'Content-Type: application/json' -d '{"actions":["empty_dirs"],"dry_run":true}' "${API_BASE}/api/v1/admin/system-cleanup" | python3 -c '
+import json, sys
+data = json.load(sys.stdin)
+assert data["dry_run"] is True
+assert "empty_dirs" in data.get("actions", {})
+print("system cleanup dry-run compatibility OK")
+'
+
 fixture_name="smoke-cleanup-$(date +%s)-$$.tmp"
 docker exec stl-master-backend sh -c "mkdir -p /data/admin-cleanup-test && printf smoke > /data/admin-cleanup-test/${fixture_name}"
 scan_json="$(curl -sS "${headers[@]}" -H 'Content-Type: application/json' -d '{"older_than_hours":6}' "${API_BASE}/api/v1/admin/cleanup/scan")"
