@@ -224,3 +224,37 @@ No state, fetch, handler, operation key, operation order, route, upload, polling
 - Deeper Studio viewer interaction/camera QA.
 - Later cleanup of broader Studio CSS duplicates not directly related to shell overflow.
 - Existing bundle-size warning remains for a performance/code-splitting stage.
+
+## 35. Deploy
+
+Frontend deploy was completed after push using the existing `./scripts/rebuild-frontend.sh` path. The script rebuilt the frontend image and recreated only `stl-master-frontend`; backend and Redis remained up-to-date.
+
+Deployed asset hashes:
+
+- `assets/index-C9ZwbDgu.css`
+- `assets/index-DshG7Cvz.js`
+
+## 36. Production Verification
+
+Production/local edge checks after deploy:
+
+| URL | Status |
+| --- | --- |
+| `/` | 200 |
+| `/app` | 200 |
+| `/admin` | 200 |
+| `/health` | 200 |
+| `/api/v1/status` | 200 |
+| `/api/v1/me` | 200 |
+| `/api/v1/config/features` | 200 |
+
+Production mobile overflow verification after deploy:
+
+| Width | document scrollWidth | body scrollWidth | offenders |
+| --- | --- | --- | --- |
+| 320 | 320 | 320 | 0 |
+| 360 | 360 | 360 | 0 |
+| 390 | 390 | 390 | 0 |
+| 430 | 430 | 430 | 0 |
+
+Production accessibility re-check found `0` unnamed focusable controls on `/app`.
