@@ -201,3 +201,179 @@
   .adminConfirmModal { max-height: 92dvh; border-radius: 18px; padding: 18px; }
   .adminJobGrid.compact { grid-template-columns: 1fr; }
 }
+
+
+/* Stage 6.1 admin visual recovery: scoped system layer. */
+.adminVkPanelHeader { display: none; }
+.vkuiPanel:has(.adminApp),
+.vkuiPanel__in:has(.adminApp),
+.vkuiRoot:has(.adminApp),
+.vkuiView:has(.adminApp) { background: #030712; }
+.adminApp {
+  --admin-bg: #030712;
+  --admin-surface-1: rgba(7, 15, 30, .92);
+  --admin-surface-2: rgba(10, 22, 42, .88);
+  --admin-surface-elevated: rgba(13, 27, 50, .94);
+  --admin-border-subtle: rgba(132, 160, 196, .12);
+  --admin-border-default: rgba(103, 132, 176, .24);
+  --admin-border-accent: rgba(53, 215, 255, .52);
+  --admin-text-primary: #f4f8ff;
+  --admin-text-secondary: #b7c4d7;
+  --admin-text-muted: #788aa4;
+  --admin-accent: #35d7ff;
+  --admin-accent-hover: #60a5ff;
+  --admin-success: #35e7a6;
+  --admin-warning: #f7c948;
+  --admin-danger: #ff5f7d;
+  --admin-info: #7c8cff;
+  --admin-radius-sm: 10px;
+  --admin-radius-md: 14px;
+  --admin-radius-lg: 20px;
+  --admin-shadow-card: 0 18px 48px rgba(0, 0, 0, .34), inset 0 1px 0 rgba(255, 255, 255, .035);
+  --admin-sidebar-width: 292px;
+  --admin-topbar-height: 148px;
+  --admin-content-max: 1680px;
+  color: var(--admin-text-primary);
+  font-family: "SF Pro Display", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.adminApp *, .adminLoginScreen *, .adminConfirmOverlay * { box-sizing: border-box; }
+.adminApp.adminDashboard {
+  width: 100%; min-height: 100dvh; height: auto;
+  display: grid; grid-template-columns: var(--admin-sidebar-width) minmax(0, 1fr); gap: 16px;
+  padding: 16px; overflow-x: clip; overflow-y: visible;
+  background: radial-gradient(circle at 84% 8%, rgba(80, 90, 255, .14), transparent 32%), radial-gradient(circle at 8% 88%, rgba(53, 215, 255, .10), transparent 28%), linear-gradient(135deg, #030712 0%, #071122 52%, #080822 100%);
+}
+.adminApp.adminDashboard::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(53, 215, 255, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(53, 215, 255, .025) 1px, transparent 1px);
+  background-size: 48px 48px; mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 72%);
+}
+.adminApp.sidebarCollapsed { grid-template-columns: 92px minmax(0, 1fr); }
+.adminApp .adminSidebar, .adminApp .adminWorkspace, .adminApp .adminTopbar, .adminApp .adminSummaryCard, .adminApp .adminJobPanel, .adminApp .adminAnalyticsPanel, .adminApp .adminDangerPanel, .adminApp .adminToolbar, .adminApp .adminBulkBar, .adminApp .adminFilters, .adminApp .adminTableWrap, .adminApp .cleanupPlanPanel, .adminApp .approvalMessagePanel {
+  border: 1px solid var(--admin-border-subtle); background: linear-gradient(180deg, rgba(9, 20, 38, .92), rgba(5, 12, 24, .92)); box-shadow: var(--admin-shadow-card); backdrop-filter: blur(16px);
+}
+.adminApp .adminSidebar {
+  position: sticky; top: 16px; z-index: 30; align-self: start; height: calc(100dvh - 32px);
+  display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto auto; gap: 14px; padding: 16px; overflow: hidden; border-radius: var(--admin-radius-lg);
+}
+.adminApp .adminBrand { min-width: 0; padding-bottom: 14px; border-bottom: 1px solid var(--admin-border-subtle); }
+.adminApp .adminBrand strong { color: var(--admin-text-primary); font-size: 24px; line-height: 1; letter-spacing: -.02em; }
+.adminApp .adminBrand small, .adminApp .adminVersion { color: var(--admin-text-muted); letter-spacing: .12em; text-transform: uppercase; }
+.adminApp .adminTabs { min-height: 0; display: grid; align-content: start; gap: 7px; overflow: auto; padding: 2px 3px 2px 0; scrollbar-width: thin; }
+.adminApp .adminTabs button, .adminApp .adminSidebarToggle, .adminApp .adminLogout, .adminApp .adminSystemPills button, .adminApp .adminToolbar button, .adminApp .adminBulkBar button, .adminApp .adminFilters button, .adminApp .adminRowActions button, .adminApp .adminContextMenu > button, .adminApp .adminContextMenuList button, .adminApp .adminPagination button, .adminApp .adminLoginButton, .adminApp .adminCleanupButton, .adminApp .adminNotice button, .adminConfirmModal button {
+  appearance: none; min-height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 1px solid var(--admin-border-default); border-radius: var(--admin-radius-sm); background: rgba(9, 20, 38, .82); color: var(--admin-text-primary);
+  font: inherit; font-size: 13px; font-weight: 750; line-height: 1.1; text-decoration: none; cursor: pointer;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.adminApp .adminTabs button { width: 100%; min-height: 42px; justify-content: start; grid-template-columns: 26px minmax(0, 1fr) auto; padding: 0 12px; color: var(--admin-text-secondary); }
+.adminApp .adminTabs button:hover, .adminApp button:hover:not(:disabled), .adminConfirmModal button:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--admin-border-accent); background: rgba(14, 33, 62, .92); }
+.adminApp .adminTabs button.active { color: #fff; border-color: var(--admin-border-accent); background: linear-gradient(135deg, rgba(53, 215, 255, .16), rgba(112, 76, 255, .13)); box-shadow: inset 3px 0 0 var(--admin-accent), 0 10px 28px rgba(53, 215, 255, .10); }
+.adminApp .adminNavIcon { width: 24px; height: 24px; display: inline-grid; place-items: center; border-radius: 8px; background: rgba(53, 215, 255, .10); color: var(--admin-accent); font-size: 13px; }
+.adminApp .adminNavTitle { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: normal; }
+.adminApp .adminWorkspace { min-width: 0; max-width: var(--admin-content-max); width: 100%; justify-self: center; display: grid; align-content: start; gap: 16px; padding: 16px; overflow: visible; border-radius: var(--admin-radius-lg); }
+.adminApp .adminTopbar { min-width: 0; display: grid; grid-template-columns: minmax(340px, 1fr) minmax(280px, 440px); gap: 14px; align-items: start; min-height: var(--admin-topbar-height); padding: 18px; border-radius: var(--admin-radius-lg); }
+.adminApp .adminTopbar > div:first-child { min-width: 0; max-width: 760px; }
+.adminApp .adminTopbar h1 { margin: 4px 0 6px; max-width: 100%; color: var(--admin-text-primary); font-size: clamp(28px, 3vw, 42px); line-height: 1.05; letter-spacing: -.035em; overflow-wrap: normal; word-break: normal; }
+.adminApp .adminTopbar p { max-width: 760px; color: var(--admin-text-secondary); line-height: 1.45; }
+.adminApp .panelLabel { margin: 0; color: var(--admin-accent); font-size: 12px; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+.adminApp .adminGlobalSearch { position: relative; min-width: 0; }
+.adminApp input, .adminApp select, .adminApp textarea, .adminLoginScreen input, .adminLoginScreen select, .adminLoginScreen textarea { appearance: none; min-height: 42px; border: 1px solid var(--admin-border-default); border-radius: var(--admin-radius-sm); background: rgba(3, 8, 17, .72); color: var(--admin-text-primary); font: inherit; outline: none; }
+.adminApp input, .adminApp select, .adminApp textarea { padding: 0 12px; }
+.adminApp textarea { min-height: 110px; padding-top: 12px; resize: vertical; }
+.adminApp input::placeholder, .adminLoginScreen input::placeholder { color: var(--admin-text-muted); }
+.adminApp input:focus, .adminApp select:focus, .adminApp textarea:focus, .adminApp button:focus-visible, .adminConfirmModal button:focus-visible { border-color: var(--admin-border-accent); box-shadow: 0 0 0 3px rgba(53, 215, 255, .18); }
+.adminApp .adminSystemPills { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 8px; min-width: 0; }
+.adminApp .adminSystemPills span, .adminApp .adminSystemPills small, .adminApp .adminBadge, .adminApp .adminNavBadge { min-height: 28px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border: 1px solid var(--admin-border-subtle); border-radius: 999px; background: rgba(255,255,255,.035); color: var(--admin-text-secondary); font-size: 12px; font-weight: 760; white-space: nowrap; }
+.adminApp .adminBadge.real, .adminApp .adminNavBadge.real, .adminApp .adminSystemPills .ok { color: #b5ffe0; border-color: rgba(53, 231, 166, .30); background: rgba(53, 231, 166, .09); }
+.adminApp .adminBadge.test, .adminApp .adminNavBadge.test { color: #ffe8a6; border-color: rgba(247, 201, 72, .30); background: rgba(247, 201, 72, .09); }
+.adminApp .adminBadge.danger, .adminApp .adminNavBadge.danger, .adminApp .adminSystemPills .danger { color: #ffc2cd; border-color: rgba(255, 95, 125, .34); background: rgba(255, 95, 125, .10); }
+.adminApp .adminSummaryGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.adminApp .adminSummaryCard, .adminApp .adminJobPanel, .adminApp .adminAnalyticsPanel, .adminApp .adminDangerPanel, .adminApp .cleanupPlanPanel, .adminApp .approvalMessagePanel { min-width: 0; border-radius: var(--admin-radius-lg); }
+.adminApp .adminSummaryCard { min-height: 112px; padding: 18px; display: grid; align-content: space-between; gap: 12px; }
+.adminApp .adminSummaryCard span { color: var(--admin-text-muted); font-size: 13px; line-height: 1.3; }
+.adminApp .adminSummaryCard strong { color: var(--admin-text-primary); font-size: clamp(24px, 2.4vw, 34px); line-height: 1; letter-spacing: -.03em; }
+.adminApp .adminJobPanel, .adminApp .adminAnalyticsPanel, .adminApp .adminDangerPanel, .adminApp .cleanupPlanPanel, .adminApp .approvalMessagePanel { padding: 18px; }
+.adminApp .adminJobPanel > div:first-child, .adminApp .adminAnalyticsPanel > div:first-child, .adminApp .adminDangerPanel > div:first-child { margin-bottom: 14px; }
+.adminApp .adminJobPanel h2, .adminApp .adminAnalyticsPanel h2, .adminApp .adminDangerPanel h2, .adminApp .cleanupPlanPanel h3, .adminApp .adminDangerPanel h3 { margin: 4px 0 8px; color: var(--admin-text-primary); font-size: clamp(22px, 2vw, 30px); line-height: 1.12; letter-spacing: -.025em; }
+.adminApp .adminJobPanel p, .adminApp .adminAnalyticsPanel p, .adminApp .adminDangerPanel p, .adminApp .cleanupPlanPanel p { color: var(--admin-text-secondary); line-height: 1.55; }
+.adminApp .adminToolbar, .adminApp .adminBulkBar, .adminApp .adminFilters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px; margin: 14px 0; border-radius: var(--admin-radius-md); }
+.adminApp .adminToolbar input, .adminApp .adminFilters input { min-width: min(320px, 100%); flex: 1 1 260px; }
+.adminApp .segmentedOptions { display: flex; flex-wrap: wrap; gap: 7px; }
+.adminApp .segmentedOptions button { min-height: 34px; padding: 0 11px; }
+.adminApp .segmentedOptions button.active { border-color: var(--admin-border-accent); color: #fff; background: rgba(53, 215, 255, .13); }
+.adminApp .adminBulkBar { border-color: rgba(247, 201, 72, .24); background: linear-gradient(135deg, rgba(247, 201, 72, .09), rgba(12, 20, 38, .92)); }
+.adminApp .adminDangerPanel { border-color: rgba(255, 95, 125, .20); }
+.adminApp .adminDangerPanel button, .adminApp .adminBulkBar button:nth-of-type(1), .adminApp .adminRowActions button:last-child { border-color: rgba(255, 95, 125, .30); }
+.adminApp .adminTableWrap { width: 100%; max-width: 100%; overflow-x: auto; overflow-y: visible; border-radius: var(--admin-radius-md); }
+.adminApp .adminTable { width: 100%; min-width: 900px; border-collapse: separate; border-spacing: 0; color: var(--admin-text-secondary); }
+.adminApp .adminTable th, .adminApp .adminTable td { padding: 13px 14px; border-bottom: 1px solid var(--admin-border-subtle); text-align: left; vertical-align: top; line-height: 1.35; }
+.adminApp .adminTable th { position: sticky; top: 0; z-index: 2; color: #dce9fa; background: rgba(7, 15, 30, .98); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.adminApp .adminTable tr:hover td { background: rgba(53, 215, 255, .035); }
+.adminApp code { display: inline-block; max-width: 260px; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; color: #dff7ff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.adminApp .adminTable input[type="checkbox"] { width: 18px; height: 18px; min-height: 18px; padding: 0; border-radius: 5px; accent-color: var(--admin-accent); }
+.adminApp .adminRowActions { display: flex; flex-wrap: wrap; gap: 8px; min-width: 180px; }
+.adminApp .adminRowActions button, .adminApp .adminRowActions a { min-height: 34px; padding: 0 10px; }
+.adminApp .adminRowActions a { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--admin-border-default); border-radius: var(--admin-radius-sm); color: var(--admin-text-primary); text-decoration: none; }
+.adminApp .adminJobGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+.adminApp .adminJobGrid span { min-width: 0; padding: 14px; border: 1px solid var(--admin-border-subtle); border-radius: var(--admin-radius-md); background: rgba(255,255,255,.03); }
+.adminApp .adminJobGrid em { display: block; color: var(--admin-text-muted); font-style: normal; font-size: 12px; }
+.adminApp .adminJobGrid strong { display: block; margin-top: 6px; color: var(--admin-text-primary); overflow-wrap: anywhere; }
+.adminApp .adminJsonPreview { max-height: 320px; overflow: auto; padding: 14px; border: 1px solid var(--admin-border-subtle); border-radius: var(--admin-radius-md); color: #dbeafe; background: rgba(3, 8, 17, .78); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; line-height: 1.45; }
+.adminApp .adminEmpty, .adminApp .adminNotice, .adminApp .adminCleanupStatus { margin: 12px 0; padding: 12px 14px; border: 1px solid var(--admin-border-subtle); border-radius: var(--admin-radius-md); color: var(--admin-text-secondary); background: rgba(255,255,255,.035); }
+.adminApp .adminNotice.warning { color: #ffe8a6; border-color: rgba(247, 201, 72, .32); background: rgba(247, 201, 72, .08); }
+.adminApp .error { padding: 12px 14px; border: 1px solid rgba(255, 95, 125, .34); border-radius: var(--admin-radius-md); color: #ffc2cd; background: rgba(255, 95, 125, .10); }
+.adminApp .adminSearchResults, .adminApp .adminContextMenuList { position: absolute; z-index: 80; min-width: 260px; padding: 8px; border: 1px solid var(--admin-border-default); border-radius: var(--admin-radius-md); background: rgba(4, 10, 22, .98); box-shadow: var(--admin-shadow-card); }
+.adminApp .adminSearchResults { inset: calc(100% + 8px) 0 auto 0; }
+.adminApp .adminSearchResults button { width: 100%; justify-content: start; display: grid; text-align: left; padding: 10px; }
+.adminApp .adminContextMenu { position: relative; }
+.adminApp .adminContextMenuList { right: 0; top: calc(100% + 6px); display: grid; gap: 6px; }
+.adminConfirmOverlay { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 18px; background: rgba(1, 4, 10, .72); backdrop-filter: blur(12px); }
+.adminConfirmModal { position: relative; width: min(720px, 100%); max-height: min(86dvh, 760px); overflow: auto; padding: 22px; border: 1px solid var(--admin-border-accent); border-radius: var(--admin-radius-lg); background: linear-gradient(145deg, rgba(8, 18, 34, .98), rgba(14, 15, 46, .98)); color: var(--admin-text-primary); box-shadow: 0 28px 90px rgba(0,0,0,.55), 0 0 0 1px rgba(53,215,255,.12); }
+.adminConfirmClose { position: absolute; top: 14px; right: 14px; width: 38px; padding: 0; }
+.adminConfirmModal h3 { padding-right: 40px; color: #fff; font-size: 30px; line-height: 1.1; }
+.adminConfirmModal .confirmActions { justify-content: flex-end; }
+.adminApp button:disabled, .adminConfirmModal button:disabled { opacity: .48; cursor: not-allowed; transform: none; }
+.adminApp.sidebarCollapsed .adminBrand div, .adminApp.sidebarCollapsed .adminNavTitle, .adminApp.sidebarCollapsed .adminNavBadge, .adminApp.sidebarCollapsed .adminVersion { display: none; }
+.adminApp.sidebarCollapsed .adminSidebar { padding: 12px; }
+.adminApp.sidebarCollapsed .adminTabs button { grid-template-columns: 1fr; justify-items: center; padding: 0; }
+.adminApp.sidebarCollapsed .adminNavIcon { margin: 0; }
+.adminApp.sidebarCollapsed .adminSidebarToggle, .adminApp.sidebarCollapsed .adminLogout { overflow: hidden; font-size: 0; padding: 0; }
+.adminApp.sidebarCollapsed .adminSidebarToggle::after { content: "→"; font-size: 18px; }
+.adminApp.sidebarCollapsed .adminLogout::after { content: "⎋"; font-size: 18px; }
+.adminLoginScreen { min-height: 100dvh; background: radial-gradient(circle at 20% 20%, rgba(53,215,255,.12), transparent 34%), linear-gradient(135deg, #030712, #080822); }
+@media (max-width: 1180px) {
+  .adminApp.adminDashboard { grid-template-columns: 92px minmax(0, 1fr); padding: 12px; }
+  .adminApp .adminBrand div, .adminApp .adminNavTitle, .adminApp .adminNavBadge, .adminApp .adminVersion { display: none; }
+  .adminApp .adminSidebar { padding: 12px; }
+  .adminApp .adminTabs button { grid-template-columns: 1fr; justify-items: center; padding: 0; }
+  .adminApp .adminTopbar { grid-template-columns: 1fr; }
+  .adminApp .adminSummaryGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adminApp .adminJobGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .adminApp.adminDashboard { display: block; min-height: 100dvh; padding: 10px; overflow-x: clip; }
+  .adminApp .adminSidebar { position: relative; top: 0; height: auto; max-height: none; margin-bottom: 12px; grid-template-rows: auto auto auto auto; overflow: hidden; }
+  .adminApp .adminBrand div { display: block; }
+  .adminApp .adminVersion { display: none; }
+  .adminApp .adminTabs { display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
+  .adminApp .adminTabs button { width: auto; min-width: 54px; grid-template-columns: 1fr; justify-items: center; padding: 0 10px; }
+  .adminApp .adminNavTitle, .adminApp .adminNavBadge { display: none; }
+  .adminApp .adminLogout { width: 100%; }
+  .adminApp .adminWorkspace { padding: 12px; border-radius: 16px; }
+  .adminApp .adminTopbar { min-height: 0; padding: 14px; }
+  .adminApp .adminTopbar h1 { font-size: 30px; }
+  .adminApp .adminSummaryGrid, .adminApp .adminJobGrid { grid-template-columns: 1fr; }
+  .adminApp .adminToolbar, .adminApp .adminBulkBar, .adminApp .adminFilters, .adminApp .adminRowActions { align-items: stretch; flex-direction: column; }
+  .adminApp .adminToolbar input, .adminApp .adminToolbar select, .adminApp .adminFilters input, .adminApp .adminFilters select, .adminApp .adminToolbar button, .adminApp .adminBulkBar button, .adminApp .adminFilters button, .adminApp .adminRowActions button { width: 100%; }
+  .adminApp .segmentedOptions { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+  .adminApp .adminTable { min-width: 760px; }
+  .adminConfirmOverlay { align-items: end; padding: 10px; }
+  .adminConfirmModal { max-height: 92dvh; padding: 18px; border-radius: 18px; }
+}
+@media (max-width: 380px) {
+  .adminApp.adminDashboard { padding: 8px; }
+  .adminApp .adminWorkspace, .adminApp .adminSidebar { padding: 10px; }
+  .adminApp .segmentedOptions { grid-template-columns: 1fr; }
+  .adminApp .adminTopbar h1 { font-size: 26px; }
+}

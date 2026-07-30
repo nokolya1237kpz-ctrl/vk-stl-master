@@ -8326,7 +8326,7 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
   ];
 
   return (
-    <main className={`adminDashboard ${sidebarCollapsed ? "sidebarCollapsed" : ""}`}>
+    <main className={`adminDashboard adminApp ${sidebarCollapsed ? "sidebarCollapsed" : ""}`}>
       <aside className="adminSidebar">
         <div className="adminBrand">
           <span className="brandIcon"><LaunchIcon type="box" /></span>
@@ -8340,7 +8340,7 @@ function AdminFeedbackDashboard({ apiBaseUrl }) {
         }}>{sidebarCollapsed ? "Развернуть" : "Свернуть"}</button>
         <nav className="adminTabs" aria-label="Разделы админки">
           {adminNavItems.map(([id, title]) => (
-            <button key={id} type="button" className={adminTab === id ? "active" : ""} onClick={() => setAdminTab(id)}>
+            <button key={id} type="button" className={adminTab === id ? "active" : ""} aria-label={title} title={title} onClick={() => setAdminTab(id)}>
               <span className="adminNavIcon">{adminNavIcons[id]}</span>
               <span className="adminNavTitle">{title}</span>
               {id === "applications" && pendingApplicationsCount > 0 && <span className="adminNavBadge">{pendingApplicationsCount}</span>}
@@ -9268,7 +9268,7 @@ function AdminApp() {
     <ConfigProvider>
       <View activePanel="admin">
         <Panel id="admin">
-          <PanelHeader>Панель STL Master</PanelHeader>
+          <PanelHeader className="adminVkPanelHeader">Панель STL Master</PanelHeader>
           <AdminFeedbackDashboard apiBaseUrl={apiBaseUrl} />
         </Panel>
       </View>

@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-07-30T10:20:18.855Z",
+  "pages": [
+    {
+      "path": "/",
+      "metrics": {
+        "title": "STL Master",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "bodyText": "STL\nMaster\nv2.0\nВозможности\nСоединения\nДо / После\nТарифы\nFAQ\nОткрыть приложение\nПолучить Premium\nПоддержка VK\nПРОФЕССИОН"
+      },
+      "consoleErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    },
+    {
+      "path": "/app",
+      "metrics": {
+        "title": "STL Master",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "bodyText": "STL Master Studio\nРабочая область\nГотово к работе\nSTL вход · STL/ZIP/JSON/TXT результат\nПолучить Premium\nПомощь\nЭкспорт\n"
+      },
+      "consoleErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    },
+    {
+      "path": "/admin",
+      "metrics": {
+        "title": "STL Master",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "bodyText": "STL Master\nПАНЕЛЬ УПРАВЛЕНИЯ\nСвернуть\n⌁\nОбзор\n◫\nЗаявки\n♛\nПремиум и коды\n◎\nПользователи\n⇄\nЗадания и очередь\n⌬\nФайлы и очи"
+      },
+      "consoleErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    }
+  ],
+  "api": {
+    "http://127.0.0.1/health": {
+      "status": 200,
+      "ok": true,
+      "body": "{\"status\":\"ok\"}"
+    },
+    "http://127.0.0.1/api/v1/status": {
+      "status": 200,
+      "ok": true,
+      "body": "{\"service\":\"stl-master-backend\",\"status\":\"ok\",\"redis\":\"ok\"}"
+    },
+    "http://127.0.0.1/api/v1/me": {
+      "status": 200,
+      "ok": true,
+      "body": "{\"ok\":true,\"user_id\":null,\"access_level\":\"free\",\"plan\":\"free\",\"plan_label\":\"Бесплатный\",\"premium_active\":false,\"premium_started_at\":null,\"premium_expires_at\":null,\"premium_days_left\":null,\"blocked\":false,\"limits\":{\"max_file_size_mb\":100,\"daily_jobs\":null,\"acti"
+    }
+  }
+}

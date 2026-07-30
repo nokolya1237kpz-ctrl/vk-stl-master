@@ -1,0 +1,961 @@
+{
+  "generatedAt": "2026-07-30T10:07:38.749Z",
+  "devServer": "http://127.0.0.1:5174",
+  "screenshots": [
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-dashboard-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-dashboard-1024.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-dashboard-768.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-dashboard-430.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-dashboard-320.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-applications-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-premium-codes-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-users-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-queue-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-cleanup-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-features-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-feedback-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-system-1440.png",
+    "/tmp/vk-stage58/docs/stage-06-1-admin-visual/after/admin-cleanup-390.png"
+  ],
+  "checks": {
+    "dashboard-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1307,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1307
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 1275,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 1291
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Обзор",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "dashboard-1024": {
+      "metrics": {
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1575,
+          "top": 0,
+          "left": 0,
+          "right": 1024,
+          "bottom": 1575
+        },
+        "sidebar": {
+          "x": 12,
+          "y": 16,
+          "width": 92,
+          "height": 868,
+          "top": 16,
+          "left": 12,
+          "right": 104,
+          "bottom": 884
+        },
+        "workspace": {
+          "x": 120,
+          "y": 12,
+          "width": 892,
+          "height": 1551,
+          "top": 12,
+          "left": 120,
+          "right": 1012,
+          "bottom": 1563
+        },
+        "topbar": {
+          "x": 121,
+          "y": 13,
+          "width": 890,
+          "height": 229,
+          "top": 13,
+          "left": 121,
+          "right": 1011,
+          "bottom": 242
+        },
+        "topbarTitle": {
+          "x": 140,
+          "y": 53,
+          "width": 760,
+          "height": 32,
+          "top": 53,
+          "left": 140,
+          "right": 900,
+          "bottom": 86
+        },
+        "topbarTitleText": "Обзор",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "dashboard-768": {
+      "metrics": {
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 768,
+          "height": 1609,
+          "top": 0,
+          "left": 0,
+          "right": 768,
+          "bottom": 1609
+        },
+        "sidebar": {
+          "x": 12,
+          "y": 16,
+          "width": 92,
+          "height": 968,
+          "top": 16,
+          "left": 12,
+          "right": 104,
+          "bottom": 984
+        },
+        "workspace": {
+          "x": 120,
+          "y": 12,
+          "width": 636,
+          "height": 1585,
+          "top": 12,
+          "left": 120,
+          "right": 756,
+          "bottom": 1597
+        },
+        "topbar": {
+          "x": 121,
+          "y": 13,
+          "width": 634,
+          "height": 262,
+          "top": 13,
+          "left": 121,
+          "right": 755,
+          "bottom": 275
+        },
+        "topbarTitle": {
+          "x": 140,
+          "y": 53,
+          "width": 596,
+          "height": 29,
+          "top": 53,
+          "left": 140,
+          "right": 736,
+          "bottom": 83
+        },
+        "topbarTitleText": "Обзор",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "dashboard-430": {
+      "metrics": {
+        "scrollWidth": 430,
+        "clientWidth": 430,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 2444,
+          "top": 0,
+          "left": 0,
+          "right": 430,
+          "bottom": 2444
+        },
+        "sidebar": {
+          "x": 10,
+          "y": 10,
+          "width": 410,
+          "height": 302,
+          "top": 10,
+          "left": 10,
+          "right": 420,
+          "bottom": 312
+        },
+        "workspace": {
+          "x": 10,
+          "y": 324,
+          "width": 410,
+          "height": 2110,
+          "top": 324,
+          "left": 10,
+          "right": 420,
+          "bottom": 2434
+        },
+        "topbar": {
+          "x": 7,
+          "y": 321,
+          "width": 416,
+          "height": 279,
+          "top": 321,
+          "left": 7,
+          "right": 423,
+          "bottom": 600
+        },
+        "topbarTitle": {
+          "x": 22,
+          "y": 357,
+          "width": 386,
+          "height": 32,
+          "top": 357,
+          "left": 22,
+          "right": 408,
+          "bottom": 389
+        },
+        "topbarTitleText": "Обзор",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "dashboard-320": {
+      "metrics": {
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 2562,
+          "top": 0,
+          "left": 0,
+          "right": 320,
+          "bottom": 2562
+        },
+        "sidebar": {
+          "x": 8,
+          "y": 8,
+          "width": 304,
+          "height": 348,
+          "top": 8,
+          "left": 8,
+          "right": 312,
+          "bottom": 356
+        },
+        "workspace": {
+          "x": 8,
+          "y": 368,
+          "width": 304,
+          "height": 2186,
+          "top": 368,
+          "left": 8,
+          "right": 312,
+          "bottom": 2554
+        },
+        "topbar": {
+          "x": 3,
+          "y": 363,
+          "width": 314,
+          "height": 334,
+          "top": 363,
+          "left": 3,
+          "right": 317,
+          "bottom": 697
+        },
+        "topbarTitle": {
+          "x": 18,
+          "y": 399,
+          "width": 284,
+          "height": 27,
+          "top": 399,
+          "left": 18,
+          "right": 302,
+          "bottom": 427
+        },
+        "topbarTitleText": "Обзор",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-applications-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1100,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1100
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 673,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 689
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Заявки",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-premium-codes-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1100,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1100
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 669,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 685
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Премиум и коды",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-users-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1100,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1100
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 823,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 839
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Пользователи",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-queue-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1100,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1100
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 1026,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 1042
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Задания и очередь",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-cleanup-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1523,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1523
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 1491,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 1507
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Файлы и очистка",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-features-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1319,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1319
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 1287,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 1303
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Функции",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-feedback-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1300,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 1300
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 1268,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 1284
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Обратная связь",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "tab-system-1440": {
+      "metrics": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 3453,
+          "top": 0,
+          "left": 0,
+          "right": 1440,
+          "bottom": 3453
+        },
+        "sidebar": {
+          "x": 16,
+          "y": 16,
+          "width": 292,
+          "height": 1068,
+          "top": 16,
+          "left": 16,
+          "right": 308,
+          "bottom": 1084
+        },
+        "workspace": {
+          "x": 324,
+          "y": 16,
+          "width": 1100,
+          "height": 3421,
+          "top": 16,
+          "left": 324,
+          "right": 1424,
+          "bottom": 3437
+        },
+        "topbar": {
+          "x": 325,
+          "y": 17,
+          "width": 1098,
+          "height": 185,
+          "top": 17,
+          "left": 325,
+          "right": 1423,
+          "bottom": 202
+        },
+        "topbarTitle": {
+          "x": 344,
+          "y": 57,
+          "width": 606,
+          "height": 44,
+          "top": 57,
+          "left": 344,
+          "right": 950,
+          "bottom": 101
+        },
+        "topbarTitleText": "Безопасность и журнал",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    },
+    "mobile-cleanup-click": {
+      "ok": true,
+      "metrics": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "horizontalScroll": false,
+        "dashboard": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 3794,
+          "top": 0,
+          "left": 0,
+          "right": 390,
+          "bottom": 3794
+        },
+        "sidebar": {
+          "x": 10,
+          "y": 10,
+          "width": 370,
+          "height": 302,
+          "top": 10,
+          "left": 10,
+          "right": 380,
+          "bottom": 312
+        },
+        "workspace": {
+          "x": 10,
+          "y": 324,
+          "width": 370,
+          "height": 3460,
+          "top": 324,
+          "left": 10,
+          "right": 380,
+          "bottom": 3784
+        },
+        "topbar": {
+          "x": 7,
+          "y": 321,
+          "width": 376,
+          "height": 279,
+          "top": 321,
+          "left": 7,
+          "right": 383,
+          "bottom": 600
+        },
+        "topbarTitle": {
+          "x": 22,
+          "y": 357,
+          "width": 346,
+          "height": 32,
+          "top": 357,
+          "left": 22,
+          "right": 368,
+          "bottom": 389
+        },
+        "topbarTitleText": "Файлы и очистка",
+        "sampleButton": {
+          "background": "rgba(0, 0, 0, 0)",
+          "borderRadius": "12px",
+          "color": "rgb(248, 251, 255)",
+          "appearance": "none"
+        },
+        "vkPanelHeaderDisplay": "none"
+      },
+      "consoleErrors": [],
+      "requestFailures": []
+    }
+  }
+}
