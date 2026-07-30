@@ -957,15 +957,56 @@
 
 @media (max-width: 760px) {
   .studioShell { padding: 10px; gap: 10px; }
+  .studioShell,
+  .studioHeader,
+  .studioWorkspace,
+  .studioSidebar,
+  .studioViewerWorkspace,
+  .studioInspector,
+  .studioWorkflowBar {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
   .studioHeader { height: auto; display: grid; grid-template-columns: 1fr; gap: 10px; }
-  .studioBrand { min-width: 0; }
+  .studioBrand,
+  .studioBrand span,
+  .studioProjectStatus,
+  .studioHeaderActions,
+  .studioHeaderActions > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .studioBrand b,
+  .studioBrand small,
+  .studioProjectStatus span,
+  .studioProjectStatus em {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .studioProjectStatus { justify-content: start; width: 100%; }
-  .studioHeaderActions { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+  .studioHeaderActions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); width: 100%; }
+  .studioHeaderActions :is(button, a) {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .studioHeaderActions .premiumStatusWrap, .studioHeaderActions .premiumHeaderButtonV9 { grid-column: 1 / -1; width: 100%; max-width: none; }
   .studioWorkspace { grid-template-columns: 1fr; }
-  .studioSidebar { order: 2; max-height: 96px; overflow: auto hidden; }
-  .studioToolList { display: flex; }
-  .studioToolButton { width: 54px; flex: 0 0 54px; }
+  .studioSidebar { order: 2; max-height: none; overflow: visible; }
+  .studioSidebarTop,
+  .studioToolGroup,
+  .studioToolList {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .studioToolList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  }
+  .studioToolButton { width: 100%; min-width: 0; flex: initial; }
   .studioViewerWorkspace { min-height: 520px; }
   .studioInspector { order: 3; }
   .studioWorkflowBar { min-height: auto; }

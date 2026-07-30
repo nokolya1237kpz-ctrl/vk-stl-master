@@ -1,0 +1,2758 @@
+{
+  "base": "http://127.0.0.1:4173/app",
+  "count": 35,
+  "results": [
+    {
+      "label": "studio-2560",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 2560,
+      "innerHeight": 1440,
+      "scrollWidth": 2560,
+      "bodyScrollWidth": 2560,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 2560,
+        "h": 1440,
+        "right": 2560,
+        "bottom": 1440,
+        "scrollWidth": 2560,
+        "clientWidth": 2560
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 2532,
+        "h": 72,
+        "right": 2546,
+        "bottom": 86,
+        "scrollWidth": 2530,
+        "clientWidth": 2530
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 2532,
+        "h": 1224,
+        "right": 2546,
+        "bottom": 1324,
+        "scrollWidth": 2532,
+        "clientWidth": 2532
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 1224,
+        "right": 254,
+        "bottom": 1324,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1944,
+        "h": 1224,
+        "right": 2212,
+        "bottom": 1324,
+        "scrollWidth": 1942,
+        "clientWidth": 1942
+      },
+      "inspector": {
+        "x": 2226,
+        "y": 100,
+        "w": 320,
+        "h": 1224,
+        "right": 2546,
+        "bottom": 1324,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 1338,
+        "w": 2532,
+        "h": 104,
+        "right": 2546,
+        "bottom": 1442,
+        "scrollWidth": 2530,
+        "clientWidth": 2530
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-empty-1920",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "right": 1920,
+        "bottom": 1080,
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1892,
+        "h": 72,
+        "right": 1906,
+        "bottom": 86,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1892,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 1892,
+        "clientWidth": 1892
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 864,
+        "right": 254,
+        "bottom": 964,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1304,
+        "h": 864,
+        "right": 1572,
+        "bottom": 964,
+        "scrollWidth": 1302,
+        "clientWidth": 1302
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "w": 320,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "w": 1892,
+        "h": 104,
+        "right": 1906,
+        "bottom": 1082,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1680",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1680,
+      "innerHeight": 1050,
+      "scrollWidth": 1680,
+      "bodyScrollWidth": 1680,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1680,
+        "h": 1050,
+        "right": 1680,
+        "bottom": 1050,
+        "scrollWidth": 1680,
+        "clientWidth": 1680
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1652,
+        "h": 72,
+        "right": 1666,
+        "bottom": 86,
+        "scrollWidth": 1650,
+        "clientWidth": 1650
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1652,
+        "h": 834,
+        "right": 1666,
+        "bottom": 934,
+        "scrollWidth": 1652,
+        "clientWidth": 1652
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 834,
+        "right": 254,
+        "bottom": 934,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1064,
+        "h": 834,
+        "right": 1332,
+        "bottom": 934,
+        "scrollWidth": 1062,
+        "clientWidth": 1062
+      },
+      "inspector": {
+        "x": 1346,
+        "y": 100,
+        "w": 320,
+        "h": 834,
+        "right": 1666,
+        "bottom": 934,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 948,
+        "w": 1652,
+        "h": 104,
+        "right": 1666,
+        "bottom": 1052,
+        "scrollWidth": 1650,
+        "clientWidth": 1650
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1536",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1536,
+      "innerHeight": 864,
+      "scrollWidth": 1536,
+      "bodyScrollWidth": 1536,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 864,
+        "right": 1536,
+        "bottom": 864,
+        "scrollWidth": 1536,
+        "clientWidth": 1536
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1508,
+        "h": 72,
+        "right": 1522,
+        "bottom": 86,
+        "scrollWidth": 1506,
+        "clientWidth": 1506
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1508,
+        "h": 648,
+        "right": 1522,
+        "bottom": 748,
+        "scrollWidth": 1508,
+        "clientWidth": 1508
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 648,
+        "right": 254,
+        "bottom": 748,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 920,
+        "h": 648,
+        "right": 1188,
+        "bottom": 748,
+        "scrollWidth": 918,
+        "clientWidth": 918
+      },
+      "inspector": {
+        "x": 1202,
+        "y": 100,
+        "w": 320,
+        "h": 648,
+        "right": 1522,
+        "bottom": 748,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 762,
+        "w": 1508,
+        "h": 104,
+        "right": 1522,
+        "bottom": 866,
+        "scrollWidth": 1506,
+        "clientWidth": 1506
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-empty-1440",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1366",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1366,
+      "innerHeight": 768,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1366,
+        "h": 768,
+        "right": 1366,
+        "bottom": 768,
+        "scrollWidth": 1366,
+        "clientWidth": 1366
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1338,
+        "h": 72,
+        "right": 1352,
+        "bottom": 86,
+        "scrollWidth": 1336,
+        "clientWidth": 1336
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1338,
+        "h": 552,
+        "right": 1352,
+        "bottom": 652,
+        "scrollWidth": 1338,
+        "clientWidth": 1338
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 552,
+        "right": 254,
+        "bottom": 652,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 750,
+        "h": 552,
+        "right": 1018,
+        "bottom": 652,
+        "scrollWidth": 748,
+        "clientWidth": 748
+      },
+      "inspector": {
+        "x": 1032,
+        "y": 100,
+        "w": 320,
+        "h": 552,
+        "right": 1352,
+        "bottom": 652,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 666,
+        "w": 1338,
+        "h": 104,
+        "right": 1352,
+        "bottom": 770,
+        "scrollWidth": 1336,
+        "clientWidth": 1336
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1280",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "scrollWidth": 1280,
+      "bodyScrollWidth": 1280,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 800,
+        "right": 1280,
+        "bottom": 800,
+        "scrollWidth": 1280,
+        "clientWidth": 1280
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1252,
+        "h": 72,
+        "right": 1266,
+        "bottom": 86,
+        "scrollWidth": 1250,
+        "clientWidth": 1250
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1252,
+        "h": 584,
+        "right": 1266,
+        "bottom": 684,
+        "scrollWidth": 1252,
+        "clientWidth": 1252
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 584,
+        "right": 254,
+        "bottom": 684,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 664,
+        "h": 584,
+        "right": 932,
+        "bottom": 684,
+        "scrollWidth": 662,
+        "clientWidth": 662
+      },
+      "inspector": {
+        "x": 946,
+        "y": 100,
+        "w": 320,
+        "h": 584,
+        "right": 1266,
+        "bottom": 684,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 698,
+        "w": 1252,
+        "h": 104,
+        "right": 1266,
+        "bottom": 802,
+        "scrollWidth": 1250,
+        "clientWidth": 1250
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1180",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1180,
+      "innerHeight": 820,
+      "scrollWidth": 1180,
+      "bodyScrollWidth": 1180,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1180,
+        "h": 1312,
+        "right": 1180,
+        "bottom": 1312,
+        "scrollWidth": 1180,
+        "clientWidth": 1180
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1152,
+        "h": 72,
+        "right": 1166,
+        "bottom": 86,
+        "scrollWidth": 1150,
+        "clientWidth": 1150
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1152,
+        "h": 1080,
+        "right": 1166,
+        "bottom": 1180,
+        "scrollWidth": 1152,
+        "clientWidth": 1152
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 80,
+        "h": 620,
+        "right": 94,
+        "bottom": 720,
+        "scrollWidth": 78,
+        "clientWidth": 78
+      },
+      "viewer": {
+        "x": 108,
+        "y": 100,
+        "w": 1058,
+        "h": 620,
+        "right": 1166,
+        "bottom": 720,
+        "scrollWidth": 1056,
+        "clientWidth": 1056
+      },
+      "inspector": {
+        "x": 14,
+        "y": 734,
+        "w": 1152,
+        "h": 446,
+        "right": 1166,
+        "bottom": 1180,
+        "scrollWidth": 1150,
+        "clientWidth": 1150
+      },
+      "workflow": {
+        "x": 14,
+        "y": 1194,
+        "w": 1152,
+        "h": 104,
+        "right": 1166,
+        "bottom": 1298,
+        "scrollWidth": 1150,
+        "clientWidth": 1150
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1024",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1024,
+        "h": 1312,
+        "right": 1024,
+        "bottom": 1312,
+        "scrollWidth": 1024,
+        "clientWidth": 1024
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 996,
+        "h": 72,
+        "right": 1010,
+        "bottom": 86,
+        "scrollWidth": 994,
+        "clientWidth": 994
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 996,
+        "h": 1080,
+        "right": 1010,
+        "bottom": 1180,
+        "scrollWidth": 996,
+        "clientWidth": 996
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 80,
+        "h": 620,
+        "right": 94,
+        "bottom": 720,
+        "scrollWidth": 78,
+        "clientWidth": 78
+      },
+      "viewer": {
+        "x": 108,
+        "y": 100,
+        "w": 902,
+        "h": 620,
+        "right": 1010,
+        "bottom": 720,
+        "scrollWidth": 900,
+        "clientWidth": 900
+      },
+      "inspector": {
+        "x": 14,
+        "y": 734,
+        "w": 996,
+        "h": 446,
+        "right": 1010,
+        "bottom": 1180,
+        "scrollWidth": 994,
+        "clientWidth": 994
+      },
+      "workflow": {
+        "x": 14,
+        "y": 1194,
+        "w": 996,
+        "h": 104,
+        "right": 1010,
+        "bottom": 1298,
+        "scrollWidth": 994,
+        "clientWidth": 994
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-900",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 900,
+      "innerHeight": 900,
+      "scrollWidth": 900,
+      "bodyScrollWidth": 900,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 900,
+        "h": 1443,
+        "right": 900,
+        "bottom": 1443,
+        "scrollWidth": 900,
+        "clientWidth": 900
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 872,
+        "h": 203,
+        "right": 886,
+        "bottom": 217,
+        "scrollWidth": 870,
+        "clientWidth": 870
+      },
+      "workspace": {
+        "x": 14,
+        "y": 231,
+        "w": 872,
+        "h": 1080,
+        "right": 886,
+        "bottom": 1311,
+        "scrollWidth": 872,
+        "clientWidth": 872
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 231,
+        "w": 82,
+        "h": 620,
+        "right": 96,
+        "bottom": 851,
+        "scrollWidth": 80,
+        "clientWidth": 80
+      },
+      "viewer": {
+        "x": 110,
+        "y": 231,
+        "w": 776,
+        "h": 620,
+        "right": 886,
+        "bottom": 851,
+        "scrollWidth": 774,
+        "clientWidth": 774
+      },
+      "inspector": {
+        "x": 14,
+        "y": 865,
+        "w": 872,
+        "h": 446,
+        "right": 886,
+        "bottom": 1311,
+        "scrollWidth": 870,
+        "clientWidth": 870
+      },
+      "workflow": {
+        "x": 14,
+        "y": 1325,
+        "w": 872,
+        "h": 104,
+        "right": 886,
+        "bottom": 1429,
+        "scrollWidth": 870,
+        "clientWidth": 870
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-768",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 768,
+      "innerHeight": 1024,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 1467,
+        "right": 768,
+        "bottom": 1467,
+        "scrollWidth": 768,
+        "clientWidth": 768
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 740,
+        "h": 203,
+        "right": 754,
+        "bottom": 217,
+        "scrollWidth": 738,
+        "clientWidth": 738
+      },
+      "workspace": {
+        "x": 14,
+        "y": 231,
+        "w": 740,
+        "h": 1104,
+        "right": 754,
+        "bottom": 1335,
+        "scrollWidth": 740,
+        "clientWidth": 740
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 231,
+        "w": 82,
+        "h": 620,
+        "right": 96,
+        "bottom": 851,
+        "scrollWidth": 80,
+        "clientWidth": 80
+      },
+      "viewer": {
+        "x": 110,
+        "y": 231,
+        "w": 644,
+        "h": 620,
+        "right": 754,
+        "bottom": 851,
+        "scrollWidth": 642,
+        "clientWidth": 642
+      },
+      "inspector": {
+        "x": 14,
+        "y": 865,
+        "w": 740,
+        "h": 470,
+        "right": 754,
+        "bottom": 1335,
+        "scrollWidth": 738,
+        "clientWidth": 738
+      },
+      "workflow": {
+        "x": 14,
+        "y": 1349,
+        "w": 740,
+        "h": 104,
+        "right": 754,
+        "bottom": 1453,
+        "scrollWidth": 738,
+        "clientWidth": 738
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-empty-430",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 430,
+      "innerHeight": 932,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 430,
+        "h": 1786,
+        "right": 430,
+        "bottom": 1786,
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 410,
+        "h": 230,
+        "right": 420,
+        "bottom": 240,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 410,
+        "h": 1412,
+        "right": 420,
+        "bottom": 1662,
+        "scrollWidth": 410,
+        "clientWidth": 410
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 1016,
+        "w": 410,
+        "h": 138,
+        "right": 420,
+        "bottom": 1154,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 410,
+        "h": 752,
+        "right": 420,
+        "bottom": 1002,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "inspector": {
+        "x": 10,
+        "y": 1168,
+        "w": 410,
+        "h": 494,
+        "right": 420,
+        "bottom": 1662,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "workflow": {
+        "x": 10,
+        "y": 1672,
+        "w": 410,
+        "h": 104,
+        "right": 420,
+        "bottom": 1776,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-empty-390",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 1837,
+        "right": 390,
+        "bottom": 1837,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 240,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 1463,
+        "right": 380,
+        "bottom": 1713,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 1043,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 1181,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 779,
+        "right": 380,
+        "bottom": 1029,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 1195,
+        "w": 370,
+        "h": 518,
+        "right": 380,
+        "bottom": 1713,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 1723,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 1827,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-375",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 375,
+      "innerHeight": 812,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 375,
+        "h": 1902,
+        "right": 375,
+        "bottom": 1902,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 355,
+        "h": 230,
+        "right": 365,
+        "bottom": 240,
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 355,
+        "h": 1528,
+        "right": 365,
+        "bottom": 1778,
+        "scrollWidth": 355,
+        "clientWidth": 355
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 1084,
+        "w": 355,
+        "h": 138,
+        "right": 365,
+        "bottom": 1222,
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 355,
+        "h": 820,
+        "right": 365,
+        "bottom": 1070,
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "inspector": {
+        "x": 10,
+        "y": 1236,
+        "w": 355,
+        "h": 542,
+        "right": 365,
+        "bottom": 1778,
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "workflow": {
+        "x": 10,
+        "y": 1788,
+        "w": 355,
+        "h": 104,
+        "right": 365,
+        "bottom": 1892,
+        "scrollWidth": 353,
+        "clientWidth": 353
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-360",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 360,
+      "innerHeight": 800,
+      "scrollWidth": 360,
+      "bodyScrollWidth": 360,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 1902,
+        "right": 360,
+        "bottom": 1902,
+        "scrollWidth": 360,
+        "clientWidth": 360
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 340,
+        "h": 230,
+        "right": 350,
+        "bottom": 240,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 340,
+        "h": 1528,
+        "right": 350,
+        "bottom": 1778,
+        "scrollWidth": 340,
+        "clientWidth": 340
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 1084,
+        "w": 340,
+        "h": 138,
+        "right": 350,
+        "bottom": 1222,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 340,
+        "h": 820,
+        "right": 350,
+        "bottom": 1070,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      },
+      "inspector": {
+        "x": 10,
+        "y": 1236,
+        "w": 340,
+        "h": 542,
+        "right": 350,
+        "bottom": 1778,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      },
+      "workflow": {
+        "x": 10,
+        "y": 1788,
+        "w": 340,
+        "h": 104,
+        "right": 350,
+        "bottom": 1892,
+        "scrollWidth": 338,
+        "clientWidth": 338
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-320",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 320,
+      "innerHeight": 568,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 2003,
+        "right": 320,
+        "bottom": 2003,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 300,
+        "h": 230,
+        "right": 310,
+        "bottom": 240,
+        "scrollWidth": 298,
+        "clientWidth": 298
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 300,
+        "h": 1629,
+        "right": 310,
+        "bottom": 1879,
+        "scrollWidth": 300,
+        "clientWidth": 300
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 1161,
+        "w": 300,
+        "h": 138,
+        "right": 310,
+        "bottom": 1299,
+        "scrollWidth": 298,
+        "clientWidth": 298
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 300,
+        "h": 897,
+        "right": 310,
+        "bottom": 1147,
+        "scrollWidth": 298,
+        "clientWidth": 298
+      },
+      "inspector": {
+        "x": 10,
+        "y": 1313,
+        "w": 300,
+        "h": 566,
+        "right": 310,
+        "bottom": 1879,
+        "scrollWidth": 298,
+        "clientWidth": 298
+      },
+      "workflow": {
+        "x": 10,
+        "y": 1889,
+        "w": 300,
+        "h": 104,
+        "right": 310,
+        "bottom": 1993,
+        "scrollWidth": 298,
+        "clientWidth": 298
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-loaded-1920",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "right": 1920,
+        "bottom": 1080,
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1892,
+        "h": 72,
+        "right": 1906,
+        "bottom": 86,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1892,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 1892,
+        "clientWidth": 1892
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 864,
+        "right": 254,
+        "bottom": 964,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1304,
+        "h": 864,
+        "right": 1572,
+        "bottom": 964,
+        "scrollWidth": 1302,
+        "clientWidth": 1302
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "w": 320,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "w": 1892,
+        "h": 104,
+        "right": 1906,
+        "bottom": 1082,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "offenders": [],
+      "consoleMessages": [
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x3cc0014a400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x3cc0014a400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x3cc0014a400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+        },
+        {
+          "type": "warning",
+          "text": "[.WebGL-0x3cc0014a400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+        }
+      ],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-result-1920",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "right": 1920,
+        "bottom": 1080,
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1892,
+        "h": 72,
+        "right": 1906,
+        "bottom": 86,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1892,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 1892,
+        "clientWidth": 1892
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 864,
+        "right": 254,
+        "bottom": 964,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1304,
+        "h": 864,
+        "right": 1572,
+        "bottom": 964,
+        "scrollWidth": 1302,
+        "clientWidth": 1302
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "w": 320,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "w": 1892,
+        "h": 104,
+        "right": 1906,
+        "bottom": 1082,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-history-1920",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "right": 1920,
+        "bottom": 1080,
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1892,
+        "h": 72,
+        "right": 1906,
+        "bottom": 86,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1892,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 1892,
+        "clientWidth": 1892
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 864,
+        "right": 254,
+        "bottom": 964,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1304,
+        "h": 864,
+        "right": 1572,
+        "bottom": 964,
+        "scrollWidth": 1302,
+        "clientWidth": 1302
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "w": 320,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "w": 1892,
+        "h": 104,
+        "right": 1906,
+        "bottom": 1082,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-compare-1920",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080,
+        "right": 1920,
+        "bottom": 1080,
+        "scrollWidth": 1920,
+        "clientWidth": 1920
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1892,
+        "h": 72,
+        "right": 1906,
+        "bottom": 86,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1892,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 1892,
+        "clientWidth": 1892
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 864,
+        "right": 254,
+        "bottom": 964,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 1304,
+        "h": 864,
+        "right": 1572,
+        "bottom": 964,
+        "scrollWidth": 1302,
+        "clientWidth": 1302
+      },
+      "inspector": {
+        "x": 1586,
+        "y": 100,
+        "w": 320,
+        "h": 864,
+        "right": 1906,
+        "bottom": 964,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 978,
+        "w": 1892,
+        "h": 104,
+        "right": 1906,
+        "bottom": 1082,
+        "scrollWidth": 1890,
+        "clientWidth": 1890
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-loaded-1440",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-result-1440",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-loaded-430",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 430,
+      "innerHeight": 932,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 430,
+        "h": 5660,
+        "right": 430,
+        "bottom": 5660,
+        "scrollWidth": 430,
+        "clientWidth": 430
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 410,
+        "h": 230,
+        "right": 420,
+        "bottom": 240,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 410,
+        "h": 5286,
+        "right": 420,
+        "bottom": 5536,
+        "scrollWidth": 410,
+        "clientWidth": 410
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 805,
+        "w": 410,
+        "h": 138,
+        "right": 420,
+        "bottom": 943,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 410,
+        "h": 541,
+        "right": 420,
+        "bottom": 791,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "inspector": {
+        "x": 10,
+        "y": 957,
+        "w": 410,
+        "h": 4579,
+        "right": 420,
+        "bottom": 5536,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5546,
+        "w": 410,
+        "h": 104,
+        "right": 420,
+        "bottom": 5650,
+        "scrollWidth": 408,
+        "clientWidth": 408
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-loaded-390",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 5905,
+        "right": 390,
+        "bottom": 5905,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 240,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 5531,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 785,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 923,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 521,
+        "right": 380,
+        "bottom": 771,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 937,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5791,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 5895,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-result-390",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 5905,
+        "right": 390,
+        "bottom": 5905,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 240,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 5531,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 785,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 923,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 521,
+        "right": 380,
+        "bottom": 771,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 937,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5791,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 5895,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-history-390",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 5928,
+        "right": 390,
+        "bottom": 5928,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 240,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 5554,
+        "right": 380,
+        "bottom": 5804,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 808,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 946,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 544,
+        "right": 380,
+        "bottom": 794,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 960,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 5804,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5814,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 5918,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-compare-390",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 5905,
+        "right": 390,
+        "bottom": 5905,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": 10,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 240,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 5531,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 785,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 923,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 250,
+        "w": 370,
+        "h": 521,
+        "right": 380,
+        "bottom": 771,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 937,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 5781,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5791,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 5895,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-mobile-tools-open",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": -78,
+        "w": 390,
+        "h": 5905,
+        "right": 390,
+        "bottom": 5827,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": -68,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": 162,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": 172,
+        "w": 370,
+        "h": 5531,
+        "right": 380,
+        "bottom": 5703,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": 707,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": 845,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": 172,
+        "w": 370,
+        "h": 521,
+        "right": 380,
+        "bottom": 693,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": 859,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 5703,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 5713,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 5817,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-mobile-properties-open",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": {
+        "x": 0,
+        "y": -2936,
+        "w": 390,
+        "h": 5905,
+        "right": 390,
+        "bottom": 2969,
+        "scrollWidth": 390,
+        "clientWidth": 390
+      },
+      "header": {
+        "x": 10,
+        "y": -2926,
+        "w": 370,
+        "h": 230,
+        "right": 380,
+        "bottom": -2696,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workspace": {
+        "x": 10,
+        "y": -2686,
+        "w": 370,
+        "h": 5531,
+        "right": 380,
+        "bottom": 2845,
+        "scrollWidth": 370,
+        "clientWidth": 370
+      },
+      "sidebar": {
+        "x": 10,
+        "y": -2151,
+        "w": 370,
+        "h": 138,
+        "right": 380,
+        "bottom": -2013,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "viewer": {
+        "x": 10,
+        "y": -2686,
+        "w": 370,
+        "h": 521,
+        "right": 380,
+        "bottom": -2165,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "inspector": {
+        "x": 10,
+        "y": -1999,
+        "w": 370,
+        "h": 4844,
+        "right": 380,
+        "bottom": 2845,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "workflow": {
+        "x": 10,
+        "y": 2855,
+        "w": 370,
+        "h": 104,
+        "right": 380,
+        "bottom": 2959,
+        "scrollWidth": 368,
+        "clientWidth": 368
+      },
+      "offenders": [],
+      "consoleMessages": [],
+      "failed": [],
+      "pageErrors": []
+    },
+    {
+      "label": "studio-1440-zoom-67",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": []
+    },
+    {
+      "label": "studio-1440-zoom-80",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": []
+    },
+    {
+      "label": "studio-1440-zoom-100",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": []
+    },
+    {
+      "label": "studio-1440-zoom-125",
+      "href": "http://127.0.0.1:4173/app",
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 900,
+        "right": 1440,
+        "bottom": 900,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      "header": {
+        "x": 14,
+        "y": 14,
+        "w": 1412,
+        "h": 72,
+        "right": 1426,
+        "bottom": 86,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "workspace": {
+        "x": 14,
+        "y": 100,
+        "w": 1412,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 1412,
+        "clientWidth": 1412
+      },
+      "sidebar": {
+        "x": 14,
+        "y": 100,
+        "w": 240,
+        "h": 684,
+        "right": 254,
+        "bottom": 784,
+        "scrollWidth": 238,
+        "clientWidth": 238
+      },
+      "viewer": {
+        "x": 268,
+        "y": 100,
+        "w": 824,
+        "h": 684,
+        "right": 1092,
+        "bottom": 784,
+        "scrollWidth": 822,
+        "clientWidth": 822
+      },
+      "inspector": {
+        "x": 1106,
+        "y": 100,
+        "w": 320,
+        "h": 684,
+        "right": 1426,
+        "bottom": 784,
+        "scrollWidth": 318,
+        "clientWidth": 318
+      },
+      "workflow": {
+        "x": 14,
+        "y": 798,
+        "w": 1412,
+        "h": 104,
+        "right": 1426,
+        "bottom": 902,
+        "scrollWidth": 1410,
+        "clientWidth": 1410
+      },
+      "offenders": []
+    },
+    {
+      "label": "studio-modal-1920",
+      "href": "http://127.0.0.1:4173/#premium",
+      "innerWidth": 1920,
+      "innerHeight": 1080,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "shell": null,
+      "header": null,
+      "workspace": null,
+      "sidebar": null,
+      "viewer": null,
+      "inspector": null,
+      "workflow": null,
+      "offenders": []
+    },
+    {
+      "label": "studio-modal-390",
+      "href": "http://127.0.0.1:4173/#premium",
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "shell": null,
+      "header": null,
+      "workspace": null,
+      "sidebar": null,
+      "viewer": null,
+      "inspector": null,
+      "workflow": null,
+      "offenders": [
+        {
+          "tag": "img",
+          "cls": "studioSkull",
+          "text": "",
+          "x": -49,
+          "w": 480,
+          "right": 432
+        }
+      ]
+    }
+  ]
+}

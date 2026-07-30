@@ -7451,7 +7451,7 @@ function App() {
               ProgressComponent={Progress}
             />
 
-            <input ref={studioFileInputRef} className="studioFileInput" type="file" accept=".stl" onChange={handleStudioFileChange} />
+            <input ref={studioFileInputRef} className="studioFileInput" type="file" accept=".stl" aria-label="Выбрать STL-файл" onChange={handleStudioFileChange} />
           </main>
         </Panel>
       </View>

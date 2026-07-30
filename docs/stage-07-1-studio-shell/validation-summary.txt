@@ -1,0 +1,10 @@
+Stage 7.1 validation summary
+
+Build: PASS
+Full smoke suite: PASS (./tests/run_all_smoke_tests.sh)
+Protected checksum: PASS (backend, worker, frontend/src/landing, frontend/src/admin unchanged)
+Preview viewport matrix: PASS (35 screenshots, document scrollWidth <= innerWidth + 1)
+Mobile 320: PASS scrollWidth 320
+Mobile 360: PASS scrollWidth 360
+A11y shell check: PASS (0 unnamed focusable controls on /app preview)
+HTTP status check: /, /app, /admin, /health, /api/v1/status, /api/v1/me, /api/v1/config/features all 200
