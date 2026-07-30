@@ -174,7 +174,15 @@ h1 {
   touch-action: none;
 }
 
+.previewCanvasStage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .previewCanvas canvas {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -189,6 +197,181 @@ h1 {
 
 .previewCanvas canvas:active {
   cursor: grabbing;
+}
+
+.viewerMetricHud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.viewerMetricHud span {
+  min-width: 78px;
+  display: grid;
+  gap: 1px;
+  padding: 8px 10px;
+  border: 1px solid rgba(139, 217, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(5, 12, 22, 0.68);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(10px);
+}
+
+.viewerMetricHud b {
+  color: #dff6ff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.viewerMetricHud small {
+  color: #7890a8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.viewerAxisGizmo {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+  width: 72px;
+  height: 72px;
+  pointer-events: none;
+}
+
+.viewerAxisGizmo i {
+  position: absolute;
+  left: 33px;
+  top: 33px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgba(223, 246, 255, 0.75);
+  border-radius: 3px;
+  background: rgba(5, 12, 22, 0.8);
+  box-shadow: 0 0 14px rgba(53, 215, 255, 0.2);
+}
+
+.viewerAxis {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #dff6ff;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.viewerAxis::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-right: 4px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.viewerAxisX {
+  right: 1px;
+  bottom: 25px;
+  color: #ff4d5f;
+}
+
+.viewerAxisY {
+  left: 4px;
+  bottom: 40px;
+  color: #30e889;
+  transform: rotate(-28deg);
+}
+
+.viewerAxisZ {
+  left: 30px;
+  top: 3px;
+  color: #3da5ff;
+  transform: rotate(-90deg);
+  transform-origin: left center;
+}
+
+.viewerOverlay,
+.viewerResultBadge {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  border: 1px solid rgba(139, 217, 255, 0.2);
+  background: rgba(5, 12, 22, 0.72);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.viewerOverlay {
+  right: 18px;
+  top: 18px;
+  max-width: min(300px, calc(100% - 36px));
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  row-gap: 2px;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.viewerOverlay span {
+  grid-row: span 2;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(53, 215, 255, 0.22);
+  border-top-color: #35d7ff;
+  border-radius: 50%;
+  animation: viewerSpin 0.9s linear infinite;
+}
+
+.viewerOverlay strong,
+.viewerResultBadge strong {
+  color: #eaf7ff;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.viewerOverlay small,
+.viewerResultBadge small {
+  color: #93a8bd;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.viewerOverlayProcessing {
+  border-color: rgba(255, 209, 102, 0.24);
+}
+
+.viewerOverlayProcessing span {
+  border-color: rgba(255, 209, 102, 0.22);
+  border-top-color: #ffd166;
+}
+
+.viewerResultBadge {
+  left: 18px;
+  bottom: 18px;
+  display: grid;
+  gap: 2px;
+  max-width: min(320px, calc(100% - 120px));
+  padding: 10px 13px;
+  border-color: rgba(74, 222, 128, 0.28);
+  border-radius: 12px;
+  background: rgba(5, 28, 22, 0.7);
+}
+
+@keyframes viewerSpin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .previewHelp,

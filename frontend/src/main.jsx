@@ -1251,6 +1251,9 @@ function StlPreview({
   onLocalSelectionChange,
   orientationTransform,
   onOrientationChange,
+  uploading,
+  progress,
+  jobStatus,
 }) {
   const mountRef = useRef(null);
   const rendererRef = useRef(null);
@@ -1263,6 +1266,11 @@ function StlPreview({
   const symmetryOverlayRef = useRef(null);
   const localSelectionOverlayRef = useRef(null);
   const modelBoxRef = useRef(null);
+  const modelSphereRef = useRef(null);
+  const modelMetricsRef = useRef(null);
+  const gridRef = useRef(null);
+  const floorRef = useRef(null);
+  const performanceRef = useRef({ lastTime: 0, frames: 0, fps: 0, frameTime: 0 });
   const localSelectionEnabledRef = useRef(false);
   const localSelectionRadiusRef = useRef(10);
   const localSelectionStrengthRef = useRef("balanced");
@@ -1272,7 +1280,27 @@ function StlPreview({
   const lastBrushWorldPointRef = useRef(null);
   const [previewStatus, setPreviewStatus] = useState("STL-модель ещё не выбрана");
   const [previewState, setPreviewState] = useState("idle");
+  const [viewerMetrics, setViewerMetrics] = useState(null);
   const [viewVersion, setViewVersion] = useState(0);
+
+  const formatViewerNumber = (value) => {
+    const number = Number(value || 0);
+    if (!Number.isFinite(number) || number <= 0) return "0";
+    if (number >= 1000000) return `${Math.round(number / 100000) / 10}M`;
+    if (number >= 1000) return `${Math.round(number / 100) / 10}K`;
+    return `${Math.round(number)}`;
+  };
+
+  const formatViewerSize = (value) => {
+    const number = Number(value || 0);
+    if (!Number.isFinite(number)) return "0";
+    if (Math.abs(number) >= 100) return `${Math.round(number)}`;
+    return `${Math.round(number * 10) / 10}`;
+  };
+
+  const jobPhase = String(jobStatus?.status || "").toLowerCase();
+  const isViewerBusy = Boolean(uploading || ["queued", "pending", "processing", "running"].includes(jobPhase));
+  const isViewerResult = Boolean(["completed", "done", "success"].includes(jobPhase));
 
   const disposeObject = (object) => {
     object.traverse((child) => {
@@ -1521,28 +1549,121 @@ function StlPreview({
     return preview;
   };
 
-  const updateModelBox = () => {
+  const rebuildEngineeringGrid = (metrics) => {
+    const scene = sceneRef.current;
+    if (!scene || !metrics?.box) return;
+
+    if (gridRef.current) {
+      scene.remove(gridRef.current);
+      disposeObject(gridRef.current);
+      gridRef.current = null;
+    }
+    if (floorRef.current) {
+      scene.remove(floorRef.current);
+      disposeObject(floorRef.current);
+      floorRef.current = null;
+    }
+
+    const gridSize = THREE.MathUtils.clamp(Math.ceil(Math.max(metrics.diagonal * 1.9, 80) / 10) * 10, 80, 2400);
+    const divisions = THREE.MathUtils.clamp(Math.round(gridSize / 10), 16, 96);
+    const floorY = Number.isFinite(metrics.box.min.y) ? metrics.box.min.y : 0;
+
+    const grid = new THREE.GridHelper(gridSize, divisions, 0x35d7ff, 0x19354c);
+    grid.position.y = floorY;
+    grid.material.transparent = true;
+    grid.material.opacity = 0.28;
+    gridRef.current = grid;
+    scene.add(grid);
+
+    const floor = new THREE.Mesh(
+      new THREE.PlaneGeometry(gridSize, gridSize),
+      new THREE.MeshStandardMaterial({
+        color: 0x050c16,
+        metalness: 0.08,
+        roughness: 0.92,
+        transparent: true,
+        opacity: 0.34,
+        depthWrite: false,
+      }),
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = floorY - Math.max(metrics.diagonal * 0.002, 0.02);
+    floorRef.current = floor;
+    scene.add(floor);
+  };
+
+  const updateModelBox = ({ refreshGrid = false } = {}) => {
     if (!modelRef.current) return null;
-    modelBoxRef.current = new THREE.Box3().setFromObject(modelRef.current);
-    return modelBoxRef.current;
+    const box = new THREE.Box3().setFromObject(modelRef.current);
+    if (box.isEmpty()) return null;
+
+    const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    const sphere = new THREE.Sphere();
+    box.getBoundingSphere(sphere);
+    const diagonal = Math.max(size.length(), 1);
+
+    let vertices = 0;
+    let triangles = 0;
+    modelRef.current.traverse?.((child) => {
+      const geometry = child.geometry;
+      if (!geometry?.attributes?.position) return;
+      vertices += geometry.attributes.position.count || 0;
+      triangles += geometry.index?.count
+        ? Math.floor(geometry.index.count / 3)
+        : Math.floor((geometry.attributes.position.count || 0) / 3);
+    });
+
+    const metrics = {
+      box,
+      size,
+      center,
+      sphere,
+      radius: Math.max(sphere.radius || diagonal / 2, 1),
+      diagonal,
+      vertices,
+      triangles,
+    };
+    modelBoxRef.current = box;
+    modelSphereRef.current = sphere;
+    modelMetricsRef.current = metrics;
+    setViewerMetrics((current) => ({
+      ...current,
+      width: size.x,
+      height: size.y,
+      depth: size.z,
+      radius: metrics.radius,
+      diagonal,
+      vertices,
+      triangles,
+    }));
+    if (refreshGrid) rebuildEngineeringGrid(metrics);
+    return box;
   };
 
   const centerView = () => {
     const camera = cameraRef.current;
     const controls = controlsRef.current;
-    const box = updateModelBox() || modelBoxRef.current;
-    if (!camera || !controls || !box) return;
+    updateModelBox({ refreshGrid: true });
+    const metrics = modelMetricsRef.current;
+    if (!camera || !controls || !metrics) return;
 
-    const size = box.getSize(new THREE.Vector3());
-    const maxSize = Math.max(size.x, size.y, size.z) || 1;
-    const target = new THREE.Vector3(0, Math.max(size.y * 0.5, 0), 0);
-    const distance = (maxSize / (2 * Math.tan((camera.fov * Math.PI) / 360))) * 1.45;
-    camera.position.set(distance * 0.95, target.y + distance * 0.72, distance * 0.95);
-    camera.near = Math.max(distance / 100, 0.01);
-    camera.far = Math.max(distance * 100, maxSize * 20);
+    const target = metrics.center.clone();
+    const radius = Math.max(metrics.radius, 1);
+    const fov = THREE.MathUtils.degToRad(camera.fov);
+    const aspect = Math.max(camera.aspect || 1, 0.1);
+    const fitHeightDistance = radius / Math.sin(fov / 2);
+    const fitWidthDistance = radius / Math.sin(Math.atan(Math.tan(fov / 2) * aspect));
+    const distance = Math.max(fitHeightDistance, fitWidthDistance) * 1.18;
+
+    camera.position.copy(target.clone().add(new THREE.Vector3(distance * 0.78, distance * 0.54, distance * 0.86)));
+    camera.near = Math.max(radius / 180, 0.001);
+    camera.far = Math.max(distance * 8, radius * 16, metrics.diagonal * 6);
     camera.lookAt(target);
     camera.updateProjectionMatrix();
     controls.target.copy(target);
+    controls.minDistance = Math.max(radius * 0.08, 0.02);
+    controls.maxDistance = Math.max(radius * 18, distance * 4);
     controls.update();
   };
 
@@ -1555,7 +1676,7 @@ function StlPreview({
     model.position.x -= center.x;
     model.position.y -= box.min.y;
     model.position.z -= center.z;
-    updateModelBox();
+    updateModelBox({ refreshGrid: true });
     clearSplitOverlay();
     clearSymmetryOverlay();
     setViewVersion((value) => value + 1);
@@ -1688,23 +1809,29 @@ function StlPreview({
     scene.background = null;
     sceneRef.current = scene;
 
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 10000);
+    const camera = new THREE.PerspectiveCamera(42, 1, 0.05, 10000);
     camera.position.set(120, 90, 120);
     cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.02;
+    renderer.setClearColor(0x000000, 0);
     rendererRef.current = renderer;
     mount.appendChild(renderer.domElement);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.08;
+    controls.dampingFactor = 0.06;
     controls.enableRotate = true;
     controls.enablePan = true;
     controls.enableZoom = true;
-    controls.screenSpacePanning = true;
+    controls.screenSpacePanning = false;
+    controls.rotateSpeed = 0.72;
+    controls.zoomSpeed = 0.78;
+    controls.panSpeed = 0.58;
     controlsRef.current = controls;
 
     const raycaster = new THREE.Raycaster();
@@ -1790,25 +1917,21 @@ function StlPreview({
     window.addEventListener("pointerup", handleSelectionPointerUp);
     renderer.domElement.addEventListener("click", handleSelectionClick);
 
-    scene.add(new THREE.HemisphereLight(0xcdefff, 0x1f2937, 1.9));
-    const keyLight = new THREE.DirectionalLight(0xffffff, 2.8);
-    keyLight.position.set(80, 120, 70);
+    scene.add(new THREE.HemisphereLight(0xcdefff, 0x162235, 1.16));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.15);
+    keyLight.position.set(90, 130, 80);
     scene.add(keyLight);
-    const rimLight = new THREE.DirectionalLight(0x68f0d8, 1.2);
+    const fillLight = new THREE.DirectionalLight(0x8bd9ff, 0.64);
+    fillLight.position.set(-80, 40, 90);
+    scene.add(fillLight);
+    const rimLight = new THREE.DirectionalLight(0x68f0d8, 1.05);
     rimLight.position.set(-90, 80, -60);
     scene.add(rimLight);
 
-    const grid = new THREE.GridHelper(240, 24, 0x6ee7f9, 0x1f3a4d);
-    grid.position.y = 0;
-    scene.add(grid);
-
-    const floor = new THREE.Mesh(
-      new THREE.PlaneGeometry(240, 240),
-      new THREE.MeshStandardMaterial({ color: 0x07111d, metalness: 0.2, roughness: 0.82, transparent: true, opacity: 0.42 }),
-    );
-    floor.rotation.x = -Math.PI / 2;
-    floor.position.y = 0;
-    scene.add(floor);
+    rebuildEngineeringGrid({
+      box: new THREE.Box3(new THREE.Vector3(-40, 0, -40), new THREE.Vector3(40, 40, 40)),
+      diagonal: 120,
+    });
 
     const resize = () => {
       const width = mount.clientWidth || 640;
@@ -1822,9 +1945,28 @@ function StlPreview({
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(mount);
 
-    const animate = () => {
+    const animate = (time = 0) => {
       controls.update();
       renderer.render(scene, camera);
+      const perf = performanceRef.current;
+      perf.frames += 1;
+      if (!perf.lastTime) perf.lastTime = time;
+      const elapsed = time - perf.lastTime;
+      if (elapsed >= 750) {
+        perf.fps = Math.round((perf.frames * 1000) / elapsed);
+        perf.frameTime = Math.round((elapsed / Math.max(perf.frames, 1)) * 10) / 10;
+        perf.frames = 0;
+        perf.lastTime = time;
+        setViewerMetrics((current) => current ? ({
+          ...current,
+          fps: perf.fps,
+          frameTime: perf.frameTime,
+          drawCalls: renderer.info.render.calls,
+          renderTriangles: renderer.info.render.triangles,
+          geometries: renderer.info.memory.geometries,
+          textures: renderer.info.memory.textures,
+        }) : current);
+      }
       frameRef.current = window.requestAnimationFrame(animate);
     };
     animate();
@@ -1835,6 +1977,16 @@ function StlPreview({
       clearSplitOverlay();
       clearSymmetryOverlay();
       clearLocalSelectionOverlay();
+      if (gridRef.current) {
+        scene.remove(gridRef.current);
+        disposeObject(gridRef.current);
+        gridRef.current = null;
+      }
+      if (floorRef.current) {
+        scene.remove(floorRef.current);
+        disposeObject(floorRef.current);
+        floorRef.current = null;
+      }
       renderer.domElement.removeEventListener("pointerdown", handleSelectionPointerDown);
       renderer.domElement.removeEventListener("pointermove", handleSelectionPointerMove);
       window.removeEventListener("pointerup", handleSelectionPointerUp);
@@ -1855,24 +2007,27 @@ function StlPreview({
       modelRef.current = null;
     }
     modelBoxRef.current = null;
+    modelSphereRef.current = null;
+    modelMetricsRef.current = null;
+    setViewerMetrics(null);
     setViewVersion((value) => value + 1);
     setPreviewState("idle");
     setPreviewStatus("Просмотр очищен");
   };
 
-  const normalizeGeometryToFloor = (geometry) => {
+  const normalizeGeometryToCenter = (geometry) => {
     geometry.computeBoundingBox();
     const initialBox = geometry.boundingBox;
     const initialCenter = initialBox.getCenter(new THREE.Vector3());
-    const floorOffset = initialBox.min.y;
     geometry.userData.originalOffset = {
       x: initialCenter.x,
-      y: floorOffset,
+      y: initialCenter.y,
       z: initialCenter.z,
     };
-    geometry.translate(-initialCenter.x, -floorOffset, -initialCenter.z);
+    geometry.translate(-initialCenter.x, -initialCenter.y, -initialCenter.z);
     geometry.computeVertexNormals();
     geometry.computeBoundingBox();
+    geometry.computeBoundingSphere();
     return geometry;
   };
 
@@ -1959,7 +2114,7 @@ function StlPreview({
         const buffer = await file.arrayBuffer();
         if (cancelled) return;
         const geometry = loader.parse(buffer);
-        normalizeGeometryToFloor(geometry);
+        normalizeGeometryToCenter(geometry);
 
         if (heatmapEnabled && heatmapData) {
           const group = new THREE.Group();
@@ -1967,7 +2122,7 @@ function StlPreview({
             const sourceBuffer = await sourceFile.arrayBuffer();
             if (cancelled) return;
             const sourceGeometry = loader.parse(sourceBuffer);
-            normalizeGeometryToFloor(sourceGeometry);
+            normalizeGeometryToCenter(sourceGeometry);
             const sourceMaterial = new THREE.MeshStandardMaterial({
               color: 0xaab4c2,
               metalness: 0.08,
@@ -2015,7 +2170,7 @@ function StlPreview({
           modelRef.current = mesh;
         }
 
-        updateModelBox();
+        updateModelBox({ refreshGrid: true });
         centerView();
         setViewVersion((value) => value + 1);
 
@@ -2189,7 +2344,40 @@ function StlPreview({
         </div>
         <span className={`previewStatus ${previewState}`}>{previewStatus}</span>
       </div>
-      <div className={`previewCanvas ${localSelectionEnabled ? "selectionActive" : ""}`} ref={mountRef} />
+      <div className={`previewCanvas ${localSelectionEnabled ? "selectionActive" : ""}`}>
+        <div className="previewCanvasStage" ref={mountRef} />
+        <div className="viewerMetricHud" aria-hidden="true">
+          <span><b>{formatViewerNumber(viewerMetrics?.triangles)}</b><small>треуг.</small></span>
+          <span><b>{formatViewerSize(viewerMetrics?.radius)}</b><small>радиус</small></span>
+          <span><b>{viewerMetrics?.fps || 0}</b><small>FPS</small></span>
+        </div>
+        <div className="viewerAxisGizmo" aria-hidden="true">
+          <span className="viewerAxis viewerAxisX">X</span>
+          <span className="viewerAxis viewerAxisY">Y</span>
+          <span className="viewerAxis viewerAxisZ">Z</span>
+          <i />
+        </div>
+        {previewState === "loading" && (
+          <div className="viewerOverlay viewerOverlayLoading" role="status">
+            <span />
+            <strong>Готовим 3D-просмотр</strong>
+            <small>STL остаётся в инженерной сцене после загрузки</small>
+          </div>
+        )}
+        {isViewerBusy && previewState === "ready" && (
+          <div className="viewerOverlay viewerOverlayProcessing" role="status">
+            <span />
+            <strong>Обработка выполняется</strong>
+            <small>{uploading ? `Загрузка ${Math.round(Number(progress || 0))}%` : "Текущая модель остаётся доступной"}</small>
+          </div>
+        )}
+        {isViewerResult && previewState === "ready" && (
+          <div className="viewerResultBadge" role="status">
+            <strong>Готово</strong>
+            <small>Можно скачать результат или сравнить модели</small>
+          </div>
+        )}
+      </div>
       <p className="previewHelp">Если модель лежит не так, используйте кнопки поворота. Это меняет только просмотр, STL на сервере не изменяется.</p>
       {localSelectionEnabled && (
         <p className="previewWarning">
@@ -7331,6 +7519,9 @@ function App() {
                     onLocalSelectionChange={setLocalSelection}
                     orientationTransform={orientationTransform}
                     onOrientationChange={setOrientationTransform}
+                    uploading={uploading}
+                    progress={progress}
+                    jobStatus={jobStatus}
                   />
                 ) : (
                   <StudioEmptyState

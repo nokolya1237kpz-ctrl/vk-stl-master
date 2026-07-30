@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "url": "http://127.0.0.1:4175/app",
+    "hasCanvas": true,
+    "hasHud": true,
+    "hasGizmo": true,
+    "hasResultBadge": true,
+    "bodyScrollWidth": 1440,
+    "viewportWidth": 1440,
+    "hasHorizontalScroll": false,
+    "panel": {
+      "x": 269,
+      "y": 101,
+      "width": 822,
+      "height": 782,
+      "top": 101,
+      "right": 1091,
+      "bottom": 883,
+      "left": 269
+    },
+    "viewport": {
+      "x": 291,
+      "y": 201.359375,
+      "width": 778,
+      "height": 571.640625,
+      "top": 201.359375,
+      "right": 1069,
+      "bottom": 773,
+      "left": 291
+    },
+    "canvas": {
+      "x": 292,
+      "y": 202.359375,
+      "width": 776,
+      "height": 569.640625,
+      "top": 202.359375,
+      "right": 1068,
+      "bottom": 772,
+      "left": 292
+    }
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}
