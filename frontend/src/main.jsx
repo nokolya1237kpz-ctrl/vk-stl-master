@@ -5808,6 +5808,7 @@ function ContextProcessingPanel({ jobStatus, progress, statusMessage }) {
         <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus?.estimated_wait_seconds)}</dd></div>
         <div><dt>Следующий этап</dt><dd>{jobStatus?.status === "queued" ? "Запуск worker" : "Формирование результата"}</dd></div>
       </dl>
+      <p className="contextQueueHint">Premium-задачи обрабатываются быстрее.</p>
       <p>{statusMessage(jobStatus?.status, jobStatus?.message)}</p>
     </section>
   );
