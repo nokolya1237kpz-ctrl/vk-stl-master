@@ -7490,7 +7490,7 @@ function App() {
             )}
 
             <section className="studioWorkspace">
-              <StudioSidebar presets={visiblePresets} selectedMode={selectedMode} onSelect={setSelectedMode} />
+              <StudioSidebar presets={visiblePresets} selectedMode={selectedMode} onSelect={setSelectedMode} hasFile={Boolean(file)} />
 
               <section className="studioViewerWorkspace" aria-label="3D viewport STL Master Studio" onDrop={handleStudioDrop} onDragOver={handleStudioDragOver}>
                 {file ? (
@@ -7556,89 +7556,105 @@ function App() {
                 ProgressComponent={Progress}
               />
 
-              <aside className="studioInspector" aria-label="Инспектор модели и обработки">
-                <section className="studioInspectorCard studioUserCard">
-                  <p className="studioPanelLabel">Пользователь</p>
-                  <h2>{currentUser?.premium_active ? "Premium активен" : hasUploadAccess ? "Доступ активен" : "Гостевой режим"}</h2>
-                  <dl>
-                    <div><dt>Лимит STL</dt><dd>{uploadLimitMb} МБ</dd></div>
-                    <div><dt>Очередь</dt><dd>{currentUser?.limits?.priority === "premium" ? "Повышенная" : "Обычная"}</dd></div>
-                    <div><dt>Вход</dt><dd>.stl</dd></div>
-                    <div><dt>Экспорт</dt><dd>STL · ZIP · JSON · TXT</dd></div>
-                  </dl>
-                </section>
-
-                <section className="studioInspectorCard">
-                  <p className="studioPanelLabel">Настройка</p>
-                  <h2>{studioSelectedPreset.title}</h2>
-                  <p className="studioInspectorLead">{studioSelectedPreset.description}</p>
-                  {renderStudioSettings()}
-                </section>
-
-                {orientationHasVisualChanges && selectedMode !== "orientation" && (
-                  <section className="studioInspectorNote">
-                    <strong>Поворот изменил только просмотр.</strong>
-                    <span>Чтобы сохранить его в STL, выберите “Применить ориентацию”.</span>
+              <aside className={`studioInspector ${file ? "hasModel" : "isEmpty"}`} aria-label="Инспектор модели и обработки">
+                {!file ? (
+                  <section className="studioInspectorCard studioNextStepCard">
+                    <p className="studioPanelLabel">Следующий шаг</p>
+                    <h2>Загрузите STL</h2>
+                    <p className="studioInspectorLead">После загрузки здесь появятся настройки выбранной операции, статус обработки и результат.</p>
+                    <dl>
+                      <div><dt>Формат</dt><dd>.stl</dd></div>
+                      <div><dt>Лимит</dt><dd>{uploadLimitMb} МБ</dd></div>
+                      <div><dt>Демо</dt><dd>Необязательно</dd></div>
+                      <div><dt>Результат</dt><dd>STL · ZIP</dd></div>
+                    </dl>
                   </section>
-                )}
-
-                {jobStatus && (
-                  <section className="studioInspectorCard">
-                    <p className="studioPanelLabel">Обработка</p>
-                    <h2>{statusLabel(jobStatus.status)}</h2>
-                    {jobStatus.status === "queued" && (
+                ) : (
+                  <>
+                    <section className="studioInspectorCard studioUserCard">
+                      <p className="studioPanelLabel">Сцена</p>
+                      <h2>{currentUser?.premium_active ? "Premium активен" : hasUploadAccess ? "Доступ активен" : "Гостевой режим"}</h2>
                       <dl>
-                        <div><dt>Место</dt><dd>{jobStatus.queue_position || "—"}</dd></div>
-                        <div><dt>Задач</dt><dd>{jobStatus.queue_size ?? "—"}</dd></div>
-                        <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus.estimated_wait_seconds)}</dd></div>
-                        <div><dt>Приоритет</dt><dd>{queuePriorityLabel(jobStatus.priority)}</dd></div>
+                        <div><dt>Лимит STL</dt><dd>{uploadLimitMb} МБ</dd></div>
+                        <div><dt>Очередь</dt><dd>{currentUser?.limits?.priority === "premium" ? "Повышенная" : "Обычная"}</dd></div>
+                        <div><dt>Вход</dt><dd>.stl</dd></div>
+                        <div><dt>Экспорт</dt><dd>STL · ZIP · JSON · TXT</dd></div>
                       </dl>
-                    )}
-                    {jobStatus.status === "queued" && (
-                      <p className="studioQueueHint">Premium-задачи обрабатываются быстрее и получают повышенный приоритет в очереди.</p>
-                    )}
-                    <Progress value={progress} />
-                    <p>{statusMessage(jobStatus.status, jobStatus.message)}</p>
-                  </section>
-                )}
+                    </section>
 
-                {jobStatus?.status === "completed" && (
-                  <AnalysisResult
-                    activePanel={activePanel}
-                    apiBaseUrl={apiBaseUrl}
-                    result={jobStatus.result}
-                    jobStatus={jobStatus}
-                    sourceFile={file}
-                    processedPreviewFile={processedPreviewFile}
-                    setActivePanel={setActivePanel}
-                    compareMode={previewMode}
-                    hasProcessedPreview={Boolean(processedPreviewFile)}
-                    processedPreviewLoading={processedPreviewLoading}
-                    processedPreviewError={processedPreviewError}
-                    heatmapEnabled={heatmapEnabled}
-                    heatmapData={heatmapData}
-                    heatmapLoading={heatmapLoading}
-                    heatmapError={heatmapError}
-                    focusChangesVersion={focusChangesVersion}
-                    artifactMapEnabled={artifactMapEnabled}
-                    artifactMapData={artifactMapData}
-                    artifactMapLoading={artifactMapLoading}
-                    artifactMapError={artifactMapError}
-                    onCompareModeChange={(mode) => {
-                      setHeatmapEnabled(false);
-                      setArtifactMapEnabled(false);
-                      setPreviewMode(mode);
-                    }}
-                    onShowChanges={handleShowChanges}
-                    onFocusChanges={handleFocusChanges}
-                    onShowArtifacts={handleShowArtifacts}
-                    onOpenHistoryFile={handleOpenHistoryFile}
-                  />
-                )}
+                    <section className="studioInspectorCard studioOperationCard">
+                      <p className="studioPanelLabel">Настройка</p>
+                      <h2>{studioSelectedPreset.title}</h2>
+                      <p className="studioInspectorLead">{studioSelectedPreset.description}</p>
+                      {renderStudioSettings()}
+                    </section>
 
-                {jobStatus && <JobInfoPanel jobStatus={jobStatus} result={jobStatus.result} />}
-                {jobStatus?.status === "completed" && <FeedbackPanel apiBaseUrl={apiBaseUrl} jobStatus={jobStatus} />}
-                <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
+                    {orientationHasVisualChanges && selectedMode !== "orientation" && (
+                      <section className="studioInspectorNote">
+                        <strong>Поворот изменил только просмотр.</strong>
+                        <span>Чтобы сохранить его в STL, выберите “Применить ориентацию”.</span>
+                      </section>
+                    )}
+
+                    {jobStatus && (
+                      <section className="studioInspectorCard studioProcessingCard">
+                        <p className="studioPanelLabel">Обработка</p>
+                        <h2>{statusLabel(jobStatus.status)}</h2>
+                        {jobStatus.status === "queued" && (
+                          <dl>
+                            <div><dt>Место</dt><dd>{jobStatus.queue_position || "—"}</dd></div>
+                            <div><dt>Задач</dt><dd>{jobStatus.queue_size ?? "—"}</dd></div>
+                            <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus.estimated_wait_seconds)}</dd></div>
+                            <div><dt>Приоритет</dt><dd>{queuePriorityLabel(jobStatus.priority)}</dd></div>
+                          </dl>
+                        )}
+                        {jobStatus.status === "queued" && (
+                          <p className="studioQueueHint">Premium-задачи обрабатываются быстрее и получают повышенный приоритет в очереди.</p>
+                        )}
+                        <Progress value={progress} />
+                        <p>{statusMessage(jobStatus.status, jobStatus.message)}</p>
+                      </section>
+                    )}
+
+                    {jobStatus?.status === "completed" && (
+                      <AnalysisResult
+                        activePanel={activePanel}
+                        apiBaseUrl={apiBaseUrl}
+                        result={jobStatus.result}
+                        jobStatus={jobStatus}
+                        sourceFile={file}
+                        processedPreviewFile={processedPreviewFile}
+                        setActivePanel={setActivePanel}
+                        compareMode={previewMode}
+                        hasProcessedPreview={Boolean(processedPreviewFile)}
+                        processedPreviewLoading={processedPreviewLoading}
+                        processedPreviewError={processedPreviewError}
+                        heatmapEnabled={heatmapEnabled}
+                        heatmapData={heatmapData}
+                        heatmapLoading={heatmapLoading}
+                        heatmapError={heatmapError}
+                        focusChangesVersion={focusChangesVersion}
+                        artifactMapEnabled={artifactMapEnabled}
+                        artifactMapData={artifactMapData}
+                        artifactMapLoading={artifactMapLoading}
+                        artifactMapError={artifactMapError}
+                        onCompareModeChange={(mode) => {
+                          setHeatmapEnabled(false);
+                          setArtifactMapEnabled(false);
+                          setPreviewMode(mode);
+                        }}
+                        onShowChanges={handleShowChanges}
+                        onFocusChanges={handleFocusChanges}
+                        onShowArtifacts={handleShowArtifacts}
+                        onOpenHistoryFile={handleOpenHistoryFile}
+                      />
+                    )}
+
+                    {jobStatus && <JobInfoPanel jobStatus={jobStatus} result={jobStatus.result} />}
+                    {jobStatus?.status === "completed" && <FeedbackPanel apiBaseUrl={apiBaseUrl} jobStatus={jobStatus} />}
+                    <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
+                  </>
+                )}
               </aside>
             </section>
 

@@ -1,0 +1,261 @@
+{
+  "emptyMetrics": {
+    "body": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "horizontalScroll": false
+    },
+    "firstText": "STL Master Studio Рабочая область Готово к работе STL вход · STL/ZIP/JSON/TXT результат Получить Premium Помощь Экспорт ИНСТРУМЕНТЫ АНАЛИЗ 🔎 Проверить модель 🧹 Удалить AI-артефакты ✨ Улучшить модель 🎯 Выборочная правка ГЕОМЕТРИЯ ✂️ Разрезать для склейки 🧩 Разрезать под стол 🪶 Уменьшить вес 📐 Применить ориентацию 🧭 Подобрать ориентацию для печати STL input .stl НОВАЯ СЦЕНА Загрузите STL-модель Перетащите файл в окно редактора или выберите его вручную. Для обработки собственных моделей нужен доступ, демо можно открыть без загрузки. Выбрать STL-файл Открыть демо-модель Требования к файлу Входной формат: STL Лимит: до 100 МБ Результат: STL, ZIP, JSON, TXT 1 Загрузка 2 Анализ 3 Настройка 4 Обработка 5 Проверка 6 Экспорт Проверить модель Анализ модели · Проверка к печати · Подготовить пакет Запустить обработку ПОЛЬЗОВАТЕЛЬ Гостевой режим Лимит STL 100 МБ Очередь Обычная Вход .stl Экспорт STL · ZIP · JSON · TXT НАСТРОЙКА Проверить модель Быстрая проверка размеров, треугольников и готовности к печати. Проверка модели STL Master проверит габариты, целостность сетки, тонкие места и готовность к печати.",
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "right": 1440,
+      "bottom": 1000,
+      "left": 0
+    },
+    "header": {
+      "x": 14,
+      "y": 14,
+      "width": 1412,
+      "height": 72,
+      "top": 14,
+      "right": 1426,
+      "bottom": 86,
+      "left": 14
+    },
+    "workspace": {
+      "x": 14,
+      "y": 100,
+      "width": 1412,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 14
+    },
+    "sidebar": {
+      "x": 14,
+      "y": 100,
+      "width": 108,
+      "height": 886,
+      "top": 100,
+      "right": 122,
+      "bottom": 986,
+      "left": 14
+    },
+    "viewer": {
+      "x": 136,
+      "y": 100,
+      "width": 916,
+      "height": 768,
+      "top": 100,
+      "right": 1052,
+      "bottom": 868,
+      "left": 136
+    },
+    "workflow": {
+      "x": 136,
+      "y": 882,
+      "width": 916,
+      "height": 104,
+      "top": 882,
+      "right": 1052,
+      "bottom": 986,
+      "left": 136
+    },
+    "inspector": {
+      "x": 1066,
+      "y": 100,
+      "width": 360,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 1066
+    }
+  },
+  "demoDesktopMetrics": {
+    "body": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "horizontalScroll": false
+    },
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "right": 1440,
+      "bottom": 1000,
+      "left": 0
+    },
+    "workspace": {
+      "x": 14,
+      "y": 100,
+      "width": 1412,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 14
+    },
+    "sidebar": {
+      "x": 14,
+      "y": 100,
+      "width": 108,
+      "height": 886,
+      "top": 100,
+      "right": 122,
+      "bottom": 986,
+      "left": 14
+    },
+    "viewer": {
+      "x": 136,
+      "y": 100,
+      "width": 916,
+      "height": 768,
+      "top": 100,
+      "right": 1052,
+      "bottom": 868,
+      "left": 136
+    },
+    "workflow": {
+      "x": 136,
+      "y": 882,
+      "width": 916,
+      "height": 104,
+      "top": 882,
+      "right": 1052,
+      "bottom": 986,
+      "left": 136
+    },
+    "inspector": {
+      "x": 1066,
+      "y": 100,
+      "width": 360,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 1066
+    },
+    "previewActions": {
+      "x": 365.5,
+      "y": 717,
+      "width": 457,
+      "height": 132,
+      "top": 717,
+      "right": 822.5,
+      "bottom": 849,
+      "left": 365.5
+    }
+  },
+  "demoTabletMetrics": {
+    "body": {
+      "scrollWidth": 1024,
+      "scrollHeight": 5022,
+      "innerWidth": 1024,
+      "innerHeight": 900,
+      "horizontalScroll": false
+    },
+    "sidebar": {
+      "x": 14,
+      "y": 100,
+      "width": 80,
+      "height": 638,
+      "top": 100,
+      "right": 94,
+      "bottom": 738,
+      "left": 14
+    },
+    "viewer": {
+      "x": 108,
+      "y": 100,
+      "width": 902,
+      "height": 520,
+      "top": 100,
+      "right": 1010,
+      "bottom": 620,
+      "left": 108
+    },
+    "workflow": {
+      "x": 108,
+      "y": 634,
+      "width": 902,
+      "height": 104,
+      "top": 634,
+      "right": 1010,
+      "bottom": 738,
+      "left": 108
+    },
+    "inspector": {
+      "x": 14,
+      "y": 752,
+      "width": 996,
+      "height": 4255.5,
+      "top": 752,
+      "right": 1010,
+      "bottom": 5007.5,
+      "left": 14
+    }
+  },
+  "demoMobileMetrics": {
+    "body": {
+      "scrollWidth": 390,
+      "scrollHeight": 6353,
+      "innerWidth": 390,
+      "innerHeight": 900,
+      "horizontalScroll": false
+    },
+    "sidebar": {
+      "x": 10,
+      "y": 787.890625,
+      "width": 370,
+      "height": 130,
+      "top": 787.890625,
+      "right": 380,
+      "bottom": 917.890625,
+      "left": 10
+    },
+    "viewer": {
+      "x": 10,
+      "y": 253.890625,
+      "width": 370,
+      "height": 520,
+      "top": 253.890625,
+      "right": 380,
+      "bottom": 773.890625,
+      "left": 10
+    },
+    "workflow": {
+      "x": 10,
+      "y": 931.890625,
+      "width": 370,
+      "height": 104,
+      "top": 931.890625,
+      "right": 380,
+      "bottom": 1035.890625,
+      "left": 10
+    },
+    "inspector": {
+      "x": 10,
+      "y": 1049.890625,
+      "width": 370,
+      "height": 5293.4375,
+      "top": 1049.890625,
+      "right": 380,
+      "bottom": 6343.328125,
+      "left": 10
+    }
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}

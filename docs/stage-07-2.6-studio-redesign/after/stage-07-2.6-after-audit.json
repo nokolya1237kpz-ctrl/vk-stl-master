@@ -1,0 +1,351 @@
+{
+  "emptyDesktop": {
+    "body": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "horizontalScroll": false
+    },
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "right": 1440,
+      "bottom": 1000,
+      "left": 0
+    },
+    "header": {
+      "x": 16,
+      "y": 16,
+      "width": 1408,
+      "height": 72,
+      "top": 16,
+      "right": 1424,
+      "bottom": 88,
+      "left": 16
+    },
+    "workspace": {
+      "x": 16,
+      "y": 102,
+      "width": 1408,
+      "height": 882,
+      "top": 102,
+      "right": 1424,
+      "bottom": 984,
+      "left": 16
+    },
+    "sidebar": {
+      "x": 16,
+      "y": 102,
+      "width": 280,
+      "height": 882,
+      "top": 102,
+      "right": 296,
+      "bottom": 984,
+      "left": 16
+    },
+    "viewer": {
+      "x": 312,
+      "y": 102,
+      "width": 776,
+      "height": 788,
+      "top": 102,
+      "right": 1088,
+      "bottom": 890,
+      "left": 312
+    },
+    "workflow": {
+      "x": 312,
+      "y": 906,
+      "width": 1112,
+      "height": 78,
+      "top": 906,
+      "right": 1424,
+      "bottom": 984,
+      "left": 312
+    },
+    "inspector": {
+      "x": 1104,
+      "y": 102,
+      "width": 320,
+      "height": 788,
+      "top": 102,
+      "right": 1424,
+      "bottom": 890,
+      "left": 1104
+    },
+    "previewActions": null
+  },
+  "demoDesktop": {
+    "body": {
+      "scrollWidth": 1440,
+      "scrollHeight": 1000,
+      "innerWidth": 1440,
+      "innerHeight": 1000,
+      "horizontalScroll": false
+    },
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "right": 1440,
+      "bottom": 1000,
+      "left": 0
+    },
+    "header": {
+      "x": 16,
+      "y": 16,
+      "width": 1408,
+      "height": 72,
+      "top": 16,
+      "right": 1424,
+      "bottom": 88,
+      "left": 16
+    },
+    "workspace": {
+      "x": 16,
+      "y": 102,
+      "width": 1408,
+      "height": 882,
+      "top": 102,
+      "right": 1424,
+      "bottom": 984,
+      "left": 16
+    },
+    "sidebar": {
+      "x": 16,
+      "y": 102,
+      "width": 280,
+      "height": 882,
+      "top": 102,
+      "right": 296,
+      "bottom": 984,
+      "left": 16
+    },
+    "viewer": {
+      "x": 312,
+      "y": 102,
+      "width": 776,
+      "height": 788,
+      "top": 102,
+      "right": 1088,
+      "bottom": 890,
+      "left": 312
+    },
+    "workflow": {
+      "x": 312,
+      "y": 906,
+      "width": 1112,
+      "height": 78,
+      "top": 906,
+      "right": 1424,
+      "bottom": 984,
+      "left": 312
+    },
+    "inspector": {
+      "x": 1104,
+      "y": 102,
+      "width": 320,
+      "height": 788,
+      "top": 102,
+      "right": 1424,
+      "bottom": 890,
+      "left": 1104
+    },
+    "previewActions": {
+      "x": 1029,
+      "y": 199,
+      "width": 44,
+      "height": 274,
+      "top": 199,
+      "right": 1073,
+      "bottom": 473,
+      "left": 1029
+    }
+  },
+  "demoTablet": {
+    "body": {
+      "scrollWidth": 1024,
+      "scrollHeight": 5544,
+      "innerWidth": 1024,
+      "innerHeight": 900,
+      "horizontalScroll": false
+    },
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 5543.796875,
+      "top": 0,
+      "right": 1024,
+      "bottom": 5543.796875,
+      "left": 0
+    },
+    "header": {
+      "x": 16,
+      "y": 16,
+      "width": 992,
+      "height": 72,
+      "top": 16,
+      "right": 1008,
+      "bottom": 88,
+      "left": 16
+    },
+    "workspace": {
+      "x": 16,
+      "y": 102,
+      "width": 992,
+      "height": 5425.796875,
+      "top": 102,
+      "right": 1008,
+      "bottom": 5527.796875,
+      "left": 16
+    },
+    "sidebar": {
+      "x": 16,
+      "y": 102,
+      "width": 260,
+      "height": 1152.296875,
+      "top": 102,
+      "right": 276,
+      "bottom": 1254.296875,
+      "left": 16
+    },
+    "viewer": {
+      "x": 292,
+      "y": 102,
+      "width": 716,
+      "height": 776.140625,
+      "top": 102,
+      "right": 1008,
+      "bottom": 878.140625,
+      "left": 292
+    },
+    "workflow": {
+      "x": 292,
+      "y": 894.140625,
+      "width": 716,
+      "height": 104,
+      "top": 894.140625,
+      "right": 1008,
+      "bottom": 998.140625,
+      "left": 292
+    },
+    "inspector": {
+      "x": 16,
+      "y": 1270.296875,
+      "width": 992,
+      "height": 4257.5,
+      "top": 1270.296875,
+      "right": 1008,
+      "bottom": 5527.796875,
+      "left": 16
+    },
+    "previewActions": {
+      "x": 835,
+      "y": 185,
+      "width": 156,
+      "height": 298,
+      "top": 185,
+      "right": 991,
+      "bottom": 483,
+      "left": 835
+    }
+  },
+  "demoMobile": {
+    "body": {
+      "scrollWidth": 390,
+      "scrollHeight": 6724,
+      "innerWidth": 390,
+      "innerHeight": 900,
+      "horizontalScroll": false
+    },
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 6723.796875,
+      "top": 0,
+      "right": 390,
+      "bottom": 6723.796875,
+      "left": 0
+    },
+    "header": {
+      "x": 10,
+      "y": 10,
+      "width": 370,
+      "height": 70,
+      "top": 10,
+      "right": 380,
+      "bottom": 80,
+      "left": 10
+    },
+    "workspace": {
+      "x": 10,
+      "y": 90,
+      "width": 370,
+      "height": 6623.796875,
+      "top": 90,
+      "right": 380,
+      "bottom": 6713.796875,
+      "left": 10
+    },
+    "sidebar": {
+      "x": 10,
+      "y": 630,
+      "width": 370,
+      "height": 664.359375,
+      "top": 630,
+      "right": 380,
+      "bottom": 1294.359375,
+      "left": 10
+    },
+    "viewer": {
+      "x": 10,
+      "y": 90,
+      "width": 370,
+      "height": 530,
+      "top": 90,
+      "right": 380,
+      "bottom": 620,
+      "left": 10
+    },
+    "workflow": {
+      "x": 10,
+      "y": 1304.359375,
+      "width": 370,
+      "height": 104,
+      "top": 1304.359375,
+      "right": 380,
+      "bottom": 1408.359375,
+      "left": 10
+    },
+    "inspector": {
+      "x": 10,
+      "y": 1418.359375,
+      "width": 370,
+      "height": 5295.4375,
+      "top": 1418.359375,
+      "right": 380,
+      "bottom": 6713.796875,
+      "left": 10
+    },
+    "previewActions": {
+      "x": 213,
+      "y": 309,
+      "width": 154,
+      "height": 298,
+      "top": 309,
+      "right": 367,
+      "bottom": 607,
+      "left": 213
+    }
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}

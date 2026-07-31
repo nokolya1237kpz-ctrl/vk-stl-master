@@ -4,15 +4,27 @@ import { Progress } from "@vkontakte/vkui";
 export const studioToolGroups = [
   {
     title: "Анализ",
-    items: ["check", "remove_artifacts", "improve", "surface", "local"],
+    caption: "Проверка модели перед обработкой",
+    items: ["check"],
   },
   {
-    title: "Геометрия",
-    items: ["split", "fit_to_bed", "reduce", "orientation", "auto_orientation", "symmetry"],
+    title: "Ремонт",
+    caption: "Исправление сетки и AI-артефактов",
+    items: ["remove_artifacts", "improve", "surface", "local"],
+  },
+  {
+    title: "Оптимизация",
+    caption: "Вес, ориентация и подготовка формы",
+    items: ["reduce", "orientation", "auto_orientation", "symmetry"],
+  },
+  {
+    title: "Подготовка",
+    caption: "Разрез и размещение под печать",
+    items: ["split", "fit_to_bed"],
   },
 ];
 
-export const studioSteps = ["Загрузка", "Анализ", "Настройка", "Обработка", "Проверка", "Экспорт"];
+export const studioSteps = ["Загрузка", "Анализ", "Ремонт", "Оптимизация", "Подготовка", "Скачать"];
 
 export function StudioHeader({
   currentUser,
@@ -67,18 +79,26 @@ export function StudioHeader({
   );
 }
 
-export function StudioSidebar({ presets, selectedMode, onSelect }) {
+export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false }) {
   const presetsById = new Map(presets.map((preset) => [preset.id, preset]));
+  const activeGroupTitle = studioToolGroups.find((group) => group.items.includes(selectedMode))?.title || "Анализ";
   return (
     <aside className="studioSidebar" aria-label="Инструменты STL Master Studio">
       <div className="studioSidebarTop">
-        <span className="studioPanelLabel">Инструменты</span>
+        <div className="studioToolsHeader">
+          <span className="studioPanelLabel">Операции</span>
+          <strong>{hasFile ? activeGroupTitle : "После загрузки STL"}</strong>
+          <small>{hasFile ? "Выберите действие и запустите pipeline." : "Сначала загрузите модель в центральную область."}</small>
+        </div>
         {studioToolGroups.map((group) => {
           const groupItems = group.items.map((id) => presetsById.get(id)).filter(Boolean);
           if (groupItems.length === 0) return null;
           return (
             <section className="studioToolGroup" key={group.title}>
-              <h2>{group.title}</h2>
+              <div className="studioToolGroupTitle">
+                <h2>{group.title}</h2>
+                <span>{group.caption}</span>
+              </div>
               <div className="studioToolList">
                 {groupItems.map((preset) => (
                   <button
@@ -86,6 +106,7 @@ export function StudioSidebar({ presets, selectedMode, onSelect }) {
                     key={preset.id}
                     type="button"
                     aria-pressed={selectedMode === preset.id}
+                    disabled={!hasFile && preset.id !== "check"}
                     onClick={() => onSelect(preset.id)}
                   >
                     <span className="studioToolIcon">{preset.icon}</span>
@@ -101,8 +122,8 @@ export function StudioSidebar({ presets, selectedMode, onSelect }) {
         })}
       </div>
       <div className="studioSidebarFoot">
-        <span>STL input</span>
-        <b>.stl</b>
+        <span>Формат входа</span>
+        <b>STL</b>
       </div>
     </aside>
   );
@@ -114,18 +135,17 @@ export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile,
       <div className="studioDropAura" aria-hidden="true">
         <Icon type="upload" />
       </div>
-      <p className="studioPanelLabel">Новая сцена</p>
-      <h1>Загрузите STL-модель</h1>
-      <p>
-        Перетащите файл в окно редактора или выберите его вручную. Для обработки собственных моделей нужен доступ, демо можно открыть без загрузки.
-      </p>
+      <p className="studioPanelLabel">Первый шаг</p>
+      <h1>Загрузите STL</h1>
+      <strong>Drag & Drop</strong>
+      <p>Перетащите модель в рабочую область или выберите файл вручную. Демо можно открыть отдельно, чтобы быстро посмотреть возможности Studio.</p>
       <div className="studioEmptyActions">
         <button className="studioPrimaryAction" type="button" onClick={hasUploadAccess ? onSelectFile : onRequestAccess}>
           <Icon type="upload" />
-          Выбрать STL-файл
+          Выбрать файл
         </button>
         <button className="studioTextAction" type="button" onClick={onOpenDemo}>
-          Открыть демо-модель
+          Попробовать демо
         </button>
         <button className="studioTextAction" type="button" onClick={onOpenRequirements}>
           Требования к файлу
@@ -142,15 +162,23 @@ export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile,
 
 export function StudioWorkflowBar({ selectedPreset, selectedOperations, jobId, jobStatus, progress, uploading, error, canRun, onRun, result, apiBaseUrl, operationTitles, shortJobId, statusMessage, ProgressComponent = Progress }) {
   const currentStatus = jobStatus?.status || (uploading ? "processing" : jobId ? "queued" : "idle");
+  const activeOperations = new Set(selectedOperations || []);
   const activeIndex =
     currentStatus === "completed" ? 5 :
       currentStatus === "failed" ? 4 :
         currentStatus === "processing" ? 3 :
           currentStatus === "queued" ? 2 :
-            selectedPreset?.id === "check" ? 1 : 2;
+            activeOperations.has("split_model") || activeOperations.has("fit_to_bed") ? 4 :
+              activeOperations.has("reduce_polygons") || activeOperations.has("apply_orientation") || activeOperations.has("auto_orientation") ? 3 :
+                activeOperations.has("print_repair") || activeOperations.has("remove_ai_artifacts") || activeOperations.has("surface_recovery") ? 2 :
+                  selectedPreset?.id === "check" ? 1 : 2;
   const downloadUrl = result?.download_url || jobStatus?.result?.download_url;
   return (
     <section className="studioWorkflowBar" aria-label="Ход обработки">
+      <div className="studioPipelineHeader">
+        <span className="studioPanelLabel">Pipeline</span>
+        <strong>{downloadUrl ? "Результат готов" : currentStatus === "idle" ? "Готов к запуску" : statusMessage(currentStatus, jobStatus?.message)}</strong>
+      </div>
       <div className="studioStepper">
         {studioSteps.map((step, index) => (
           <span className={index <= activeIndex ? "active" : ""} key={step} aria-current={index === activeIndex ? "step" : undefined}>
