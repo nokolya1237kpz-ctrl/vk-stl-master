@@ -1069,3 +1069,630 @@
   .studioInspector { grid-column: 1 / -1; }
   .studioWorkflowBar { grid-template-columns: 1fr; }
 }
+
+/* Stage 7.2.5: Studio UX/layout recovery. Route-scoped, no business logic changes. */
+.studioShell {
+  grid-template-rows: 72px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px;
+}
+
+.studioWorkspace {
+  display: grid;
+  grid-template-columns: 108px minmax(640px, 1fr) minmax(330px, 360px);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 14px;
+  min-height: 0;
+}
+
+.studioSidebar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.studioSidebarTop {
+  gap: 10px;
+}
+
+.studioSidebar .studioPanelLabel,
+.studioSidebarFoot {
+  justify-content: center;
+  text-align: center;
+}
+
+.studioToolGroup {
+  gap: 7px;
+}
+
+.studioToolGroup h2 {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.studioToolList {
+  gap: 7px;
+}
+
+.studioToolButton {
+  min-height: 62px;
+  padding: 8px 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.studioToolIcon {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+
+.studioToolButton span:not(.studioToolIcon) {
+  min-width: 0;
+}
+
+.studioToolButton b {
+  display: block;
+  max-width: 82px;
+  font-size: 10.5px;
+  line-height: 1.08;
+  white-space: normal;
+}
+
+.studioToolButton small {
+  display: none;
+}
+
+.studioViewerWorkspace {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.studioViewerWorkspace .previewPanel {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.studioViewerWorkspace .previewHeader {
+  min-height: 54px;
+  padding: 12px 14px;
+  border-bottom-color: rgba(128,163,205,.14);
+}
+
+.studioViewerWorkspace .previewCanvas {
+  min-height: 0;
+}
+
+.studioViewerWorkspace .previewActions {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 6;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: min(760px, calc(100% - 36px));
+  padding: 7px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid rgba(128,163,205,.2);
+  border-radius: 16px;
+  background: rgba(5, 10, 21, .78);
+  box-shadow: 0 18px 54px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter: blur(14px);
+}
+
+.studioViewerWorkspace .previewActions :is(button, a) {
+  min-height: 34px;
+  max-width: 158px;
+  padding: 0 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.studioViewerWorkspace .previewMeta,
+.studioViewerWorkspace .previewActions + .previewHelp {
+  display: none;
+}
+
+.studioWorkflowBar {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 76px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 360px);
+  align-items: center;
+  gap: 12px;
+}
+
+.studioStepper {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.studioStepper span {
+  min-height: 42px;
+  padding: 7px 8px;
+  align-items: center;
+  font-size: 10.5px;
+  line-height: 1.1;
+}
+
+.studioStepper i {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.studioRunPanel {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.studioRunMeta {
+  gap: 2px;
+}
+
+.studioRunMeta strong {
+  font-size: 13px;
+}
+
+.studioRunMeta span,
+.studioRunMeta em {
+  font-size: 11px;
+}
+
+.studioProgressMini {
+  gap: 6px;
+}
+
+.studioRunActions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.studioRunActions :is(.studioPrimaryAction, .studioSecondaryAction) {
+  min-height: 38px;
+  width: 100%;
+  justify-content: center;
+}
+
+.studioInspector {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.studioInspectorCard,
+.studioInspectorNote,
+.studioInspector .analysisResult,
+.studioInspector .jobInfoPanel,
+.studioInspector .feedbackPanel,
+.studioInspector .historySection,
+.studioSettingBlock {
+  padding: 12px;
+}
+
+.studioInspectorCard h2,
+.studioSettingBlock h3 {
+  margin: 3px 0 8px;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.studioInspectorLead,
+.studioInspectorCard p,
+.studioInspectorNote span {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.studioInspectorLead {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.studioUserCard dl,
+.studioInspectorCard dl {
+  gap: 6px;
+}
+
+.studioUserCard dl {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.studioInspectorCard dl div {
+  min-height: 34px;
+  padding: 8px;
+}
+
+.studioInspectorCard dt,
+.studioInspectorCard dd {
+  font-size: 11px;
+}
+
+.studioSettingBlock {
+  gap: 9px;
+}
+
+.studioCheckboxList {
+  gap: 6px;
+}
+
+.studioCheckboxList label,
+.studioSwitch {
+  min-height: 34px;
+  padding: 8px;
+}
+
+.studioSegmentGroup {
+  gap: 5px;
+}
+
+.studioSegmentGroup button {
+  min-height: 34px;
+  padding: 0 8px;
+}
+
+.studioRangeField,
+.studioTextField,
+.studioSizeGrid {
+  gap: 6px;
+}
+
+.studioInspector .analysisResult,
+.studioInspector .jobInfoPanel,
+.studioInspector .feedbackPanel {
+  max-height: 420px;
+  overflow: auto;
+}
+
+.studioInspector .historySection {
+  flex: 0 0 auto;
+}
+
+.studioInspector .historyList {
+  max-height: 390px;
+  overflow: auto;
+  gap: 8px;
+}
+
+.studioInspector .historyCard {
+  padding: 10px;
+  gap: 7px;
+}
+
+.studioInspector .historyCardTop {
+  gap: 8px;
+}
+
+.studioInspector .historyCard p {
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.studioInspector .historyActions,
+.studioInspector .historyFiles {
+  gap: 6px;
+}
+
+.studioInspector :is(button, a) {
+  min-height: 32px;
+  border: 1px solid rgba(128,163,205,.18);
+  border-radius: 10px;
+  background: rgba(6, 14, 28, .76);
+  color: #d8e6f8;
+  font: inherit;
+}
+
+.studioInspector :is(button, a):hover {
+  border-color: rgba(53,215,255,.34);
+  color: #fff;
+}
+
+.studioInspector :is(.downloadButton, .historyDownload, .copyJobButton) {
+  background: linear-gradient(135deg, rgba(53,215,255,.16), rgba(112,76,255,.16));
+  color: #c8f6ff;
+}
+
+.studioInspector .analysisPanel {
+  display: grid;
+  gap: 10px;
+}
+
+.studioInspector .analysisHeader h2,
+.studioInspector .currentResultBlock h3,
+.studioInspector .whatChangedPanel h3,
+.studioInspector .meshReport h3 {
+  margin: 3px 0 6px;
+  font-size: 18px;
+  line-height: 1.14;
+}
+
+.studioInspector .currentResultBlock,
+.studioInspector .whatChangedPanel,
+.studioInspector .localSmoothingSummary,
+.studioInspector .meshReport,
+.studioInspector .printabilityReport,
+.studioInspector .qualityGateCard,
+.studioInspector .resultFiles,
+.studioInspector details {
+  padding: 12px;
+  border: 1px solid rgba(128,163,205,.14);
+  border-radius: 14px;
+  background: rgba(5, 12, 24, .58);
+}
+
+.studioInspector details {
+  display: grid;
+  gap: 8px;
+}
+
+.studioInspector summary {
+  cursor: pointer;
+  list-style: none;
+  color: #c8f6ff;
+  font-weight: 750;
+}
+
+.studioInspector summary::-webkit-details-marker {
+  display: none;
+}
+
+.studioInspector summary::before {
+  content: "›";
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--color-cyan);
+  transform: translateY(-1px);
+}
+
+.studioInspector details[open] summary::before {
+  transform: rotate(90deg) translateX(1px);
+}
+
+.studioInspector :is(.analysisPanel, .analysisGrid, .whatChangedGrid, .improveStats, .meshStats, .resultFileList, .historyFileList) {
+  min-width: 0;
+}
+
+.studioInspector .analysisGrid,
+.studioInspector .whatChangedGrid,
+.studioInspector .improveStats,
+.studioInspector .meshStats,
+.studioInspector .resultFileList,
+.studioInspector .historyFileList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.studioInspector .whatChangedCard,
+.studioInspector .meshStats span,
+.studioInspector .improveStats span,
+.studioInspector .historyFileRow {
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(128,163,205,.12);
+  border-radius: 11px;
+  background: rgba(255,255,255,.035);
+}
+
+.studioInspector :is(p, li, span, dd, dt, strong, em, code) {
+  overflow-wrap: anywhere;
+}
+
+.studioInspector ul {
+  margin: 6px 0 0;
+  padding-left: 16px;
+}
+
+.studioInspector li {
+  margin: 3px 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.studioInspector .panelLabel,
+.studioInspector .historyMeta,
+.studioInspector .feedbackStatus {
+  color: #8fa4bd;
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.studioInspector .compareModeTabs,
+.studioInspector .compareToolbar,
+.studioInspector .compareHighlightActions,
+.studioInspector .historyActions,
+.studioInspector .feedbackChoice,
+.studioInspector .feedbackForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 8px;
+}
+
+.studioInspector .feedbackChoice button,
+.studioInspector .feedbackForm button,
+.studioInspector .compareModeTabs button,
+.studioInspector .compareHighlightActions button {
+  width: 100%;
+  justify-content: center;
+}
+
+.studioEmptyState {
+  min-height: 100%;
+  align-content: center;
+}
+
+.studioEmptyActions .studioPrimaryAction {
+  min-width: 190px;
+}
+
+.studioPrimaryAction:focus-visible,
+.studioSecondaryAction:focus-visible,
+.studioTextAction:focus-visible,
+.studioToolButton:focus-visible,
+.studioIconButton:focus-visible,
+.studioExportButton:focus-visible,
+.studioHeader button:focus-visible,
+.studioHeader a:focus-visible {
+  outline: 2px solid rgba(53, 215, 255, .9);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1280px) {
+  .studioWorkspace {
+    grid-template-columns: 96px minmax(560px, 1fr) minmax(300px, 330px);
+  }
+
+  .studioWorkflowBar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1180px) {
+  .studioShell {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    grid-template-rows: auto auto;
+  }
+
+  .studioWorkspace {
+    grid-template-columns: 80px minmax(0, 1fr);
+    grid-template-rows: minmax(520px, auto) auto auto;
+  }
+
+  .studioSidebar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .studioViewerWorkspace {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .studioWorkflowBar {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .studioInspector {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    overflow: visible;
+  }
+
+  .studioInspector .historyList,
+  .studioInspector .analysisResult,
+  .studioInspector .jobInfoPanel,
+  .studioInspector .feedbackPanel {
+    max-height: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .studioShell {
+    grid-template-rows: auto auto;
+    padding: 10px;
+  }
+
+  .studioWorkspace {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .studioViewerWorkspace {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 520px;
+  }
+
+  .studioSidebar {
+    grid-column: 1;
+    grid-row: 2;
+    order: initial;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .studioSidebarTop {
+    min-width: max-content;
+  }
+
+  .studioSidebar .studioPanelLabel,
+  .studioToolGroup h2,
+  .studioSidebarFoot {
+    display: none;
+  }
+
+  .studioToolGroup {
+    display: contents;
+  }
+
+  .studioToolList {
+    display: flex;
+    gap: 8px;
+  }
+
+  .studioToolButton {
+    width: 58px;
+    min-width: 58px;
+    min-height: 54px;
+  }
+
+  .studioToolButton span:not(.studioToolIcon) {
+    display: none;
+  }
+
+  .studioWorkflowBar {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .studioStepper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .studioInspector {
+    grid-column: 1;
+    grid-row: 4;
+    order: initial;
+  }
+
+  .studioViewerWorkspace .previewActions {
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "desktopMetrics": {
+    "scrollWidth": 1440,
+    "innerWidth": 1440,
+    "horizontalScroll": false,
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 1000,
+      "top": 0,
+      "right": 1440,
+      "bottom": 1000,
+      "left": 0
+    },
+    "header": {
+      "x": 14,
+      "y": 14,
+      "width": 1412,
+      "height": 72,
+      "top": 14,
+      "right": 1426,
+      "bottom": 86,
+      "left": 14
+    },
+    "workspace": {
+      "x": 14,
+      "y": 100,
+      "width": 1412,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 14
+    },
+    "sidebar": {
+      "x": 14,
+      "y": 100,
+      "width": 108,
+      "height": 886,
+      "top": 100,
+      "right": 122,
+      "bottom": 986,
+      "left": 14
+    },
+    "viewer": {
+      "x": 136,
+      "y": 100,
+      "width": 916,
+      "height": 768,
+      "top": 100,
+      "right": 1052,
+      "bottom": 868,
+      "left": 136
+    },
+    "inspector": {
+      "x": 1066,
+      "y": 100,
+      "width": 360,
+      "height": 886,
+      "top": 100,
+      "right": 1426,
+      "bottom": 986,
+      "left": 1066
+    },
+    "workflow": {
+      "x": 136,
+      "y": 882,
+      "width": 916,
+      "height": 104,
+      "top": 882,
+      "right": 1052,
+      "bottom": 986,
+      "left": 136
+    }
+  },
+  "tabletMetrics": {
+    "scrollWidth": 1024,
+    "innerWidth": 1024,
+    "horizontalScroll": false,
+    "sidebar": {
+      "x": 14,
+      "y": 100,
+      "width": 80,
+      "height": 638,
+      "top": 100,
+      "right": 94,
+      "bottom": 738,
+      "left": 14
+    },
+    "viewer": {
+      "x": 108,
+      "y": 100,
+      "width": 902,
+      "height": 520,
+      "top": 100,
+      "right": 1010,
+      "bottom": 620,
+      "left": 108
+    },
+    "workflow": {
+      "x": 108,
+      "y": 634,
+      "width": 902,
+      "height": 104,
+      "top": 634,
+      "right": 1010,
+      "bottom": 738,
+      "left": 108
+    },
+    "inspector": {
+      "x": 14,
+      "y": 752,
+      "width": 996,
+      "height": 4255.5,
+      "top": 752,
+      "right": 1010,
+      "bottom": 5007.5,
+      "left": 14
+    }
+  },
+  "mobileMetrics": {
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "horizontalScroll": false,
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 6353.328125,
+      "top": 0,
+      "right": 390,
+      "bottom": 6353.328125,
+      "left": 0
+    },
+    "header": {
+      "x": 10,
+      "y": 10,
+      "width": 370,
+      "height": 229.890625,
+      "top": 10,
+      "right": 380,
+      "bottom": 239.890625,
+      "left": 10
+    },
+    "workspace": {
+      "x": 10,
+      "y": 253.890625,
+      "width": 370,
+      "height": 6089.4375,
+      "top": 253.890625,
+      "right": 380,
+      "bottom": 6343.328125,
+      "left": 10
+    },
+    "sidebar": {
+      "x": 10,
+      "y": 787.890625,
+      "width": 370,
+      "height": 130,
+      "top": 787.890625,
+      "right": 380,
+      "bottom": 917.890625,
+      "left": 10
+    },
+    "viewer": {
+      "x": 10,
+      "y": 253.890625,
+      "width": 370,
+      "height": 520,
+      "top": 253.890625,
+      "right": 380,
+      "bottom": 773.890625,
+      "left": 10
+    },
+    "workflow": {
+      "x": 10,
+      "y": 931.890625,
+      "width": 370,
+      "height": 104,
+      "top": 931.890625,
+      "right": 380,
+      "bottom": 1035.890625,
+      "left": 10
+    },
+    "inspector": {
+      "x": 10,
+      "y": 1049.890625,
+      "width": 370,
+      "height": 5293.4375,
+      "top": 1049.890625,
+      "right": 380,
+      "bottom": 6343.328125,
+      "left": 10
+    },
+    "focusedActionText": [
+      "Запустить обработку"
+    ]
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}

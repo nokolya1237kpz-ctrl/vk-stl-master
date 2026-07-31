@@ -85,6 +85,7 @@ export function StudioSidebar({ presets, selectedMode, onSelect }) {
                     className={`studioToolButton ${selectedMode === preset.id ? "active" : ""}`}
                     key={preset.id}
                     type="button"
+                    aria-pressed={selectedMode === preset.id}
                     onClick={() => onSelect(preset.id)}
                   >
                     <span className="studioToolIcon">{preset.icon}</span>
@@ -152,7 +153,7 @@ export function StudioWorkflowBar({ selectedPreset, selectedOperations, jobId, j
     <section className="studioWorkflowBar" aria-label="Ход обработки">
       <div className="studioStepper">
         {studioSteps.map((step, index) => (
-          <span className={index <= activeIndex ? "active" : ""} key={step}>
+          <span className={index <= activeIndex ? "active" : ""} key={step} aria-current={index === activeIndex ? "step" : undefined}>
             <i>{index + 1}</i>
             {step}
           </span>

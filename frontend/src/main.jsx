@@ -7538,6 +7538,24 @@ function App() {
                 )}
               </section>
 
+              <StudioWorkflowBar
+                apiBaseUrl={apiBaseUrl}
+                canRun={canRunStudioJob}
+                error={error}
+                jobId={jobId}
+                jobStatus={jobStatus}
+                progress={progress}
+                result={jobStatus?.result}
+                selectedOperations={studioSelectedOperations}
+                selectedPreset={studioSelectedPreset}
+                uploading={uploading}
+                onRun={handleUpload}
+                operationTitles={operationTitles}
+                shortJobId={shortJobId}
+                statusMessage={statusMessage}
+                ProgressComponent={Progress}
+              />
+
               <aside className="studioInspector" aria-label="Инспектор модели и обработки">
                 <section className="studioInspectorCard studioUserCard">
                   <p className="studioPanelLabel">Пользователь</p>
@@ -7623,24 +7641,6 @@ function App() {
                 <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
               </aside>
             </section>
-
-            <StudioWorkflowBar
-              apiBaseUrl={apiBaseUrl}
-              canRun={canRunStudioJob}
-              error={error}
-              jobId={jobId}
-              jobStatus={jobStatus}
-              progress={progress}
-              result={jobStatus?.result}
-              selectedOperations={studioSelectedOperations}
-              selectedPreset={studioSelectedPreset}
-              uploading={uploading}
-              onRun={handleUpload}
-              operationTitles={operationTitles}
-              shortJobId={shortJobId}
-              statusMessage={statusMessage}
-              ProgressComponent={Progress}
-            />
 
             <input ref={studioFileInputRef} className="studioFileInput" type="file" accept=".stl" aria-label="Выбрать STL-файл" onChange={handleStudioFileChange} />
           </main>

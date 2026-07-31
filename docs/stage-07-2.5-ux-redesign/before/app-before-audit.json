@@ -1,0 +1,241 @@
+{
+  "metrics": {
+    "scrollWidth": 390,
+    "innerWidth": 390,
+    "horizontalScroll": false,
+    "shell": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 5903.609375,
+      "top": 0,
+      "right": 390,
+      "bottom": 5903.609375,
+      "left": 0
+    },
+    "header": {
+      "x": 10,
+      "y": 10,
+      "width": 370,
+      "height": 229.890625,
+      "top": 10,
+      "right": 380,
+      "bottom": 239.890625,
+      "left": 10
+    },
+    "workspace": {
+      "x": 10,
+      "y": 249.890625,
+      "width": 370,
+      "height": 5529.71875,
+      "top": 249.890625,
+      "right": 380,
+      "bottom": 5779.609375,
+      "left": 10
+    },
+    "sidebar": {
+      "x": 10,
+      "y": 783.890625,
+      "width": 370,
+      "height": 138,
+      "top": 783.890625,
+      "right": 380,
+      "bottom": 921.890625,
+      "left": 10
+    },
+    "viewer": {
+      "x": 10,
+      "y": 249.890625,
+      "width": 370,
+      "height": 520,
+      "top": 249.890625,
+      "right": 380,
+      "bottom": 769.890625,
+      "left": 10
+    },
+    "inspector": {
+      "x": 10,
+      "y": 935.890625,
+      "width": 370,
+      "height": 4843.71875,
+      "top": 935.890625,
+      "right": 380,
+      "bottom": 5779.609375,
+      "left": 10
+    },
+    "workflow": {
+      "x": 10,
+      "y": 5789.609375,
+      "width": 370,
+      "height": 104,
+      "top": 5789.609375,
+      "right": 380,
+      "bottom": 5893.609375,
+      "left": 10
+    },
+    "actionButtons": [
+      {
+        "text": "STL Master Studiodemo_original.stl",
+        "className": "studioBrand"
+      },
+      {
+        "text": "Получить Premium",
+        "className": "publicTopCta topCtaV8 premiumHeaderButtonV9 studioPremiumButton"
+      },
+      {
+        "text": "Помощь",
+        "className": "studioIconButton"
+      },
+      {
+        "text": "Экспорт",
+        "className": "studioExportButton"
+      },
+      {
+        "text": "🔎Проверить модельПонятный отчёт о состоянии STL",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "🧹Удалить AI-артефактыУбирает мусорные фрагменты",
+        "className": "studioToolButton active"
+      },
+      {
+        "text": "✨Улучшить модельИсправляет сетку и нормали",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "🎯Выборочная правкаЛокально сглаживает выбранную область",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "✂️Разрезать для склейкиЧасти со штифтами и пазами",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "🧩Разрезать под столЧасти помещаются на стол принтера",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "🪶Уменьшить весУменьшает количество полигонов",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "📐Применить ориентациюСохраняет текущий поворот",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "🧭Подобрать ориентацию для печатиВыбирает удобное положение",
+        "className": "studioToolButton "
+      },
+      {
+        "text": "По центру",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Повернуть X",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Повернуть Y",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Повернуть Z",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Поставить на стол",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Очистить",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Скриншот",
+        "className": "vkuiInternalTappable vkuiButton__host vkuiButton__sizeM vkuiButton__modeSecondary vkuiButton__appearanceAccent vkuiButton__sizeYNone vkuiTappable__host vkuiTappable__sizeXNone vkuiTappable__hasPointerNone vkuiClickable__host vkuiClickable__realClickable vkuistyles__-focus-visible vkuiRootComponent__host"
+      },
+      {
+        "text": "Аккуратно",
+        "className": ""
+      },
+      {
+        "text": "Баланс",
+        "className": "active"
+      },
+      {
+        "text": "Сильно",
+        "className": ""
+      },
+      {
+        "text": "Сравнить модели",
+        "className": ""
+      },
+      {
+        "text": "Подсветить изменения",
+        "className": ""
+      },
+      {
+        "text": "Фокус на изменениях",
+        "className": ""
+      },
+      {
+        "text": "Показать дефекты",
+        "className": ""
+      },
+      {
+        "text": "До обработки",
+        "className": ""
+      },
+      {
+        "text": "После обработки",
+        "className": "active"
+      },
+      {
+        "text": "Сравнить модели",
+        "className": "showChangesButton"
+      },
+      {
+        "text": "▶Текущая модельdemo_final.stl",
+        "className": "workflowPanelHeader currentModelHeader"
+      },
+      {
+        "text": "Показать историю",
+        "className": ""
+      },
+      {
+        "text": "Скопировать Job ID",
+        "className": "copyJobButton"
+      },
+      {
+        "text": "👍 Всё хорошо",
+        "className": ""
+      },
+      {
+        "text": "👎 Есть проблема",
+        "className": ""
+      },
+      {
+        "text": "▶ДополнительноИстория · JSON · Manifest",
+        "className": "workflowPanelHeader"
+      },
+      {
+        "text": "Скопировать Job ID",
+        "className": "copyJobButton"
+      },
+      {
+        "text": "👍 Всё хорошо",
+        "className": ""
+      },
+      {
+        "text": "👎 Есть проблема",
+        "className": ""
+      },
+      {
+        "text": "Запустить обработку",
+        "className": "studioPrimaryAction compact"
+      }
+    ]
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}
