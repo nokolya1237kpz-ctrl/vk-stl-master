@@ -666,6 +666,20 @@ function buildWhatChangedItems(result) {
   return items;
 }
 
+const splitPresetDefaults = {
+  split: { splitMode: "simple", lockProfile: "tongue_groove" },
+  split_pins: { splitMode: "pins", lockProfile: "tongue_groove" },
+  split_tongue: { splitMode: "lock", lockProfile: "tongue_groove" },
+  split_dovetail: { splitMode: "lock", lockProfile: "dovetail" },
+  split_puzzle: { splitMode: "slots", lockProfile: "wave" },
+};
+
+const splitPresetIds = new Set(Object.keys(splitPresetDefaults));
+
+function isSplitPreset(modeId) {
+  return splitPresetIds.has(modeId);
+}
+
 const operationPresets = [
   {
     id: "check",
@@ -728,11 +742,51 @@ const operationPresets = [
   },
   {
     id: "split",
-    title: "Разрезать для склейки",
-    description: "Делит модель на части для печати на маленьком столе. Можно выбрать ось и сместить плоскость разреза.",
-    result: "Части со штифтами и пазами",
+    title: "Плоский разрез",
+    description: "Обычный инженерный разрез без соединителей, пазов и штифтов. Только чистое разделение модели.",
+    result: "Части без соединений",
     icon: "✂️",
     status: "Pro",
+    featureKey: "split",
+    operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
+  },
+  {
+    id: "split_pins",
+    title: "Разрез со штифтами",
+    description: "Разделяет модель и готовит цилиндрические направляющие: диаметр, глубина, количество, отступ и автопозиционирование.",
+    result: "Части + штифты",
+    icon: "●",
+    status: "Pro",
+    featureKey: "split",
+    operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
+  },
+  {
+    id: "split_tongue",
+    title: "Разрез паз-гребень",
+    description: "Готовит стыковку по профилю паз-гребень для предсказуемого совмещения половин модели.",
+    result: "Профильный паз-гребень",
+    icon: "▰",
+    status: "Архитектура",
+    featureKey: "split",
+    operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
+  },
+  {
+    id: "split_dovetail",
+    title: "Ласточкин хвост",
+    description: "Подготавливает профиль с механической фиксацией на сдвиг. Генерация развивается поверх существующего lock-пайплайна.",
+    result: "Замок на сдвиг",
+    icon: "▣",
+    status: "Архитектура",
+    featureKey: "split",
+    operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
+  },
+  {
+    id: "split_puzzle",
+    title: "Пазловое соединение",
+    description: "Фундамент для волнового/пазлового соединения: предварительный просмотр и параметры соединителей уже отделены от обычного разреза.",
+    result: "Пазловый профиль",
+    icon: "⌁",
+    status: "Архитектура",
     featureKey: "split",
     operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
   },
@@ -804,11 +858,10 @@ const artifactCleanupStrengthOptions = [
 ];
 
 const splitModeOptions = [
-  { id: "simple", icon: "—", title: "Без соединения", description: "Только плоскость разреза." },
-  { id: "glue", icon: "▰", title: "Под клей", description: "Нахлёст и направляющие для совмещения." },
-  { id: "pins", icon: "●", title: "Штифты", description: "Цилиндрические штифты и ответные отверстия." },
-  { id: "magnets", icon: "◉", title: "Магниты", description: "Парные посадочные карманы под магниты." },
-  { id: "lock", icon: "▣", title: "Фигурный замок", description: "MVP паз-гребень для автоматического совмещения." },
+  { id: "simple", icon: "—", title: "Плоский разрез", description: "Одна секущая плоскость без соединителей." },
+  { id: "pins", icon: "●", title: "Штифты", description: "Цилиндрические направляющие и ответные отверстия." },
+  { id: "lock", icon: "▣", title: "Паз-гребень", description: "Профильная стыковка для точного совмещения." },
+  { id: "slots", icon: "⌁", title: "Пазловое соединение", description: "Основа для направляющих и пазлового профиля." },
 ];
 
 const connectorSizeOptions = [3, 4, 6];
@@ -824,6 +877,12 @@ const magnetSizeOptions = [
 ];
 const lockProfileOptions = [
   { id: "tongue_groove", title: "Паз-гребень" },
+  { id: "dovetail", title: "Ласточкин хвост" },
+  { id: "wave", title: "Пазловый профиль" },
+];
+const connectorPlacementOptions = [
+  { id: "auto", title: "Авто", description: "STL Master сам расставляет соединители в рабочей зоне." },
+  { id: "manual", title: "Ручная", description: "Архитектура для будущей корректировки позиций в viewer." },
 ];
 const splitModeTitles = Object.fromEntries(splitModeOptions.map((mode) => [mode.id, mode.title]));
 const bedSizeOptions = [
@@ -1230,6 +1289,7 @@ function StlPreview({
   file,
   sourceFile,
   splitPreviewEnabled,
+  splitOperationTitle,
   splitAxis,
   splitParts,
   splitMode,
@@ -2377,6 +2437,12 @@ function StlPreview({
             <small>Можно скачать результат или сравнить модели</small>
           </div>
         )}
+        {splitPreviewEnabled && previewState === "ready" && (
+          <div className="viewerSplitPreviewBadge" role="status">
+            <strong>{splitOperationTitle || "Split preview"}</strong>
+            <small>{splitParts} части · ось {String(splitAxis || "z").toUpperCase()} · {splitModeTitles[splitMode] || splitMode}</small>
+          </div>
+        )}
       </div>
       <p className="previewHelp">Если модель лежит не так, используйте кнопки поворота. Это меняет только просмотр, STL на сервере не изменяется.</p>
       {localSelectionEnabled && (
@@ -2410,16 +2476,30 @@ function StlPreview({
       {isLargeFile && (
         <p className="previewWarning">Файл большой, 3D-просмотр может занять время и нагрузить устройство.</p>
       )}
-      <div className="previewActions">
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={centerView}>По центру</Button>
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={() => rotateModel("x")}>Повернуть X</Button>
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={() => rotateModel("y")}>Повернуть Y</Button>
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={() => rotateModel("z")}>Повернуть Z</Button>
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={placeModelOnTable}>Поставить на стол</Button>
-        <Button size="m" mode="secondary" onClick={clearScene}>Очистить</Button>
-        <Button size="m" mode="secondary" disabled={previewState !== "ready"} onClick={takeScreenshot}>
-          Скриншот
-        </Button>
+      <div className="previewActions viewerToolbar" aria-label="Панель инструментов просмотра">
+        <span className="viewerToolbarHint" title="Центрировать — вернуть модель в центр viewport. Горячая клавиша: C">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Центрировать модель, клавиша C" onClick={centerView}>По центру</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Повернуть по X — развернуть модель вокруг оси X. Горячая клавиша: X">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси X" onClick={() => rotateModel("x")}>Повернуть X</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Повернуть по Y — развернуть модель вокруг оси Y. Горячая клавиша: Y">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Y" onClick={() => rotateModel("y")}>Повернуть Y</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Повернуть по Z — развернуть модель вокруг оси Z. Горячая клавиша: Z">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Z" onClick={() => rotateModel("z")}>Повернуть Z</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Сбросить положение — поставить модель на стол и обновить рабочую ориентацию.">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сбросить положение модели на стол" onClick={placeModelOnTable}>Поставить на стол</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Очистить — убрать текущую сцену и выбрать другой STL.">
+          <Button size="m" mode="secondary" aria-label="Очистить сцену просмотра" onClick={clearScene}>Очистить</Button>
+        </span>
+        <span className="viewerToolbarHint" title="Сделать снимок — сохранить PNG текущего viewport.">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сделать снимок viewport" onClick={takeScreenshot}>
+            Скриншот
+          </Button>
+        </span>
       </div>
     </div>
   );
@@ -5829,6 +5909,7 @@ function ContextResultPanel({ apiBaseUrl, result, onCompare, onOpenResult, onRep
         <h2>Результат готов</h2>
         <p className="studioInspectorLead">Главное действие — скачать ZIP. Отдельные файлы и технические детали доступны по запросу.</p>
         {zipUrl && <a className="contextPrimaryDownload" href={`${apiBaseUrl}${zipUrl}`}>Скачать ZIP</a>}
+        <span className="contextDownloadLabel">Дополнительные файлы</span>
         <div className="contextDownloadGrid">
           {stlUrl && <a href={`${apiBaseUrl}${stlUrl}`}>STL</a>}
           {jsonFile && <a href={`${apiBaseUrl}${fileUrl(jsonFile)}`}>JSON</a>}
@@ -6708,6 +6789,7 @@ function App() {
   const [connectorCount, setConnectorCount] = useState(2);
   const [connectorDepth, setConnectorDepth] = useState(6);
   const [connectorWallThickness, setConnectorWallThickness] = useState(1.2);
+  const [connectorPlacement, setConnectorPlacement] = useState("auto");
   const [magnetSize, setMagnetSize] = useState("6x2");
   const [lockProfile, setLockProfile] = useState("tongue_groove");
   const [bedSizePreset, setBedSizePreset] = useState("220");
@@ -7400,6 +7482,17 @@ function App() {
 
   const studioSelectedPreset = operationPresets.find((preset) => preset.id === selectedMode) || operationPresets[0];
   const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode));
+  const splitWorkflowActive = isSplitPreset(selectedMode);
+  const selectedSplitModeOption = splitModeOptions.find((mode) => mode.id === splitMode);
+
+  const selectStudioMode = (modeId) => {
+    setSelectedMode(modeId);
+    const splitDefaults = splitPresetDefaults[modeId];
+    if (splitDefaults) {
+      setSplitMode(splitDefaults.splitMode);
+      setLockProfile(splitDefaults.lockProfile);
+    }
+  };
   const studioGeneratedFiles = Array.isArray(jobStatus?.result?.generated_files) ? jobStatus.result.generated_files : [];
   const canRunStudioJob = Boolean(file && hasUploadAccess);
   const jobIsRunning = uploading || ["queued", "processing", "running"].includes(jobStatus?.status);
@@ -7509,11 +7602,17 @@ function App() {
       );
     }
 
-    if (selectedMode === "split") {
+    if (splitWorkflowActive) {
+      const connectorEnabled = splitMode !== "simple";
+      const lockProfileVisible = splitMode === "lock" || splitMode === "slots";
       return (
-        <div className="studioSettingBlock">
+        <div className="studioSettingBlock splitSetupPanel">
           <h3>Плоскость разреза</h3>
-          <p>Настройте положение секущей плоскости и тип соединения для сборки после печати.</p>
+          <p>{studioSelectedPreset.title}: {studioSelectedPreset.description}</p>
+          <div className="splitModeSummary" aria-live="polite">
+            <strong>{selectedSplitModeOption?.title || "Split"}</strong>
+            <span>{selectedSplitModeOption?.description || "Предварительный просмотр разреза активен."}</span>
+          </div>
           <span className="studioSettingLabel">Ось разреза</span>
           {renderOptionButtons(["x", "y", "z"], splitAxis, setSplitAxis, (item) => item.toUpperCase())}
           <span className="studioSettingLabel">Количество частей</span>
@@ -7522,15 +7621,37 @@ function App() {
             <span>Смещение плоскости: {Number(splitPlaneOffset || 0)} мм</span>
             <input type="range" min="-100" max="100" step="1" value={splitPlaneOffset} onChange={(event) => setSplitPlaneOffset(Number(event.target.value) || 0)} />
           </label>
-          <span className="studioSettingLabel">Тип соединения</span>
-          {renderOptionButtons(splitModeOptions, splitMode, setSplitMode, (item) => item.title)}
-          {splitMode !== "simple" && (
+          {connectorEnabled && (
             <>
-              <span className="studioSettingLabel">Зазор</span>
+              <span className="studioSettingLabel">Диаметр / размер</span>
+              {renderOptionButtons(connectorSizeOptions, connectorSize, setConnectorSize, (item) => `${item} мм`)}
+              <span className="studioSettingLabel">Глубина</span>
+              {renderOptionButtons(connectorDepthOptions, connectorDepth, setConnectorDepth, (item) => `${item} мм`)}
+              <span className="studioSettingLabel">Отступ / зазор</span>
               {renderOptionButtons(connectorClearanceOptions, connectorClearance, setConnectorClearance, (item) => `${item} мм`)}
-              <span className="studioSettingLabel">{splitMode === "magnets" ? "Количество пар" : "Количество соединителей"}</span>
+              <span className="studioSettingLabel">Количество</span>
               {renderOptionButtons(connectorCountOptions, connectorCount, setConnectorCount)}
+              <span className="studioSettingLabel">Расстановка</span>
+              {renderOptionButtons(connectorPlacementOptions, connectorPlacement, setConnectorPlacement, (item) => item.title)}
+              {lockProfileVisible && (
+                <>
+                  <span className="studioSettingLabel">Профиль</span>
+                  {renderOptionButtons(lockProfileOptions, lockProfile, setLockProfile, (item) => item.title)}
+                </>
+              )}
+              {splitMode === "pins" && (
+                <div className="splitEngineeringNote">
+                  <b>Штифты готовы к настройке</b>
+                  <span>Диаметр, глубина, количество и отступ передаются в pipeline. Ручная корректировка подготовлена как режим интерфейса.</span>
+                </div>
+              )}
             </>
+          )}
+          {splitMode === "simple" && (
+            <div className="splitEngineeringNote">
+              <b>Только разделение модели</b>
+              <span>Соединители не создаются. Viewer показывает одну область разрезания до запуска обработки.</span>
+            </div>
           )}
         </div>
       );
@@ -7821,14 +7942,15 @@ function App() {
             )}
 
             <section className="studioWorkspace">
-              <StudioSidebar presets={visiblePresets} selectedMode={selectedMode} onSelect={setSelectedMode} hasFile={Boolean(file)} />
+              <StudioSidebar presets={visiblePresets} selectedMode={selectedMode} onSelect={selectStudioMode} hasFile={Boolean(file)} />
 
               <section className="studioViewerWorkspace" aria-label="3D viewport STL Master Studio" onDrop={handleStudioDrop} onDragOver={handleStudioDragOver}>
                 {file ? (
                   <StlPreview
                     file={activePreviewFile}
                     sourceFile={file}
-                    splitPreviewEnabled={selectedMode === "split"}
+                    splitPreviewEnabled={splitWorkflowActive}
+                    splitOperationTitle={studioSelectedPreset?.title}
                     splitAxis={splitAxis}
                     splitParts={splitParts}
                     splitMode={splitMode}

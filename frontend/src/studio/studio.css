@@ -2675,3 +2675,90 @@
     border-radius: 20px;
   }
 }
+
+
+/* Stage 8.0 professional preparation */
+.splitSetupPanel {
+  gap: 12px;
+}
+
+.splitModeSummary,
+.splitEngineeringNote {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgba(53, 215, 255, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(53, 215, 255, 0.09), rgba(124, 92, 255, 0.055));
+  color: rgba(225, 238, 255, 0.86);
+}
+
+.splitModeSummary strong,
+.splitEngineeringNote b {
+  color: #f8fbff;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.splitModeSummary span,
+.splitEngineeringNote span {
+  color: rgba(166, 184, 207, 0.92);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.viewerSplitPreviewBadge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 6;
+  display: grid;
+  gap: 3px;
+  max-width: min(330px, calc(100% - 36px));
+  padding: 10px 12px;
+  border: 1px solid rgba(53, 215, 255, 0.28);
+  border-radius: 14px;
+  background: rgba(3, 9, 18, 0.78);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35), 0 0 24px rgba(53, 215, 255, 0.12);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.viewerSplitPreviewBadge strong {
+  color: #f8fbff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.viewerSplitPreviewBadge small {
+  color: rgba(158, 178, 203, 0.95);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.viewerToolbarHint {
+  display: inline-flex;
+}
+
+.viewerToolbar :is(button, a)[title] {
+  cursor: help;
+}
+
+.contextDownloadLabel {
+  display: block;
+  margin-top: 12px;
+  color: rgba(148, 163, 184, 0.96);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .viewerSplitPreviewBadge {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+}

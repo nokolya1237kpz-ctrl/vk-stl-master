@@ -18,9 +18,14 @@ export const studioToolGroups = [
     items: ["reduce", "orientation", "auto_orientation", "symmetry"],
   },
   {
-    title: "Подготовка",
-    caption: "Разрез и размещение под печать",
-    items: ["split", "fit_to_bed"],
+    title: "Разделение",
+    caption: "Плоский разрез и типы соединений",
+    items: ["split", "split_pins", "split_tongue", "split_dovetail", "split_puzzle", "fit_to_bed"],
+  },
+  {
+    title: "Экспорт",
+    caption: "Пакет STL, ZIP, JSON и TXT",
+    items: [],
   },
 ];
 
