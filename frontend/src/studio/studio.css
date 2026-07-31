@@ -2429,3 +2429,249 @@
     content: "▣";
   }
 }
+
+/* Stage 7.2.7 contextual inspector */
+.studioInspector:is(.contextState-start, .contextState-model, .contextState-analysis, .contextState-processing, .contextState-result) {
+  gap: 12px;
+}
+
+.contextStartPanel,
+.contextModelCard,
+.contextAnalysisCard,
+.contextProcessingCard,
+.contextResultCard {
+  border-color: rgba(53, 215, 255, .2);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(53, 215, 255, .08), transparent 32%),
+    rgba(8, 16, 31, .72);
+}
+
+.contextModelCard dl,
+.contextProcessingCard dl {
+  grid-template-columns: 1fr;
+}
+
+.contextModelCard dl div,
+.contextProcessingCard dl div,
+.contextStartPanel dl div {
+  align-items: start;
+}
+
+.contextOperationCard {
+  border-color: rgba(128, 163, 205, .14);
+  background: rgba(5, 12, 24, .54);
+}
+
+.contextPanelActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.contextPanelActions button,
+.contextResultActions button,
+.contextDownloadGrid a,
+.contextPrimaryDownload {
+  min-height: 38px;
+  border: 1px solid rgba(128, 163, 205, .18);
+  border-radius: 12px;
+  background: rgba(7, 15, 29, .72);
+  color: #d8e6f8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-weight: 750;
+}
+
+.contextPanelActions button:hover,
+.contextResultActions button:hover,
+.contextDownloadGrid a:hover {
+  border-color: rgba(53, 215, 255, .42);
+  color: #fff;
+}
+
+.contextScore,
+.contextProgressValue {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid rgba(53, 215, 255, .18);
+  border-radius: 16px;
+  background: rgba(53, 215, 255, .06);
+}
+
+.contextScore span,
+.contextProgressValue span,
+.contextIssueGrid em {
+  color: #8fa4bd;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-style: normal;
+}
+
+.contextScore strong,
+.contextProgressValue strong {
+  color: #f8fbff;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.contextIssueGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.contextIssueGrid span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid rgba(128, 163, 205, .14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.contextIssueGrid strong {
+  color: #f8fbff;
+  font-size: 18px;
+}
+
+.contextListCard ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.contextListCard li {
+  margin: 6px 0;
+}
+
+.contextProcessingCard.failed {
+  border-color: rgba(255, 95, 128, .34);
+  background: linear-gradient(180deg, rgba(255, 95, 128, .1), rgba(8, 16, 31, .72));
+}
+
+.contextResultCard {
+  display: grid;
+  gap: 12px;
+}
+
+.contextPrimaryDownload {
+  min-height: 50px;
+  border-color: rgba(53, 215, 255, .42);
+  background: linear-gradient(135deg, #35d7ff, #704cff);
+  color: #fff;
+  box-shadow: 0 16px 42px rgba(53, 215, 255, .2);
+}
+
+.contextDownloadGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.contextResultActions {
+  display: grid;
+  gap: 8px;
+}
+
+.contextResultActions button:disabled,
+.contextPanelActions button:disabled {
+  opacity: .52;
+  cursor: not-allowed;
+}
+
+.studioContextOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2200;
+  display: grid;
+  justify-items: end;
+  background: rgba(1, 5, 12, .38);
+}
+
+.studioContextBackdrop {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+}
+
+.studioContextDrawer {
+  position: relative;
+  width: min(560px, calc(100vw - 28px));
+  height: calc(100dvh - 28px);
+  margin: 14px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  border: 1px solid rgba(53, 215, 255, .22);
+  border-radius: 24px;
+  background: rgba(5, 11, 23, .94);
+  box-shadow: 0 32px 120px rgba(0, 0, 0, .52);
+  overflow: hidden;
+}
+
+.studioContextDrawer > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid rgba(128, 163, 205, .14);
+}
+
+.studioContextDrawer h2 {
+  margin: 3px 0 0;
+  color: #f8fbff;
+  font-size: 24px;
+  letter-spacing: -.035em;
+}
+
+.studioContextDrawer > header button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(128, 163, 205, .18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .035);
+  color: #d8e6f8;
+  font-size: 22px;
+}
+
+.studioContextDrawerBody {
+  min-height: 0;
+  overflow: auto;
+  padding: 16px;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.studioContextDrawerBody .historySection,
+.studioContextDrawerBody .jobInfoPanel,
+.studioContextDrawerBody .feedbackPanel,
+.studioContextDrawerBody .analysisPanel,
+.studioContextDrawerBody .generatedFilesPanel {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(128, 163, 205, .14);
+  border-radius: 18px;
+  background: rgba(8, 16, 31, .62);
+}
+
+@media (max-width: 760px) {
+  .contextPanelActions,
+  .contextIssueGrid,
+  .contextDownloadGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studioContextDrawer {
+    width: calc(100vw - 20px);
+    height: calc(100dvh - 20px);
+    margin: 10px;
+    border-radius: 20px;
+  }
+}

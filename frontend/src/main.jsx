@@ -5652,6 +5652,201 @@ function FeedbackPanel({ apiBaseUrl, jobStatus }) {
   );
 }
 
+function ContextPanelActions({ onHistory, onDetails, onFeedback, showFeedback = false }) {
+  return (
+    <div className="contextPanelActions" aria-label="Дополнительные действия">
+      <button type="button" onClick={onHistory}>История</button>
+      <button type="button" onClick={onDetails}>Подробнее</button>
+      {showFeedback && <button type="button" onClick={onFeedback}>Отзыв</button>}
+    </div>
+  );
+}
+
+function ContextOverlay({ title, subtitle, onClose, children }) {
+  return (
+    <div className="studioContextOverlay" role="dialog" aria-modal="true" aria-label={title}>
+      <div className="studioContextBackdrop" onClick={onClose} />
+      <section className="studioContextDrawer">
+        <header>
+          <div>
+            <p className="studioPanelLabel">{subtitle}</p>
+            <h2>{title}</h2>
+          </div>
+          <button type="button" onClick={onClose} aria-label="Закрыть">×</button>
+        </header>
+        <div className="studioContextDrawerBody">
+          {children}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function ContextStartPanel({ uploadLimitMb, onHistory }) {
+  return (
+    <section className="studioInspectorCard studioNextStepCard contextStartPanel">
+      <p className="studioPanelLabel">Начало работы</p>
+      <h2>Загрузите STL</h2>
+      <p className="studioInspectorLead">Правая панель будет меняться по шагам: модель, анализ, обработка и результат. Сейчас нужен только файл.</p>
+      <dl>
+        <div><dt>Формат</dt><dd>.stl</dd></div>
+        <div><dt>Лимит</dt><dd>{uploadLimitMb} МБ</dd></div>
+        <div><dt>Демо</dt><dd>Отдельно</dd></div>
+        <div><dt>История</dt><dd><button type="button" onClick={onHistory}>Открыть</button></dd></div>
+      </dl>
+    </section>
+  );
+}
+
+function ContextModelPanel({ file, result, selectedPreset, settings, uploadLimitMb, onHistory, onDetails }) {
+  const dimensions = result?.dimensions || {};
+  const printability = result?.printability || {};
+  const modelQa = result?.model_qa || {};
+  const boundingBox =
+    dimensions.width || dimensions.depth || dimensions.height
+      ? `${formatMetric(dimensions.width)} × ${formatMetric(dimensions.depth)} × ${formatMetric(dimensions.height)} мм`
+      : "После анализа";
+  return (
+    <>
+      <section className="studioInspectorCard contextModelCard">
+        <p className="studioPanelLabel">Текущая модель</p>
+        <h2>{file?.name || "STL-модель"}</h2>
+        <p className="studioInspectorLead">Здесь только данные текущего файла. История, отзывы и технические детали открываются отдельно.</p>
+        <dl>
+          <div><dt>Размер файла</dt><dd>{formatBytes(file?.size)}</dd></div>
+          <div><dt>Треугольники</dt><dd>{formatMetric(result?.triangles ?? result?.triangles_count ?? modelQa.faces)}</dd></div>
+          <div><dt>Размеры</dt><dd>{boundingBox}</dd></div>
+          <div><dt>Объём</dt><dd>{formatMetric(result?.volume_cm3 ?? result?.volume, result?.volume_cm3 ? " см³" : "")}</dd></div>
+          <div><dt>Поверхности</dt><dd>{formatMetric(result?.surfaces_count ?? modelQa.components)}</dd></div>
+          <div><dt>Bounding Box</dt><dd>{boundingBox}</dd></div>
+          <div><dt>Стол</dt><dd>{printability.bed_fit_220_220_250 === undefined ? "После анализа" : printability.bed_fit_220_220_250 ? "Помещается" : "Не помещается"}</dd></div>
+          <div><dt>Лимит STL</dt><dd>{uploadLimitMb} МБ</dd></div>
+        </dl>
+      </section>
+
+      <section className="studioInspectorCard studioOperationCard contextOperationCard">
+        <p className="studioPanelLabel">Текущая операция</p>
+        <h2>{selectedPreset.title}</h2>
+        <p className="studioInspectorLead">{selectedPreset.description}</p>
+        {settings}
+      </section>
+
+      <ContextPanelActions onHistory={onHistory} onDetails={onDetails} />
+    </>
+  );
+}
+
+function ContextAnalysisPanel({ result, onHistory, onDetails }) {
+  const modelQa = result?.model_qa || {};
+  const artifactQuality = modelQa.artifact_quality || {};
+  const printability = result?.printability || {};
+  const warnings = [
+    ...(printability.warnings || []),
+    Number(modelQa.open_edges || 0) > 0 ? `Открытые края: ${formatMetric(modelQa.open_edges)}` : null,
+    Number(modelQa.non_manifold_edges || 0) > 0 ? `Non-manifold рёбра: ${formatMetric(modelQa.non_manifold_edges)}` : null,
+    Number(modelQa.tiny_islands || 0) > 0 ? `Мелкие островки: ${formatMetric(modelQa.tiny_islands)}` : null,
+    Number(artifactQuality.suspicious_regions || 0) > 0 ? `Подозрительные зоны: ${formatMetric(artifactQuality.suspicious_regions)}` : null,
+  ].filter(Boolean);
+  const recommendations = printability.recommendations || [];
+  return (
+    <>
+      <section className="studioInspectorCard contextAnalysisCard">
+        <p className="studioPanelLabel">Анализ модели</p>
+        <h2>{modelQa.health_label || "Проверка завершена"}</h2>
+        <div className="contextScore">
+          <span>Оценка</span>
+          <strong>{formatMetric(modelQa.health_score ?? result?.score ?? 0)}</strong>
+        </div>
+        <div className="contextIssueGrid">
+          <span><em>Ошибки</em><strong>{formatMetric(Number(modelQa.non_manifold_edges || 0) + Number(modelQa.open_edges || 0))}</strong></span>
+          <span><em>Предупреждения</em><strong>{formatMetric(warnings.length)}</strong></span>
+          <span><em>Артефакты</em><strong>{formatMetric(artifactQuality.suspicious_regions)}</strong></span>
+        </div>
+      </section>
+
+      <section className="studioInspectorCard contextListCard">
+        <p className="studioPanelLabel">Что проверить</p>
+        <h2>Ошибки и предупреждения</h2>
+        {warnings.length ? (
+          <ul>{warnings.slice(0, 6).map((item) => <li key={item}>{item}</li>)}</ul>
+        ) : (
+          <p>Критичных ошибок не найдено.</p>
+        )}
+      </section>
+
+      <section className="studioInspectorCard contextListCard">
+        <p className="studioPanelLabel">Рекомендации</p>
+        <h2>Следующий шаг</h2>
+        {recommendations.length ? (
+          <ul>{recommendations.slice(0, 5).map((item) => <li key={item}>{item}</li>)}</ul>
+        ) : (
+          <p>Можно выбрать ремонт, оптимизацию или подготовку к печати.</p>
+        )}
+      </section>
+
+      <ContextPanelActions onHistory={onHistory} onDetails={onDetails} />
+    </>
+  );
+}
+
+function ContextProcessingPanel({ jobStatus, progress, statusMessage }) {
+  const operations = Array.isArray(jobStatus?.operations) ? jobStatus.operations : [];
+  const currentOperation = operations.map((operation) => operationTitles[operation] || operation).join(" · ") || "Подготовка результата";
+  const isFailed = jobStatus?.status === "failed";
+  return (
+    <section className={`studioInspectorCard contextProcessingCard ${isFailed ? "failed" : ""}`}>
+      <p className="studioPanelLabel">Обработка</p>
+      <h2>{isFailed ? "Обработка остановлена" : "Идёт обработка"}</h2>
+      <div className="contextProgressValue">
+        <strong>{formatMetric(progress, "%")}</strong>
+        <span>{currentOperation}</span>
+      </div>
+      <Progress value={progress} />
+      <dl>
+        <div><dt>Текущая операция</dt><dd>{currentOperation}</dd></div>
+        <div><dt>Статус</dt><dd>{statusLabel(jobStatus?.status)}</dd></div>
+        <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus?.estimated_wait_seconds)}</dd></div>
+        <div><dt>Следующий этап</dt><dd>{jobStatus?.status === "queued" ? "Запуск worker" : "Формирование результата"}</dd></div>
+      </dl>
+      <p>{statusMessage(jobStatus?.status, jobStatus?.message)}</p>
+    </section>
+  );
+}
+
+function ContextResultPanel({ apiBaseUrl, result, onCompare, onOpenResult, onRepeat, onHistory, onDetails, onFeedback, canRun, uploading }) {
+  const generatedFiles = Array.isArray(result?.generated_files) ? result.generated_files : [];
+  const zipUrl = result?.download_url;
+  const stlUrl = getProcessedPreviewUrl(result);
+  const jsonFile = generatedFiles.find((file) => String(file.name || "").toLowerCase().endsWith(".json") && !String(file.name || "").toLowerCase().includes("manifest"));
+  const txtFile = generatedFiles.find((file) => String(file.name || "").toLowerCase().endsWith(".txt"));
+  const fileUrl = (file) => file?.download_url || file?.url;
+
+  return (
+    <>
+      <section className="studioInspectorCard contextResultCard">
+        <p className="studioPanelLabel">Результат</p>
+        <h2>Результат готов</h2>
+        <p className="studioInspectorLead">Главное действие — скачать ZIP. Отдельные файлы и технические детали доступны по запросу.</p>
+        {zipUrl && <a className="contextPrimaryDownload" href={`${apiBaseUrl}${zipUrl}`}>Скачать ZIP</a>}
+        <div className="contextDownloadGrid">
+          {stlUrl && <a href={`${apiBaseUrl}${stlUrl}`}>STL</a>}
+          {jsonFile && <a href={`${apiBaseUrl}${fileUrl(jsonFile)}`}>JSON</a>}
+          {txtFile && <a href={`${apiBaseUrl}${fileUrl(txtFile)}`}>TXT</a>}
+        </div>
+      </section>
+
+      <section className="studioInspectorCard contextResultActions">
+        <p className="studioPanelLabel">Действия</p>
+        <button type="button" onClick={onCompare}>Compare</button>
+        <button type="button" onClick={onOpenResult} disabled={!stlUrl}>Открыть результат</button>
+        <button type="button" onClick={onRepeat} disabled={!canRun || uploading}>{uploading ? "Запускаем..." : "Повторить обработку"}</button>
+      </section>
+
+      <ContextPanelActions onHistory={onHistory} onDetails={onDetails} onFeedback={onFeedback} showFeedback />
+    </>
+  );
+}
+
 function AnalysisResult({
   result,
   jobStatus,
@@ -6555,6 +6750,7 @@ function App() {
   const [artifactMapData, setArtifactMapData] = useState(null);
   const [artifactMapLoading, setArtifactMapLoading] = useState(false);
   const [artifactMapError, setArtifactMapError] = useState("");
+  const [studioOverlay, setStudioOverlay] = useState(null);
   const apiBaseUrl = useMemo(getApiBaseUrl, []);
   const visiblePresets = useMemo(() => visiblePresetsForFlags(featureFlags), [featureFlags]);
   const uploadLimitMb = Number(currentUser?.limits?.max_file_size_mb || featureFlags.active_upload_limit_mb || featureFlags.beta_upload_limit_mb || 100);
@@ -6702,6 +6898,7 @@ function App() {
     setArtifactMapError("");
     setArtifactMapLoading(false);
     setLocalSelection(null);
+    setStudioOverlay(null);
   }, [file?.name, file?.size]);
 
   useEffect(() => {
@@ -7196,6 +7393,7 @@ function App() {
     setError("");
     setPreviewMode("before");
     setProcessedPreviewFile(null);
+    setStudioOverlay(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -7203,6 +7401,10 @@ function App() {
   const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode));
   const studioGeneratedFiles = Array.isArray(jobStatus?.result?.generated_files) ? jobStatus.result.generated_files : [];
   const canRunStudioJob = Boolean(file && hasUploadAccess);
+  const jobIsRunning = uploading || ["queued", "processing", "running"].includes(jobStatus?.status);
+  const jobIsAnalysis = jobStatus?.status === "completed" && selectedMode === "check";
+  const jobIsCompleted = jobStatus?.status === "completed" && !jobIsAnalysis;
+  const resultStlUrl = getProcessedPreviewUrl(jobStatus?.result);
 
   const renderOptionButtons = (items, value, onChange, formatter = (item) => item) => (
     <div className="studioSegmentGroup">
@@ -7418,6 +7620,134 @@ function App() {
     return null;
   };
 
+  const renderAnalysisResultDetails = () => (
+    jobStatus?.status === "completed" ? (
+      <AnalysisResult
+        activePanel={activePanel}
+        apiBaseUrl={apiBaseUrl}
+        result={jobStatus.result}
+        jobStatus={jobStatus}
+        sourceFile={file}
+        processedPreviewFile={processedPreviewFile}
+        setActivePanel={setActivePanel}
+        compareMode={previewMode}
+        hasProcessedPreview={Boolean(processedPreviewFile)}
+        processedPreviewLoading={processedPreviewLoading}
+        processedPreviewError={processedPreviewError}
+        heatmapEnabled={heatmapEnabled}
+        heatmapData={heatmapData}
+        heatmapLoading={heatmapLoading}
+        heatmapError={heatmapError}
+        focusChangesVersion={focusChangesVersion}
+        artifactMapEnabled={artifactMapEnabled}
+        artifactMapData={artifactMapData}
+        artifactMapLoading={artifactMapLoading}
+        artifactMapError={artifactMapError}
+        onCompareModeChange={(mode) => {
+          setHeatmapEnabled(false);
+          setArtifactMapEnabled(false);
+          setPreviewMode(mode);
+        }}
+        onShowChanges={handleShowChanges}
+        onFocusChanges={handleFocusChanges}
+        onShowArtifacts={handleShowArtifacts}
+        onOpenHistoryFile={handleOpenHistoryFile}
+      />
+    ) : null
+  );
+
+  const renderContextInspector = () => {
+    if (!file) {
+      return <ContextStartPanel uploadLimitMb={uploadLimitMb} onHistory={() => setStudioOverlay("history")} />;
+    }
+
+    if (jobIsRunning || jobStatus?.status === "failed") {
+      return <ContextProcessingPanel jobStatus={jobStatus} progress={progress} statusMessage={statusMessage} />;
+    }
+
+    if (jobIsAnalysis) {
+      return (
+        <ContextAnalysisPanel
+          result={jobStatus.result}
+          onHistory={() => setStudioOverlay("history")}
+          onDetails={() => setStudioOverlay("details")}
+        />
+      );
+    }
+
+    if (jobIsCompleted) {
+      return (
+        <ContextResultPanel
+          apiBaseUrl={apiBaseUrl}
+          result={jobStatus.result}
+          canRun={canRunStudioJob}
+          uploading={uploading}
+          onCompare={() => {
+            setHeatmapEnabled(false);
+            setArtifactMapEnabled(false);
+            setPreviewMode("after");
+          }}
+          onOpenResult={() => {
+            if (!resultStlUrl) return;
+            setHeatmapEnabled(false);
+            setArtifactMapEnabled(false);
+            setPreviewMode("after");
+          }}
+          onRepeat={handleUpload}
+          onHistory={() => setStudioOverlay("history")}
+          onDetails={() => setStudioOverlay("details")}
+          onFeedback={() => setStudioOverlay("feedback")}
+        />
+      );
+    }
+
+    return (
+      <ContextModelPanel
+        file={file}
+        result={jobStatus?.result}
+        selectedPreset={studioSelectedPreset}
+        settings={renderStudioSettings()}
+        uploadLimitMb={uploadLimitMb}
+        onHistory={() => setStudioOverlay("history")}
+        onDetails={() => setStudioOverlay("details")}
+      />
+    );
+  };
+
+  const renderStudioOverlay = () => {
+    if (!studioOverlay) return null;
+
+    if (studioOverlay === "history") {
+      return (
+        <ContextOverlay title="История обработок" subtitle="Отдельный режим" onClose={() => setStudioOverlay(null)}>
+          <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
+        </ContextOverlay>
+      );
+    }
+
+    if (studioOverlay === "feedback" && jobStatus?.status === "completed") {
+      return (
+        <ContextOverlay title="Отзыв о результате" subtitle="Поддержка" onClose={() => setStudioOverlay(null)}>
+          <FeedbackPanel apiBaseUrl={apiBaseUrl} jobStatus={jobStatus} />
+        </ContextOverlay>
+      );
+    }
+
+    return (
+      <ContextOverlay title="Подробности" subtitle="Техническая информация" onClose={() => setStudioOverlay(null)}>
+        {jobStatus ? <JobInfoPanel jobStatus={jobStatus} result={jobStatus.result} /> : (
+          <section className="studioInspectorCard">
+            <p className="studioPanelLabel">Текущая модель</p>
+            <h2>{file?.name || "STL-модель"}</h2>
+            <p>Задача ещё не запускалась. Технические отчёты и manifest появятся после обработки.</p>
+          </section>
+        )}
+        {renderAnalysisResultDetails()}
+        {studioGeneratedFiles.length > 0 && <GeneratedFilesBlock files={studioGeneratedFiles} />}
+      </ContextOverlay>
+    );
+  };
+
   if (publicView === "home") {
     return (
       <ConfigProvider appearance="dark">
@@ -7556,107 +7886,12 @@ function App() {
                 ProgressComponent={Progress}
               />
 
-              <aside className={`studioInspector ${file ? "hasModel" : "isEmpty"}`} aria-label="Инспектор модели и обработки">
-                {!file ? (
-                  <section className="studioInspectorCard studioNextStepCard">
-                    <p className="studioPanelLabel">Следующий шаг</p>
-                    <h2>Загрузите STL</h2>
-                    <p className="studioInspectorLead">После загрузки здесь появятся настройки выбранной операции, статус обработки и результат.</p>
-                    <dl>
-                      <div><dt>Формат</dt><dd>.stl</dd></div>
-                      <div><dt>Лимит</dt><dd>{uploadLimitMb} МБ</dd></div>
-                      <div><dt>Демо</dt><dd>Необязательно</dd></div>
-                      <div><dt>Результат</dt><dd>STL · ZIP</dd></div>
-                    </dl>
-                  </section>
-                ) : (
-                  <>
-                    <section className="studioInspectorCard studioUserCard">
-                      <p className="studioPanelLabel">Сцена</p>
-                      <h2>{currentUser?.premium_active ? "Premium активен" : hasUploadAccess ? "Доступ активен" : "Гостевой режим"}</h2>
-                      <dl>
-                        <div><dt>Лимит STL</dt><dd>{uploadLimitMb} МБ</dd></div>
-                        <div><dt>Очередь</dt><dd>{currentUser?.limits?.priority === "premium" ? "Повышенная" : "Обычная"}</dd></div>
-                        <div><dt>Вход</dt><dd>.stl</dd></div>
-                        <div><dt>Экспорт</dt><dd>STL · ZIP · JSON · TXT</dd></div>
-                      </dl>
-                    </section>
-
-                    <section className="studioInspectorCard studioOperationCard">
-                      <p className="studioPanelLabel">Настройка</p>
-                      <h2>{studioSelectedPreset.title}</h2>
-                      <p className="studioInspectorLead">{studioSelectedPreset.description}</p>
-                      {renderStudioSettings()}
-                    </section>
-
-                    {orientationHasVisualChanges && selectedMode !== "orientation" && (
-                      <section className="studioInspectorNote">
-                        <strong>Поворот изменил только просмотр.</strong>
-                        <span>Чтобы сохранить его в STL, выберите “Применить ориентацию”.</span>
-                      </section>
-                    )}
-
-                    {jobStatus && (
-                      <section className="studioInspectorCard studioProcessingCard">
-                        <p className="studioPanelLabel">Обработка</p>
-                        <h2>{statusLabel(jobStatus.status)}</h2>
-                        {jobStatus.status === "queued" && (
-                          <dl>
-                            <div><dt>Место</dt><dd>{jobStatus.queue_position || "—"}</dd></div>
-                            <div><dt>Задач</dt><dd>{jobStatus.queue_size ?? "—"}</dd></div>
-                            <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus.estimated_wait_seconds)}</dd></div>
-                            <div><dt>Приоритет</dt><dd>{queuePriorityLabel(jobStatus.priority)}</dd></div>
-                          </dl>
-                        )}
-                        {jobStatus.status === "queued" && (
-                          <p className="studioQueueHint">Premium-задачи обрабатываются быстрее и получают повышенный приоритет в очереди.</p>
-                        )}
-                        <Progress value={progress} />
-                        <p>{statusMessage(jobStatus.status, jobStatus.message)}</p>
-                      </section>
-                    )}
-
-                    {jobStatus?.status === "completed" && (
-                      <AnalysisResult
-                        activePanel={activePanel}
-                        apiBaseUrl={apiBaseUrl}
-                        result={jobStatus.result}
-                        jobStatus={jobStatus}
-                        sourceFile={file}
-                        processedPreviewFile={processedPreviewFile}
-                        setActivePanel={setActivePanel}
-                        compareMode={previewMode}
-                        hasProcessedPreview={Boolean(processedPreviewFile)}
-                        processedPreviewLoading={processedPreviewLoading}
-                        processedPreviewError={processedPreviewError}
-                        heatmapEnabled={heatmapEnabled}
-                        heatmapData={heatmapData}
-                        heatmapLoading={heatmapLoading}
-                        heatmapError={heatmapError}
-                        focusChangesVersion={focusChangesVersion}
-                        artifactMapEnabled={artifactMapEnabled}
-                        artifactMapData={artifactMapData}
-                        artifactMapLoading={artifactMapLoading}
-                        artifactMapError={artifactMapError}
-                        onCompareModeChange={(mode) => {
-                          setHeatmapEnabled(false);
-                          setArtifactMapEnabled(false);
-                          setPreviewMode(mode);
-                        }}
-                        onShowChanges={handleShowChanges}
-                        onFocusChanges={handleFocusChanges}
-                        onShowArtifacts={handleShowArtifacts}
-                        onOpenHistoryFile={handleOpenHistoryFile}
-                      />
-                    )}
-
-                    {jobStatus && <JobInfoPanel jobStatus={jobStatus} result={jobStatus.result} />}
-                    {jobStatus?.status === "completed" && <FeedbackPanel apiBaseUrl={apiBaseUrl} jobStatus={jobStatus} />}
-                    <JobHistory apiBaseUrl={apiBaseUrl} currentJobId={jobId} onOpenJob={openHistoryJob} />
-                  </>
-                )}
+              <aside className={`studioInspector ${file ? "hasModel" : "isEmpty"} contextState-${!file ? "start" : jobIsRunning ? "processing" : jobIsAnalysis ? "analysis" : jobIsCompleted ? "result" : "model"}`} aria-label="Контекстная панель Studio">
+                {renderContextInspector()}
               </aside>
             </section>
+
+            {renderStudioOverlay()}
 
             <input ref={studioFileInputRef} className="studioFileInput" type="file" accept=".stl" aria-label="Выбрать STL-файл" onChange={handleStudioFileChange} />
           </main>

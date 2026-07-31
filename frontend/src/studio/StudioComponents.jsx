@@ -24,7 +24,7 @@ export const studioToolGroups = [
   },
 ];
 
-export const studioSteps = ["Загрузка", "Анализ", "Ремонт", "Оптимизация", "Подготовка", "Скачать"];
+const studioSteps = ["Загрузка", "Анализ", "Настройка", "Обработка", "Проверка", "Экспорт"];
 
 export function StudioHeader({
   currentUser,
