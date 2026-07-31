@@ -136,7 +136,7 @@ export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile,
         <Icon type="upload" />
       </div>
       <p className="studioPanelLabel">Первый шаг</p>
-      <h1>Загрузите STL</h1>
+      <h1>Загрузите STL-модель</h1>
       <strong>Drag & Drop</strong>
       <p>Перетащите модель в рабочую область или выберите файл вручную. Демо можно открыть отдельно, чтобы быстро посмотреть возможности Studio.</p>
       <div className="studioEmptyActions">
