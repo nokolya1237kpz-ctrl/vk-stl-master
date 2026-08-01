@@ -1817,6 +1817,25 @@
   cursor: not-allowed;
   opacity: .46;
 }
+.studioToolButton.comingSoon {
+  opacity: .64;
+}
+
+.studioToolButton.comingSoon b::after {
+  content: "Скоро";
+  display: inline-flex;
+  margin-left: 6px;
+  padding: 2px 6px;
+  border: 1px solid rgba(53, 215, 255, .28);
+  border-radius: 999px;
+  color: #35d7ff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 
 .studioToolIcon {
   width: 30px;
@@ -2762,3 +2781,85 @@
     max-width: none;
   }
 }
+
+
+/* Stage 8.1: production split tools and Studio viewport stability. */
+.studioApp {
+  min-height: 100dvh;
+  height: auto;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.studioShell {
+  min-height: 100dvh;
+  height: auto;
+  overflow: visible;
+  align-content: start;
+}
+
+.studioWorkspace {
+  min-height: calc(100dvh - 118px);
+  overflow: visible;
+}
+
+@media (min-width: 1100px) {
+  .studioWorkspace {
+    grid-template-rows: minmax(620px, auto) minmax(86px, auto);
+  }
+
+  .studioSidebar,
+  .studioInspector {
+    max-height: none;
+  }
+}
+
+.studioViewerWorkspace .viewerToolbar {
+  max-width: 46px;
+  overflow: hidden;
+  justify-content: flex-start;
+  transition: max-width .22s ease, background .22s ease, box-shadow .22s ease;
+}
+
+.studioViewerWorkspace .viewerToolbar:hover,
+.studioViewerWorkspace .viewerToolbar:focus-within {
+  max-width: min(760px, calc(100% - 36px));
+}
+
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint {
+  flex: 0 0 32px;
+}
+
+.studioViewerWorkspace .viewerToolbar:hover .viewerToolbarHint,
+.studioViewerWorkspace .viewerToolbar:focus-within .viewerToolbarHint {
+  flex: 0 1 auto;
+}
+
+.studioViewerWorkspace .viewerToolbar :is(button, a) {
+  width: 32px;
+  min-width: 32px;
+  padding-inline: 0;
+  font-size: 0;
+}
+
+.studioViewerWorkspace .viewerToolbar:hover :is(button, a),
+.studioViewerWorkspace .viewerToolbar:focus-within :is(button, a) {
+  width: auto;
+  min-width: 34px;
+  padding-inline: 11px;
+  font-size: inherit;
+}
+
+.studioViewerWorkspace .viewerToolbar :is(button, a)::before {
+  color: #d8e8ff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(1) :is(button, a)::before { content: "◎"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(2) :is(button, a)::before { content: "X"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(3) :is(button, a)::before { content: "Y"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(4) :is(button, a)::before { content: "Z"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(5) :is(button, a)::before { content: "⌂"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(6) :is(button, a)::before { content: "↺"; }
+.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(7) :is(button, a)::before { content: "▣"; }

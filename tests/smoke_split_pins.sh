@@ -46,11 +46,36 @@ trap smoke_cleanup_run EXIT
 
 PROJECT_DIR="/home/codex/projects/vk-stl-master"
 API_BASE="http://localhost:8000"
-MODEL="${PROJECT_DIR}/test-data/cube_with_spikes.stl"
 MODE="pins"
+RESULT_DIR="${PROJECT_DIR}/tests/results/stage81_pins"
 
 cd "${PROJECT_DIR}"
-mkdir -p tests/results
+mkdir -p "${RESULT_DIR}"
+
+make_box() {
+  local path="$1"
+  python3 - "$path" <<'PY_BOX'
+from pathlib import Path
+import sys
+path = Path(sys.argv[1])
+sx, sy, sz = 60.0, 40.0, 24.0
+x, y, z = sx / 2, sy / 2, sz / 2
+verts = [(-x,-y,-z),(x,-y,-z),(x,y,-z),(-x,y,-z),(-x,-y,z),(x,-y,z),(x,y,z),(-x,y,z)]
+faces = [(0,1,2),(0,2,3),(4,6,5),(4,7,6),(0,4,5),(0,5,1),(1,5,6),(1,6,2),(2,6,7),(2,7,3),(3,7,4),(3,4,0)]
+with path.open('w', encoding='utf-8') as f:
+    f.write('solid smoke_pins_box\n')
+    for a, b, c in faces:
+        f.write(' facet normal 0 0 0\n  outer loop\n')
+        for i in (a, b, c):
+            vx, vy, vz = verts[i]
+            f.write(f'   vertex {vx:.6f} {vy:.6f} {vz:.6f}\n')
+        f.write('  endloop\n endfacet\n')
+    f.write('endsolid smoke_pins_box\n')
+PY_BOX
+}
+
+MODEL="${RESULT_DIR}/box_60x40x24.stl"
+make_box "${MODEL}"
 
 echo "STL Master Split Connectors 4.0 pins smoke test"
 
@@ -81,7 +106,7 @@ for _ in $(seq 1 120); do
 done
 [[ "${status}" == "completed" ]] || { echo "job status=${status}" >&2; printf '%s\n' "${job_json}" >&2; exit 1; }
 
-printf '%s' "${job_json}" > "tests/results/split_pins_${job_id}.json"
+printf '%s' "${job_json}" > "${RESULT_DIR}/split_pins_${job_id}.json"
 JOB_JSON="${job_json}" MODE="${MODE}" python3 <<'PY'
 import json, os
 data = json.loads(os.environ["JOB_JSON"])
@@ -90,6 +115,7 @@ result = data.get("result", {})
 split = result.get("split_model", {})
 connectors = split.get("connectors") or {}
 generated = {item.get("name") for item in result.get("generated_files", [])}
+qa = connectors.get("qa") or {}
 checks = [
     split.get("success") is True,
     split.get("split_mode") == mode,
@@ -97,7 +123,9 @@ checks = [
     "split_part_2.stl" in generated,
     "connector_report.json" in generated,
     connectors.get("type") == mode,
-    connectors.get("integrated") is True or bool(connectors.get("reason")),
+    connectors.get("integrated") is True,
+    connectors.get("success") is True,
+    qa.get("assembly_check_passed") is True,
 ]
 if not all(checks):
     raise SystemExit("pins connector contract failed")

@@ -57,7 +57,7 @@ export function StudioHeader({
       </button>
       <div className="studioProjectStatus" aria-live="polite">
         <span>{jobStatus?.status ? statusLabel(jobStatus.status) : "Готово к работе"}</span>
-        <em>{jobStatus?.message || "STL вход · STL/ZIP/JSON/TXT результат"}</em>
+        <em>{jobStatus?.message || "Вход: STL · результат: STL/ZIP/JSON/TXT"}</em>
       </div>
       <div className="studioHeaderActions">
         <PremiumStatusControl
@@ -93,7 +93,7 @@ export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false
         <div className="studioToolsHeader">
           <span className="studioPanelLabel">Операции</span>
           <strong>{hasFile ? activeGroupTitle : "После загрузки STL"}</strong>
-          <small>{hasFile ? "Выберите действие и запустите pipeline." : "Сначала загрузите модель в центральную область."}</small>
+          <small>{hasFile ? "Выберите действие и запустите обработку." : "Сначала загрузите модель в центральную область."}</small>
         </div>
         {studioToolGroups.map((group) => {
           const groupItems = group.items.map((id) => presetsById.get(id)).filter(Boolean);
@@ -105,22 +105,28 @@ export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false
                 <span>{group.caption}</span>
               </div>
               <div className="studioToolList">
-                {groupItems.map((preset) => (
-                  <button
-                    className={`studioToolButton ${selectedMode === preset.id ? "active" : ""}`}
-                    key={preset.id}
-                    type="button"
-                    aria-pressed={selectedMode === preset.id}
-                    disabled={!hasFile && preset.id !== "check"}
-                    onClick={() => onSelect(preset.id)}
-                  >
-                    <span className="studioToolIcon">{preset.icon}</span>
-                    <span>
-                      <b>{preset.title}</b>
-                      <small>{preset.result}</small>
-                    </span>
-                  </button>
-                ))}
+                {groupItems.map((preset) => {
+                  const disabled = Boolean(preset.disabled || (!hasFile && preset.id !== "check"));
+                  const caption = preset.disabled ? (preset.disabledReason || "Режим готовится") : preset.result;
+                  return (
+                    <button
+                      className={`studioToolButton ${selectedMode === preset.id ? "active" : ""} ${preset.disabled ? "comingSoon" : ""}`}
+                      key={preset.id}
+                      type="button"
+                      aria-pressed={selectedMode === preset.id}
+                      aria-disabled={disabled}
+                      disabled={disabled}
+                      title={preset.disabled ? caption : undefined}
+                      onClick={() => !disabled && onSelect(preset.id)}
+                    >
+                      <span className="studioToolIcon">{preset.icon}</span>
+                      <span>
+                        <b>{preset.title}</b>
+                        <small>{caption}</small>
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </section>
           );
@@ -142,7 +148,7 @@ export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile,
       </div>
       <p className="studioPanelLabel">Первый шаг</p>
       <h1>Загрузите STL-модель</h1>
-      <strong>Drag & Drop</strong>
+      <strong>Перетащите STL</strong>
       <p>Перетащите модель в рабочую область или выберите файл вручную. Демо можно открыть отдельно, чтобы быстро посмотреть возможности Studio.</p>
       <div className="studioEmptyActions">
         <button className="studioPrimaryAction" type="button" onClick={hasUploadAccess ? onSelectFile : onRequestAccess}>
@@ -181,7 +187,7 @@ export function StudioWorkflowBar({ selectedPreset, selectedOperations, jobId, j
   return (
     <section className="studioWorkflowBar" aria-label="Ход обработки">
       <div className="studioPipelineHeader">
-        <span className="studioPanelLabel">Pipeline</span>
+        <span className="studioPanelLabel">Процесс</span>
         <strong>{downloadUrl ? "Результат готов" : currentStatus === "idle" ? "Готов к запуску" : statusMessage(currentStatus, jobStatus?.message)}</strong>
       </div>
       <div className="studioStepper">

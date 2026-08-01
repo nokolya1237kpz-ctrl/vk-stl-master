@@ -766,17 +766,21 @@ const operationPresets = [
     description: "Готовит стыковку по профилю паз-гребень для предсказуемого совмещения половин модели.",
     result: "Профильный паз-гребень",
     icon: "▰",
-    status: "Архитектура",
+    status: "Скоро",
+    disabled: true,
+    disabledReason: "Геометрия профиля ещё не включена в производственную обработку.",
     featureKey: "split",
     operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
   },
   {
     id: "split_dovetail",
     title: "Ласточкин хвост",
-    description: "Подготавливает профиль с механической фиксацией на сдвиг. Генерация развивается поверх существующего lock-пайплайна.",
+    description: "Подготавливает профиль с механической фиксацией на сдвиг. Генерация развивается поверх существующего пайплайна замков.",
     result: "Замок на сдвиг",
     icon: "▣",
-    status: "Архитектура",
+    status: "Скоро",
+    disabled: true,
+    disabledReason: "Ласточкин хвост пока доступен только как предварительный просмотр, без готового экспорта.",
     featureKey: "split",
     operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
   },
@@ -786,7 +790,9 @@ const operationPresets = [
     description: "Фундамент для волнового/пазлового соединения: предварительный просмотр и параметры соединителей уже отделены от обычного разреза.",
     result: "Пазловый профиль",
     icon: "⌁",
-    status: "Архитектура",
+    status: "Скоро",
+    disabled: true,
+    disabledReason: "Пазловый профиль пока не создаётся как готовая геометрия для печати.",
     featureKey: "split",
     operations: ["analyze", "print_check", "repair_mesh", "split_model", "prepare_package"],
   },
@@ -949,8 +955,8 @@ function formatPremiumShortDate(value) {
 function premiumTimeLabel(currentUser) {
   if (!currentUser?.premium_active) {
     return currentUser?.premium_expires_at && Number(currentUser?.premium_days_left || 0) <= 0
-      ? "Premium истёк"
-      : "Получить Premium";
+      ? "Премиум истёк"
+      : "Получить Премиум";
   }
   if (!currentUser.premium_expires_at) return "Без ограничения срока";
   const daysLeft = Number(currentUser.premium_days_left);
@@ -960,9 +966,9 @@ function premiumTimeLabel(currentUser) {
 }
 
 function premiumUntilLabel(currentUser) {
-  if (!currentUser?.premium_active) return "Premium не активен";
-  if (!currentUser.premium_expires_at) return "Premium активен без срока";
-  return `Premium до ${formatPremiumShortDate(currentUser.premium_expires_at)}`;
+  if (!currentUser?.premium_active) return "Премиум не активен";
+  if (!currentUser.premium_expires_at) return "Премиум активен без срока";
+  return `Премиум до ${formatPremiumShortDate(currentUser.premium_expires_at)}`;
 }
 
 function formatMetric(value, suffix = "") {
@@ -988,9 +994,9 @@ function formatDuration(seconds) {
 
 function queuePriorityLabel(priority) {
   const labels = {
-    premium: "Premium",
-    early_access: "Early Access",
-    free: "Free",
+    premium: "Премиум",
+    early_access: "Ранний доступ",
+    free: "Бесплатно",
   };
   return labels[priority] || labels.free;
 }
@@ -1928,7 +1934,7 @@ function StlPreview({
       onLocalSelectionChangeRef.current?.((current) => {
         const currentRegions = normalizeSelectionRegions(current);
         if (currentRegions.length >= 30) {
-          setPreviewStatus("Достигнут лимит выделения для MVP");
+          setPreviewStatus("Достигнут лимит выделения для текущего режима");
           return current;
         }
         const nextRegions = [
@@ -2439,7 +2445,7 @@ function StlPreview({
         )}
         {splitPreviewEnabled && previewState === "ready" && (
           <div className="viewerSplitPreviewBadge" role="status">
-            <strong>{splitOperationTitle || "Split preview"}</strong>
+            <strong>{splitOperationTitle || "Предпросмотр разреза"}</strong>
             <small>{splitParts} части · ось {String(splitAxis || "z").toUpperCase()} · {splitModeTitles[splitMode] || splitMode}</small>
           </div>
         )}
@@ -2477,7 +2483,7 @@ function StlPreview({
         <p className="previewWarning">Файл большой, 3D-просмотр может занять время и нагрузить устройство.</p>
       )}
       <div className="previewActions viewerToolbar" aria-label="Панель инструментов просмотра">
-        <span className="viewerToolbarHint" title="Центрировать — вернуть модель в центр viewport. Горячая клавиша: C">
+        <span className="viewerToolbarHint" title="Центрировать — вернуть модель в центр окна просмотра. Горячая клавиша: C">
           <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Центрировать модель, клавиша C" onClick={centerView}>По центру</Button>
         </span>
         <span className="viewerToolbarHint" title="Повернуть по X — развернуть модель вокруг оси X. Горячая клавиша: X">
@@ -2495,9 +2501,9 @@ function StlPreview({
         <span className="viewerToolbarHint" title="Очистить — убрать текущую сцену и выбрать другой STL.">
           <Button size="m" mode="secondary" aria-label="Очистить сцену просмотра" onClick={clearScene}>Очистить</Button>
         </span>
-        <span className="viewerToolbarHint" title="Сделать снимок — сохранить PNG текущего viewport.">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сделать снимок viewport" onClick={takeScreenshot}>
-            Скриншот
+        <span className="viewerToolbarHint" title="Сделать снимок — сохранить PNG текущего окна просмотра.">
+          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сделать снимок окна просмотра" onClick={takeScreenshot}>
+            Снимок
           </Button>
         </span>
       </div>
@@ -3452,8 +3458,8 @@ function PremiumStatusControl({ currentUser, loading = false, onOpenPremium, onO
 
   if (!premiumActive) {
     return (
-      <button className={`publicTopCta topCtaV8 premiumHeaderButtonV9 ${className}`.trim()} type="button" onClick={onOpenPremium} aria-label="Получить STL Master Premium">
-        {loading ? "Проверяем..." : "Получить Premium"} <LaunchIcon type="premium" />
+      <button className={`publicTopCta topCtaV8 premiumHeaderButtonV9 ${className}`.trim()} type="button" onClick={onOpenPremium} aria-label="Получить Премиум STL Master">
+        {loading ? "Проверяем..." : "Получить Премиум"} <LaunchIcon type="premium" />
       </button>
     );
   }
@@ -3470,13 +3476,13 @@ function PremiumStatusControl({ currentUser, loading = false, onOpenPremium, onO
       >
         <LaunchIcon type="premium" />
         <span>
-          <b>Premium активен</b>
+          <b>Премиум активен</b>
           <small>{premiumTimeLabel(currentUser)}</small>
         </span>
       </button>
       {open && (
-        <div className="premiumStatusPopover" role="dialog" aria-label="Статус Premium">
-          <strong>Тариф: Premium</strong>
+        <div className="premiumStatusPopover" role="dialog" aria-label="Статус Премиум">
+          <strong>Тариф: Премиум</strong>
           <dl>
             <div><dt>Действует до</dt><dd>{currentUser.premium_expires_at ? formatDateRu(currentUser.premium_expires_at) : "Без ограничения срока"}</dd></div>
             <div><dt>Осталось</dt><dd>{premiumTimeLabel(currentUser)}</dd></div>
@@ -4396,7 +4402,7 @@ const workflowSteps = [
     mode: "connectors",
     showSplitPlane: true,
     titleText: "Соединения для сборки",
-    description: "Показывает понятный split preview и режим штифтов. В приложении параметры соединения настраиваются перед обработкой.",
+    description: "Показывает понятный предпросмотр разреза и режим штифтов. В приложении параметры соединения настраиваются перед обработкой.",
     facts: ["Под склейку", "Штифты", "Магниты", "Базовый замок"],
     tags: ["pins", "magnets", "lock"],
     link: ["Перейти к секции 03", "#connectors"],
@@ -5886,9 +5892,9 @@ function ContextProcessingPanel({ jobStatus, progress, statusMessage }) {
         <div><dt>Текущая операция</dt><dd>{currentOperation}</dd></div>
         <div><dt>Статус</dt><dd>{statusLabel(jobStatus?.status)}</dd></div>
         <div><dt>Ожидание</dt><dd>{formatDuration(jobStatus?.estimated_wait_seconds)}</dd></div>
-        <div><dt>Следующий этап</dt><dd>{jobStatus?.status === "queued" ? "Запуск worker" : "Формирование результата"}</dd></div>
+        <div><dt>Следующий этап</dt><dd>{jobStatus?.status === "queued" ? "Запуск обработчика" : "Формирование результата"}</dd></div>
       </dl>
-      <p className="contextQueueHint">Premium-задачи обрабатываются быстрее.</p>
+      <p className="contextQueueHint">Премиум-задачи обрабатываются быстрее.</p>
       <p>{statusMessage(jobStatus?.status, jobStatus?.message)}</p>
     </section>
   );
@@ -5919,7 +5925,7 @@ function ContextResultPanel({ apiBaseUrl, result, onCompare, onOpenResult, onRep
 
       <section className="studioInspectorCard contextResultActions">
         <p className="studioPanelLabel">Действия</p>
-        <button type="button" onClick={onCompare}>Compare</button>
+        <button type="button" onClick={onCompare}>Сравнить</button>
         <button type="button" onClick={onOpenResult} disabled={!stlUrl}>Открыть результат</button>
         <button type="button" onClick={onRepeat} disabled={!canRun || uploading}>{uploading ? "Запускаем..." : "Повторить обработку"}</button>
       </section>
@@ -6948,7 +6954,7 @@ function App() {
 
   useEffect(() => {
     const currentPreset = operationPresets.find((preset) => preset.id === selectedMode);
-    if (currentPreset && !featureEnabled(featureFlags, currentPreset.featureKey)) {
+    if (currentPreset && (!featureEnabled(featureFlags, currentPreset.featureKey) || currentPreset.disabled)) {
       setSelectedMode("check");
     }
   }, [featureFlags, selectedMode]);
@@ -7481,11 +7487,13 @@ function App() {
   };
 
   const studioSelectedPreset = operationPresets.find((preset) => preset.id === selectedMode) || operationPresets[0];
-  const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode));
+  const studioSelectedOperations = studioSelectedPreset.disabled ? [] : expandOperationsForUpload(operationsForMode(selectedMode));
   const splitWorkflowActive = isSplitPreset(selectedMode);
   const selectedSplitModeOption = splitModeOptions.find((mode) => mode.id === splitMode);
 
   const selectStudioMode = (modeId) => {
+    const nextPreset = operationPresets.find((preset) => preset.id === modeId);
+    if (nextPreset?.disabled) return;
     setSelectedMode(modeId);
     const splitDefaults = splitPresetDefaults[modeId];
     if (splitDefaults) {
@@ -7494,7 +7502,7 @@ function App() {
     }
   };
   const studioGeneratedFiles = Array.isArray(jobStatus?.result?.generated_files) ? jobStatus.result.generated_files : [];
-  const canRunStudioJob = Boolean(file && hasUploadAccess);
+  const canRunStudioJob = Boolean(file && hasUploadAccess && !studioSelectedPreset.disabled);
   const jobIsRunning = uploading || ["queued", "processing", "running"].includes(jobStatus?.status);
   const jobIsAnalysis = jobStatus?.status === "completed" && selectedMode === "check";
   const jobIsCompleted = jobStatus?.status === "completed" && !jobIsAnalysis;
@@ -7610,7 +7618,7 @@ function App() {
           <h3>Плоскость разреза</h3>
           <p>{studioSelectedPreset.title}: {studioSelectedPreset.description}</p>
           <div className="splitModeSummary" aria-live="polite">
-            <strong>{selectedSplitModeOption?.title || "Split"}</strong>
+            <strong>{selectedSplitModeOption?.title || "Разрез"}</strong>
             <span>{selectedSplitModeOption?.description || "Предварительный просмотр разреза активен."}</span>
           </div>
           <span className="studioSettingLabel">Ось разреза</span>
@@ -7642,7 +7650,7 @@ function App() {
               {splitMode === "pins" && (
                 <div className="splitEngineeringNote">
                   <b>Штифты готовы к настройке</b>
-                  <span>Диаметр, глубина, количество и отступ передаются в pipeline. Ручная корректировка подготовлена как режим интерфейса.</span>
+                  <span>Диаметр, глубина, количество и отступ передаются в обработку. Ручная корректировка подготовлена как режим интерфейса.</span>
                 </div>
               )}
             </>

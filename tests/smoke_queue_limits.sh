@@ -245,6 +245,6 @@ echo "cancelled job not processed OK"
 grep -q "Очередь" frontend/src/main.jsx || { echo "frontend missing queue tab" >&2; exit 1; }
 grep -q "Отменить задачу" frontend/src/main.jsx || { echo "frontend missing cancel action" >&2; exit 1; }
 grep -q "queue_position" frontend/src/main.jsx || { echo "frontend missing queue_position UX" >&2; exit 1; }
-grep -q "Premium-задачи обрабатываются быстрее" frontend/src/main.jsx || { echo "frontend missing premium queue hint" >&2; exit 1; }
+grep -Eq "(Premium|Премиум)-задачи обрабатываются быстрее" frontend/src/main.jsx || { echo "frontend missing premium queue hint" >&2; exit 1; }
 
 echo "Queue limits smoke test passed."

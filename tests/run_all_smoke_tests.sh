@@ -33,6 +33,7 @@ tests=(
   "tests/smoke_split_real_model.sh"
   "tests/smoke_split_glue_connector.sh"
   "tests/smoke_split_pins.sh"
+  "tests/smoke_split_pins_geometry.sh"
   "tests/smoke_split_magnets.sh"
   "tests/smoke_split_lock.sh"
   "tests/smoke_final_model_contract.sh"

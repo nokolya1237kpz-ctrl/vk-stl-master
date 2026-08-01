@@ -26,7 +26,11 @@ checks = {
     "StudioEmptyState component": "function StudioEmptyState" in studio_components,
     "StudioWorkflowBar component": "function StudioWorkflowBar" in studio_components,
     "renderStudioSettings": "const renderStudioSettings = () =>" in source,
-    "selected operations expansion": "const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode))" in source,
+    "selected operations expansion": (
+        "const studioSelectedOperations = expandOperationsForUpload(operationsForMode(selectedMode))" in source
+        or "const studioSelectedOperations = studioSelectedPreset.disabled ? [] : expandOperationsForUpload(operationsForMode(selectedMode))" in source
+    ),
+    "disabled preset guard": "if (nextPreset?.disabled) return;" in source and "currentPreset.disabled" in source,
     "single studio file input": 'className="studioFileInput" type="file" accept=".stl"' in source,
     "demo polling skipped": 'jobId === "demo"' in source,
     "history step activePanel": "activePanel === stepPanelId" in source and "const stepPanelId = `history:${item.step}`" in source,

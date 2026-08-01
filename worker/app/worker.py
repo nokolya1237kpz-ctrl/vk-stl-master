@@ -3226,6 +3226,29 @@ def validate_split_parts(result_dir: Path, output_files: list[str], split_parts:
     return True, None
 
 
+def require_integrated_pins_or_fail(report: dict, output_files: list[str], result_dir: Path, connectors: dict, recommendations: list[str]) -> None:
+    if report.get("split_mode") != "pins" or not report.get("success"):
+        return
+    if connectors.get("integrated") is True and connectors.get("success") is True:
+        return
+
+    reason = connectors.get("reason") or "Не удалось безопасно встроить штифты и ответные отверстия."
+    remove_split_outputs(result_dir)
+    output_files.clear()
+    connectors["success"] = False
+    connectors["integrated"] = False
+    connectors["files"] = []
+    connectors["connector_files"] = []
+    connectors["fallback_guide_files"] = []
+    connectors["guide_file"] = None
+    connectors["reason"] = reason
+    report["success"] = False
+    report["reason"] = f"Разрез со штифтами не выполнен: {reason}"
+    report["output_files"] = []
+    report["connectors"] = connectors
+    recommendations.append("Уменьшите диаметр, глубину или количество штифтов, либо выберите плоский разрез.")
+
+
 def write_connector_report(result_dir: Path, split_axis: str, split_mode: str, connectors: dict, connector_config: dict | None = None) -> str | None:
     if split_mode == "simple":
         return None
@@ -3678,6 +3701,7 @@ def run_safe_mvp_split(source_path: Path, result_dir: Path, split_axis: str, spl
                     report["success"] = True
                     connectors = create_connector_guides(mesh, result_dir, split_mode, split_axis, split_parts, connector_size_mm, connector_clearance_mm, connector_count, connector_config)
                     report["connectors"] = connectors
+                    require_integrated_pins_or_fail(report, output_files, result_dir, connectors, recommendations)
 
         if not report["success"]:
             recommendations.append("Попробуйте другую ось, меньшее количество частей или blender_boolean split.")
@@ -3901,6 +3925,7 @@ for index in range(split_parts):
                         connectors["integrated"] = False
                         connectors["reason"] = fallback_reason or connectors.get("reason") or "Встроить соединители автоматически не удалось."
                     report["connectors"] = connectors
+                    require_integrated_pins_or_fail(report, output_files, result_dir, connectors, recommendations)
     except subprocess.TimeoutExpired:
         remove_split_outputs(result_dir)
         output_files.clear()

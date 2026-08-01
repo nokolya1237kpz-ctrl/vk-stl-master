@@ -133,8 +133,10 @@ if 'prepare_package' in operations:
     for name in ('print_report.txt', 'manifest.json'):
         if name not in zip_files:
             issues.append(f'ZIP missing {name}')
-if sorted(set(generated_names)) != sorted(set(zip_files)):
-    issues.append(f'generated_files != ZIP ({generated_names} vs {zip_files})')
+package_metadata = {'manifest.json'}
+zip_artifacts = [name for name in zip_files if name not in package_metadata]
+if sorted(set(generated_names)) != sorted(set(zip_artifacts)):
+    issues.append(f'generated_files != ZIP artifacts ({generated_names} vs {zip_artifacts})')
 for name in generated_names:
     if name not in zip_files:
         issues.append(f'generated file not in ZIP: {name}')

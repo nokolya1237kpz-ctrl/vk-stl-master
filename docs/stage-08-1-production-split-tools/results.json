@@ -1,0 +1,77 @@
+{
+  "stage": "08.1",
+  "title": "Production Split Tools",
+  "base_commit": "b04d122b5288083b9a8456658a4d5fd2f58e6087",
+  "backup_branch": "backup/stage-08-0-before-08-1",
+  "server_backup": "/home/codex/backups/stage81-20260731-190635",
+  "deployment": {
+    "frontend_build": "PASS",
+    "frontend_container": "stl-master-frontend",
+    "frontend_reload": "PASS",
+    "worker_rebuild": "PASS",
+    "worker_container": "stl-master-worker",
+    "backend_changed": false,
+    "api_routes_changed": false
+  },
+  "pins_contract": {
+    "requires_integrated_geometry": true,
+    "requires_connector_success": true,
+    "requires_qa_assembly_passed": true,
+    "blocks_fake_ordinary_split_export": true,
+    "thin_model_failure_verified": true
+  },
+  "disabled_production_modes": [
+    "split_tongue",
+    "split_dovetail",
+    "split_puzzle"
+  ],
+  "browser_check": {
+    "tool": "Playwright Chromium",
+    "routes": {
+      "/": {
+        "status": 200,
+        "horizontal_overflow": false,
+        "console_errors": 0,
+        "page_errors": 0,
+        "request_failures": 0
+      },
+      "/app": {
+        "status": 200,
+        "horizontal_overflow": false,
+        "console_errors": 0,
+        "page_errors": 0,
+        "request_failures": 0
+      },
+      "/admin": {
+        "status": 200,
+        "horizontal_overflow": false,
+        "console_errors": 0,
+        "page_errors": 0,
+        "request_failures": 0
+      }
+    },
+    "screenshots": [
+      "/tmp/stage81_root.png",
+      "/tmp/stage81_app.png",
+      "/tmp/stage81_admin.png"
+    ]
+  },
+  "api_checks": {
+    "GET /api/v1/me": {
+      "status": 200,
+      "result": "PASS"
+    }
+  },
+  "tests": {
+    "python_compile_worker": "PASS",
+    "frontend_build": "PASS",
+    "smoke_split_pins": "PASS",
+    "smoke_split_pins_geometry": "PASS",
+    "smoke_pipeline_matrix": "PASS",
+    "run_all_smoke_tests": "PASS"
+  },
+  "known_notes": [
+    "smoke_admin_security skipped positive login checks because SMOKE_ADMIN_PASSWORD was not set in the shell.",
+    "glue, magnets, and lock smoke tests still allow guide/fallback reports where their production booleans do not integrate; Stage 08.1 only makes pins strict."
+  ]
+}

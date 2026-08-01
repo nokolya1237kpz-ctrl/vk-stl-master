@@ -238,20 +238,20 @@ h1 {
 
 .viewerAxisGizmo {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
-  z-index: 3;
-  width: 72px;
-  height: 72px;
+  right: 20px;
+  bottom: 74px;
+  z-index: 5;
+  width: 64px;
+  height: 64px;
   pointer-events: none;
 }
 
 .viewerAxisGizmo i {
   position: absolute;
-  left: 33px;
-  top: 33px;
-  width: 9px;
-  height: 9px;
+  left: 29px;
+  top: 29px;
+  width: 8px;
+  height: 8px;
   border: 1px solid rgba(223, 246, 255, 0.75);
   border-radius: 3px;
   background: rgba(5, 12, 22, 0.8);
@@ -271,7 +271,7 @@ h1 {
 .viewerAxis::before {
   content: "";
   display: block;
-  width: 28px;
+  width: 24px;
   height: 2px;
   margin-right: 4px;
   border-radius: 999px;
@@ -280,21 +280,21 @@ h1 {
 }
 
 .viewerAxisX {
-  right: 1px;
-  bottom: 25px;
+  right: 0;
+  bottom: 22px;
   color: #ff4d5f;
 }
 
 .viewerAxisY {
-  left: 4px;
-  bottom: 40px;
+  left: 5px;
+  bottom: 36px;
   color: #30e889;
   transform: rotate(-28deg);
 }
 
 .viewerAxisZ {
-  left: 30px;
-  top: 3px;
+  left: 28px;
+  top: 4px;
   color: #3da5ff;
   transform: rotate(-90deg);
   transform-origin: left center;
