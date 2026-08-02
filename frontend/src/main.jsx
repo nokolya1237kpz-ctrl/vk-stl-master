@@ -1315,6 +1315,8 @@ function StlPreview({
   localSelectionMode,
   localSelection,
   onLocalSelectionChange,
+  onClearModel,
+  onSelectFile,
   orientationTransform,
   onOrientationChange,
   uploading,
@@ -2483,29 +2485,38 @@ function StlPreview({
         <p className="previewWarning">Файл большой, 3D-просмотр может занять время и нагрузить устройство.</p>
       )}
       <div className="previewActions viewerToolbar" aria-label="Панель инструментов просмотра">
-        <span className="viewerToolbarHint" title="Центрировать — вернуть модель в центр окна просмотра. Горячая клавиша: C">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Центрировать модель, клавиша C" onClick={centerView}>По центру</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Повернуть по X — развернуть модель вокруг оси X. Горячая клавиша: X">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси X" onClick={() => rotateModel("x")}>Повернуть X</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Повернуть по Y — развернуть модель вокруг оси Y. Горячая клавиша: Y">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Y" onClick={() => rotateModel("y")}>Повернуть Y</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Повернуть по Z — развернуть модель вокруг оси Z. Горячая клавиша: Z">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Z" onClick={() => rotateModel("z")}>Повернуть Z</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Сбросить положение — поставить модель на стол и обновить рабочую ориентацию.">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сбросить положение модели на стол" onClick={placeModelOnTable}>Поставить на стол</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Очистить — убрать текущую сцену и выбрать другой STL.">
-          <Button size="m" mode="secondary" aria-label="Очистить сцену просмотра" onClick={clearScene}>Очистить</Button>
-        </span>
-        <span className="viewerToolbarHint" title="Сделать снимок — сохранить PNG текущего окна просмотра.">
-          <Button size="m" mode="secondary" disabled={previewState !== "ready"} aria-label="Сделать снимок окна просмотра" onClick={takeScreenshot}>
-            Снимок
-          </Button>
-        </span>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Центрировать модель" onClick={centerView}>
+          <LaunchIcon type="target" />
+          <span>Центрировать</span>
+        </button>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси X" onClick={() => rotateModel("x")}>
+          <LaunchIcon type="rotateX" />
+          <span>Повернуть по X</span>
+        </button>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Y" onClick={() => rotateModel("y")}>
+          <LaunchIcon type="rotateY" />
+          <span>Повернуть по Y</span>
+        </button>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Повернуть модель по оси Z" onClick={() => rotateModel("z")}>
+          <LaunchIcon type="rotateZ" />
+          <span>Повернуть по Z</span>
+        </button>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Сбросить вид модели" onClick={placeModelOnTable}>
+          <LaunchIcon type="resetView" />
+          <span>Сбросить вид</span>
+        </button>
+        <button className="viewerToolButton" type="button" aria-label="Очистить текущую модель" onClick={onClearModel || clearScene}>
+          <LaunchIcon type="clearModel" />
+          <span>Очистить</span>
+        </button>
+        <button className="viewerToolButton viewerToolButtonWide" type="button" aria-label="Загрузить другую STL-модель" onClick={onSelectFile}>
+          <LaunchIcon type="upload" />
+          <span>Загрузить другую модель</span>
+        </button>
+        <button className="viewerToolButton" type="button" disabled={previewState !== "ready"} aria-label="Сделать снимок окна просмотра" onClick={takeScreenshot}>
+          <LaunchIcon type="camera" />
+          <span>Сделать снимок</span>
+        </button>
       </div>
     </div>
   );
@@ -3446,6 +3457,13 @@ function LaunchIcon({ type }) {
     copy: "M8 8h10v10H8zM5 5h10v3M5 5v10h3",
     lock: "M7 11V8a5 5 0 0110 0v3M6 11h12v9H6z",
     premium: "M4 17h16M6 17L5 7l4 4 3-6 3 6 4-4-1 10M8 21h8",
+    target: "M12 5v3M12 16v3M5 12h3M16 12h3M8.5 8.5l2 2M15.5 8.5l-2 2M8.5 15.5l2-2M15.5 15.5l-2-2M12 9.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z",
+    rotateX: "M5 12c0-3.3 3.1-6 7-6 2.1 0 4 .8 5.3 2M17.3 8H14M17.3 8V4.7M19 12c0 3.3-3.1 6-7 6-2.1 0-4-.8-5.3-2M6.7 16H10M6.7 16v3.3M8 9l8 6M16 9l-8 6",
+    rotateY: "M12 4c3.9 0 7 3.6 7 8s-3.1 8-7 8-7-3.6-7-8 3.1-8 7-8zM12 4v16M9 9l3 3 3-3",
+    rotateZ: "M7 7a7.1 7.1 0 019.8-.2M17 7h-3.5M17 7V3.5M17 17a7.1 7.1 0 01-9.8.2M7 17h3.5M7 17v3.5M9 12h6",
+    resetView: "M5 5h6v6H5zM13 5h6v6h-6zM5 13h6v6H5zM13 13h6v6h-6zM8 8h.01M16 8h.01M8 16h.01M16 16h.01",
+    clearModel: "M7 7l10 10M17 7L7 17M4 12a8 8 0 1016 0 8 8 0 00-16 0z",
+    camera: "M5 8h3l1.5-2h5L16 8h3v10H5zM12 11a3 3 0 100 6 3 3 0 000-6z",
   };
   return <svg className="launchSvgIcon" viewBox="0 0 24 24" aria-hidden="true"><path d={paths[type] || paths.cube} /></svg>;
 }
@@ -7302,9 +7320,39 @@ function App() {
     });
   };
 
+  const resetStudioModel = () => {
+    setDemoMode(false);
+    setFile(null);
+    setProcessedPreviewFile(null);
+    setProcessedPreviewLoading(false);
+    setProcessedPreviewError("");
+    setJobId(null);
+    setJobStatus(null);
+    setUploading(false);
+    setPreviewMode("before");
+    setError("");
+    setAccessGateMessage("");
+    setHeatmapEnabled(false);
+    setHeatmapData(null);
+    setHeatmapLoading(false);
+    setHeatmapError("");
+    setArtifactMapEnabled(false);
+    setArtifactMapData(null);
+    setArtifactMapLoading(false);
+    setArtifactMapError("");
+    setFocusChangesVersion(0);
+    setLocalSelection(null);
+    setStudioOverlay(null);
+    setModelName("");
+    setSelectedMode("check");
+    setActivePanel("settings:check");
+    resetOrientationTransform();
+  };
+
   const openDemo = () => {
     const original = createDemoStl({ cleaned: false });
     const cleaned = createDemoStl({ cleaned: true });
+    resetStudioModel();
     setDemoMode(true);
     navigatePublicView("app");
     setFile(original);
@@ -7338,6 +7386,7 @@ function App() {
       setError("Редактор принимает только STL-файлы.");
       return;
     }
+    resetStudioModel();
     setDemoMode(false);
     setFile(nextFile);
     setProcessedPreviewFile(null);
@@ -7978,6 +8027,8 @@ function App() {
                     localSelectionMode={localSelectionMode}
                     localSelection={localSelection}
                     onLocalSelectionChange={setLocalSelection}
+                    onClearModel={resetStudioModel}
+                    onSelectFile={requestStudioFile}
                     orientationTransform={orientationTransform}
                     onOrientationChange={setOrientationTransform}
                     uploading={uploading}

@@ -1,0 +1,62 @@
+{
+  "stage": "8.1-R",
+  "title": "Studio workspace visual and UX correction",
+  "source_sha": "487159c2cc63813cced0805e63ff7cc3f4d4bc0a",
+  "protected_checksum_before": "4a01a449a501aae93f3b901e8fcd63501206f4756611d3af44975c8fe8618d2e",
+  "protected_checksum_after": "4a01a449a501aae93f3b901e8fcd63501206f4756611d3af44975c8fe8618d2e",
+  "changed_files": [
+    "frontend/src/main.jsx",
+    "frontend/src/studio/StudioComponents.jsx",
+    "frontend/src/studio/studio.css",
+    "tests/run_all_smoke_tests.sh",
+    "tests/smoke_studio_workspace_correction.sh",
+    "docs/STAGE-08-1-R-STUDIO-CORRECTION.md",
+    "docs/stage-08-1-r-studio-correction/results.json",
+    "docs/stage-08-1-r-studio-correction/browser-e2e-results.json",
+    "docs/stage-08-1-r-studio-correction/screenshots/*.png"
+  ],
+  "protected_areas_changed": false,
+  "build": {
+    "command": "cd /home/codex/projects/vk-stl-master/frontend && npm run build",
+    "status": "PASS",
+    "warnings": [
+      "VKUI package use client directives ignored by Vite",
+      "Large chunk warning"
+    ]
+  },
+  "targeted_smoke": {
+    "command": "./tests/smoke_studio_workspace_correction.sh",
+    "status": "PASS"
+  },
+  "full_smoke": {
+    "command": "./tests/run_all_smoke_tests.sh",
+    "status": "PASS"
+  },
+  "browser_e2e": {
+    "status": "PASS",
+    "screenshots": 15,
+    "viewport_checks": 14,
+    "zoom_checks": 6,
+    "console_errors": 0,
+    "failed_requests": 0,
+    "bad_responses": 0,
+    "result_file": "docs/stage-08-1-r-studio-correction/browser-e2e-results.json"
+  },
+  "fixed": {
+    "demo_clear_resets_filename": true,
+    "custom_upload_after_demo_clear": true,
+    "replace_model_action": true,
+    "operations_accordion": true,
+    "unfinished_split_modes_disabled": true,
+    "viewer_toolbar_labels": true,
+    "viewer_toolbar_aria_labels": true,
+    "axis_gizmo_inside_viewer": true,
+    "process_panel_accessible": true,
+    "no_horizontal_overflow": true,
+    "russian_ui_strings": true
+  },
+  "deployment": {
+    "status": "pending_before_commit",
+    "command": "./scripts/rebuild-frontend.sh"
+  }
+}

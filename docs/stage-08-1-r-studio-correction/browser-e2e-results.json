@@ -1,0 +1,1608 @@
+{
+  "testRunId": "stage81r-1785647289567",
+  "accessCodeFormat": "r*a*thw**xnrg*s*f*by*ye*",
+  "checks": {
+    "emptyNoDemoAutoload": true,
+    "emptyUploadButton": true,
+    "emptyDemoButton": true,
+    "accordionExpanded": 1,
+    "comingSoonDisabled": 3,
+    "demoClearedFilenameGone": true,
+    "demoClearedUploadState": true,
+    "replaceModel": 3,
+    "toolbarLabels": {
+      "center": 1,
+      "reset": 1,
+      "screenshot": 1,
+      "replace": 1
+    },
+    "noHorizontalOverflow": true,
+    "axisInsideViewer": true,
+    "workflowAccessible": true
+  },
+  "viewportMatrix": [
+    {
+      "label": "1920x1080",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "scroll": {
+        "width": 1920,
+        "height": 1092,
+        "clientWidth": 1920,
+        "clientHeight": 1080,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 1904,
+        "bottom": 88,
+        "width": 1888,
+        "height": 72
+      },
+      "viewer": {
+        "top": 104,
+        "left": 312,
+        "right": 1568,
+        "bottom": 964,
+        "width": 1256,
+        "height": 860
+      },
+      "workflow": {
+        "top": 980,
+        "left": 312,
+        "right": 1904,
+        "bottom": 1076,
+        "width": 1592,
+        "height": 96
+      },
+      "runButton": {
+        "top": 1012,
+        "left": 1701,
+        "right": 1891,
+        "bottom": 1044,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 187,
+        "left": 1503,
+        "right": 1551,
+        "bottom": 513,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 194,
+        "left": 1474,
+        "right": 1544,
+        "bottom": 226,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 790,
+        "left": 1450,
+        "right": 1526,
+        "bottom": 866,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 104,
+        "left": 1584,
+        "right": 1904,
+        "bottom": 964,
+        "width": 320,
+        "height": 860
+      }
+    },
+    {
+      "label": "1680x1050",
+      "viewport": {
+        "width": 1680,
+        "height": 1050
+      },
+      "scroll": {
+        "width": 1680,
+        "height": 1062,
+        "clientWidth": 1680,
+        "clientHeight": 1050,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 1664,
+        "bottom": 88,
+        "width": 1648,
+        "height": 72
+      },
+      "viewer": {
+        "top": 104,
+        "left": 312,
+        "right": 1328,
+        "bottom": 934,
+        "width": 1016,
+        "height": 830
+      },
+      "workflow": {
+        "top": 950,
+        "left": 312,
+        "right": 1664,
+        "bottom": 1046,
+        "width": 1352,
+        "height": 96
+      },
+      "runButton": {
+        "top": 982,
+        "left": 1461,
+        "right": 1651,
+        "bottom": 1014,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 187,
+        "left": 1263,
+        "right": 1311,
+        "bottom": 513,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 194,
+        "left": 1234,
+        "right": 1304,
+        "bottom": 226,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 760,
+        "left": 1210,
+        "right": 1286,
+        "bottom": 836,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 104,
+        "left": 1344,
+        "right": 1664,
+        "bottom": 934,
+        "width": 320,
+        "height": 830
+      }
+    },
+    {
+      "label": "1536x864",
+      "viewport": {
+        "width": 1536,
+        "height": 864
+      },
+      "scroll": {
+        "width": 1536,
+        "height": 876,
+        "clientWidth": 1536,
+        "clientHeight": 864,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 1520,
+        "bottom": 88,
+        "width": 1504,
+        "height": 72
+      },
+      "viewer": {
+        "top": 104,
+        "left": 312,
+        "right": 1184,
+        "bottom": 748,
+        "width": 872,
+        "height": 644
+      },
+      "workflow": {
+        "top": 764,
+        "left": 312,
+        "right": 1520,
+        "bottom": 860,
+        "width": 1208,
+        "height": 96
+      },
+      "runButton": {
+        "top": 796,
+        "left": 1317,
+        "right": 1507,
+        "bottom": 828,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 187,
+        "left": 1119,
+        "right": 1167,
+        "bottom": 513,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 194,
+        "left": 1090,
+        "right": 1160,
+        "bottom": 226,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 574,
+        "left": 1066,
+        "right": 1142,
+        "bottom": 650,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 104,
+        "left": 1200,
+        "right": 1520,
+        "bottom": 748,
+        "width": 320,
+        "height": 644
+      }
+    },
+    {
+      "label": "1440x900",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 912,
+        "clientWidth": 1440,
+        "clientHeight": 900,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 1424,
+        "bottom": 88,
+        "width": 1408,
+        "height": 72
+      },
+      "viewer": {
+        "top": 104,
+        "left": 312,
+        "right": 1088,
+        "bottom": 784,
+        "width": 776,
+        "height": 680
+      },
+      "workflow": {
+        "top": 800,
+        "left": 312,
+        "right": 1424,
+        "bottom": 896,
+        "width": 1112,
+        "height": 96
+      },
+      "runButton": {
+        "top": 832,
+        "left": 1221,
+        "right": 1411,
+        "bottom": 864,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 187,
+        "left": 1023,
+        "right": 1071,
+        "bottom": 513,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 194,
+        "left": 994,
+        "right": 1064,
+        "bottom": 226,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 610,
+        "left": 970,
+        "right": 1046,
+        "bottom": 686,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 104,
+        "left": 1104,
+        "right": 1424,
+        "bottom": 784,
+        "width": 320,
+        "height": 680
+      }
+    },
+    {
+      "label": "1440x800",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 828,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 12,
+        "left": 12,
+        "right": 1428,
+        "bottom": 84,
+        "width": 1416,
+        "height": 72
+      },
+      "viewer": {
+        "top": 96,
+        "left": 308,
+        "right": 1092,
+        "bottom": 708,
+        "width": 784,
+        "height": 612
+      },
+      "workflow": {
+        "top": 724,
+        "left": 308,
+        "right": 1428,
+        "bottom": 816,
+        "width": 1120,
+        "height": 92
+      },
+      "runButton": {
+        "top": 754,
+        "left": 1227,
+        "right": 1417,
+        "bottom": 786,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 179,
+        "left": 1027,
+        "right": 1075,
+        "bottom": 505,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 186,
+        "left": 998,
+        "right": 1068,
+        "bottom": 218,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 534,
+        "left": 974,
+        "right": 1050,
+        "bottom": 610,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 96,
+        "left": 1108,
+        "right": 1428,
+        "bottom": 708,
+        "width": 320,
+        "height": 612
+      }
+    },
+    {
+      "label": "1366x768",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "scroll": {
+        "width": 1366,
+        "height": 805,
+        "clientWidth": 1366,
+        "clientHeight": 768,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 12,
+        "left": 12,
+        "right": 1354,
+        "bottom": 84,
+        "width": 1342,
+        "height": 72
+      },
+      "viewer": {
+        "top": 96,
+        "left": 308,
+        "right": 1018,
+        "bottom": 676,
+        "width": 710,
+        "height": 580
+      },
+      "workflow": {
+        "top": 692,
+        "left": 308,
+        "right": 1354,
+        "bottom": 793.234375,
+        "width": 1046,
+        "height": 101.234375
+      },
+      "runButton": {
+        "top": 726.609375,
+        "left": 1153,
+        "right": 1343,
+        "bottom": 758.609375,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 179,
+        "left": 953,
+        "right": 1001,
+        "bottom": 505,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 186,
+        "left": 924,
+        "right": 994,
+        "bottom": 218,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 502,
+        "left": 900,
+        "right": 976,
+        "bottom": 578,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 96,
+        "left": 1034,
+        "right": 1354,
+        "bottom": 676,
+        "width": 320,
+        "height": 580
+      }
+    },
+    {
+      "label": "1280x720",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "scroll": {
+        "width": 1280,
+        "height": 805,
+        "clientWidth": 1280,
+        "clientHeight": 720,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 12,
+        "left": 12,
+        "right": 1268,
+        "bottom": 84,
+        "width": 1256,
+        "height": 72
+      },
+      "viewer": {
+        "top": 96,
+        "left": 296,
+        "right": 932,
+        "bottom": 628,
+        "width": 636,
+        "height": 532
+      },
+      "workflow": {
+        "top": 644,
+        "left": 296,
+        "right": 1268,
+        "bottom": 793.234375,
+        "width": 972,
+        "height": 149.234375
+      },
+      "runButton": {
+        "top": 702.609375,
+        "left": 713,
+        "right": 903,
+        "bottom": 734.609375,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 179,
+        "left": 867,
+        "right": 915,
+        "bottom": 505,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 186,
+        "left": 838,
+        "right": 908,
+        "bottom": 218,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 454,
+        "left": 814,
+        "right": 890,
+        "bottom": 530,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 96,
+        "left": 948,
+        "right": 1268,
+        "bottom": 628,
+        "width": 320,
+        "height": 532
+      }
+    },
+    {
+      "label": "1024x768",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scroll": {
+        "width": 1024,
+        "height": 1570,
+        "clientWidth": 1024,
+        "clientHeight": 768,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 1008,
+        "bottom": 88,
+        "width": 992,
+        "height": 72
+      },
+      "viewer": {
+        "top": 104,
+        "left": 292,
+        "right": 1008,
+        "bottom": 624,
+        "width": 716,
+        "height": 520
+      },
+      "workflow": {
+        "top": 640,
+        "left": 292,
+        "right": 1008,
+        "bottom": 805.09375,
+        "width": 716,
+        "height": 165.09375
+      },
+      "runButton": {
+        "top": 752.09375,
+        "left": 305,
+        "right": 995,
+        "bottom": 794.09375,
+        "width": 690,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 187,
+        "left": 943,
+        "right": 991,
+        "bottom": 529,
+        "width": 48,
+        "height": 342
+      },
+      "toolbarButton": {
+        "top": 194,
+        "left": 934,
+        "right": 984,
+        "bottom": 228,
+        "width": 50,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 450,
+        "left": 890,
+        "right": 966,
+        "bottom": 526,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 821.09375,
+        "left": 16,
+        "right": 1008,
+        "bottom": 1553.671875,
+        "width": 992,
+        "height": 732.578125
+      }
+    },
+    {
+      "label": "768x1024",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "scroll": {
+        "width": 768,
+        "height": 1701,
+        "clientWidth": 768,
+        "clientHeight": 1024,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 16,
+        "left": 16,
+        "right": 752,
+        "bottom": 218.890625,
+        "width": 736,
+        "height": 202.890625
+      },
+      "viewer": {
+        "top": 234.890625,
+        "left": 292,
+        "right": 752,
+        "bottom": 754.890625,
+        "width": 460,
+        "height": 520
+      },
+      "workflow": {
+        "top": 770.890625,
+        "left": 292,
+        "right": 752,
+        "bottom": 935.984375,
+        "width": 460,
+        "height": 165.09375
+      },
+      "runButton": {
+        "top": 882.984375,
+        "left": 305,
+        "right": 739,
+        "bottom": 924.984375,
+        "width": 434,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 317.890625,
+        "left": 687,
+        "right": 735,
+        "bottom": 659.890625,
+        "width": 48,
+        "height": 342
+      },
+      "toolbarButton": {
+        "top": 324.890625,
+        "left": 678,
+        "right": 728,
+        "bottom": 358.890625,
+        "width": 50,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 580.890625,
+        "left": 634,
+        "right": 710,
+        "bottom": 656.890625,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 951.984375,
+        "left": 16,
+        "right": 752,
+        "bottom": 1684.5625,
+        "width": 736,
+        "height": 732.578125
+      }
+    },
+    {
+      "label": "430x932",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "scroll": {
+        "width": 430,
+        "height": 2431,
+        "clientWidth": 430,
+        "clientHeight": 932,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10,
+        "left": 10,
+        "right": 420,
+        "bottom": 239.890625,
+        "width": 410,
+        "height": 229.890625
+      },
+      "viewer": {
+        "top": 249.890625,
+        "left": 10,
+        "right": 420,
+        "bottom": 779.890625,
+        "width": 410,
+        "height": 530
+      },
+      "workflow": {
+        "top": 1355.6875,
+        "left": 10,
+        "right": 420,
+        "bottom": 1579.875,
+        "width": 410,
+        "height": 224.1875
+      },
+      "runButton": {
+        "top": 1526.875,
+        "left": 23,
+        "right": 407,
+        "bottom": 1568.875,
+        "width": 384,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 592.890625,
+        "left": 23,
+        "right": 407,
+        "bottom": 766.890625,
+        "width": 384,
+        "height": 174
+      },
+      "toolbarButton": {
+        "top": 599.890625,
+        "left": 30,
+        "right": 167.3125,
+        "bottom": 633.890625,
+        "width": 137.3125,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 619.890625,
+        "left": 318,
+        "right": 384,
+        "bottom": 685.890625,
+        "width": 66,
+        "height": 66
+      },
+      "inspector": {
+        "top": 1589.875,
+        "left": 10,
+        "right": 420,
+        "bottom": 2420.625,
+        "width": 410,
+        "height": 830.75
+      }
+    },
+    {
+      "label": "390x844",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scroll": {
+        "width": 390,
+        "height": 2448,
+        "clientWidth": 390,
+        "clientHeight": 844,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10,
+        "left": 10,
+        "right": 380,
+        "bottom": 239.890625,
+        "width": 370,
+        "height": 229.890625
+      },
+      "viewer": {
+        "top": 249.890625,
+        "left": 10,
+        "right": 380,
+        "bottom": 779.890625,
+        "width": 370,
+        "height": 530
+      },
+      "workflow": {
+        "top": 1355.6875,
+        "left": 10,
+        "right": 380,
+        "bottom": 1579.875,
+        "width": 370,
+        "height": 224.1875
+      },
+      "runButton": {
+        "top": 1526.875,
+        "left": 23,
+        "right": 367,
+        "bottom": 1568.875,
+        "width": 344,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 550.890625,
+        "left": 23,
+        "right": 367,
+        "bottom": 766.890625,
+        "width": 344,
+        "height": 216
+      },
+      "toolbarButton": {
+        "top": 557.890625,
+        "left": 30,
+        "right": 167.3125,
+        "bottom": 591.890625,
+        "width": 137.3125,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 619.890625,
+        "left": 278,
+        "right": 344,
+        "bottom": 685.890625,
+        "width": 66,
+        "height": 66
+      },
+      "inspector": {
+        "top": 1589.875,
+        "left": 10,
+        "right": 380,
+        "bottom": 2438.015625,
+        "width": 370,
+        "height": 848.140625
+      }
+    },
+    {
+      "label": "375x812",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "scroll": {
+        "width": 375,
+        "height": 2448,
+        "clientWidth": 375,
+        "clientHeight": 812,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10,
+        "left": 10,
+        "right": 365,
+        "bottom": 239.890625,
+        "width": 355,
+        "height": 229.890625
+      },
+      "viewer": {
+        "top": 249.890625,
+        "left": 10,
+        "right": 365,
+        "bottom": 779.890625,
+        "width": 355,
+        "height": 530
+      },
+      "workflow": {
+        "top": 1355.6875,
+        "left": 10,
+        "right": 365,
+        "bottom": 1579.875,
+        "width": 355,
+        "height": 224.1875
+      },
+      "runButton": {
+        "top": 1526.875,
+        "left": 23,
+        "right": 352,
+        "bottom": 1568.875,
+        "width": 329,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 550.890625,
+        "left": 23,
+        "right": 352,
+        "bottom": 766.890625,
+        "width": 329,
+        "height": 216
+      },
+      "toolbarButton": {
+        "top": 557.890625,
+        "left": 30,
+        "right": 167.3125,
+        "bottom": 591.890625,
+        "width": 137.3125,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 619.890625,
+        "left": 263,
+        "right": 329,
+        "bottom": 685.890625,
+        "width": 66,
+        "height": 66
+      },
+      "inspector": {
+        "top": 1589.875,
+        "left": 10,
+        "right": 365,
+        "bottom": 2438.015625,
+        "width": 355,
+        "height": 848.140625
+      }
+    },
+    {
+      "label": "360x800",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "scroll": {
+        "width": 360,
+        "height": 2465,
+        "clientWidth": 360,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10,
+        "left": 10,
+        "right": 350,
+        "bottom": 239.890625,
+        "width": 340,
+        "height": 229.890625
+      },
+      "viewer": {
+        "top": 249.890625,
+        "left": 10,
+        "right": 350,
+        "bottom": 779.890625,
+        "width": 340,
+        "height": 530
+      },
+      "workflow": {
+        "top": 1355.6875,
+        "left": 10,
+        "right": 350,
+        "bottom": 1579.875,
+        "width": 340,
+        "height": 224.1875
+      },
+      "runButton": {
+        "top": 1526.875,
+        "left": 23,
+        "right": 337,
+        "bottom": 1568.875,
+        "width": 314,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 550.890625,
+        "left": 23,
+        "right": 337,
+        "bottom": 766.890625,
+        "width": 314,
+        "height": 216
+      },
+      "toolbarButton": {
+        "top": 557.890625,
+        "left": 30,
+        "right": 167.3125,
+        "bottom": 591.890625,
+        "width": 137.3125,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 619.890625,
+        "left": 248,
+        "right": 314,
+        "bottom": 685.890625,
+        "width": 66,
+        "height": 66
+      },
+      "inspector": {
+        "top": 1589.875,
+        "left": 10,
+        "right": 350,
+        "bottom": 2455.40625,
+        "width": 340,
+        "height": 865.53125
+      }
+    },
+    {
+      "label": "320x568",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "scroll": {
+        "width": 320,
+        "height": 2465,
+        "clientWidth": 320,
+        "clientHeight": 568,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10,
+        "left": 10,
+        "right": 310,
+        "bottom": 239.890625,
+        "width": 300,
+        "height": 229.890625
+      },
+      "viewer": {
+        "top": 249.890625,
+        "left": 10,
+        "right": 310,
+        "bottom": 779.890625,
+        "width": 300,
+        "height": 530
+      },
+      "workflow": {
+        "top": 1355.6875,
+        "left": 10,
+        "right": 310,
+        "bottom": 1579.875,
+        "width": 300,
+        "height": 224.1875
+      },
+      "runButton": {
+        "top": 1526.875,
+        "left": 23,
+        "right": 297,
+        "bottom": 1568.875,
+        "width": 274,
+        "height": 42
+      },
+      "toolbar": {
+        "top": 466.890625,
+        "left": 23,
+        "right": 297,
+        "bottom": 766.890625,
+        "width": 274,
+        "height": 300
+      },
+      "toolbarButton": {
+        "top": 473.890625,
+        "left": 30,
+        "right": 167.3125,
+        "bottom": 507.890625,
+        "width": 137.3125,
+        "height": 34
+      },
+      "axisGizmo": {
+        "top": 619.890625,
+        "left": 208,
+        "right": 274,
+        "bottom": 685.890625,
+        "width": 66,
+        "height": 66
+      },
+      "inspector": {
+        "top": 1589.875,
+        "left": 10,
+        "right": 310,
+        "bottom": 2455.40625,
+        "width": 300,
+        "height": 865.53125
+      }
+    }
+  ],
+  "zoomMatrix": [
+    {
+      "label": "zoom-67%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 800,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 8.03125,
+        "left": 8.03125,
+        "right": 1431.96875,
+        "bottom": 56.265625,
+        "width": 1423.9375,
+        "height": 48.234375
+      },
+      "viewer": {
+        "top": 64.296875,
+        "left": 206.34375,
+        "right": 1206.859375,
+        "bottom": 474.328125,
+        "width": 1000.515625,
+        "height": 410.03125
+      },
+      "workflow": {
+        "top": 485.046875,
+        "left": 206.34375,
+        "right": 1431.96875,
+        "bottom": 546.671875,
+        "width": 1225.625,
+        "height": 61.625
+      },
+      "runButton": {
+        "top": 505.140625,
+        "left": 1296.984375,
+        "right": 1424.28125,
+        "bottom": 526.578125,
+        "width": 127.296875,
+        "height": 21.4375
+      },
+      "toolbar": {
+        "top": 120.234375,
+        "left": 1162.984375,
+        "right": 1195.140625,
+        "bottom": 339.28125,
+        "width": 32.15625,
+        "height": 219.046875
+      },
+      "toolbarButton": {
+        "top": 125.25,
+        "left": 1143.28125,
+        "right": 1190.765625,
+        "bottom": 146.6875,
+        "width": 47.484375,
+        "height": 21.4375
+      },
+      "axisGizmo": {
+        "top": 357.109375,
+        "left": 1127.171875,
+        "right": 1178.078125,
+        "bottom": 408.015625,
+        "width": 50.90625,
+        "height": 50.90625
+      },
+      "inspector": {
+        "top": 64.296875,
+        "left": 1217.578125,
+        "right": 1431.96875,
+        "bottom": 474.328125,
+        "width": 214.390625,
+        "height": 410.03125
+      }
+    },
+    {
+      "label": "zoom-80%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 800,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 9.59375,
+        "left": 9.59375,
+        "right": 1430.40625,
+        "bottom": 67.1875,
+        "width": 1420.8125,
+        "height": 57.59375
+      },
+      "viewer": {
+        "top": 76.78125,
+        "left": 246.390625,
+        "right": 1161.609375,
+        "bottom": 566.375,
+        "width": 915.21875,
+        "height": 489.59375
+      },
+      "workflow": {
+        "top": 579.171875,
+        "left": 246.390625,
+        "right": 1430.40625,
+        "bottom": 652.765625,
+        "width": 1184.015625,
+        "height": 73.59375
+      },
+      "runButton": {
+        "top": 603.171875,
+        "left": 1269.40625,
+        "right": 1421.40625,
+        "bottom": 628.765625,
+        "width": 152,
+        "height": 25.59375
+      },
+      "toolbar": {
+        "top": 143.375,
+        "left": 1109.421875,
+        "right": 1147.8125,
+        "bottom": 404.453125,
+        "width": 38.390625,
+        "height": 261.078125
+      },
+      "toolbarButton": {
+        "top": 149.171875,
+        "left": 1085.640625,
+        "right": 1142.40625,
+        "bottom": 174.765625,
+        "width": 56.765625,
+        "height": 25.59375
+      },
+      "axisGizmo": {
+        "top": 426.796875,
+        "left": 1066.828125,
+        "right": 1127.625,
+        "bottom": 487.59375,
+        "width": 60.796875,
+        "height": 60.796875
+      },
+      "inspector": {
+        "top": 76.78125,
+        "left": 1174.40625,
+        "right": 1430.40625,
+        "bottom": 566.375,
+        "width": 256,
+        "height": 489.59375
+      }
+    },
+    {
+      "label": "zoom-90%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 800,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 10.796875,
+        "left": 10.796875,
+        "right": 1429.203125,
+        "bottom": 75.59375,
+        "width": 1418.40625,
+        "height": 64.796875
+      },
+      "viewer": {
+        "top": 86.390625,
+        "left": 277.1875,
+        "right": 1126.8125,
+        "bottom": 637.1875,
+        "width": 849.625,
+        "height": 550.796875
+      },
+      "workflow": {
+        "top": 651.578125,
+        "left": 277.1875,
+        "right": 1429.203125,
+        "bottom": 734.375,
+        "width": 1152.015625,
+        "height": 82.796875
+      },
+      "runButton": {
+        "top": 678.5625,
+        "left": 1248.203125,
+        "right": 1419.203125,
+        "bottom": 707.359375,
+        "width": 171,
+        "height": 28.796875
+      },
+      "toolbar": {
+        "top": 161.1875,
+        "left": 1068.234375,
+        "right": 1111.421875,
+        "bottom": 454.65625,
+        "width": 43.1875,
+        "height": 293.46875
+      },
+      "toolbarButton": {
+        "top": 167.578125,
+        "left": 1041.875,
+        "right": 1105.21875,
+        "bottom": 196.375,
+        "width": 63.34375,
+        "height": 28.796875
+      },
+      "axisGizmo": {
+        "top": 480.40625,
+        "left": 1020.4375,
+        "right": 1088.828125,
+        "bottom": 548.796875,
+        "width": 68.390625,
+        "height": 68.390625
+      },
+      "inspector": {
+        "top": 86.390625,
+        "left": 1141.203125,
+        "right": 1429.203125,
+        "bottom": 637.1875,
+        "width": 288,
+        "height": 550.796875
+      }
+    },
+    {
+      "label": "zoom-100%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 828,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 12,
+        "left": 12,
+        "right": 1428,
+        "bottom": 84,
+        "width": 1416,
+        "height": 72
+      },
+      "viewer": {
+        "top": 96,
+        "left": 308,
+        "right": 1092,
+        "bottom": 708,
+        "width": 784,
+        "height": 612
+      },
+      "workflow": {
+        "top": 724,
+        "left": 308,
+        "right": 1428,
+        "bottom": 816,
+        "width": 1120,
+        "height": 92
+      },
+      "runButton": {
+        "top": 754,
+        "left": 1227,
+        "right": 1417,
+        "bottom": 786,
+        "width": 190,
+        "height": 32
+      },
+      "toolbar": {
+        "top": 179,
+        "left": 1027,
+        "right": 1075,
+        "bottom": 505,
+        "width": 48,
+        "height": 326
+      },
+      "toolbarButton": {
+        "top": 186,
+        "left": 998,
+        "right": 1068,
+        "bottom": 218,
+        "width": 70,
+        "height": 32
+      },
+      "axisGizmo": {
+        "top": 534,
+        "left": 974,
+        "right": 1050,
+        "bottom": 610,
+        "width": 76,
+        "height": 76
+      },
+      "inspector": {
+        "top": 96,
+        "left": 1108,
+        "right": 1428,
+        "bottom": 708,
+        "width": 320,
+        "height": 612
+      }
+    },
+    {
+      "label": "zoom-110%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 911,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 13.1875,
+        "left": 13.1875,
+        "right": 1426.8125,
+        "bottom": 92.375,
+        "width": 1413.625,
+        "height": 79.1875
+      },
+      "viewer": {
+        "top": 105.5625,
+        "left": 338.78125,
+        "right": 1064.78125,
+        "bottom": 778.75,
+        "width": 726,
+        "height": 673.1875
+      },
+      "workflow": {
+        "top": 796.34375,
+        "left": 338.78125,
+        "right": 1426.8125,
+        "bottom": 897.53125,
+        "width": 1088.03125,
+        "height": 101.1875
+      },
+      "runButton": {
+        "top": 829.34375,
+        "left": 1205.8125,
+        "right": 1414.8125,
+        "bottom": 864.53125,
+        "width": 209,
+        "height": 35.1875
+      },
+      "toolbar": {
+        "top": 196.75,
+        "left": 993.390625,
+        "right": 1046.1875,
+        "bottom": 555.015625,
+        "width": 52.796875,
+        "height": 358.265625
+      },
+      "toolbarButton": {
+        "top": 204.34375,
+        "left": 962.015625,
+        "right": 1038.59375,
+        "bottom": 239.53125,
+        "width": 76.578125,
+        "height": 35.1875
+      },
+      "axisGizmo": {
+        "top": 587.578125,
+        "left": 935.203125,
+        "right": 1018.796875,
+        "bottom": 671.171875,
+        "width": 83.59375,
+        "height": 83.59375
+      },
+      "inspector": {
+        "top": 105.5625,
+        "left": 1082.375,
+        "right": 1426.8125,
+        "bottom": 778.75,
+        "width": 344.4375,
+        "height": 673.1875
+      }
+    },
+    {
+      "label": "zoom-125%",
+      "viewport": {
+        "width": 1440,
+        "height": 800
+      },
+      "scroll": {
+        "width": 1440,
+        "height": 1035,
+        "clientWidth": 1440,
+        "clientHeight": 800,
+        "horizontalOverflow": false
+      },
+      "header": {
+        "top": 15,
+        "left": 15,
+        "right": 1605,
+        "bottom": 105,
+        "width": 1590,
+        "height": 90
+      },
+      "viewer": {
+        "top": 120,
+        "left": 385,
+        "right": 1210,
+        "bottom": 885,
+        "width": 825,
+        "height": 765
+      },
+      "workflow": {
+        "top": 905,
+        "left": 385,
+        "right": 1605,
+        "bottom": 1020,
+        "width": 1220,
+        "height": 115
+      },
+      "runButton": {
+        "top": 942.5,
+        "left": 1354,
+        "right": 1591.5,
+        "bottom": 982.5,
+        "width": 237.5,
+        "height": 40
+      },
+      "toolbar": {
+        "top": 223.5,
+        "left": 1129,
+        "right": 1189,
+        "bottom": 630.5,
+        "width": 60,
+        "height": 407
+      },
+      "toolbarButton": {
+        "top": 232,
+        "left": 1092.5,
+        "right": 1180.5,
+        "bottom": 272,
+        "width": 88,
+        "height": 40
+      },
+      "axisGizmo": {
+        "top": 668,
+        "left": 1063,
+        "right": 1158,
+        "bottom": 763,
+        "width": 95,
+        "height": 95
+      },
+      "inspector": {
+        "top": 120,
+        "left": 1230,
+        "right": 1605,
+        "bottom": 885,
+        "width": 375,
+        "height": 765
+      }
+    }
+  ],
+  "screenshots": [
+    "studio-empty-1440x800.png",
+    "studio-demo-1440x800.png",
+    "studio-operation-groups-closed.png",
+    "studio-operation-group-open.png",
+    "studio-toolbar-compact.png",
+    "studio-toolbar-expanded.png",
+    "studio-toolbar-keyboard.png",
+    "studio-axis-gizmo.png",
+    "studio-demo-cleared.png",
+    "studio-custom-upload.png",
+    "studio-process-bottom-visible-1366x768.png",
+    "studio-scroll-bottom.png",
+    "studio-mobile-empty.png",
+    "studio-mobile-demo.png",
+    "studio-mobile-toolbar.png"
+  ],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "pass": true
+}

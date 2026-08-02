@@ -15,6 +15,7 @@ tests=(
   "tests/smoke_visible_result_contract.sh"
   "tests/smoke_frontend_workflow_contract.sh"
   "tests/smoke_studio_legacy_contract.sh"
+  "tests/smoke_studio_workspace_correction.sh"
   "tests/smoke_premium_ui_contract.sh"
   "tests/smoke_beta_feedback_ui_contract.sh"
   "tests/smoke_admin_feedback.sh"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Progress } from "@vkontakte/vkui";
 
 export const studioToolGroups = [
@@ -14,13 +14,18 @@ export const studioToolGroups = [
   },
   {
     title: "Оптимизация",
-    caption: "Вес, ориентация и подготовка формы",
-    items: ["reduce", "orientation", "auto_orientation", "symmetry"],
+    caption: "Снижение веса модели",
+    items: ["reduce"],
+  },
+  {
+    title: "Подготовка к печати",
+    caption: "Ориентация, стол и симметрия",
+    items: ["orientation", "auto_orientation", "symmetry", "fit_to_bed"],
   },
   {
     title: "Разделение",
     caption: "Плоский разрез и типы соединений",
-    items: ["split", "split_pins", "split_tongue", "split_dovetail", "split_puzzle", "fit_to_bed"],
+    items: ["split", "split_pins", "split_tongue", "split_dovetail", "split_puzzle"],
   },
   {
     title: "Экспорт",
@@ -57,7 +62,7 @@ export function StudioHeader({
       </button>
       <div className="studioProjectStatus" aria-live="polite">
         <span>{jobStatus?.status ? statusLabel(jobStatus.status) : "Готово к работе"}</span>
-        <em>{jobStatus?.message || "Вход: STL · результат: STL/ZIP/JSON/TXT"}</em>
+        <em>{jobStatus?.message || "Вход: STL · Результат: STL, ZIP, JSON, TXT"}</em>
       </div>
       <div className="studioHeaderActions">
         <PremiumStatusControl
@@ -85,8 +90,14 @@ export function StudioHeader({
 }
 
 export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false }) {
-  const presetsById = new Map(presets.map((preset) => [preset.id, preset]));
+  const presetsById = useMemo(() => new Map(presets.map((preset) => [preset.id, preset])), [presets]);
   const activeGroupTitle = studioToolGroups.find((group) => group.items.includes(selectedMode))?.title || "Анализ";
+  const [openGroupTitle, setOpenGroupTitle] = useState(activeGroupTitle);
+
+  useEffect(() => {
+    setOpenGroupTitle(activeGroupTitle);
+  }, [activeGroupTitle]);
+
   return (
     <aside className="studioSidebar" aria-label="Инструменты STL Master Studio">
       <div className="studioSidebarTop">
@@ -97,15 +108,28 @@ export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false
         </div>
         {studioToolGroups.map((group) => {
           const groupItems = group.items.map((id) => presetsById.get(id)).filter(Boolean);
-          if (groupItems.length === 0) return null;
+          const enabledCount = groupItems.filter((preset) => !preset.disabled).length;
+          const isOpen = openGroupTitle === group.title;
+          const hasActive = group.items.includes(selectedMode);
+          const panelId = `studio-tool-group-${group.title.toLowerCase().replace(/\s+/g, "-")}`;
           return (
-            <section className="studioToolGroup" key={group.title}>
-              <div className="studioToolGroupTitle">
-                <h2>{group.title}</h2>
-                <span>{group.caption}</span>
-              </div>
-              <div className="studioToolList">
-                {groupItems.map((preset) => {
+            <section className={`studioToolGroup ${isOpen ? "open" : ""} ${hasActive ? "hasActive" : ""}`} key={group.title}>
+              <button
+                className="studioToolGroupTitle"
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() => setOpenGroupTitle((current) => current === group.title ? "" : group.title)}
+              >
+                <span>
+                  <strong className="studioToolGroupHeading">{group.title}</strong>
+                  <small>{hasActive ? `Выбрано: ${presetsById.get(selectedMode)?.title || group.caption}` : group.caption}</small>
+                </span>
+                <b>{enabledCount}/{group.items.length}</b>
+                <i aria-hidden="true">⌄</i>
+              </button>
+              <div className="studioToolList" id={panelId} hidden={!isOpen}>
+                {groupItems.length > 0 ? groupItems.map((preset) => {
                   const disabled = Boolean(preset.disabled || (!hasFile && preset.id !== "check"));
                   const caption = preset.disabled ? (preset.disabledReason || "Режим готовится") : preset.result;
                   return (
@@ -126,7 +150,9 @@ export function StudioSidebar({ presets, selectedMode, onSelect, hasFile = false
                       </span>
                     </button>
                   );
-                })}
+                }) : (
+                  <p className="studioToolGroupEmpty">Экспорт и файлы результата появятся после обработки.</p>
+                )}
               </div>
             </section>
           );
@@ -153,7 +179,7 @@ export function StudioEmptyState({ uploadLimitMb, hasUploadAccess, onSelectFile,
       <div className="studioEmptyActions">
         <button className="studioPrimaryAction" type="button" onClick={hasUploadAccess ? onSelectFile : onRequestAccess}>
           <Icon type="upload" />
-          Выбрать файл
+          Выбрать STL-файл
         </button>
         <button className="studioTextAction" type="button" onClick={onOpenDemo}>
           Попробовать демо
@@ -187,7 +213,7 @@ export function StudioWorkflowBar({ selectedPreset, selectedOperations, jobId, j
   return (
     <section className="studioWorkflowBar" aria-label="Ход обработки">
       <div className="studioPipelineHeader">
-        <span className="studioPanelLabel">Процесс</span>
+        <span className="studioPanelLabel">Этапы обработки</span>
         <strong>{downloadUrl ? "Результат готов" : currentStatus === "idle" ? "Готов к запуску" : statusMessage(currentStatus, jobStatus?.message)}</strong>
       </div>
       <div className="studioStepper">
