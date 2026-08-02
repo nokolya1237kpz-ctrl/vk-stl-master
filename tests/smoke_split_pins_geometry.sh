@@ -81,19 +81,27 @@ upload_and_wait() {
   local depth="$2"
   local label="$3"
   local response job_id status job_json
-  response="$(curl -sS -X POST \
-    -F "file=@${model}" \
-    -F "operations=analyze,print_check,split_model,prepare_package" \
-    -F "split_axis=z" \
-    -F "split_parts=2" \
-    -F "split_mode=pins" \
-    -F "split_engine=blender_boolean" \
-    -F "connector_size_mm=4" \
-    -F "connector_depth_mm=${depth}" \
-    -F "connector_clearance_mm=0.25" \
-    -F "connector_count=2" \
-    "${SMOKE_UPLOAD_FIELDS[@]}" "${API_BASE}/api/v1/jobs/upload")"
-  job_id="$(printf '%s' "${response}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("job_id", ""))')"
+  for attempt in $(seq 1 20); do
+    response="$(curl -sS -X POST \
+      -F "file=@${model}" \
+      -F "operations=analyze,print_check,split_model,prepare_package" \
+      -F "split_axis=z" \
+      -F "split_parts=2" \
+      -F "split_mode=pins" \
+      -F "split_engine=blender_boolean" \
+      -F "connector_size_mm=4" \
+      -F "connector_depth_mm=${depth}" \
+      -F "connector_clearance_mm=0.25" \
+      -F "connector_count=2" \
+      "${SMOKE_UPLOAD_FIELDS[@]}" "${API_BASE}/api/v1/jobs/upload")"
+    job_id="$(printf '%s' "${response}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("job_id", ""))')"
+    [[ -n "${job_id}" ]] && break
+    if printf '%s' "${response}" | grep -q "задача в обработке"; then
+      sleep 3
+      continue
+    fi
+    break
+  done
   [[ -n "${job_id}" ]] || { echo "${label}: upload did not return job_id: ${response}" >&2; exit 1; }
   for _ in $(seq 1 120); do
     job_json="$(curl -sS "${API_BASE}/api/v1/jobs/${job_id}")"

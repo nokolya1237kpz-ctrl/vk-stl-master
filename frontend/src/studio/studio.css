@@ -2850,20 +2850,6 @@
   font-size: inherit;
 }
 
-.studioViewerWorkspace .viewerToolbar :is(button, a)::before {
-  color: #d8e8ff;
-  font-size: 14px;
-  line-height: 1;
-}
-
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(1) :is(button, a)::before { content: "◎"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(2) :is(button, a)::before { content: "X"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(3) :is(button, a)::before { content: "Y"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(4) :is(button, a)::before { content: "Z"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(5) :is(button, a)::before { content: "⌂"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(6) :is(button, a)::before { content: "↺"; }
-.studioViewerWorkspace .viewerToolbar .viewerToolbarHint:nth-of-type(7) :is(button, a)::before { content: "▣"; }
-
 /* Stage 8.1-R: Studio workspace correction. Scope: /app only. */
 .studioShell {
   height: auto;

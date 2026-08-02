@@ -139,5 +139,7 @@ with zipfile.ZipFile(sys.argv[1]) as archive:
 PY
 )"
 printf '%s\n' "${zip_contents}" | grep -qx "connector_report.json" || { echo "ZIP missing connector_report.json" >&2; exit 1; }
+printf '%s\n' "${zip_contents}" | grep -qx "split_part_1.stl" || { echo "ZIP missing split_part_1.stl" >&2; exit 1; }
+printf '%s\n' "${zip_contents}" | grep -qx "split_part_2.stl" || { echo "ZIP missing split_part_2.stl" >&2; exit 1; }
 
 echo "Split pins smoke test passed."

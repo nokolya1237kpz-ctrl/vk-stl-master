@@ -6690,7 +6690,7 @@ function AnalysisResult({
                         <p>{splitModel.connectors.qa?.assembly_check_passed ? "Посадка соединителей проверена." : "Требуется ручная проверка соединителей."}</p>
                         {splitModel.connectors.qa && (
                           <span>
-                            Clearance: {splitModel.connectors.qa.minimum_clearance_mm ?? "—"} мм · Intersection: {splitModel.connectors.qa.maximum_intersection_mm ?? "—"} мм
+                            Зазор: {splitModel.connectors.qa.minimum_clearance_mm ?? "—"} мм · Пересечение: {splitModel.connectors.qa.maximum_intersection_mm ?? "—"} мм
                           </span>
                         )}
                       </div>
@@ -7680,13 +7680,13 @@ function App() {
           </label>
           {connectorEnabled && (
             <>
-              <span className="studioSettingLabel">Диаметр / размер</span>
+              <span className="studioSettingLabel">{splitMode === "pins" ? "Диаметр" : "Размер соединения"}</span>
               {renderOptionButtons(connectorSizeOptions, connectorSize, setConnectorSize, (item) => `${item} мм`)}
               <span className="studioSettingLabel">Глубина</span>
               {renderOptionButtons(connectorDepthOptions, connectorDepth, setConnectorDepth, (item) => `${item} мм`)}
-              <span className="studioSettingLabel">Отступ / зазор</span>
+              <span className="studioSettingLabel">Зазор</span>
               {renderOptionButtons(connectorClearanceOptions, connectorClearance, setConnectorClearance, (item) => `${item} мм`)}
-              <span className="studioSettingLabel">Количество</span>
+              <span className="studioSettingLabel">{splitMode === "pins" ? "Количество штифтов" : "Количество соединителей"}</span>
               {renderOptionButtons(connectorCountOptions, connectorCount, setConnectorCount)}
               <span className="studioSettingLabel">Расстановка</span>
               {renderOptionButtons(connectorPlacementOptions, connectorPlacement, setConnectorPlacement, (item) => item.title)}

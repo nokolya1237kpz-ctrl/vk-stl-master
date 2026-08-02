@@ -5221,6 +5221,10 @@ def create_result_zip(job_id: str, input_path: Path, result: dict, job: dict[str
     if result.get("split_model"):
         for output_file in result["split_model"].get("output_files", []):
             zip_files.append(output_file)
+        if result["split_model"].get("success"):
+            for part_path in sorted(result_dir.glob("split_part_*.stl")):
+                if part_path.name not in zip_files:
+                    zip_files.append(part_path.name)
         connectors = result["split_model"].get("connectors") or {}
         connector_report = connectors.get("report_file") or result["split_model"].get("connector_report_file")
         if connector_report:
@@ -5234,6 +5238,17 @@ def create_result_zip(job_id: str, input_path: Path, result: dict, job: dict[str
     if result.get("fit_to_bed_split"):
         for output_file in result["fit_to_bed_split"].get("output_files", []):
             zip_files.append(output_file)
+
+    split_has_result_parts = bool(result.get("split_model", {}).get("success") and result.get("split_model", {}).get("output_files"))
+    after_file = result.get("after_file") or result.get("final_model")
+    if (
+        after_file
+        and after_file != "original.stl"
+        and after_file not in zip_files
+        and not split_has_result_parts
+        and (result_dir / after_file).exists()
+    ):
+        zip_files.append(after_file)
 
     if "prepare_package" in result.get("operations", []):
         generated_at = datetime.now(timezone.utc).isoformat()
@@ -5341,6 +5356,12 @@ def create_result_zip(job_id: str, input_path: Path, result: dict, job: dict[str
         if "prepare_package" in result.get("operations", []):
             archive.write(print_report_txt, arcname="print_report.txt")
             archive.write(manifest_json, arcname="manifest.json")
+        for file_name in zip_files:
+            if file_name in archive.namelist():
+                continue
+            candidate_path = result_dir / file_name
+            if candidate_path.exists() and candidate_path.is_file():
+                archive.write(candidate_path, arcname=file_name)
     temp_zip_path.replace(zip_path)
     return zip_path
 

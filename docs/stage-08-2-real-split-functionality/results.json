@@ -1,0 +1,31 @@
+{
+  "stage": "8.2",
+  "created_at": "2026-08-02T07:08:45.109411+00:00",
+  "source_sha": "bbb4001bb0b5e7f4c300452baec06a88d6728271",
+  "checks": {
+    "frontend_build": "PASS",
+    "smoke_split_real_model": "PASS",
+    "smoke_split_pins": "PASS",
+    "smoke_split_pins_geometry": "PASS",
+    "smoke_split_result_zip_contract": "PASS",
+    "smoke_studio_workspace_correction": "PASS",
+    "run_all_smoke_tests": "PASS",
+    "backend_py_compile": "PASS",
+    "worker_py_compile": "PASS"
+  },
+  "zip_contract": {
+    "flat_split_required_files": [
+      "split_part_1.stl",
+      "split_part_2.stl"
+    ],
+    "pins_split_required_files": [
+      "split_part_1.stl",
+      "split_part_2.stl"
+    ],
+    "only_original_stl_allowed_for_successful_split": false
+  },
+  "toolbar": {
+    "legacy_pseudo_icons_removed": true,
+    "one_svg_per_button_contract": true
+  }
+}
